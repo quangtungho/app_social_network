@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/lnBranch"
+            android:layout_marginTop="@dimen/margin_10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/branchbackgroundgray"
+                tools:ignore="UselessParent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="layout/item_detail_restaurant_post_0">
+
+                    <LinearLayout
+                        android:id="@+id/lnReviewRating"
+                        android:layout_width="@dimen/size_60"
+                        android:layout_height="0dp"
+                        android:background="@drawable/backgroundratingbranch"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <vn.techres.line.widget.TechResTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="@string/rating"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_small" />
+
+                        <vn.techres.line.widget.TechResTextViewBold
+                            android:id="@+id/tvRatingReview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zero"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_big" />
+
+                        <ImageView
+                            android:layout_width="@dimen/size_20"
+                            android:layout_height="@dimen/size_20"
+                            android:layout_marginBottom="@dimen/margin_5dp"
+                            android:contentDescription="@string/description_place_image"
+                            android:src="@drawable/ic_star_review"
+                            android:tint="@color/white"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lnAvataAndSaveBranch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/lnReviewRating"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/size_60"
+                            android:layout_height="@dimen/size_60"
+                            app:cardCornerRadius="@dimen/size_5"
+                            android:layout_margin="@dimen/padding_5dp">
+
+                            <ImageView
+                                android:id="@+id/imgBranchLogo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/logo_aloline_placeholder"
+                                android:contentDescription="@string/description_place_image" />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:gravity="center|start"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/lnAvataAndSaveBranch"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <vn.techres.line.widget.TechResTextViewBold
+                            android:id="@+id/txtBranchName"
+                            style="@style/TvBody"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingTop="@dimen/padding_5dp"
+                            android:singleLine="true" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RatingBar
+                                android:id="@+id/reviewRating"
+                                style="@style/CustomRatingBarSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_2dp"
+                                android:isIndicator="true"
+                                android:rating="4.7" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/txtBranchVotes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:paddingStart="@dimen/padding_5dp"
+                                android:textColor="@color/blue_logo"
+                                android:textSize="@dimen/font_caption"
+                                tools:ignore="RtlSymmetry" />
+                        </LinearLayout>
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/txtBranchAddress"
+                            style="@style/TvCaption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingBottom="@dimen/padding_5dp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_tiny" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/llType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_50"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+
+                    <com.like.LikeButton
+                        android:id="@+id/lbSaveBranch"
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/padding_10dp"
+                        app:anim_scale_factor="2.0"
+                        app:circle_end_color="@color/blue_gg"
+                        app:circle_start_color="@color/main_bg"
+                        app:dots_primary_color="@color/blue_gg"
+                        app:dots_secondary_color="@color/main_bg"
+                        app:icon_size="30.0dip"
+                        app:icon_type="heart"
+                        app:is_enabled="true"
+                        app:like_drawable="@drawable/ic_bookmark_orange"
+                        app:unlike_drawable="@drawable/ic_bookmark_gray"
+                        tools:ignore="MissingConstraints,RtlSymmetry" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </merge>
+
+</layout>

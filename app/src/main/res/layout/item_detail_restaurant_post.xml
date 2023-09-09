@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_12dp"
+    android:layout_marginTop="@dimen/margin_8dp"
+    android:layout_marginRight="@dimen/margin_12dp"
+    android:background="@drawable/selector_round_rectangle_white_border"
+    android:paddingTop="@dimen/padding_8dp"
+    android:paddingBottom="@dimen/padding_8dp"
+    android:tag="layout/item_detail_restaurant_post_0">
+
+    <ImageView
+        android:id="@+id/imgAvatarGroup"
+        android:layout_width="@dimen/size_45"
+        android:layout_height="@dimen/size_45"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_8dp"
+        android:layout_marginRight="@dimen/margin_8dp"
+        android:background="@drawable/ic_restaurant_image_holder"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvNameRestaurant"
+        style="@style/TvBody"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8dp"
+        android:singleLine="true"
+        app:layout_constraintLeft_toRightOf="@+id/imgAvatarGroup"
+        app:layout_constraintRight_toLeftOf="@+id/imgSaveBranch"
+        app:layout_constraintTop_toTopOf="@+id/imgAvatarGroup" />
+
+    <ImageView
+        android:id="@+id/imgSaveBranch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_view_transparent"
+        android:paddingLeft="@dimen/padding_10dp"
+        android:src="@drawable/ic_bookmark_gray"
+        android:paddingBottom="@dimen/padding_10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints,RtlHardcoded,RtlSymmetry" />
+
+    <RatingBar
+        android:id="@+id/rbRestaurantRateDetail"
+        style="@style/CustomRatingBarSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginBottom="@dimen/margin_4dp"
+        android:isIndicator="true"
+        app:layout_constraintLeft_toRightOf="@+id/imgAvatarGroup"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameRestaurant"
+        tools:ignore="MissingConstraints" />
+
+    <vn.techres.line.widget.TechResTextView
+        style="@style/TvCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_4dp"
+        android:id="@+id/tvTotalRating"
+        app:layout_constraintBottom_toBottomOf="@+id/rbRestaurantRateDetail"
+        app:layout_constraintLeft_toRightOf="@+id/rbRestaurantRateDetail"
+        app:layout_constraintTop_toTopOf="@+id/rbRestaurantRateDetail"
+        tools:ignore="RtlHardcoded" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvAddressDetailBranch"
+        style="@style/TvCaption"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8dp"
+        android:singleLine="true"
+        android:tag="binding_6"
+        app:layout_constraintLeft_toRightOf="@+id/imgAvatarGroup"
+        app:layout_constraintRight_toLeftOf="@+id/imgSaveBranch"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbRestaurantRateDetail"
+        tools:ignore="RtlHardcoded" />
+</androidx.constraintlayout.widget.ConstraintLayout>

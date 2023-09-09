@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_header_main"
+    android:padding="@dimen/padding_5dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvItemNewFeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/size_5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/item_new_feed_header"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray"/>
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_big"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:gravity="center"
+                tools:ignore="RtlSymmetry"
+                android:autoLink="web"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:paddingStart="@dimen/padding_10dp"
+                android:paddingEnd="@dimen/padding_10dp"/>
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:autoLink="web"
+                android:paddingStart="@dimen/padding_10dp"
+                android:paddingEnd="@dimen/padding_10dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginBottom="@dimen/margin_10dp" />
+
+            <include layout="@layout/item_media_one"/>
+            <include layout="@layout/item_media_two"/>
+            <include layout="@layout/item_media_three"/>
+            <include layout="@layout/item_media_four"/>
+            <include layout="@layout/item_media_five"/>
+
+            <include layout="@layout/item_new_feed_branch"/>
+
+            <include layout="@layout/item_new_feed_reaction"/>
+
+            <include layout="@layout/item_new_feed_value_comment_share"/>
+
+            <View
+                android:id="@id/vLine"
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/divider"/>
+
+            <include layout="@layout/item_new_feed_comment"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <include layout="@layout/item_load_page"/>
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_color"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:orientation="vertical">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@id/tvNameUserDrink"
+                style="@style/TvBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:paddingLeft="@dimen/padding_12dp"
+                android:paddingTop="@dimen/padding_12dp"
+                android:paddingRight="@dimen/padding_12dp"
+                android:tag="binding_4" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@id/tvAddressDetailBranch"
+                style="@style/TvCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_check_in_primary"
+                android:gravity="center_vertical"
+                android:maxLines="3"
+                android:paddingStart="@dimen/padding_8dp"
+                android:paddingEnd="@dimen/padding_12dp"
+                android:paddingBottom="@dimen/padding_8dp"
+                android:tag="binding_5" />
+
+            <RatingBar
+                android:id="@+id/rbCreateNewRate"
+                style="@style/CustomRatingBarBig"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                app:layout_constraintBottom_toTopOf="@id/tvRateDescription"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/colorDivider" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/padding_12dp"
+                android:paddingTop="@dimen/padding_8dp"
+                android:paddingRight="@dimen/padding_12dp"
+                android:paddingBottom="@dimen/padding_8dp">
+
+                <EditText
+                    android:id="@+id/edtComment"
+                    style="@style/TvBody"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_color"
+                    android:gravity="top"
+                    android:hint="@string/hint_input_review"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minLines="2"
+                    android:tag="binding_12"
+                    android:autofillHints="@string/hint_input_review">
+
+                    <requestFocus />
+                </EditText>
+
+                <View
+                    android:id="@+id/vAnchor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25.0dip"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvImages"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white_color"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/colorDivider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTemplateComment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_2dp"
+        android:paddingRight="@dimen/padding_2dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/colorDivider" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_44"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/imgCamera"
+            android:background="@drawable/selector_view_white"
+            android:paddingLeft="@dimen/padding_8dp"
+            android:paddingRight="@dimen/padding_8dp"
+            android:src="@drawable/ic_camera" />
+    </LinearLayout>
+</LinearLayout>

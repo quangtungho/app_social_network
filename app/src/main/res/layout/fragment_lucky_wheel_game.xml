@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_women_day"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/clone_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+        <ImageView
+            android:id="@+id/heart_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_heart"
+            android:visibility="gone"
+            android:contentDescription="@string/default_image" />
+        </FrameLayout>
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/imvBack"
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/default_image"
+                android:padding="@dimen/padding_15dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/lucky_wheel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_largexxxx" />
+
+            <ImageView
+                android:id="@+id/imvShare"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/ic_share"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/rlHeader"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/imgRuleGame"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/rule_game_lucky_wheel"
+                    app:layout_constraintEnd_toStartOf="@+id/tvNumberRound"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvNumberRound"
+                    android:layout_width="@dimen/size_60"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_bg"
+                    android:gravity="center"
+                    android:text="Vòng 0"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgRuleGame"
+                    app:layout_constraintEnd_toStartOf="@+id/imgListMemberWinner"
+                    app:layout_constraintStart_toEndOf="@+id/imgRuleGame"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--                android:src="@drawable/ic_button_giai_thuong"-->
+                <ImageView
+                    android:id="@+id/imgListMemberWinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/list_winner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvNumberRound"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--                android:background="@drawable/lucky_wheel_turn"-->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgShelf"
+                    android:layout_width="@dimen/size_150"
+                    android:layout_height="@dimen/size_80"
+                    android:src="@drawable/ic_shelf_lucky_wheel"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/content_luckyWheel"
+                    app:layout_constraintStart_toStartOf="@+id/content_luckyWheel"
+                    app:layout_constraintTop_toBottomOf="@+id/content_luckyWheel" />
+
+                <RelativeLayout
+                    android:id="@+id/content_luckyWheel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgRuleGame"
+                    tools:ignore="DuplicateIds,MissingConstraints">
+
+                    <vn.techres.line.data.model.WheelView
+                        android:id="@+id/luckyWheel1"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_lucky_wheel" />
+
+                    <ImageView
+                        android:id="@+id/imvBgWheel"
+                        android:layout_width="310dp"
+                        android:layout_height="310dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/default_image" />
+
+                    <ImageView
+                        android:id="@+id/imv_gift_win"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/default_image"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                android:id="@+id/commentGame"
+                layout="@layout/item_comment_game" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparent_time_bg"
+            android:visibility="gone">
+
+
+            <cn.iwgang.countdownview.CountdownView
+                android:id="@+id/cv_countdownViewTest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                app:isHideTimeBackground="false"
+                app:isShowDay="false"
+                app:isShowHour="true"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:suffixGravity="center"
+                app:suffixTextColor="#000000"
+                app:suffixTextSize="30sp"
+                app:timeBgDivisionLineSize="1dp"
+                app:timeBgRadius="3dp"
+                app:timeBgSize="60dp"
+                app:timeTextColor="#FFFFFF"
+                app:timeTextSize="30sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lnGiftLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/gift_loading"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="@dimen/size_150"
+                android:layout_gravity="center"
+                android:contentDescription="@string/default_image">
+
+            </ImageView>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rltGiftDialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_tran_black"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imv_shawdow_game"
+                android:layout_width="@dimen/size_350"
+                android:layout_height="@dimen/size_350"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/shawdow_game"
+                app:layout_constraintBottom_toBottomOf="@+id/konfettiView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imv_trungthuong"
+                android:layout_width="@dimen/size_350"
+                android:layout_height="@dimen/size_350"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/win_game"
+                app:layout_constraintBottom_toBottomOf="@+id/imv_shawdow_game"
+                app:layout_constraintEnd_toEndOf="@+id/imv_shawdow_game"
+                app:layout_constraintStart_toStartOf="@+id/imv_shawdow_game" />
+
+            <ImageView
+                android:id="@+id/imv_crab"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="@dimen/size_150"
+                android:layout_above="@+id/imgClose"
+                android:layout_alignTop="@+id/imv_shawdow_game"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/default_image"
+                app:layout_constraintBottom_toBottomOf="@+id/imv_shawdow_game"
+                app:layout_constraintEnd_toEndOf="@+id/imv_shawdow_game"
+                app:layout_constraintStart_toStartOf="@+id/imv_shawdow_game"
+                app:layout_constraintTop_toTopOf="@+id/imv_shawdow_game"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <nl.dionsegijn.konfetti.xml.KonfettiView
+                android:id="@+id/viewKonfetti"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:layout_below="@+id/imv_shawdow_game"
+                android:layout_alignStart="@+id/imv_shawdow_game"
+                android:layout_alignEnd="@+id/imv_shawdow_game"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/close_game"
+                app:layout_constraintEnd_toEndOf="@+id/imv_shawdow_game"
+                app:layout_constraintStart_toStartOf="@+id/imv_shawdow_game"
+                app:layout_constraintTop_toBottomOf="@+id/imv_shawdow_game" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</layout>
+
+

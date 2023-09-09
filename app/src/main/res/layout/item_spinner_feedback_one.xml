@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/size_40"
+            android:layout_height="@dimen/size_40">
+            <ImageView
+                android:id="@+id/ic_img_view"
+                android:layout_width="@dimen/size_24"
+                android:layout_height="@dimen/size_24"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <vn.techres.line.widget.TechResTextView
+            android:paddingLeft="@dimen/padding_10dp"
+            android:textSize="@dimen/font_normal"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/size_4"
+            android:id="@+id/tv_ic_img_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/size_2"
+        android:layout_marginBottom="@dimen/size_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/view_divider_thin" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg">
+
+        <include
+            android:id="@+id/headerAction"
+            layout="@layout/item_header_action_call" />
+
+        <include
+            android:id="@+id/content"
+            layout="@layout/item_content_call" />
+
+        <include
+            android:id="@+id/bottomAction"
+            layout="@layout/item_bottom_action_call_answer" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/size_16"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_white"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:gravity="center"
+                android:padding="@dimen/default_margin"
+                android:text="@string/warning_unknown_device"
+                android:textColor="@color/red"
+                android:textSize="@dimen/TextSize_17" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:padding="@dimen/default_margin"
+                android:id="@+id/titleWarring"
+                android:text="@string/title_warning_login"
+                android:textSize="@dimen/TextSize_14" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:padding="@dimen/default_margin"
+                android:text="@string/warning_account"
+                android:textSize="@dimen/TextSize_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnLockAccount"
+                    android:layout_width="240dp"
+                    android:layout_height="@dimen/size_32"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:background="@drawable/border_red_dot_circle"
+                    android:gravity="center"
+                    android:text="@string/emergency_account_lockout"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/TextSize_14"
+                    android:textColor="@color/white"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="240dp"
+                    android:layout_height="@dimen/size_32"
+                    android:layout_marginTop="@dimen/size_16"
+                    android:layout_marginBottom="@dimen/default_margin"
+                    android:background="@drawable/border_gray_dot_circle"
+                    android:gravity="center"
+                    android:textSize="@dimen/TextSize_14"
+                    android:text="@string/close"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

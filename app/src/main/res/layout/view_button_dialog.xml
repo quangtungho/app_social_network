@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_btn_bg_color">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_42"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_key_btnCancel"
+            style="@style/DialogNegativeButtonStyle"
+            android:layout_width="120.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/margin_12dp"
+            android:minWidth="70.0dip"
+            android:text="@string/common_dialog_btn_cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/red" />
+
+        <Button
+            android:id="@+id/dialog_key_btnAccept"
+            android:text="@string/arrge"
+            style="@style/DialogPositiveButtonStyle"
+            android:layout_width="120.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/margin_12dp"
+            android:minWidth="70.0dip"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

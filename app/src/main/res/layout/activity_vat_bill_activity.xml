@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".activity.VATBillActivity">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                android:background="@color/transparent"
+                android:padding="@dimen/padding_15dp"
+                android:src="@drawable/back"
+                android:tint="@color/main_gray_dim"
+                tools:ignore="ContentDescription,UseAppTint" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/vat_bill"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/techResTextViewBold13"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout5"
+            tools:listitem="@layout/item_food_vat_header"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewParent" />
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/techResTextViewBold13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_10dp"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:text="Tổng tiền: "
+            app:layout_constraintEnd_toStartOf="@+id/txtTotalAmount"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/padding_10dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/techResTextViewBold13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/techResTextViewBold13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

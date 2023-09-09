@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <merge>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_12dp"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingRight="@dimen/padding_12dp"
+            android:paddingBottom="@dimen/padding_8dp">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@id/tvNameUserDrink"
+                style="@style/TvBody"
+                android:text="@string/restaurant_open_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_logo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold" />
+
+            <vn.techres.line.widget.TechResTextView
+                style="@style/TvCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvPass"
+                android:text=""
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:layout_marginRight="@dimen/padding_8dp"
+                android:gravity="left"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tvCreateAt"
+                app:layout_constraintTop_toBottomOf="@id/tvNameUserDrink"
+                tools:ignore="RtlHardcoded" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvCreateAt"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:gravity="start"
+                app:layout_constraintLeft_toRightOf="@id/tvPass"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNameUserDrink" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </merge>
+
+</layout>

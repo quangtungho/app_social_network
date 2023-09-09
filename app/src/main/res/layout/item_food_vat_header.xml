@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/orange_70">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtVATPercent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Thuế suất 10% (3)"
+                android:textColor="@color/white"
+                android:padding="@dimen/padding_10dp" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/txtVATAmountTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thuế: 6,210"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/gray_background">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tên món"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_10dp" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:layout_width="@dimen/size_100"
+                android:layout_height="wrap_content"
+                android:text="Trước thuế"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_10dp"
+                android:gravity="end" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:layout_width="@dimen/size_80"
+                android:layout_height="wrap_content"
+                android:text="Thuế"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_10dp"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_food_vat" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="@string/category_for_you"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_big" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/lnQRCode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_qr_code_home" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/scan_qr"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lnOrderByPoint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_use_point" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:gravity="center"
+                        android:text="@string/order_by_point"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnPromotionDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="49dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:alpha="0.6"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_use_point" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/coming_soon" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llOrderHome"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="@dimen/size_2"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_delivery_techres" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:gravity="center"
+                        android:text="@string/title_mv"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:alpha="0.6"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_delivery_techres" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/coming_soon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnPointHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_history_point" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:gravity="center"
+                        android:text="@string/point_history"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/lnPlayGame"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_game_store" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/play_game"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:alpha="0.6"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_game_store" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/coming_soon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/size_60"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_green_50dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_book"
+                            android:contentDescription="@string/title_Barcode" />
+                    </LinearLayout>
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/title_mv"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnCreateBooking"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_booking_home" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/title_booking"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnUtilities"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_puzzle_extension" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/utility"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlGift"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/imgGift"
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:elevation="@dimen/size_2"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_gift_box"
+                        tools:ignore="ContentDescription" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvCountGift"
+                        android:layout_width="@dimen/size_15"
+                        android:layout_height="@dimen/size_15"
+                        android:layout_alignTop="@+id/imgGift"
+                        android:layout_marginStart="-10dp"
+                        android:layout_toEndOf="@+id/imgGift"
+                        android:background="@drawable/counter_bg_main"
+                        android:elevation="@dimen/size_3"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding_2dp"
+                        android:paddingEnd="@dimen/padding_2dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_very_tiny" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgGift"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/gift"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:alpha="0.6"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="2dp"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_gift_box" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/coming_soon" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:weightSum="4"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/lnRecharge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables,UselessParent">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="@dimen/size_2"
+                        android:padding="@dimen/padding_3dp"
+                        android:src="@drawable/ic_mobile_recharge" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="@string/recharge"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnImageStore"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables,UselessParent">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="@dimen/size_2"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_kho_hinh_anh" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="Kho lưu trữ"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnRestaurantImage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables,UselessParent">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_white_4dp"
+                        android:contentDescription="@string/title_Barcode"
+                        android:elevation="@dimen/size_2"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_restaurant_svgrepo_com" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text="Hình ảnh quán"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </merge>
+
+</layout>

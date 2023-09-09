@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lnProfileMain">
+        <include layout="@layout/item_header_profile"/>
+
+        <include layout="@layout/item_profile_infor"/>
+
+        <include layout="@layout/item_profile_friend"/>
+
+        <include layout="@layout/item_profile_media"/>
+    </LinearLayout>
+</ScrollView>

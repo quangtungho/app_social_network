@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_8dp"
+                android:paddingRight="@dimen/padding_8dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <vn.techres.line.widget.TechResTextView
+                            style="@style/TextTitleProvisionalVoucherBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:text="@string/phone_invoice_title_label" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvReceiptCode"
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/provisional_code_receipt" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvReceiptOrderNumber"
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnReceiptDate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <vn.techres.line.widget.TechResTextView
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/provisional_date_receipt" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvReceiptDate"
+                                style="@style/TextValueProvisionalVoucherNormal"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnReceiptTable"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <vn.techres.line.widget.TechResTextView
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/invoice_detail_table_receipt" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvReceiptTable"
+                                style="@style/TextValueProvisionalVoucherNormal"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:ellipsize="end"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnReceiptEmployee"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <vn.techres.line.widget.TechResTextView
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/employee_name" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvReceiptEmployee"
+                                style="@style/TextValueProvisionalVoucherNormal"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:ellipsize="end"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <vn.techres.line.widget.TechResTextView
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/customer_name" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvCustomerName"
+                                style="@style/TextValueProvisionalVoucherNormal"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:ellipsize="end"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <vn.techres.line.widget.TechResTextView
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/customer_phonenumber" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvCustomerPhoneNumber"
+                                style="@style/TextValueProvisionalVoucherNormal"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:ellipsize="end"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnEmployee"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible"></LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imgCollected"
+                        android:layout_width="@dimen/size_110"
+                        android:layout_height="@dimen/size_80"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginRight="@dimen/margin_4dp"
+                        android:src="@drawable/has_colected_money"
+                        android:visibility="gone"
+                        tools:ignore="RtlHardcoded" />
+
+                    <ImageView
+                        android:id="@+id/imgPayment"
+                        android:layout_width="@dimen/size_170"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="58dp"
+                        android:src="@drawable/has_colected_money"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/frag_layout_title_listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:background="@drawable/bg_listview_receipt"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_8dp">
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:gravity="start"
+                        android:text="@string/phone_invoice_header_items_label"
+                        android:textColor="@color/black" />
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:id="@+id/frag_detail_bill_total_quantity"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center|right"
+                        android:text="@string/phone_invoice_header_quantity_label"
+                        android:textColor="@color/black"
+                        tools:ignore="RtlHardcoded" />
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:gravity="center|right"
+                        android:text="@string/phone_invoice_header_price_label"
+                        android:textColor="@color/black"
+                        tools:ignore="RtlHardcoded" />
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:id="@+id/vn.aloapp.lite.widget.TechResTextView13"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:gravity="center|right"
+                        android:text="@string/phone_invoice_header_amount_label"
+                        android:textColor="@color/black"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </merge>
+
+</layout>

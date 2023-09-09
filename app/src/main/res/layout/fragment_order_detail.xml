@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/llOrderDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <include android:id="@+id/header_payment" layout="@layout/item_header_payment" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcOrderDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/padding_16dp"
+                        android:paddingTop="@dimen/padding_10dp"
+                        android:paddingRight="@dimen/padding_16dp"
+                        android:paddingBottom="@dimen/padding_10dp">
+
+                        <vn.techres.line.widget.TechResTextView
+                            style="@style/TextProvisionalVoucherBold"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/title_total_price"
+                            android:textSize="@dimen/font_big" />
+
+                        <vn.techres.line.widget.TechResTextViewBold
+                            android:id="@+id/tvTotalMoney"
+                            style="@style/TextProvisionalVoucherBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_8dp"
+                            android:gravity="end"
+                            android:textSize="@dimen/font_big" />
+                    </LinearLayout>
+
+                    <include layout="@layout/view_line" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_16dp"
+                    android:paddingRight="@dimen/padding_16dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <vn.techres.line.widget.TechResTextViewItalic
+                                    android:id="@+id/lbl_discount"
+                                    style="@style/TextValueProvisionalVoucherNormal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/phone_invoice_footer_amount_discount_money"
+                                    android:textColor="@color/main_bg"
+                                    android:textSize="@dimen/font_normal" />
+
+                                <vn.techres.line.widget.TechResTextViewItalic
+                                    android:id="@+id/tvPercentDiscount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/main_bg" />
+                            </LinearLayout>
+
+                            <vn.techres.line.widget.TechResTextViewItalic
+                                android:id="@+id/tvDiscount"
+                                style="@style/TextValueProvisionalVoucherNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_8dp"
+                                android:gravity="end"
+                                android:textSize="@dimen/font_normal"
+                                android:textColor="@color/main_bg" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/view_line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <vn.techres.line.widget.TechResTextViewItalic
+                                    android:id="@+id/lbl_vat"
+                                    style="@style/TextValueProvisionalVoucherNormal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/tax"
+                                    android:textColor="@color/blue_logo"
+                                    android:textSize="@dimen/font_normal" />
+
+                                <vn.techres.line.widget.TechResTextViewItalic
+                                    android:id="@+id/tvPercentVat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/blue_logo" />
+                            </LinearLayout>
+
+                            <vn.techres.line.widget.TechResTextViewItalic
+                                android:id="@+id/tvTotalVat"
+                                style="@style/TextValueProvisionalVoucherNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_8dp"
+                                android:gravity="end"
+                                android:textSize="@dimen/font_normal"
+                                android:textColor="@color/blue_logo"
+                                tools:ignore="RtlHardcoded" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/view_line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp">
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/count_point_get"
+                                android:textColor="@color/main_bg"
+                                android:textSize="@dimen/font_big" />
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/tvPointPurchase"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_8dp"
+                                android:gravity="end"
+                                android:textColor="@color/main_bg"
+                                android:textSize="@dimen/font_big" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/view_line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/padding_10dp"
+                            android:paddingBottom="@dimen/padding_10dp">
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/point_used"
+                                android:textColor="@color/main_bg"
+                                android:textSize="@dimen/font_big" />
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/tvTotalPointUsed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_8dp"
+                                android:gravity="end"
+                                android:textSize="@dimen/font_big"
+                                android:textColor="@color/main_bg" />
+                        </LinearLayout>
+
+                        <include layout="@layout/view_line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp">
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/phone_invoice_footer_subtotal_amount"
+                                android:textColor="@color/blue_logo"
+                                android:textSize="@dimen/font_big" />
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/tvTotalPay"
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_8dp"
+                                android:gravity="end"
+                                android:textColor="@color/blue_logo"
+                                android:textSize="@dimen/font_big" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/view_line" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.6dip"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:background="@color/line"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/lnChange"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:orientation="horizontal">
+
+                            <vn.techres.line.widget.TechResTextView
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/phone_invoice_footer_return_amount"
+                                android:textSize="@dimen/font_normal" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvReturnMoney"
+                                style="@style/TextProvisionalVoucherBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="54.000"
+                                android:textSize="@dimen/font_normal" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.6dip"
+                            android:layout_marginTop="@dimen/margin_16dp"
+                            android:background="@color/line" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvThank_you"
+                    style="@style/TextProvisionalVoucherBold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_20"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/phone_invoice_footer_thank"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/font_normal"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

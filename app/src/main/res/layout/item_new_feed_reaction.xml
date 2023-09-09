@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_20dp">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/please_express_your_thoughts_on_the_article"
+                android:textColor="@color/main_gray_ghost_white"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:id="@+id/lnReactionOne"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_3dp">
+
+                        <ImageView
+                            android:id="@+id/imgReaction"
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:src="@drawable/icon_lovely"
+                            android:contentDescription="@string/description_place_image"
+                            android:layout_gravity="center" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvOneCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingStart="@dimen/padding_5dp"
+                            tools:ignore="RtlSymmetry"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvReactionOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/favourite"
+                        android:textSize="@dimen/font_very_tiny"
+                        android:layout_marginTop="@dimen/margin_2dp"
+                        tools:ignore="TooManyViews" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnReactionTwo"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_3dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_exciting"
+                            android:contentDescription="@string/description_place_image"
+                            tools:ignore="TooManyViews" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvTwoCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingStart="@dimen/padding_5dp"
+                            tools:ignore="RtlSymmetry"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvReactionTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/exciting"
+                        android:textSize="@dimen/font_very_tiny"
+                        android:layout_marginTop="@dimen/margin_2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnReactionThree"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_3dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_sad"
+                            android:contentDescription="@string/description_place_image" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvThreeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingStart="@dimen/padding_5dp"
+                            tools:ignore="RtlSymmetry"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvReactionThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/moving"
+                        android:textSize="@dimen/font_very_tiny"
+                        android:layout_marginTop="@dimen/margin_2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnReactionFour"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="TooManyViews"
+                        android:layout_marginTop="@dimen/margin_3dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_diamond"
+                            android:contentDescription="@string/description_place_image" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvFourCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingStart="@dimen/padding_5dp"
+                            tools:ignore="RtlSymmetry"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvReactionFour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/value"
+                        android:textSize="@dimen/font_very_tiny"
+                        android:layout_marginTop="@dimen/margin_2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnReactionFive"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_3dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_nagative"
+                            android:contentDescription="@string/description_place_image" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvFiveCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingStart="@dimen/padding_5dp"
+                            tools:ignore="RtlSymmetry"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvReactionFive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/negative"
+                        android:textSize="@dimen/font_very_tiny"
+                        android:layout_marginTop="@dimen/margin_2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnReactionSix"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_3dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_26"
+                            android:layout_height="@dimen/size_26"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_nothing"
+                            android:contentDescription="@string/description_place_image" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvSixCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingStart="@dimen/padding_5dp"
+                            tools:ignore="RtlSymmetry"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvReactionSix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nothing"
+                        android:textSize="@dimen/font_very_tiny"
+                        android:layout_marginTop="@dimen/margin_2dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </merge>
+</layout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_round_rectangle_border"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_50"
+        android:background="@color/back_ground_app"
+        android:orientation="horizontal">
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/selector_view_transparent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp"
+            android:id="@+id/btnCacel"
+            android:text="X"
+            android:textColor="@color/main_bg" />
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvBody"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="Create Post" />
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/selector_view_transparent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_12dp"
+            android:paddingRight="@dimen/padding_12dp"
+            android:id="@+id/btnUpdate"
+            android:text="Post"
+            android:textColor="@color/main_bg" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@id/edtContent"
+        style="@style/TvBody"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_12dp"
+        android:background="@drawable/bg_gray_border"
+        android:gravity="center|left|top"
+        android:hint="What's on your mind?"
+        android:minLines="5"
+        android:padding="@dimen/padding_12dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/activity_vertical_margin"
+        android:paddingTop="8.0dip"
+        android:paddingEnd="@dimen/activity_vertical_margin"
+        android:paddingBottom="8.0dip">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/size_40"
+            android:layout_height="@dimen/size_40"
+            app:cardCornerRadius="@dimen/size_20"
+           app:cardElevation="@dimen/size_0"
+            app:layout_constraintBottom_toBottomOf="@+id/comment_editor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/comment_editor">
+            <ImageView
+                android:id="@+id/owner_avatar_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/comment_editor"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginLeft="8.0dip"
+
+            android:padding="2.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/owner_avatar_img"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NotSibling">
+
+            <EditText
+                android:id="@+id/comment_edt"
+                style="@style/Techres.EditText.Body2"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip"
+                android:layout_marginBottom="1.0dip"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/feed_write_a_comment"
+                android:maxHeight="72.0dip"
+                android:minHeight="48.0dip"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/barrier_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="left"
+                app:constraint_referenced_ids="emoij_iv,media_iv,imgSent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/emoij_iv"
+                style="@style/Tehres.ImageIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/media_iv"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_editor_feeling_comment" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/media_iv"
+                style="@style/Tehres.ImageIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgSent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_editor_media_comment" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgSent"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:background="?selectableItemBackgroundBorderless"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_send_comment" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

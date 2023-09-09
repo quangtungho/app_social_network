@@ -1,0 +1,2 @@
+com/github/pgreze/reactions/BuildConfig.java
+ com.github.pgreze.reactions.BuildConfig

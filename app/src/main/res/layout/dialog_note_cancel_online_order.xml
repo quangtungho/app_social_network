@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:tag="layout/dialog_mall_menu_complex_0"
+    app:cardCornerRadius="@dimen/size_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gf_bg_options_diaolog"
+        android:paddingBottom="@dimen/margin_16dp">
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvOne"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center"
+            android:paddingEnd="@dimen/padding_30dp"
+            android:tag="binding_2"
+            android:text="@string/title_note_cancel_order"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_largexxx"
+            app:layout_constraintBottom_toBottomOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@color/LightGrey3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOne" />
+
+        <vn.techres.line.widget.TechResEditText
+            android:id="@+id/edNoteCancelOnlineOrder"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:background="@drawable/shape_skeleton_dialog"
+            android:completionThreshold="1"
+            android:gravity="start|center|top"
+            android:hint="@string/note_cancel_order"
+            android:inputType="textCapSentences|textMultiLine"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingTop="@dimen/padding_14dp"
+            android:paddingRight="@dimen/margin_16dp"
+            android:paddingBottom="@dimen/padding_14dp"
+            android:scrollbars="vertical"
+            android:selectAllOnFocus="true"
+            android:tag="binding_4"
+            android:textColor="@color/black"
+            android:textColorHint="@color/LightGrey1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/confirm"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/size_48"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:gravity="center"
+            android:tag="binding_8"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edNoteCancelOnlineOrder" />
+        <LinearLayout
+            android:id="@+id/llCancelOnlineOrder"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/size_48"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:tag="binding_9"
+            app:layout_constraintBottom_toBottomOf="@id/confirm"
+            app:layout_constraintEnd_toEndOf="@id/confirm"
+            app:layout_constraintStart_toStartOf="@id/confirm"
+            app:layout_constraintTop_toTopOf="@id/confirm" >
+            <Button
+                android:id="@+id/btnCancelOnlineOrder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:background="@drawable/border_orange_4dp"
+                android:text="@string/arrge"
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:tag="binding_9"
+                tools:ignore="ButtonStyle" />
+            <Button
+                android:id="@+id/btnBackOnlineOrder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_rectangle"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:text="@string/title_return"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold"
+                android:tag="binding_9"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

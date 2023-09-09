@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragment.game.drink.DrinkDetailGameFragment">
+
+            <ImageView
+                android:id="@+id/imgBackgroundDrinkDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgBackgroundTransparentDrinkDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_drink_detail"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgBackgroundContainerDrinkDetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_300"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgAvatarDrinkDetail"
+                android:layout_width="@dimen/size_200"
+                android:layout_height="@dimen/size_300"
+                app:layout_constraintBottom_toTopOf="@+id/viewDescription"
+                app:layout_constraintStart_toStartOf="@+id/imgBackgroundContainerDrinkDetail"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:id="@+id/viewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_200"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBackgroundDrinkDetail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_100"
+                app:layout_constraintBottom_toTopOf="@+id/viewDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgAvatarDrinkDetail"
+                tools:ignore="MissingConstraints" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvNameDrinkDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_big"
+                app:layout_constraintBottom_toBottomOf="@+id/view8"
+                app:layout_constraintEnd_toEndOf="@+id/view8"
+                app:layout_constraintStart_toStartOf="@+id/view8"
+                app:layout_constraintTop_toTopOf="@+id/view8" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvLinkDescriptionDrinkDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view8"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameDrinkDetail"
+                tools:ignore="MissingConstraints" />
+
+
+            <ImageView
+                android:id="@+id/imgQRCodeDrink"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="@dimen/size_150"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgAvatarDrinkDetail"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_70"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewDescription"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout23"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/view9"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout24"
+                app:layout_constraintStart_toStartOf="@+id/view9"
+                app:layout_constraintTop_toTopOf="@+id/viewDescription"
+                tools:ignore="MissingConstraints,UselessLeaf">
+
+                <vn.techres.line.widget.TechResTextViewLight
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:text="@string/net_weight"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvDescriptionDrinkDetailOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/font_large"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout24"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/view9"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout25"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout23"
+                app:layout_constraintTop_toTopOf="@+id/viewDescription"
+                tools:ignore="MissingConstraints,UselessLeaf">
+
+                <vn.techres.line.widget.TechResTextViewLight
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:text="@string/weight"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvDescriptionDrinkDetailTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/font_large"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout25"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/view9"
+                app:layout_constraintEnd_toEndOf="@+id/view9"
+                app:layout_constraintStart_toEndOf="@id/linearLayout24"
+                app:layout_constraintTop_toTopOf="@+id/viewDescription"
+                tools:ignore="MissingConstraints,UselessLeaf">
+
+                <vn.techres.line.widget.TechResTextViewLight
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:text="@string/barrel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvDescriptionDrinkDetailThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/font_large"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBackgroundDrinkDetail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+            <ImageView
+                android:id="@+id/imgDescriptionOne"
+                android:layout_width="@dimen/size_70"
+                android:layout_height="@dimen/size_70"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgDescriptionTwo"
+                app:layout_constraintStart_toStartOf="@+id/view10"
+                app:layout_constraintTop_toBottomOf="@+id/view9"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgDescriptionTwo"
+                android:layout_width="@dimen/size_70"
+                android:layout_height="@dimen/size_70"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgDescriptionThree"
+                app:layout_constraintTop_toBottomOf="@+id/view9"
+                app:layout_constraintStart_toEndOf="@+id/imgDescriptionOne"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgDescriptionThree"
+                android:layout_width="@dimen/size_70"
+                android:layout_height="@dimen/size_70"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view10"
+                app:layout_constraintStart_toEndOf="@+id/imgDescriptionTwo"
+                app:layout_constraintTop_toBottomOf="@+id/view9"
+                tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

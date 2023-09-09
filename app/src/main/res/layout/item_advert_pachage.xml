@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/size_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtCreateTime"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/font_normal"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="@dimen/size_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtName"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/font_normal"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="@dimen/size_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtAdvertPackage"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/font_normal"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="@dimen/size_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtPackageTime"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/font_normal"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="@dimen/size_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/lnStatus"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10dp"
+                android:textSize="@dimen/font_normal"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtApproved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/border_blue_50dp"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp"
+                    android:paddingStart="@dimen/padding_10dp"
+                    android:paddingEnd="@dimen/padding_10dp"
+                    android:text="@string/approved"
+                    android:visibility="gone" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtRunning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/border_green_50dp"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp"
+                    android:paddingStart="@dimen/padding_10dp"
+                    android:paddingEnd="@dimen/padding_10dp"
+                    android:text="@string/running"
+                    android:visibility="gone" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtRefuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/border_orange_50dp"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp"
+                    android:paddingStart="@dimen/padding_10dp"
+                    android:paddingEnd="@dimen/padding_10dp"
+                    android:text="@string/refuse"
+                    android:visibility="gone" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtPending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/border_blue_50dp"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp"
+                    android:paddingStart="@dimen/padding_10dp"
+                    android:paddingEnd="@dimen/padding_10dp"
+                    android:text="@string/pending_a"
+                    android:visibility="gone" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/border_red_50dp"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingBottom="@dimen/padding_5dp"
+                    android:paddingStart="@dimen/padding_10dp"
+                    android:paddingEnd="@dimen/padding_10dp"
+                    android:text="@string/pause"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/size_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtShowDisplay"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/font_normal"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="@dimen/size_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="@dimen/size_150"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10dp"
+                android:textSize="@dimen/font_normal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    android:src="@drawable/ic_player_pause"
+                    android:background="@drawable/border_green_50dp" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    android:src="@drawable/ic_pause_button"
+                    android:background="@drawable/border_green_50dp" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    android:padding="@dimen/padding_5dp"
+                    android:background="@drawable/border_orange_50dp"
+                    android:layout_marginStart="@dimen/margin_10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0_5"
+            android:background="@color/gray" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvMeRecharge"
+                android:layout_width="@dimen/size_70"
+                android:layout_height="@dimen/size_30"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/stroke_corners_orange_5dp"
+                android:drawableStart="@drawable/ic_user"
+                android:drawableTint="@color/main_bg"
+                android:gravity="center"
+                android:padding="@dimen/padding_5dp"
+                android:text="@string/i"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imgHomeNetwork"
+                android:layout_width="@dimen/size_100"
+                android:layout_height="@dimen/size_65"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_gmobile"
+                android:background="@drawable/stroke_corners_gray_5dp"
+                android:contentDescription="@string/default_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMeRecharge" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipLastNameCustomer"
+                style="@style/PhoneRecharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/i"
+                app:endIconDrawable="@drawable/ic_phone_book"
+                app:endIconTint="@color/blue_gg"
+                app:endIconCheckable="true"
+                app:endIconMode="custom"
+                app:layout_constraintBottom_toBottomOf="@+id/imgHomeNetwork"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgHomeNetwork">
+
+                <vn.techres.line.widget.TechResEditText
+                    android:id="@+id/edtPhoneCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/padding_30dp"
+                    android:paddingTop="@dimen/padding_20dp"
+                    android:paddingEnd="@dimen/padding_20dp"
+                    android:paddingBottom="@dimen/padding_20dp"
+                    android:textColor="@color/black"
+                    android:inputType="phone"
+                    android:textSize="@dimen/font_large" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcDenominations"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/view5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgHomeNetwork" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:layout_marginBottom="8dp"
+                android:background="@color/gray"
+                app:layout_constraintBottom_toTopOf="@+id/tvPriceRecharge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvPriceRecharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_largexxx"
+                app:layout_constraintBottom_toTopOf="@+id/btnRechargeNow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/techResTextView11" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/techResTextView11"
+                android:layout_width="@dimen/size_100"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/total_price"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_big"
+                app:layout_constraintBottom_toTopOf="@+id/btnRechargeNow"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnRechargeNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_btn_rectangle"
+                android:text="@string/recharge_now"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

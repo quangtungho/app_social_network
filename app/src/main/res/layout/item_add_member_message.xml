@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_8dp"
+        android:paddingBottom="@dimen/padding_8dp">
+
+        <LinearLayout
+            android:id="@+id/lnAddUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/bg_input_message"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:paddingTop="@dimen/padding_5dp"
+            android:paddingRight="@dimen/padding_10dp"
+            android:paddingBottom="@dimen/padding_5dp"
+            android:visibility="visible"
+            tools:ignore="UselessParent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAvatarOne"
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                app:cardCornerRadius="@dimen/size_7_5"
+                app:cardElevation="@dimen/size_0"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgAvatarOne"
+                    android:layout_width="@dimen/size_15"
+                    android:layout_height="@dimen/size_15"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAvatarTwo"
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                app:cardCornerRadius="@dimen/size_7_5"
+                app:cardElevation="@dimen/size_0"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgAvatarTwo"
+                    android:layout_width="@dimen/size_15"
+                    android:layout_height="@dimen/size_15"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAvatarThree"
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                app:cardCornerRadius="@dimen/size_7_5"
+                app:cardElevation="@dimen/size_0"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgAvatarThree"
+                    android:layout_width="@dimen/size_15"
+                    android:layout_height="@dimen/size_15"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNotificationAddUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/color_text_chat"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

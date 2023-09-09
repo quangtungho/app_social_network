@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_16dp">
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/tvTimeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_10dp"
+            android:background="@drawable/time_text_bg"
+            android:paddingLeft="@dimen/padding_7dp"
+            android:paddingTop="@dimen/padding_1dp"
+            android:paddingRight="@dimen/padding_7dp"
+            android:paddingBottom="@dimen/padding_1dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_tiny"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.giphy.sdk.ui.views.GPHMediaView
+            android:id="@+id/gifView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeHeader" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/size_100" />
+
+        <LinearLayout
+            android:id="@+id/lnReactionContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/gifView"
+            app:layout_constraintTop_toBottomOf="@+id/gifView">
+
+            <include
+                android:id="@+id/reaction"
+                layout="@layout/item_reaction_message" />
+
+        </LinearLayout>
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvTimeGiPhy"
+            style="@style/chat_time_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_5dp"
+            android:paddingRight="@dimen/padding_5dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/gifView"
+            app:layout_constraintTop_toBottomOf="@+id/gifView"
+            tools:ignore="RelativeOverlap" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

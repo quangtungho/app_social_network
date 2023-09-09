@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="notify"
+            type="vn.techres.line.data.model.Notifications" />
+        <variable
+            name="notificationsHandler"
+            type="vn.techres.line.interfaces.NotificationsHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selecter_click_white">
+
+        <ImageView
+            android:id="@+id/imgBackground"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="@dimen/size_64"
+            android:layout_height="@dimen/size_64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="@dimen/size_25"
+                app:cardElevation="0dp"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo_aloline_placeholder" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imgStatusFriend"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/circle_orange"
+                android:contentDescription="@string/description_place_image"
+                android:padding="@dimen/padding_5dp"
+                android:layout_margin="@dimen/margin_4dp"
+                android:src="@drawable/ic_friends"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/imgStatusNewsFeed"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:layout_marginEnd="@dimen/margin_4dp"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:background="@drawable/circle_green"
+                android:contentDescription="@string/description_place_image"
+                android:padding="@dimen/padding_5dp"
+                android:src="@drawable/ic_diamond"
+                android:visibility="gone"
+                tools:ignore="UseAppTint" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout29"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/relativeLayout4"
+            app:layout_constraintEnd_toStartOf="@+id/imgMoreNotify"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayout4"
+            app:layout_constraintTop_toTopOf="@+id/relativeLayout4">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvContentNotify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="@color/black" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvTimeNotify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/imgMoreNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_alignParentEnd="true"
+            android:background="@color/transparent"
+            android:contentDescription="@string/default_image"
+            android:src="@drawable/ic_more_horizontal_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout29"
+            android:layout_marginEnd="@dimen/margin_12dp"
+            android:paddingStart="@dimen/padding_8dp"
+            tools:ignore="RtlSymmetry" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtStatusFriend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgMoreNotify"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout29"/>
+
+        <LinearLayout
+            android:id="@+id/lnFriend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgMoreNotify"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout29"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnRefuseFriend"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/size_40"
+                android:background="@drawable/background_gray"
+                android:text="@string/refuse"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnAcceptFriend"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/size_40"
+                android:background="@drawable/corners_orange_4dp"
+                android:text="@string/accept"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/margin_20dp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

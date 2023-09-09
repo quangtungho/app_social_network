@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <merge>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_200">
+
+            <ImageView
+                android:id="@+id/imgCancelCall"
+                android:layout_width="@dimen/size_60"
+                android:layout_height="@dimen/size_60"
+                android:contentDescription="@string/default_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/reject_call_button_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgMoreCall"
+                android:layout_width="@dimen/size_54"
+                android:layout_height="@dimen/size_54"
+                app:layout_constraintBottom_toBottomOf="@+id/imgCancelCall"
+                app:layout_constraintEnd_toStartOf="@+id/imgCancelCall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgCancelCall"
+                app:srcCompat="@drawable/incall_button_menu_selector"
+                android:contentDescription="@string/default_image"/>
+
+            <ImageView
+                android:id="@+id/imgAudioDefault"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/default_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/incall_speaker_button_selector"
+                app:layout_constraintBottom_toBottomOf="@+id/imgCancelCall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgCancelCall"
+                app:layout_constraintTop_toTopOf="@+id/imgCancelCall" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </merge>
+
+</layout>

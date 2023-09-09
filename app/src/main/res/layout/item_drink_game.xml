@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_250">
+    <RelativeLayout
+        android:id="@+id/rlDrink"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginEnd="@dimen/margin_5dp"
+        android:layout_marginBottom="@dimen/margin_20dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green"
+            tools:ignore="ContentDescription" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_10dp"
+            android:orientation="vertical">
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/account_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"
+                />
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/account_name"
+                android:textSize="@dimen/font_small"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imgLogoDrink"
+        android:layout_width="@dimen/size_50"
+        android:layout_height="@dimen/size_200"
+        android:layout_marginEnd="@dimen/margin_10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/rlDrink"/>
+</RelativeLayout>

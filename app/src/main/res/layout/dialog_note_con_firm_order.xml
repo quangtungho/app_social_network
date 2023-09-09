@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:tag="layout/dialog_mall_menu_complex_0"
+    app:cardCornerRadius="@dimen/size_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gf_bg_options_diaolog"
+        android:paddingTop="@dimen/padding_5dp"
+        android:paddingBottom="@dimen/margin_16dp">
+
+        <ImageView
+            android:id="@+id/imgCloseNoteConFirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:paddingTop="@dimen/padding_10dp"
+            android:tag="binding_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            tools:ignore="ContentDescription" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvOne"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:tag="binding_2"
+            android:text="@string/title_note_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_largexxx"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCloseEditNote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgCloseNoteConFirm"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@color/LightGrey3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOne" />
+
+        <vn.techres.line.widget.TechResEditText
+            android:id="@+id/edNoteConFirm"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:background="@drawable/shape_skeleton_dialog"
+            android:completionThreshold="1"
+            android:gravity="start|center|top"
+            android:hint="@string/title_note_address"
+            android:inputType="textCapSentences|textMultiLine"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingTop="@dimen/padding_14dp"
+            android:paddingRight="@dimen/margin_16dp"
+            android:paddingBottom="@dimen/padding_14dp"
+            android:scrollbars="vertical"
+            android:selectAllOnFocus="true"
+            android:tag="binding_4"
+            android:textColor="@color/black"
+            android:textColorHint="@color/LightGrey1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/confirm"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/size_48"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:gravity="center"
+            android:tag="binding_8"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edNoteConFirm" />
+
+        <Button
+            android:id="@+id/btnSaveNote"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/size_48"
+            android:background="@drawable/bg_btn_rectangle"
+            android:gravity="center"
+            android:tag="binding_9"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_big"
+            app:layout_constraintBottom_toBottomOf="@id/confirm"
+            app:layout_constraintEnd_toEndOf="@id/confirm"
+            app:layout_constraintStart_toStartOf="@id/confirm"
+            app:layout_constraintTop_toTopOf="@id/confirm"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

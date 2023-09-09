@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary_text"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:background="@drawable/selector_view_transparent"
+            android:padding="@dimen/padding_8dp"
+            android:src="@drawable/ic_left_arrow"
+            android:tag="binding_1" />
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:tag="binding_2" />
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/selector_view_transparent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_12dp"
+            android:paddingRight="@dimen/padding_12dp"
+            android:tag="binding_3"
+            android:text="@string/common_label_done" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:tag="binding_4"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3" />
+</LinearLayout>

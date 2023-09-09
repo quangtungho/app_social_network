@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_12dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:layout_marginHorizontal="@dimen/margin_5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_orange_radius"
+            android:padding="@dimen/padding_5dp">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtTagReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phục vụ tốt"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

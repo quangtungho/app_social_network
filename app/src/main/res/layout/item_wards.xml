@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvWards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_large"
+        android:textColor="@color/black"
+        android:padding="@dimen/padding_10dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_2"
+        android:background="@color/gray_background"/>
+</LinearLayout>

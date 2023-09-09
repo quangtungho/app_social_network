@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding_5dp"
+    android:paddingBottom="@dimen/padding_5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTypingChat"
+        android:layout_width="@dimen/size_25"
+        android:layout_height="@dimen/size_25"
+        android:layout_marginStart="@dimen/margin_5dp"
+        android:layout_marginEnd="@dimen/margin_5dp"
+        android:layout_alignParentStart="true"
+        app:cardCornerRadius="@dimen/size_12_5"
+        app:cardElevation="@dimen/size_0">
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/default_image"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:id="@+id/lnTypingChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/cvTypingChat"
+        android:background="@drawable/state_message_left"
+        android:paddingTop="@dimen/padding_2dp"
+        android:paddingEnd="@dimen/padding_7dp"
+        android:paddingStart="@dimen/padding_7dp"
+        android:paddingBottom="@dimen/padding_2dp"
+        android:layout_marginBottom="@dimen/margin_2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        tools:ignore="UselessParent">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Small.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_10dp"
+            app:SpinKit_Color="@color/color_4D4D4D"/>
+    </LinearLayout>
+</RelativeLayout>

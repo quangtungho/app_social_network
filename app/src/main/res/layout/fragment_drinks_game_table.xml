@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.ShowVideoImageFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:layout_weight="1">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvNameUserDrink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/font_small"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:text="@string/account_name"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/svDrink"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignStart="@+id/tvNameUserDrink"
+                        android:background="@drawable/bg_form_input"
+                        android:gravity="center_vertical"
+                        android:theme="@style/SearchView"
+                        android:visibility="gone"
+                        app:closeIcon="@drawable/ic_messenger_close"
+                        app:iconifiedByDefault="false"
+                        app:layout_constraintEnd_toStartOf="@+id/imgSearchDrink"
+                        app:layout_constraintStart_toEndOf="@+id/tvNameUserDrink"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:queryBackground="@android:color/transparent"
+                        app:queryHint="Tìm kiếm"
+                        app:searchIcon="@drawable/ic_search"
+                        tools:ignore="NestedWeights" />
+
+                    <ImageView
+                        android:id="@+id/imgSearchDrink"
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_search"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardView"
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    app:cardCornerRadius="@dimen/size_15"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgAvatarUserDrink"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/logo_aloline_placeholder"
+                        android:contentDescription="@string/default_image"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayoutDrink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:tabIndicatorColor="@color/main_bg"
+                    app:tabSelectedTextColor="@color/main_bg"
+                    app:tabTextColor="@color/nobel"
+                    app:tabTextAppearance="@style/MyTabLayout"></com.google.android.material.tabs.TabLayout>
+
+                <com.sbrukhanda.fragmentviewpager.FragmentViewPager
+                    android:id="@+id/fragmentPagerDrink"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray_light" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

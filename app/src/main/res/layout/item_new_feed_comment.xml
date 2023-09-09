@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_10dp">
+
+            <LinearLayout
+                android:id="@+id/lnComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnCommentOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        app:cardCornerRadius="@dimen/size_20"
+                        app:cardElevation="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivCommentAvatarOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_user_placeholder" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/commentCont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/margin_10dp"
+                        android:layout_marginEnd="@dimen/margin_10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/feed_comment_item_bg">
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/tvCommentUserNameOne"
+                                style="@style/TextDisplayName"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvCommentContentOne"
+                                style="@style/Comment.Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:lineSpacingMultiplier="1.1" />
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvCommentOne"
+                            android:layout_width="@dimen/size_150"
+                            android:layout_height="@dimen/size_150"
+                            app:cardCornerRadius="@dimen/size_10"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginBottom="@dimen/margin_5dp">
+
+                            <ImageView
+                                android:id="@+id/imgCommentOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="@string/description_place_image" />
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView
+                            android:id="@+id/imgStickerOne"
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginBottom="@dimen/margin_5dp"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_2dp"
+                            android:layout_marginBottom="@dimen/margin_8dp">
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvCommentTimeOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:textSize="@dimen/font_small" />
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/tvFavoriteOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:paddingStart="@dimen/padding_20dp"
+                                android:paddingEnd="@dimen/padding_20dp"
+                                android:text="@string/favorite"
+                                android:textColor="@color/main_gray_dim"
+                                android:visibility="visible"
+                                tools:ignore="RtlHardcoded" />
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/txtReplyOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:text="@string/title_reply" />
+
+                            <LinearLayout
+                                android:id="@+id/lnReactionCommentOne"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:id="@+id/imgReactionCommentOne"
+                                    android:layout_width="@dimen/size_16"
+                                    android:layout_height="@dimen/size_16"
+                                    android:src="@drawable/icon_lovely"
+                                    android:contentDescription="@string/description_place_image"
+                                    android:layout_marginEnd="@dimen/margin_5dp" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:id="@+id/txtReactionCommentOne"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnCommentTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        app:cardCornerRadius="@dimen/size_20"
+                        app:cardElevation="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="@dimen/margin_8dp">
+
+                        <ImageView
+                            android:id="@+id/ivCommentAvatarTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_user_placeholder" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/commentContTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/margin_10dp"
+                        android:layout_marginEnd="@dimen/margin_10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/feed_comment_item_bg">
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/tvCommentUserNameTwo"
+                                style="@style/TextDisplayName"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvCommentContentTwo"
+                                style="@style/Comment.Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:lineSpacingMultiplier="1.1" />
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvCommentTwo"
+                            android:layout_width="@dimen/size_150"
+                            android:layout_height="@dimen/size_150"
+                            app:cardCornerRadius="@dimen/size_10"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginBottom="@dimen/margin_5dp">
+
+                            <ImageView
+                                android:id="@+id/imgCommentTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="@string/description_place_image" />
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView
+                            android:id="@+id/imgStickerTwo"
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginBottom="@dimen/margin_5dp"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_2dp"
+                            android:layout_marginBottom="@dimen/margin_8dp">
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvCommentTimeTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:textSize="@dimen/font_small" />
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/tvFavoriteTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:paddingStart="@dimen/padding_20dp"
+                                android:paddingEnd="@dimen/padding_20dp"
+                                android:text="@string/favorite"
+                                android:textColor="@color/main_gray_dim"
+                                android:visibility="visible"
+                                tools:ignore="RtlHardcoded" />
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/txtReplyTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:text="@string/title_reply" />
+
+                            <LinearLayout
+                                android:id="@+id/lnReactionCommentTwo"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:id="@+id/imgReactionCommentTwo"
+                                    android:layout_width="@dimen/size_16"
+                                    android:layout_height="@dimen/size_16"
+                                    android:src="@drawable/icon_lovely"
+                                    android:contentDescription="@string/description_place_image"
+                                    android:layout_marginEnd="@dimen/margin_5dp" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:id="@+id/txtReactionCommentTwo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnCommentThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        app:cardCornerRadius="@dimen/size_20"
+                        app:cardElevation="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivCommentAvatarThree"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_user_placeholder" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/commentContThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/margin_10dp"
+                        android:layout_marginEnd="@dimen/margin_10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/feed_comment_item_bg">
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/tvCommentUserNameThree"
+                                style="@style/TextDisplayName"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvCommentContentThree"
+                                style="@style/Comment.Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:lineSpacingMultiplier="1.1"
+                                android:textSize="@dimen/font_small" />
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvCommentThree"
+                            android:layout_width="@dimen/size_150"
+                            android:layout_height="@dimen/size_150"
+                            app:cardCornerRadius="@dimen/size_10"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginBottom="@dimen/margin_5dp">
+
+                            <ImageView
+                                android:id="@+id/imgCommentThree"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="@string/description_place_image" />
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView
+                            android:id="@+id/imgStickerThree"
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginBottom="@dimen/margin_5dp"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_2dp"
+                            android:layout_marginBottom="@dimen/margin_8dp">
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvCommentTimeThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:textSize="@dimen/font_small" />
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/tvFavoriteThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:paddingStart="@dimen/padding_20dp"
+                                android:paddingEnd="@dimen/padding_20dp"
+                                android:text="@string/favorite"
+                                android:textColor="@color/main_gray_dim"
+                                android:visibility="visible"
+                                tools:ignore="RtlHardcoded" />
+
+                            <vn.techres.line.widget.TechResTextViewBold
+                                android:id="@+id/txtReplyThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:text="@string/title_reply" />
+
+                            <LinearLayout
+                                android:id="@+id/lnReactionCommentThree"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:id="@+id/imgReactionCommentThree"
+                                    android:layout_width="@dimen/size_16"
+                                    android:layout_height="@dimen/size_16"
+                                    android:src="@drawable/icon_lovely"
+                                    android:contentDescription="@string/description_place_image"
+                                    android:layout_marginEnd="@dimen/margin_5dp" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:id="@+id/txtReactionCommentThree"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/margin_8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/size_40"
+                    android:layout_height="@dimen/size_40"
+                    app:cardCornerRadius="@dimen/size_20"
+                    android:layout_gravity="center"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/ivMyAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/default_image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user_placeholder" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_comment_gray"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/tagingCommentEdt"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/write_comment"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="14sp"
+                        android:maxLines="4"
+                        android:visibility="gone"
+                        tools:ignore="NestedWeights"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/tvCommentClick"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/btnAddSticker"
+                        android:background="@null"
+                        android:hint="@string/write_comment"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="14sp"
+                        android:maxLines="4"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/imgEmoji"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_add_emo_comment"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/mediaIv"
+                        android:layout_width="@dimen/size_45"
+                        android:layout_height="@dimen/size_45"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:padding="@dimen/_8sdp"
+                        app:srcCompat="@drawable/ic_gallery" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/imgSent"
+                        android:layout_width="@dimen/size_45"
+                        android:layout_height="@dimen/size_45"
+                        android:clickable="false"
+                        android:padding="@dimen/_8sdp"
+                        android:src="@drawable/ic_send_comment"
+                        android:background="@color/transparent"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </merge>
+</layout>

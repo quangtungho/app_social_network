@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_300"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_fileName="team_business.json" />
+        <Button
+            android:id="@+id/btnCloseCheckVersion"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:layout_gravity="right"
+            android:alpha="0.5"
+            android:background="@drawable/ic_clear"
+            android:backgroundTint="@color/main_bg"
+            tools:ignore="RtlHardcoded"
+            android:visibility="visible"/>
+    </FrameLayout>
+
+    <vn.techres.line.widget.TechResTextViewBold
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:gravity="center"
+        android:text="@string/force_version_title_new_version"
+        android:textAllCaps="true"
+        android:textColor="@color/color_main"
+        android:textSize="@dimen/font_big" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:gravity="center"
+        android:text="@string/force_version_title_sub_title"
+        android:textSize="@dimen/font_big" />
+
+    <Button
+        android:id="@+id/btnUpdateVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_45"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@drawable/border_main_5dp"
+        android:paddingTop="8.0dip"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_8dp"
+        android:text="@string/force_version_btn_update_now" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvDescriptionVersionNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/font_normal"
+        android:text="@string/force_version_description" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.plattysoft.leonids"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+8-->/Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:8:5-10:42
+9        android:minSdkVersion="21"
+9-->/Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:8:5-10:42
+10        android:targetSdkVersion="30"
+10-->/Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:9:9-38
+11        tools:ignore="GradleOverrides" />
+11-->/Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:10:9-39
+12
+13    <application android:allowBackup="true" >
+13-->/Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:12:5-15:19
+13-->/Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:13:9-35
+14    </application>
+15
+16</manifest>

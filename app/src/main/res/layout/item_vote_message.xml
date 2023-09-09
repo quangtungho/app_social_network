@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_4dp"
+        android:background="@drawable/background_non_vote_message"
+        android:padding="@dimen/padding_16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout27"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout27">
+
+        <RadioButton
+            android:id="@+id/rbChoosePlan"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:buttonTint="@color/main_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvAnswer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingEnd="@dimen/padding_4dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintEnd_toStartOf="@+id/lnUserVote"
+            app:layout_constraintStart_toEndOf="@+id/rbChoosePlan"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:id="@+id/lnUserVote"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvAnswer">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvUserOne"
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                app:cardCornerRadius="@dimen/size_7_5"
+                app:cardElevation="@dimen/size_0">
+                <ImageView
+                    android:id="@+id/imgUserOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/default_image"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvUserTwo"
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                app:cardCornerRadius="@dimen/size_7_5"
+                app:cardElevation="@dimen/size_0">
+                <ImageView
+                    android:id="@+id/imgUserTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/default_image"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvUserThree"
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                app:cardCornerRadius="@dimen/size_7_5"
+                app:cardElevation="@dimen/size_0">
+                <ImageView
+                    android:id="@+id/imgUserThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/default_image"/>
+            </androidx.cardview.widget.CardView>
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNumberUser"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_15"
+                android:background="@drawable/corners_orange_20dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/padding_4dp"
+                android:paddingEnd="@dimen/padding_4dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny"
+                android:visibility="invisible"
+                />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

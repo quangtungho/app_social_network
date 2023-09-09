@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/loading_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:viewBindingIgnore="true">
+
+        <ProgressBar
+            style="@style/ProgressBarCircleNormal"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/size_5"
+            android:indeterminate="true"
+            android:indeterminateBehavior="repeat"
+            android:theme="@style/CircularProgress" />
+
+
+    </FrameLayout>
+</layout>

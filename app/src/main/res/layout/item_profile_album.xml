@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="@dimen/size_170"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/margin_10dp">
+
+        <LinearLayout
+            android:id="@+id/lnCreateAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/size_150"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/main_bg"
+                android:layout_marginTop="@dimen/size_3"
+                android:layout_marginBottom="@dimen/size_1"
+                android:layout_gravity="center" />
+
+            <View
+                android:layout_width="@dimen/size_160"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/main_bg"
+                android:layout_marginTop="@dimen/size_1"
+                android:layout_marginBottom="@dimen/size_2"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="@dimen/size_170"
+                android:layout_height="@dimen/size_170"
+                android:src="@drawable/ic_add_white"
+                android:tint="@color/main_bg"
+                android:padding="70dp"
+                android:background="@drawable/border_orange_1dp" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tạo album"
+                android:textColor="@color/main_bg"
+                android:layout_marginTop="@dimen/margin_3dp"
+                android:layout_marginBottom="@dimen/margin_3dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="@dimen/size_150"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray_dark"
+                android:layout_marginTop="@dimen/size_3"
+                android:layout_marginBottom="@dimen/size_1"
+                android:layout_gravity="center" />
+
+            <View
+                android:layout_width="@dimen/size_160"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray_dark"
+                android:layout_marginTop="@dimen/size_1"
+                android:layout_marginBottom="@dimen/size_2"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/imgAlbum"
+                android:layout_width="@dimen/size_170"
+                android:layout_height="@dimen/size_170"
+                android:src="@color/gray_dark"
+                android:scaleType="centerCrop"
+                android:background="@drawable/border_orange_1dp" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvAlbumName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Album 1"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_marginBottom="@dimen/margin_3dp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvAlbumNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 ảnh"
+                android:layout_marginBottom="@dimen/margin_3dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

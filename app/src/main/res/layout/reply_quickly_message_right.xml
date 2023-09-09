@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/attachment_image_view"
+        android:layout_height="match_parent"
+        android:layout_width="@dimen/size_150"
+        android:layout_margin="@dimen/size_2"
+        android:contentDescription="@string/default_image" />
+</layout>

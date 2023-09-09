@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="vn.techres.line.fragment.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_qRCodeManagerFragment"
+            app:destination="@id/qRCodeManagerFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_chooseFoodRewardPointsFragment"
+            app:destination="@id/chooseFoodRewardPointsFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_foodTakeAwayDetailFragment"
+            app:destination="@id/foodTakeAwayDetailFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_branchFoodsFragment"
+            app:destination="@id/branchFoodsFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_chooseBranchFragment"
+            app:destination="@id/chooseBranchFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_codeBarFragment"
+            app:destination="@id/codeBarFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_orderManagerFragment"
+            app:destination="@id/orderManagerFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_bookingInformaitonManagerFragment"
+            app:destination="@id/bookingInformationManagerFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_addMemberGroupChatFragment"
+            app:destination="@id/addMemberGroupChatFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_chatGroupFragment"
+            app:destination="@id/chatGroupFragment"
+
+            />
+
+        <action
+            android:id="@+id/action_mainFragment_to_chatPersonalFragment"
+            app:destination="@id/chatPersonalFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+
+
+        <action
+            android:id="@+id/action_mainFragment_to_restaurantCardManageFragment"
+            app:destination="@id/restaurantCardManageFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_chooseBranchGameFragment"
+            app:destination="@id/chooseBranchGameFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_foodTopFragment"
+            app:destination="@id/foodTopFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/registryFragment"
+        android:name="vn.techres.line.fragment.account.RegistryFragment"
+        android:label="fragment_registry"
+        tools:layout="@layout/fragment_registry">
+        <action
+            android:id="@+id/action_registryFragment_to_verifyPhoneFragment"
+            app:destination="@id/verifyPhoneFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="vn.techres.line.fragment.setting.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+
+    </fragment>
+    <fragment
+        android:id="@+id/orderManagerFragment"
+        android:name="vn.techres.line.fragment.order.OrderManagerFragment"
+        android:label="fragment_order_manager"
+        tools:layout="@layout/fragment_order_manager">
+        <action
+            android:id="@+id/action_orderManagerFragment_to_orderCustomerComFirmedFragment"
+            app:destination="@id/orderCustomerComFirmedFragment" />
+        <action
+            android:id="@+id/action_orderManagerFragment_to_ordersFragment"
+            app:destination="@id/ordersCustomerFragment" />
+        <action
+            android:id="@+id/action_orderManagerFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_orderManagerFragment_to_billFragment"
+            app:destination="@id/billFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantCardFragment"
+        android:name="vn.techres.line.fragment.card.RestaurantCardFragment"
+        android:label="fragment_member_card"
+        tools:layout="@layout/fragment_restaurant_card">
+        <action
+            android:id="@+id/action_restaurantCardFragment_to_barcodeMemberCardFragment"
+            app:destination="@id/barcodeMemberCardFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersCustomerFragment"
+        android:name="vn.techres.line.fragment.order.OrdersCustomerFragment"
+        android:label="fragment_orders_customer"
+        tools:layout="@layout/fragment_orders_customer">
+
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="vn.techres.line.fragment.main.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account">
+
+    </fragment>
+    <fragment
+        android:id="@+id/newsFeedFragment"
+        android:name="vn.techres.line.fragment.newsfeed.NewsFeedFragment"
+        android:label="fragment_news_feed"
+        tools:layout="@layout/fragment_news_feed">
+
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="vn.techres.line.fragment.order.OrderDetailFragment"
+        android:label="fragment_order_detail"
+        tools:layout="@layout/fragment_order_detail" />
+
+    <fragment
+        android:id="@+id/chooseFoodRewardPointsFragment"
+        android:name="vn.techres.line.fragment.food.ChooseFoodRewardPointsFragment"
+        android:label="fragment_choose_food_reward_points"
+        tools:layout="@layout/fragment_choose_food_reward_points">
+        <action
+            android:id="@+id/action_chooseFoodRewardPointsFragment_to_detailFoodPointFragment"
+            app:destination="@id/detailFoodPointFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_chooseFoodRewardPointsFragment_to_conFirmOrderFragment"
+            app:destination="@id/conFirmOrderFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_chooseFoodRewardPointsFragment_to_billFragment"
+            app:destination="@id/billFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_chooseFoodRewardPointsFragment_to_chooseBranchFragment"
+            app:destination="@id/chooseBranchFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailMoreBranchFragment"
+        android:name="vn.techres.line.fragment.branch.DetailMoreBranchFragment"
+        android:label="fragment_detail_more_restaurant"
+        tools:layout="@layout/fragment_detail_more_branch" />
+
+
+    <fragment
+        android:id="@+id/verifyPhoneFragment"
+        android:name="vn.techres.line.fragment.account.VerifyPhoneFragment"
+        android:label="fragment_verify_phone"
+        tools:layout="@layout/fragment_verify_phone"></fragment>
+
+    <fragment
+        android:id="@+id/conFirmOrderFragment"
+        android:name="vn.techres.line.fragment.confirm.ConFirmOrderFragment"
+        android:label="fragment_con_firm_order"
+        tools:layout="@layout/fragment_con_firm_order">
+        <action
+            android:id="@+id/action_conFirmOrderFragment_to_orderSuccessFragment"
+            app:destination="@id/orderSuccessFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+
+        <action
+            android:id="@+id/action_conFirmOrderFragment_to_chooseFoodRewardPointsFragment"
+            app:destination="@id/chooseFoodRewardPointsFragment"
+            app:enterAnim="@anim/translate_to_left"
+            app:exitAnim="@anim/translate_from_right"
+            app:popEnterAnim="@anim/translate_to_right"
+            app:popExitAnim="@anim/translate_from_left" />
+        <action
+            android:id="@+id/action_conFirmOrderFragment_to_branchFoodsFragment"
+            app:destination="@id/branchFoodsFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_conFirmOrderFragment_to_addressFragment"
+            app:destination="@id/addressFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailDishFragment"
+        android:name="vn.techres.line.fragment.food.DetailDishFragment"
+        android:label="fragment_detail_dish"
+        tools:layout="@layout/fragment_detail_dish" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="vn.techres.line.fragment.account.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password">
+
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_verifyPhoneFragment"
+            app:destination="@id/verifyPhoneFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/chooseBranchFragment"
+        android:name="vn.techres.line.fragment.branch.ChooseBranchFragment"
+        android:label="fragment_choose_branch"
+        tools:layout="@layout/fragment_choose_branch">
+        <action
+            android:id="@+id/action_chooseBranchFragment_to_chooseFoodRewardPointsFragment"
+            app:destination="@id/chooseFoodRewardPointsFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_chooseBranchFragment_to_branchFoodsFragment"
+            app:destination="@id/branchFoodsFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_chooseBranchFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/billFragment"
+        android:name="vn.techres.line.fragment.bill.BillFragment"
+        android:label="fragment_bill"
+        tools:layout="@layout/fragment_bill">
+        <action
+            android:id="@+id/action_billFragment_to_chooseFoodRewardPointsFragment"
+            app:destination="@id/chooseFoodRewardPointsFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_billFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/branchFoodsFragment"
+        android:name="vn.techres.line.fragment.branch.BranchFoodsFragment"
+        android:label="fragment_branch_foods"
+        tools:layout="@layout/fragment_branch_foods">
+        <action
+            android:id="@+id/action_branchFoodsFragment_to_detailDishFragment"
+            app:destination="@id/detailDishFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_branchFoodsFragment_to_conFirmOrderFragment"
+            app:destination="@id/conFirmOrderFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="vn.techres.line.fragment.address.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" />
+    <fragment
+        android:id="@+id/barcodeMemberCardFragment"
+        android:name="vn.techres.line.fragment.qr.BarcodeMemberCardFragment"
+        android:label="fragment_barcode_member_card"
+        tools:layout="@layout/fragment_barcode_member_card" />
+    <fragment
+        android:id="@+id/orderSuccessFragment"
+        android:name="vn.techres.line.fragment.order.OrderSuccessFragment"
+        android:label="fragment_order_success"
+        tools:layout="@layout/fragment_order_success">
+        <action
+            android:id="@+id/action_orderSuccessFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="vn.techres.line.fragment.main.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+    <fragment
+        android:id="@+id/bookingInformationManagerFragment"
+        android:name="vn.techres.line.fragment.booking.BookingInformationManagerFragment"
+        android:label="fragment_booking_informaiton_manager"
+        tools:layout="@layout/fragment_booking_informaiton_manager">
+        <action
+            android:id="@+id/action_bookingInformaitonManagerFragment_to_processingBookingFragment"
+            app:destination="@id/processingBookingFragment" />
+        <action
+            android:id="@+id/action_bookingInformaitonManagerFragment_to_processedBookingFragment"
+            app:destination="@id/processedBookingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/processingBookingFragment"
+        android:name="vn.techres.line.fragment.booking.ProcessingBookingFragment"
+        android:label="fragment_processing_booking"
+        tools:layout="@layout/fragment_processing_booking" />
+    <fragment
+        android:id="@+id/processedBookingFragment"
+        android:name="vn.techres.line.fragment.booking.ProcessedBookingFragment"
+        android:label="fragment_processed_booking"
+        tools:layout="@layout/fragment_processed_booking" />
+    <fragment
+        android:id="@+id/orderCustomerComFirmedFragment"
+        android:name="vn.techres.line.fragment.order.OrderCustomerComFirmedFragment"
+        android:label="fragment_order_customer_com_firmed"
+        tools:layout="@layout/fragment_order_customer_com_firmed" />
+    <fragment
+        android:id="@+id/formConfirmBirthdayInfoFragment"
+        android:name="vn.techres.line.fragment.birthday.FormConfirmBirthdayInfoFragment"
+        android:label="fragment_form_confirm_birthday_info"
+        tools:layout="@layout/fragment_form_confirm_birthday_info" />
+
+    <fragment
+        android:id="@+id/codeBarFragment"
+        android:name="vn.techres.line.fragment.qr.CodeBarFragment"
+        android:label="fragment_code_bar"
+        tools:layout="@layout/fragment_code_bar">
+        <action
+            android:id="@+id/action_codeBarFragment_to_billFragment"
+            app:destination="@id/billFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="vn.techres.line.fragment.feedback.FeedbackFragment"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback">
+        <action
+            android:id="@+id/action_feedbackFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFoodPointFragment"
+        android:name="vn.techres.line.fragment.food.DetailFoodPointFragment"
+        android:label="fragment_detail_food_point"
+        tools:layout="@layout/fragment_detail_food_point" />
+    <fragment
+        android:id="@+id/chatGroupFragment"
+        android:name="vn.techres.line.fragment.chat.group.ChatGroupFragment"
+        android:label="fragment_chat_group"
+        tools:layout="@layout/fragment_chat_group">
+        <action
+            android:id="@+id/action_chatGroupFragment_to_detailGroupFragment"
+            app:destination="@id/detailGroupFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_chatGroupFragment_to_shareMessageGroupFragment"
+            app:destination="@id/shareMessageFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/detailGroupFragment"
+        android:name="vn.techres.line.fragment.chat.group.DetailGroupFragment"
+        android:label="fragment_detail_group"
+        tools:layout="@layout/fragment_detail_group">
+        <action
+            android:id="@+id/action_detailGroupFragment_to_memberGroupFragment"
+            app:destination="@id/memberGroupFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_detailGroupFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:popEnterAnim="@anim/translate_from_left" />
+        <action
+            android:id="@+id/action_detailGroupFragment_to_mediaChatFragment"
+            app:destination="@id/mediaChatFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupChatFragment"
+        android:name="vn.techres.line.fragment.chat.GroupChatFragment"
+        android:label="fragment_group_chat"
+        tools:layout="@layout/fragment_group_chat">
+
+    </fragment>
+    <fragment
+        android:id="@+id/addMemberGroupChatFragment"
+        android:name="vn.techres.line.fragment.chat.AddMemberGroupFragment"
+        android:label="fragment_add_member_group_chat"
+        tools:layout="@layout/fragment_add_member_group_chat">
+    </fragment>
+    <fragment
+        android:id="@+id/memberGroupFragment"
+        android:name="vn.techres.line.fragment.chat.MemberGroupFragment"
+        android:label="fragment_member_group"
+        tools:layout="@layout/fragment_member_group">
+        <action
+            android:id="@+id/action_memberGroupFragment_to_createGroupChatFragment"
+            app:destination="@id/addMemberGroupChatFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailNewfeedFragment"
+        android:name="vn.techres.line.fragment.newsfeed.DetailNewsfeedFragment"
+        android:label="fragment_detail_newfeed"
+        tools:layout="@layout/fragment_detail_newfeed" />
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="vn.techres.line.fragment.game.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_listRoomGameFragment"
+            app:destination="@id/listRoomGameFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_gameFragment_to_drinksGameTableFragment"
+            app:destination="@id/drinksGameTableFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listRoomGameFragment"
+        android:name="vn.techres.line.fragment.game.luckywheel.ListRoomGameFragment"
+        android:label="fragment_list_room_game"
+        tools:layout="@layout/fragment_list_room_game">
+        <action
+            android:id="@+id/action_listRoomGameFragment_to_QRCodeGameFragment"
+            app:destination="@id/qRCodeGameFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/qRCodeGameFragment"
+        android:name="vn.techres.line.fragment.game.QRCodeGameFragment"
+        android:label="fragment_q_r_code_game"
+        tools:layout="@layout/fragment_q_r_code_game">
+        <action
+            android:id="@+id/action_QRCodeGameFragment_to_luckyWheelGameFragment"
+            app:destination="@id/luckyWheelGameFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="vn.techres.line.fragment.advert.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
+    <fragment
+        android:id="@+id/chatPersonalFragment"
+        android:name="vn.techres.line.fragment.chat.personal.ChatPersonalFragment"
+        android:label="fragment_chat_personal"
+        tools:layout="@layout/fragment_chat_personal">
+        <action
+            android:id="@+id/action_chatPersonalFragment_to_detailChatPersonalFragment"
+            app:destination="@id/detailChatPersonalFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+
+        <action
+            android:id="@+id/action_chatPersonalFragment_to_shareMessageFragment"
+            app:destination="@id/shareMessageFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/luckyWheelGameFragment"
+        android:name="vn.techres.line.fragment.game.luckywheel.LuckyWheelGameFragment"
+        android:label="fragment_lucky_wheel_game"
+        tools:layout="@layout/fragment_lucky_wheel_game" />
+    <fragment
+        android:id="@+id/detailChatPersonalFragment"
+        android:name="vn.techres.line.fragment.chat.personal.DetailPersonalFragment"
+        android:label="fragment_detail_chat_personal"
+        tools:layout="@layout/fragment_detail_chat_personal">
+        <action
+            android:id="@+id/action_detailChatPersonalFragment_to_mediaChatFragment"
+            app:destination="@id/mediaChatFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantCardManageFragment"
+        android:name="vn.techres.line.fragment.card.RestaurantCardManageFragment"
+        android:label="fragment_restaurant_card_manage"
+        tools:layout="@layout/fragment_restaurant_card_manage" />
+
+    <fragment
+        android:id="@+id/drinksGameTableFragment"
+        android:name="vn.techres.line.fragment.game.drink.DrinksGameTableFragment"
+        android:label="fragment_drinks_game_table"
+        tools:layout="@layout/fragment_drinks_game_table">
+        <action
+            android:id="@+id/action_drinksGameTableFragment_to_drinkDetailGameFragment"
+            app:destination="@id/drinkDetailGameFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/drinkGameFragment"
+        android:name="vn.techres.line.fragment.game.drink.DrinkGameFragment"
+        android:label="fragment_drink_game"
+        tools:layout="@layout/fragment_drink_game" />
+    <fragment
+        android:id="@+id/rulesDrinkFragment"
+        android:name="vn.techres.line.fragment.game.drink.RulesDrinkFragment"
+        android:label="fragment_rules_drink"
+        tools:layout="@layout/fragment_rules_drink" />
+    <fragment
+        android:id="@+id/drinkDetailGameFragment"
+        android:name="vn.techres.line.fragment.game.drink.DrinkDetailGameFragment"
+        android:label="fragment_drink_detail_game"
+        tools:layout="@layout/fragment_drink_detail_game" />
+
+    <fragment
+        android:id="@+id/chooseBranchGameFragment"
+        android:name="vn.techres.line.fragment.game.ChooseBranchGameFragment"
+        android:label="fragment_choose_branch_game"
+        tools:layout="@layout/fragment_choose_branch_game">
+        <action
+            android:id="@+id/action_chooseBranchGameFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/mediaChatFragment"
+        android:name="vn.techres.line.fragment.chat.MediaFragment"
+        android:label="fragment_media_chat"
+        tools:layout="@layout/fragment_media_chat" />
+
+
+    <fragment
+        android:id="@+id/foodTopFragment"
+        android:name="vn.techres.line.fragment.food.FoodTopFragment"
+        android:label="fragment_food_top"
+        tools:layout="@layout/fragment_food_top" />
+    <fragment
+        android:id="@+id/detailReactionManagerFragment"
+        android:name="vn.techres.line.fragment.newsfeed.DetailReactionManagerFragment"
+        android:label="fragment_detail_reaction_manager"
+        tools:layout="@layout/fragment_detail_reaction_manager">
+        <action
+            android:id="@+id/action_detailReactionManagerFragment_to_chatPersonalFragment"
+            app:destination="@id/chatPersonalFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTotalReactionFragment"
+        android:name="vn.techres.line.fragment.newsfeed.DetailTotalReactionFragment"
+        android:label="fragment_detail_total_reaction"
+        tools:layout="@layout/fragment_detail_total_reaction" />
+    <fragment
+        android:id="@+id/shareMessageFragment"
+        android:name="vn.techres.line.fragment.chat.ShareMessageFragment"
+        android:label="fragment_share_message"
+        tools:layout="@layout/fragment_share_message" />
+    <fragment
+        android:id="@+id/profileImageFragment"
+        android:name="vn.techres.line.fragment.account.ProfileImageFragment"
+        android:label="fragment_profile_image"
+        tools:layout="@layout/fragment_profile_image" />
+    <fragment
+        android:id="@+id/profileVideoFragment"
+        android:name="vn.techres.line.fragment.account.ProfileVideoFragment"
+        android:label="fragment_profile_video"
+        tools:layout="@layout/fragment_profile_video" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="vn.techres.line.fragment.friend.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/searchMessageFragment"
+        android:name="vn.techres.line.fragment.chat.SearchMessageFragment"
+        android:label="fragment_search_message"
+        tools:layout="@layout/fragment_search_message" />
+    <fragment
+        android:id="@+id/profileAlbumFragment"
+        android:name="vn.techres.line.fragment.account.ProfileAlbumFragment"
+        android:label="fragment_profile_album"
+        tools:layout="@layout/fragment_profile_album" />
+    <fragment
+        android:id="@+id/libraryDeviceFragment"
+        android:name="vn.techres.line.fragment.utilities.LibraryDeviceFragment"
+        android:label="fragment_library_device"
+        tools:layout="@layout/fragment_library_device" />
+    <fragment
+        android:id="@+id/historyLevelValueFragment"
+        android:name="vn.techres.line.fragment.account.HistoryLevelValueFragment"
+        android:label="fragment_history_level_value"
+        tools:layout="@layout/fragment_history_level_value" />
+    <fragment
+        android:id="@+id/mobileRechargeFragment"
+        android:name="vn.techres.line.fragment.recharge.MobileRechargeFragment"
+        android:label="fragment_mobile_recharge"
+        tools:layout="@layout/fragment_mobile_recharge" />
+    <fragment
+        android:id="@+id/contactDeviceFragment"
+        android:name="vn.techres.line.fragment.contact.ContactDeviceFragment"
+        android:label="fragment_contact_device"
+        tools:layout="@layout/fragment_contact_device" />
+    <fragment
+        android:id="@+id/mobileRechargeBillFragment"
+        android:name="vn.techres.line.fragment.recharge.MobileRechargeBillFragment"
+        android:label="fragment_mobile_recharge_bill"
+        tools:layout="@layout/fragment_mobile_recharge_bill" />
+    <fragment
+        android:id="@+id/giphyFragment"
+        android:name="vn.techres.line.fragment.giphy.GiPhyFragment"
+        android:label="fragment_giphy"
+        tools:layout="@layout/fragment_giphy" />
+    <fragment
+        android:id="@+id/contactDeviceChatFragment"
+        android:name="vn.techres.line.fragment.chat.ContactDeviceChatFragment"
+        android:label="fragment_contact_device_chat"
+        tools:layout="@layout/fragment_contact_device_chat" />
+    <fragment
+        android:id="@+id/createVoteMessageFragment"
+        android:name="vn.techres.line.fragment.chat.vote.CreateVoteMessageFragment"
+        android:label="fragment_create_vote_message"
+        tools:layout="@layout/fragment_create_vote_message" />
+    <fragment
+        android:id="@+id/detailVoteMessageFragment"
+        android:name="vn.techres.line.fragment.chat.vote.DetailVoteMessageFragment"
+        android:label="fragment_detail_vote_message"
+        tools:layout="@layout/fragment_detail_vote_message" />
+    <fragment
+        android:id="@+id/votedFragment"
+        android:name="vn.techres.line.fragment.chat.vote.VotedFragment"
+        android:label="fragment_voted"
+        tools:layout="@layout/fragment_voted" />
+    <fragment
+        android:id="@+id/foodTakeAwayDetailFragment"
+        android:name="vn.techres.line.fragment.food.FoodTakeAwayDetailFragment"
+        android:label="fragment_food_take_away_detail"
+        tools:layout="@layout/fragment_food_take_away_detail">
+        <action
+            android:id="@+id/action_foodTakeAwayDetailFragment_to_chooseBranchFragment"
+            app:destination="@id/chooseBranchFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+        <action
+            android:id="@+id/action_foodTakeAwayDetailFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment"
+            app:enterAnim="@anim/translate_from_right"
+            app:exitAnim="@anim/translate_to_left"
+            app:popEnterAnim="@anim/translate_from_left"
+            app:popExitAnim="@anim/translate_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="vn.techres.line.fragment.food.FoodDetailFragment"
+        android:label="fragment_food_detail"
+        tools:layout="@layout/fragment_food_detail" />
+    <fragment
+        android:id="@+id/payMemMethodFragment"
+        android:name="vn.techres.line.fragment.paymem.PayMemMethodFragment"
+        android:label="fragment_pay_mem_method"
+        tools:layout="@layout/fragment_pay_mem_method" />
+    <fragment
+        android:id="@+id/qRCodeManagerFragment"
+        android:name="vn.techres.line.fragment.qr.QRCodeManagerFragment"
+        android:label="fragment_q_r_code"
+        tools:layout="@layout/fragment_q_r_manager_code" />
+    <fragment
+        android:id="@+id/qRCodeFragment"
+        android:name="vn.techres.line.fragment.qr.QRCodeFragment"
+        android:label="fragment_q_r_code"
+        tools:layout="@layout/fragment_q_r_code" />
+    <fragment
+        android:id="@+id/yourQRCodeFragment"
+        android:name="vn.techres.line.fragment.qr.YourQRCodeFragment"
+        android:label="fragment_your_q_r_code"
+        tools:layout="@layout/fragment_your_q_r_code" />
+    <fragment
+        android:id="@+id/chooseShippingUnitFragment"
+        android:name="vn.techres.line.fragment.ChooseShippingUnitFragment"
+        android:label="fragment_choose_shipping_unit"
+        tools:layout="@layout/fragment_choose_shipping_unit" />
+    <fragment
+        android:id="@+id/voucherManagerFragment"
+        android:name="vn.techres.line.fragment.voucher.VoucherManagerFragment"
+        android:label="fragment_voucher_manager"
+        tools:layout="@layout/fragment_voucher_manager" />
+    <fragment
+        android:id="@+id/voucherNotUsedFragment"
+        android:name="vn.techres.line.fragment.voucher.VoucherNotUsedFragment"
+        android:label="fragment_voucher_not_used"
+        tools:layout="@layout/fragment_voucher_not_used" />
+    <fragment
+        android:id="@+id/voucherUsedFragment"
+        android:name="vn.techres.line.fragment.voucher.VoucherUsedFragment"
+        android:label="fragment_voucher_used"
+        tools:layout="@layout/fragment_voucher_used" />
+
+</navigation>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <merge>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/lnContentCall"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <com.skyfishjy.library.RippleBackground
+                    android:id="@+id/rippleBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    app:rb_color="#ffffff"
+                    app:rb_duration="3000"
+                    app:rb_radius="70dp"
+                    app:rb_rippleAmount="3"
+                    app:rb_scale="2"
+                    app:rb_type="fillRipple">
+
+                    <ProgressBar
+                        android:id="@+id/progressBarCountDown"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="198dp"
+                        android:layout_height="198dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_shape"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/circular_progress_bar"
+                        android:visibility="visible" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logo_aloline_placeholder" />
+                </com.skyfishjy.library.RippleBackground>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="320dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:id="@+id/name"
+                        style="@style/AutoTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/TextSize_17"
+                        android:visibility="gone" />
+
+                    <Chronometer
+                        android:id="@+id/chronometer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/TextSize_17"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </merge>
+</layout>

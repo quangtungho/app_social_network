@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_8dp">
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/tvTimeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:paddingLeft="@dimen/padding_7dp"
+            android:paddingTop="@dimen/padding_1dp"
+            android:paddingRight="@dimen/padding_7dp"
+            android:paddingBottom="@dimen/padding_1dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_tiny"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvNameUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_name_user_chat"
+            android:paddingStart="@dimen/padding_7dp"
+            android:paddingTop="@dimen/padding_2dp"
+            android:paddingEnd="@dimen/padding_7dp"
+            android:paddingBottom="@dimen/padding_2dp"
+            android:textSize="@dimen/font_tiny"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/rlBusinessCard"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeHeader"
+            tools:ignore="RtlSymmetry,SmallSp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvUser"
+            android:layout_width="@dimen/size_30"
+            android:layout_height="@dimen/size_30"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="@dimen/size_15"
+            app:cardElevation="@dimen/size_0"
+            app:layout_constraintBottom_toBottomOf="@+id/tvNameUser"
+            app:layout_constraintEnd_toStartOf="@+id/rlBusinessCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvNameUser">
+
+            <ImageView
+                android:id="@+id/imgAvatarUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/default_image"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imgPermission"
+            android:layout_width="@dimen/size_15"
+            android:layout_height="@dimen/size_15"
+            android:layout_alignEnd="@+id/cvUser"
+            android:layout_alignBottom="@+id/cvUser"
+            android:background="@drawable/ic_key_vice_group"
+            android:contentDescription="@string/default_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/cvUser"
+            app:layout_constraintEnd_toEndOf="@+id/cvUser" />
+
+        <ImageButton
+            android:id="@+id/imgActionMore"
+            android:layout_width="@dimen/size_35"
+            android:layout_height="@dimen/size_35"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ic_share_solid_circle_pressed_24"
+            android:contentDescription="@string/default_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/rlBusinessCard"
+            app:layout_constraintStart_toEndOf="@+id/rlBusinessCard"
+            app:layout_constraintTop_toTopOf="@+id/rlBusinessCard"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RelativeLayout
+            android:id="@+id/rlBusinessCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/state_message_left"
+            android:padding="@dimen/padding_8dp"
+            app:layout_constraintStart_toEndOf="@+id/cvUser"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameUser"
+            app:layout_constraintWidth_max="wrap"
+            app:layout_constraintWidth_percent="0.6">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvPhoneContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:textColor="@color/blue_gg"
+                android:textSize="@dimen/font_big" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvContact"
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                android:layout_below="@+id/tvPhoneContact"
+                app:cardCornerRadius="@dimen/size_25"
+                app:cardElevation="@dimen/size_0">
+
+                <ImageView
+                    android:id="@+id/imgAvatarContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNameContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPhoneContact"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:layout_toStartOf="@+id/imgInfor"
+                android:layout_toEndOf="@+id/cvContact"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <ImageView
+                android:id="@+id/imgInfor"
+                android:layout_width="@dimen/size_16"
+                android:layout_height="@dimen/size_16"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_information"
+                android:layout_marginStart="8dp"/>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvContentPhoneContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNameContact"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_toEndOf="@+id/cvContact"
+                android:drawableStart="@drawable/ic_business_card"
+                android:drawablePadding="@dimen/margin_8dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <View
+                android:id="@+id/viewMain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:layout_below="@+id/cvContact"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:background="@color/gray_dark" />
+
+            <LinearLayout
+                android:id="@+id/lnMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewMain"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:orientation="horizontal">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvAddFriend"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/make_friend"
+                    android:textColor="@color/main_bg"
+                    android:textSize="@dimen/font_big"
+                    android:visibility="gone" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/call"
+                    android:textColor="@color/main_bg"
+                    android:textSize="@dimen/font_big"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="@dimen/size_0_5"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_dark" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvChat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/chat"
+                    android:textColor="@color/main_bg"
+                    android:textSize="@dimen/font_big" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lnReactionContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/tvTimeBusinessCard"
+            app:layout_constraintEnd_toEndOf="@+id/rlBusinessCard"
+            app:layout_constraintTop_toBottomOf="@+id/rlBusinessCard">
+
+            <include
+                android:id="@+id/reaction"
+                layout="@layout/item_reaction_message" />
+
+        </LinearLayout>
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvTimeBusinessCard"
+            style="@style/chat_time_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_5dp"
+            android:paddingRight="@dimen/padding_5dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/rlBusinessCard"
+            app:layout_constraintTop_toBottomOf="@+id/rlBusinessCard"
+            tools:ignore="RelativeOverlap" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvStatusView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lnReactionContainer"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:drawableStart="@drawable/icn_bubble_chat_received"
+            android:drawablePadding="@dimen/padding_2dp"
+            android:paddingLeft="@dimen/padding_7dp"
+            android:paddingTop="@dimen/padding_1dp"
+            android:paddingRight="@dimen/padding_7dp"
+            android:paddingBottom="@dimen/padding_1dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_very_tiny"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/rlBusinessCard"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeBusinessCard" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcViewer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lnReactionContainer"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatusView"
+            app:reverseLayout="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

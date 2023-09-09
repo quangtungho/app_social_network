@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/activity_vertical_margin"
+    android:paddingTop="8.0dip"
+    android:paddingEnd="@dimen/activity_vertical_margin"
+    android:fitsSystemWindows="true"
+    android:paddingBottom="8.0dip">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/size_40"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginEnd="@dimen/margin_6dp"
+        android:layout_gravity="center"
+        app:cardElevation="@dimen/size_0"
+        app:cardCornerRadius="@dimen/size_20">
+        <ImageView
+            android:id="@+id/owner_avatar_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/feed_comment_editor_bg"
+        android:gravity="center">
+
+        <vn.techres.line.widget.TechResEditText
+            android:id="@+id/taging_comment_edt"
+            style="@style/Techres.EditText.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/feed_write_a_comment"
+            android:padding="@dimen/size_10" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_50"
+            android:layout_gravity="bottom"
+            android:paddingTop="@dimen/size_5">
+
+            <ImageView
+                android:id="@+id/imgEmoji"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:padding="@dimen/padding_5dp"
+                android:src="@drawable/ic_editor_feeling_comment"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/media_iv"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:padding="@dimen/padding_5dp"
+                android:src="@drawable/ic_editor_media_comment"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgSent"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:background="?selectableItemBackgroundBorderless"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_send_comment"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

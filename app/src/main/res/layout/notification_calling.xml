@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imgAvatarCalling"
+        android:layout_width="@dimen/size_50"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:contentDescription="@string/default_image" />
+
+    <TextView
+        android:id="@+id/tvNameCalling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:textSize="@dimen/font_big"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_toEndOf="@+id/imgAvatarCalling"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/rejectCallVideo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTypingCalling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:textSize="@dimen/font_normal"
+        android:layout_toEndOf="@+id/imgAvatarCalling"
+        android:layout_toStartOf="@+id/rejectCallVideo"
+        android:layout_below="@+id/tvNameCalling"/>
+    <ImageView
+        android:id="@+id/rejectCallVideo"
+        android:layout_width="@dimen/size_50"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:padding="@dimen/padding_5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/default_image"
+        android:src="@drawable/ic_phone_cancel" />
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AdvertHistoryFragment"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+
+        <LinearLayout
+            android:id="@+id/linearDataNull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/size_100"
+                android:layout_height="@dimen/size_100"
+                android:contentDescription="@string/app_description"
+                android:src="@drawable/picture_icon_data_error" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="ádasdasd" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/linearListData"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/margin_2dp"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_4"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/size_4"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="@dimen/size_150"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_5dp"
+                        android:text="@string/branch_name"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/size_4"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="@dimen/size_250"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_5dp"
+                        android:text="@string/address"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/size_4"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="@dimen/size_150"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_5dp"
+                        android:text="@string/show_dislay"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/size_4"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="@dimen/size_150"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_5dp"
+                        android:text="@string/money_use"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_4"
+                    android:background="@color/white" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_5" />
+    </LinearLayout>
+</layout>

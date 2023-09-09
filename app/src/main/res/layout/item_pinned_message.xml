@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/lnPinned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_input_message"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:paddingTop="@dimen/padding_5dp"
+            android:paddingRight="@dimen/padding_10dp"
+            android:paddingBottom="@dimen/padding_5dp"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:visibility="visible"
+            android:gravity="center"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:layout_width="@dimen/size_10"
+                android:layout_height="@dimen/size_10"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/icn_msg_pinned"
+                tools:ignore="RtlSymmetry" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                app:cardCornerRadius="@dimen/size_7_5"
+                app:cardElevation="@dimen/size_0"
+                android:layout_marginRight="@dimen/margin_5dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/imgPinned"
+                    android:layout_width="@dimen/size_15"
+                    android:layout_height="@dimen/size_15"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop"
+                    />
+
+            </androidx.cardview.widget.CardView>
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvMessagePinned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_text_chat"
+                android:textSize="@dimen/font_small"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

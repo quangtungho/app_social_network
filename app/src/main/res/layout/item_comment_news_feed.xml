@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/commentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:tag="layout/comment_item_0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivCommentAvatarOne"
+            style="@style/ImageAvatarTiny"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            app:actualImageScaleType="centerCrop"
+            app:failureImageScaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundAsCircle="true"
+            app:roundingBorderColor="@color/gray_click"
+            app:roundingBorderWidth="1dp" />
+
+        <LinearLayout
+            android:id="@+id/bubble"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/ivCommentAvatarOne"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/ivCommentAvatarOne"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/commentCont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_light_gray_news"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvCommentUserName"
+                    style="@style/TextDisplayName"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="Tên nè"
+                    android:textSize="13sp" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvCommentContentOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.1"
+                    android:text="Nội dung bình luận nè"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivCommentPhoto"
+                    android:layout_width="@dimen/size_200"
+                    android:layout_height="@dimen/size_200"
+                    android:src="@drawable/ic_image_placeholder"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivCommentPhoto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ivCommentPhoto"
+                    app:layout_constraintTop_toTopOf="@+id/ivCommentPhoto" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvCommentEditStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/secondaryText"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/bubble"
+            app:layout_constraintTop_toBottomOf="@+id/bubble" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCommentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Thời gian bình luận nè"
+            android:textColor="@color/secondaryText"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tvCommentEditStatus"
+            app:layout_constraintTop_toBottomOf="@+id/bubble" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

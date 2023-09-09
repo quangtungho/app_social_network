@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_view_white"
+    android:paddingLeft="@dimen/padding_12dp"
+    android:id="@+id/ctMenuFood"
+    android:paddingTop="@dimen/padding_8dp"
+    android:paddingBottom="@dimen/padding_8dp"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+    <ImageView
+        android:id="@+id/imgLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_detail_restaurant_menu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tv1"
+        style="@style/TvBody"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_12dp"
+        android:paddingRight="@dimen/padding_12dp"
+        android:paddingBottom="@dimen/padding_4dp"
+        android:text="@string/menu"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintLeft_toRightOf="@id/imgLeft"
+        app:layout_constraintRight_toLeftOf="@+id/imgRight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <vn.techres.line.widget.TechResTextView
+        style="@style/TvCaption"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:id="@+id/tvMenuDetail"
+        android:paddingStart="@dimen/padding_12dp"
+        android:tag="binding_1"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintLeft_toRightOf="@id/imgLeft"
+        app:layout_constraintRight_toLeftOf="@+id/imgRight"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/imgRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_go_to_detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/techResTextView25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/restaurant_nearby"
+            android:textColor="@color/blue_logo"
+            android:textSize="@dimen/font_huge"
+            android:textStyle="bold" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include layout="@layout/item_shimmer_card" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/lnRestaurantRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/svRestaurantRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_margin="@dimen/margin_10dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_form_input"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:theme="@style/SearchView"
+                        android:visibility="visible"
+                        app:closeIcon="@drawable/ic_messenger_close"
+                        app:iconifiedByDefault="false"
+                        app:queryBackground="@android:color/transparent"
+                        app:queryHint="@string/search"
+                        app:searchIcon="@drawable/ic_search"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcRestaurantRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnEmptyRestaurant"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_150"
+                        android:layout_height="@dimen/size_150"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/emptystate" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/empty_restaurant"
+                        android:textColor="@color/black_70"
+                        android:textStyle="bold" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/empty_restaurant_one" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnPermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/size_80"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_google_maps" />
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:gravity="center"
+                        android:text="@string/allow_location"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_big"
+                        android:textStyle="bold" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:layout_marginEnd="@dimen/margin_16dp"
+                        android:gravity="center"
+                        android:text="@string/content_allow_location_two" />
+
+                    <Button
+                        android:id="@+id/btnPermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:background="@drawable/bg_btn_rectangle"
+                        android:paddingStart="@dimen/padding_15dp"
+                        android:paddingEnd="@dimen/padding_15dp"
+                        android:text="@string/allow_access"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnGPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/size_80"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_50dp"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_location_pin_flat" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin_15dp"
+                        android:gravity="center"
+                        android:text="Không xác định được vị trí của bạn" />
+
+                    <Button
+                        android:id="@+id/btnTryAgain"
+                        android:layout_width="@dimen/size_160"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_orange_50dp"
+                        android:paddingStart="@dimen/padding_15dp"
+                        android:paddingEnd="@dimen/padding_15dp"
+                        android:text="@string/try_again"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lnMediaTwo"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/margin_10dp">
+
+            <com.zhihu.matisse.internal.ui.widget.SquareFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_4dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgOneTypeTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:src="@color/app_color_9b"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imgOneTypeTwoPlay"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/play_video"
+                            android:visibility="gone"
+                            tools:ignore="ContentDescription" />
+                        <ImageView
+                            android:id="@+id/imgDeleteOneTwo"
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:src="@drawable/ic_close"
+                            android:layout_margin="@dimen/margin_10dp"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="visible"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgTwoTypeTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imgTwoTypeTwoPlay"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/play_video"
+                            android:visibility="gone"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/imgDeleteTwoTwo"
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:src="@drawable/ic_close"
+                            android:layout_margin="@dimen/margin_10dp"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="visible"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.zhihu.matisse.internal.ui.widget.SquareFrameLayout>
+        </LinearLayout>
+    </merge>
+
+</layout>

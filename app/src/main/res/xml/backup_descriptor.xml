@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude
+        domain="sharedpref"
+        path="photocollagePrefs.xml" />
+    <exclude
+        domain="sharedpref"
+        path="splash-welcome.xml" />
+    <exclude
+        domain="sharedpref"
+        path="emojicon.xml" />
+    <exclude
+        domain="sharedpref"
+        path="templateDetailPref.xml" />
+    <exclude
+        domain="sharedpref"
+        path="variant-emoji-manager.xml" />
+    <exclude
+        domain="sharedpref"
+        path="emoji-recent-manager.xml" />
+</full-backup-content>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.esafirm.imagepicker.view.SquareFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imgMedia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/default_image"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            android:src="@drawable/ic_image_placeholder"/>
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/size_35"
+            android:layout_height="@dimen/size_35"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/padding_8dp"
+            android:src="@drawable/ic_close" />
+        <ImageView
+            android:id="@+id/imgPlay"
+            android:layout_width="@dimen/size_30"
+            android:layout_height="@dimen/size_30"
+            android:src="@drawable/play_video"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</com.esafirm.imagepicker.view.SquareFrameLayout>

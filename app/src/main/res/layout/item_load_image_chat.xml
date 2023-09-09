@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.luck.picture.lib.widget.SquareRelativeLayout
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_100">
+        <ImageView
+            android:id="@+id/imgChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/default_image" />
+    </com.luck.picture.lib.widget.SquareRelativeLayout>
+
+</layout>

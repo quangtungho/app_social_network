@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <ImageView
+            android:id="@+id/imgAvatarNotify"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:contentDescription="@string/default_image" />
+
+        <TextView
+            android:id="@+id/tvNameCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:textSize="@dimen/font_big"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_toEndOf="@+id/imgAvatarNotify"
+            android:layout_alignParentTop="true"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvTyping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:textSize="@dimen/font_normal"
+            android:layout_toEndOf="@+id/imgAvatarNotify"
+            android:layout_below="@+id/tvNameCall"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgAvatarNotify"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:paddingBottom="@dimen/padding_4dp"
+            >
+            <ImageView
+                android:id="@+id/imgCall"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_30"
+                android:layout_weight="1"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/ic_phone_accept" />
+
+            <ImageView
+                android:id="@+id/imgChat"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_30"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_3dp"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/ic_chat_notification"
+                tools:ignore="UseAppTint" />
+            <ImageView
+                android:id="@+id/imgBell"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_30"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_3dp"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/ic_ringing"
+                tools:ignore="UseAppTint" />
+            <ImageView
+                android:id="@+id/rejectCallVideo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_30"
+                android:layout_weight="1"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/ic_phone_cancel" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

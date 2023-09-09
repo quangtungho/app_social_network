@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size_10">
+
+    <LinearLayout
+        android:id="@+id/lnMoreMyChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@id/lnMessage"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    tools:ignore="NotSibling,UselessParent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:background="@drawable/state_message_right"
+                        android:orientation="vertical"
+                        android:paddingStart="10.0dip"
+                        android:paddingTop="6.0dip"
+                        android:paddingEnd="10.0dip"
+                        android:paddingBottom="6.0dip">
+
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@id/tvMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1.0dip"
+                            android:layout_marginBottom="2.0dip"
+                            android:autoLink="web"
+                            android:text="Game này vui không bạn"
+                            android:lineSpacingExtra="3.0dip"
+                            android:maxWidth="@dimen/size_200"
+                            android:minWidth="@dimen/margin_12dp"
+                            android:textColor="@color/color_text_chat"
+                            android:textColorLink="@color/colorLink"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnSticker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:id="@+id/imgSticker"
+                        android:layout_width="100.0dip"
+                        android:layout_height="100.0dip"
+                        android:layout_gravity="right"
+                        android:contentDescription="@string/default_image"
+                        tools:ignore="RtlHardcoded" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

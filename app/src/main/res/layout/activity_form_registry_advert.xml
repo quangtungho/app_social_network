@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_10dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tipNameCustomer"
+                    style="@style/AdvertTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:hint="@string/hit_name_contact_advert"
+                    >
+
+                    <vn.techres.line.widget.TechResEditText
+                        android:id="@+id/edtNameCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/padding_30dp"
+                        android:paddingTop="@dimen/padding_20dp"
+                        android:paddingEnd="@dimen/padding_20dp"
+                        android:paddingBottom="@dimen/padding_20dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal"
+                        android:enabled="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tipPhoneCustomer"
+                    style="@style/AdvertTextInputLayout"
+                    android:layout_below="@+id/tipNameCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:hint="@string/hit_phone_contact_advert"
+                    >
+
+                    <vn.techres.line.widget.TechResEditText
+                        android:id="@+id/edtPhoneCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/padding_30dp"
+                        android:paddingTop="@dimen/padding_20dp"
+                        android:paddingEnd="@dimen/padding_20dp"
+                        android:paddingBottom="@dimen/padding_20dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal"
+                        android:enabled="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tipEmailCustomer"
+                    style="@style/AdvertTextInputLayout"
+                    android:layout_below="@+id/tipPhoneCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:hint="@string/hit_email_contact_advert"
+                    >
+
+                    <vn.techres.line.widget.TechResEditText
+                        android:id="@+id/edtEmailCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/padding_30dp"
+                        android:paddingTop="@dimen/padding_20dp"
+                        android:paddingEnd="@dimen/padding_20dp"
+                        android:paddingBottom="@dimen/padding_20dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tipAddressCustomer"
+                    style="@style/AdvertTextInputLayout"
+                    android:layout_below="@+id/tipEmailCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:hint="@string/title_address_advert"
+                    >
+
+                    <vn.techres.line.widget.TechResEditText
+                        android:id="@+id/edtAddressCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/padding_30dp"
+                        android:paddingTop="@dimen/padding_20dp"
+                        android:paddingEnd="@dimen/padding_20dp"
+                        android:paddingBottom="@dimen/padding_20dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tipNameCompanyCustomer"
+                    style="@style/AdvertTextInputLayout"
+                    android:layout_below="@+id/tipAddressCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:hint="@string/title_name_company_contact"
+                    >
+
+                    <vn.techres.line.widget.TechResEditText
+                        android:id="@+id/edtNameCompanyCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/padding_30dp"
+                        android:paddingTop="@dimen/padding_20dp"
+                        android:paddingEnd="@dimen/padding_20dp"
+                        android:paddingBottom="@dimen/padding_20dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <vn.techres.line.widget.TechResEditText
+                    android:id="@+id/edtDescriptionAdvert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tipNameCompanyCustomer"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:background="@drawable/corners_gray_5dp"
+                    android:gravity="top"
+                    android:hint="@string/title_description_advert"
+                    android:minHeight="@dimen/size_100"
+                    android:padding="@dimen/padding_10dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_normal" />
+
+                <Button
+                    android:id="@+id/btnActivateForm"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtDescriptionAdvert"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/size_30"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:layout_marginEnd="@dimen/size_30"
+                    android:background="@drawable/border_orange_50dp"
+                    android:paddingStart="@dimen/padding_30dp"
+                    android:paddingTop="@dimen/padding_15dp"
+                    android:paddingEnd="@dimen/padding_30dp"
+                    android:paddingBottom="@dimen/padding_15dp"
+                    android:text="@string/send_require"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_big" />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

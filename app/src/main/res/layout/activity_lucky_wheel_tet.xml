@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.game.LuckyWheelOfflineActivity"
+        android:background="@drawable/bglkwo">
+        <ImageButton
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:layout_margin="@dimen/margin_10dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/border_gray_light_50dp"
+            android:src="@drawable/ic_action_navigation_arrow_back"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgListMemberWinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_32dp"
+            android:layout_marginStart="@dimen/margin_32dp"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:layout_marginEnd="@dimen/margin_32dp"
+            android:layout_marginBottom="@dimen/margin_32dp"
+            android:contentDescription="@string/default_image"
+            android:src="@drawable/list_winner" />
+
+        <ImageView
+            android:layout_width="@dimen/size_200"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imgBg"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/eventluckywheel" />
+
+        <vn.techres.line.helper.LuckyWheelView
+            android:id="@+id/luckyWheel"
+            android:layout_width="@dimen/size_260"
+            android:layout_height="@dimen/size_260"
+            android:layout_centerInParent="true"
+            android:paddingTop="4dp"
+            android:paddingStart="2dp"
+            app:lkwBackgroundColor="#FF9800"
+            app:lkwCenterImage="@color/transparent"
+            app:lkwCursor="@drawable/ic_location"
+            app:lkwTopTextColor="#263238" />
+
+        <ImageView
+            android:id="@+id/imgBg"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/default_image" />
+
+    </RelativeLayout>
+</layout>

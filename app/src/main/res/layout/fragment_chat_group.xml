@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <vn.techres.line.helper.emojiscreen.EmojiRainLayout
+        android:id="@+id/fragmentRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        app:per="10"
+        app:duration="5000"
+        app:dropDuration="2400"
+        app:dropFrequency="500">
+
+        <FrameLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_gray_light"/>
+    </vn.techres.line.helper.emojiscreen.EmojiRainLayout>
+</layout>

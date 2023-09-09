@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_15dp">
+        <vn.techres.line.widget.TechResTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friends"
+            android:textSize="@dimen/font_big"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtSearchFriend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_15dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/search_friend"
+            android:textColor="@color/blue_logo"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/txtFriendNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:layout_marginStart="@dimen/padding_15dp"
+        android:layout_marginBottom="@dimen/margin_10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFriends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/padding_15dp"/>
+
+    <Button
+        android:id="@+id/btnViewAll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginStart="@dimen/margin_15dp"
+        android:layout_marginEnd="@dimen/margin_15dp"
+        android:text="@string/view_all"
+        android:textAllCaps="false"
+        android:background="@drawable/background_gray"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0_5"
+        android:background="@color/gray"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:layout_marginBottom="@dimen/margin_15dp"/>
+</LinearLayout>

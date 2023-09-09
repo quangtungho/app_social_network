@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_400"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/list_win_bg"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/listWinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_40"
+                android:layout_marginTop="@dimen/size_60"
+                android:layout_marginRight="@dimen/size_40"
+                android:layout_marginBottom="@dimen/margin_40dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="gjdofjgodfnogndongodnogneriodng
+                    oiedniognjodfnhobndfoihnodfnognonoiwnoidfneo
+                    ignvdfongodfnoigndfoingoidfnoigndfoignoidfnogin
+                    mpewijrpiocvnljogronrgnklfiotipjtjnvbcndfnkldfln
+                    kdfgjgijrjnldfnioprtgiodawdwadawnkhbnjdfngndfgn
+                    kghmkdfgmmpfgmdmgddwadwadgdfhlpfg,hfg,m,fgl;h,ygj
+                    gl,dflg,ldf,l;g,f;dl,g;df,g;l,dfl;g,l;dfg;ldfdaw
+                    dawkjoertyjuenngckbnkcnbrjodnfgndjfkngnuenuionfofd" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/size_40"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/close_game"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

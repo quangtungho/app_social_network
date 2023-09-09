@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:tag="layout/dialog_mall_menu_complex_0"
+    app:cardCornerRadius="@dimen/size_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gf_bg_options_diaolog"
+        android:paddingTop="@dimen/padding_5dp"
+        android:paddingBottom="@dimen/margin_16dp">
+
+        <ImageView
+            android:id="@+id/imgCloseAddPromotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:paddingTop="@dimen/padding_10dp"
+            android:tag="binding_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            tools:ignore="ContentDescription" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvNameShippingFee"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:tag="binding_2"
+            android:text="@string/title_more_promotion"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_largexxx"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCloseAddPromotion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgCloseAddPromotion"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@color/LightGrey3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNameShippingFee" />
+
+        <vn.techres.line.widget.TechResTextViewLight
+            android:id="@+id/edNoteConFirm"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:background="@drawable/shape_skeleton_dialog"
+            android:completionThreshold="1"
+            android:gravity="start|center|top"
+            android:inputType="textCapSentences|textMultiLine"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingTop="@dimen/padding_14dp"
+            android:paddingRight="@dimen/margin_16dp"
+            android:paddingBottom="@dimen/padding_14dp"
+            android:scrollbars="vertical"
+            android:selectAllOnFocus="true"
+            android:tag="binding_4"
+            android:text="@string/add_promotion"
+            android:textColor="@color/black"
+            android:textColorHint="@color/LightGrey1"
+            android:textSize="@dimen/font_big"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

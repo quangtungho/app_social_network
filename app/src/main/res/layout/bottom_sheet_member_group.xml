@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet">
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/techResTextViewBold6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/information_member_group"
+            android:textSize="@dimen/font_big"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/size_30"
+            android:layout_height="@dimen/size_30"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:src="@drawable/ic_close_12dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/default_image"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout26"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/view20"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0_5"
+            android:layout_marginTop="16dp"
+            android:background="@color/main_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/techResTextViewBold6" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="@dimen/padding_8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view20">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                app:cardCornerRadius="@dimen/size_25"
+                app:cardElevation="@dimen/size_0">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:textSize="@dimen/font_large"
+                android:textColor="@color/black"/>
+
+            <ImageButton
+                android:id="@+id/imgMessage"
+                android:layout_width="@dimen/size_30"
+                android:layout_height="@dimen/size_30"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_chat_friend"
+                android:contentDescription="@string/default_image" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view24"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0_5"
+            android:background="@color/main_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout26" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvSeenProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seen_profile"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_normal"
+            android:padding="@dimen/padding_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view24" />
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvChangeAuthorize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_16dp"
+            android:text="@string/moved_on_authorize_permission"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSeenProfile" />
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvChangePermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_16dp"
+            android:text="@string/promoted_vice_group"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvChangeAuthorize" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvKickMember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:padding="@dimen/padding_16dp"
+            android:text="@string/kick_member_group"
+            android:textColor="@color/red_error"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvChangePermission" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

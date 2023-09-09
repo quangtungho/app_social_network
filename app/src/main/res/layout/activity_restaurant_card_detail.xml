@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include
+                android:id="@+id/header"
+                layout="@layout/header_main" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:tag="layout/activity_new_user_level_0">
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size_380"
+                    android:alpha="0.2"
+                    android:background="@drawable/bghello"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvPointCardLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/corners_orange_20dp"
+                    android:gravity="center"
+                    android:padding="@dimen/size_8"
+                    android:paddingStart="@dimen/padding_10dp"
+                    android:paddingTop="@dimen/padding_5dp"
+                    android:paddingEnd="@dimen/padding_10dp"
+                    android:paddingBottom="@dimen/padding_5dp"
+                    android:text="0 đ"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_big"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:id="@+id/rlCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPointCardLevel">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPagerCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_220"
+                        android:paddingStart="@dimen/padding_40dp"
+                        android:paddingEnd="@dimen/padding_40dp"
+                        tools:ignore="MissingConstraints" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvExperienceCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/viewPagerCard"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal" />
+                </RelativeLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progressLevelCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_5"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/size_20"
+                    android:max="100"
+                    app:indicatorColor="@color/main_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rlCard"
+                    app:trackColor="@color/white"
+                    app:trackCornerRadius="@dimen/size_10" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:layout_marginEnd="@dimen/size_20"
+                    app:cardCornerRadius="@dimen/size_20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/progressLevelCard">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcPrerogativesCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="@dimen/size_20" />
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_content">
+
+                    <LinearLayout
+                        android:id="@+id/ln_partner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/size_12"
+                        android:paddingTop="@dimen/size_5"
+                        android:paddingBottom="@dimen/size_5"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cv_content"
+                        tools:ignore="RtlSymmetry,UseCompoundDrawables">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tv_partner"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_marginStart="@dimen/size_10"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Dánh sách ưu đãi từ đối tác"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_normal" />
+
+                        <ImageView
+                            android:layout_width="@dimen/size_26"
+                            android:layout_height="@dimen/size_26"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="@dimen/size_5"
+                            android:src="@drawable/ic_chevron_right_black_24dp"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/v_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_0_5"
+                        android:layout_marginStart="@dimen/size_18"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:layout_marginEnd="@dimen/size_18"
+                        android:background="#eeeeee"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/ln_partner" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvFormAccumulatePoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_marginStart="@dimen/margin_20dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:layout_marginEnd="@dimen/margin_20dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/form_of_accumulating_points"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_line"
+                        tools:ignore="InefficientWeight,UseCompatTextViewDrawableXml" />
+
+                    <View
+                        android:id="@+id/v_line_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_0_5"
+                        android:layout_marginStart="@dimen/size_18"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:layout_marginEnd="@dimen/size_18"
+                        android:background="#eeeeee"
+                        app:layout_constraintTop_toBottomOf="@+id/ln_point_rule" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvHistoryPointCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_marginStart="@dimen/margin_20dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:layout_marginEnd="@dimen/margin_20dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/history_point"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_line_1"
+                        tools:ignore="UseCompatTextViewDrawableXml" />
+
+                    <View
+                        android:id="@+id/v_line_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_0_5"
+                        android:layout_marginStart="@dimen/size_18"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:layout_marginEnd="@dimen/size_18"
+                        android:background="#eeeeee"
+                        app:layout_constraintTop_toBottomOf="@+id/ln_mission" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvQuestionCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_marginStart="@dimen/margin_20dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:layout_marginEnd="@dimen/margin_20dp"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/normal_question"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size_14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_line_2"
+                        tools:ignore="InefficientWeight,SpUsage,UseCompatTextViewDrawableXml" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</layout>

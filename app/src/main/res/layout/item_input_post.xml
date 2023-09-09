@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lnEditPost"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/lnEditTitlePost"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_8dp"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:layout_marginEnd="@dimen/margin_12dp"
+                android:layout_marginTop="@dimen/margin_12dp"
+                android:background="@drawable/background_choose_branch"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtTitlePost"
+                    style="@style/TvBody"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_color"
+                    android:gravity="top"
+                    android:hint="@string/hint_input_title_post"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minLines="5"
+                    android:maxLines="5"
+                    android:maxLength="250" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_8dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:layout_marginEnd="@dimen/margin_12dp"
+                android:layout_marginBottom="@dimen/margin_12dp"
+                android:background="@drawable/background_choose_branch"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtContentPost"
+                    style="@style/TvBody"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_color"
+                    android:gravity="top"
+                    android:hint="@string/hint_input_review"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minLines="10"
+                    android:maxLines="10" />
+            </LinearLayout>
+        </LinearLayout>
+    </merge>
+</layout>

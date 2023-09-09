@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_120"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_2dp"
+        app:cardCornerRadius="@dimen/size_8">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgFood"
+                android:layout_width="@dimen/size_120"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/default_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food_demo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvNameFood"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNameFood"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Chocola Trắng Chocola Trắng Chocola Trắng Chocola Trắng Chocola Trắng"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_big"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgFood"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Hạt cacao sau khi sấy khô và lên men sẽ bao gồm phần bơ cacao và phần mảnh hạt cacao, với khối lượng tương đương."
+                android:textSize="@dimen/font_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgFood"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameFood" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="200.000.000đ"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgFood" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="@dimen/size_90"
+                android:layout_height="@dimen/size_25"
+                android:text="@string/add"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/ic_rim_orange"
+                android:textColor="@color/main_bg"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_8dp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <LinearLayout
+                android:id="@+id/lnQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_30"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/margin_8dp"
+                android:gravity="center"
+                android:visibility="gone">
+                <ImageButton
+                    android:id="@+id/imgDecrease"
+                    android:layout_width="@dimen/size_25"
+                    android:layout_height="@dimen/size_25"
+                    android:src="@drawable/ic_minus_24"
+                    android:tint="@color/main_bg"
+                    android:background="@drawable/circle_cart_food"
+                    tools:ignore="UseAppTint"
+                    android:padding="@dimen/padding_4dp"/>
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_5dp"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/margin_10dp"/>
+                <ImageButton
+                    android:id="@+id/imgIncrease"
+                    android:layout_width="@dimen/size_25"
+                    android:layout_height="@dimen/size_25"
+                    android:src="@drawable/ic_plus_orange_24dp"
+                    android:background="@drawable/circle_cart_food"
+                    android:padding="@dimen/padding_4dp"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/expand_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+
+        android:layout_marginBottom="@dimen/margin_16dp">
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/margin_8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                app:cardElevation="@dimen/size_0"
+                app:cardCornerRadius="@dimen/size_20">
+
+                <ImageView
+                    android:id="@+id/imgGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
+            </androidx.cardview.widget.CardView>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNameGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbChooseGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@drawable/selector_radio_button_member"
+                android:paddingEnd="@dimen/padding_16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

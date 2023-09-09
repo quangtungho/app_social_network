@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="@dimen/size_350"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_bottom_sheet_layout_chat">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_album"
+                    android:textSize="@dimen/font_huge"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_20dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray_dark"/>
+
+            <vn.techres.line.widget.TechResEditText
+                android:id="@+id/edtAlbumName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_white_50dp"
+                android:padding="@dimen/padding_20dp"
+                android:hint="@string/album_name"
+                android:layout_margin="@dimen/margin_2dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray_dark"/>
+
+            <Button
+                android:id="@+id/btnCreateAlbum"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="@dimen/size_40"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_15dp"
+                android:background="@drawable/bg_button_orange_radius"
+                android:text="@string/create"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <vn.techres.line.widget.TechResTextView
+        style="@style/style_bottom_sheet"
+        android:id="@+id/txtReply"
+        android:text="@string/title_reply"
+        android:drawableStart="@drawable/ic_reply"
+        android:drawablePadding="@dimen/padding_10dp"/>
+
+    <vn.techres.line.widget.TechResTextView
+        style="@style/style_bottom_sheet"
+        android:id="@+id/txtCopy"
+        android:text="@string/copy_content"
+        android:drawableStart="@drawable/ic_text"
+        android:drawablePadding="@dimen/padding_10dp"/>
+
+    <vn.techres.line.widget.TechResTextView
+        style="@style/style_bottom_sheet"
+        android:id="@+id/txtDelete"
+        android:text="@string/delete"
+        android:drawableStart="@drawable/ic_delete"
+        android:drawablePadding="@dimen/padding_10dp"/>
+
+    <vn.techres.line.widget.TechResTextView
+        style="@style/style_bottom_sheet"
+        android:id="@+id/txtEdit"
+        android:text="@string/edit_content"
+        android:drawableStart="@drawable/ic_edit"
+        android:drawablePadding="@dimen/padding_10dp"/>
+
+    <vn.techres.line.widget.TechResTextView
+        style="@style/style_bottom_sheet"
+        android:id="@+id/txtReport"
+        android:text="@string/repost"
+        android:drawableStart="@drawable/ic_warning"
+        android:drawableTint="@color/black"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

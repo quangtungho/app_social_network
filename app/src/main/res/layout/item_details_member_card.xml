@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/size_2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/margin_6dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                tools:ignore="DisableBaselineAlignment">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_weight="3"
+                        android:orientation="vertical"
+                        android:weightSum="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        tools:ignore="NestedWeights">
+
+                        <vn.techres.line.widget.TechResTextViewBold
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_4"
+                            android:textSize="@dimen/font_normal"
+                            tools:ignore="NestedWeights" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvDatePoint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_4"
+                            android:textSize="@dimen/font_normal"
+                            tools:ignore="NestedWeights,RtlSymmetry" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_4"
+                            android:textSize="@dimen/font_normal"
+                            tools:ignore="NestedWeights" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/lineDot"
+                        android:paddingTop="@dimen/size_10"
+                        android:paddingBottom="@dimen/size_10"
+                        android:layout_width="@dimen/size_10"
+                        android:layout_height="@dimen/size_80"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.01"
+                        android:src="@drawable/ic_dot_line"
+                        android:tint="@color/black"
+                        android:visibility="visible"
+                        tools:ignore="ContentDescription,UseAppTint" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:id="@+id/tvPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:textSize="@dimen/font_normal" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvPointText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/point_mini"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/view_line" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

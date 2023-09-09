@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:tag="layout/item_restaurant_detail_utilities_child_0">
+
+    <LinearLayout
+        android:id="@+id/lvrBranchUtility1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_marginLeft="@dimen/margin_12dp"
+            android:src="@drawable/ic_utility_7"
+            android:layout_marginRight="@dimen/margin_12dp"
+            android:tag="binding_1"
+            tools:ignore="ContentDescription" />
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/padding_8dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/restaurant_utility_7"
+            android:textSize="@dimen/font_normal"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingEnd="@dimen/padding_12dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:tag="binding_2"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lvrBranchUtility2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_marginLeft="@dimen/margin_12dp"
+            android:layout_marginRight="@dimen/margin_12dp"
+            android:src="@drawable/ic_utility_6"
+            android:tag="binding_1"
+            tools:ignore="ContentDescription" />
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/padding_8dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/restaurant_utility_6"
+            android:textSize="@dimen/font_normal"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingEnd="@dimen/padding_12dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:tag="binding_2"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lvrBranchUtility3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_marginLeft="@dimen/margin_12dp"
+            android:layout_marginRight="@dimen/margin_12dp"
+            android:src="@drawable/ic_utility_8"
+            android:tag="binding_1"
+            tools:ignore="ContentDescription" />
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/padding_8dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/restaurant_utility_8"
+            android:textSize="@dimen/font_normal"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingEnd="@dimen/padding_12dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:tag="binding_2"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+</LinearLayout>
+

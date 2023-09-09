@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10dp"
+        android:background="@drawable/bg_border_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/size_90"
+                android:layout_height="@dimen/size_90"
+                app:cardCornerRadius="@dimen/size_5"
+                android:layout_margin="@dimen/margin_10dp">
+
+                <ImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/description_place_image" />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/size_110">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:layout_centerVertical="true">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/txtRestaurantName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nhà hàng NGUYỄN 123"
+                        android:textSize="@dimen/font_normal"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue_logo" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/txtBranchName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chi nhánh 123-Zô.Vn 303 Phạm Văn Đồng"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/font_normal"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:layout_marginBottom="@dimen/margin_20dp" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/txtDateTimeOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="09/12/2020 15:32"
+                        android:textSize="@dimen/font_small"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_30"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bg_button_orange_radius"
+                    android:paddingStart="@dimen/padding_10dp"
+                    android:paddingEnd="@dimen/padding_10dp"
+                    android:text="@string/review"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_small"
+                    android:layout_margin="@dimen/margin_10dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

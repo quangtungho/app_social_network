@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion 30
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  defaultConfig {
+    minSdkVersion 21
+  }
+
+  resourcePrefix 'emoji_'
+}
+
+dependencies {
+  api "androidx.appcompat:appcompat:1.2.0"
+  api "androidx.cardview:cardview:1.0.0"
+}
+
+dependencies {
+  testImplementation 'junit:junit:4.13.1'
+  testImplementation "org.robolectric:robolectric:4.4"
+}
+
+//apply plugin: "com.vanniktech.maven.publish"

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                android:background="@color/transparent"
+                android:src="@drawable/back"
+                android:tint="@color/main_gray_dim"
+                android:padding="@dimen/padding_15dp"
+                tools:ignore="ContentDescription,UseAppTint" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/edit_information"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_200"
+                    android:background="@color/line"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginBottom="@dimen/margin_10dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_border_white">
+
+                        <ImageView
+                            android:id="@+id/imgCover"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="@color/gray_text_title"
+                            android:alpha="0.9"
+                            tools:ignore="ContentDescription" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlHeader"
+                            android:layout_width="@dimen/size_90"
+                            android:layout_height="@dimen/size_90"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:id="@+id/rlAvatar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:layout_width="85dp"
+                                    android:layout_height="85dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circle_white"
+                                    android:contentDescription="@string/default_image" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/cardView"
+                                    android:layout_width="@dimen/size_80"
+                                    android:layout_height="@dimen/size_80"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="@dimen/size_40">
+
+                                    <ImageView
+                                        android:id="@+id/imgEditProfile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/logo_aloline_placeholder"
+                                        android:contentDescription="@string/default_image"
+                                        android:scaleType="centerCrop" />
+                                </com.google.android.material.card.MaterialCardView>
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/imgCameraEditProfile"
+                                android:layout_width="@dimen/size_30"
+                                android:layout_height="@dimen/size_30"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/icn_avatar_profile" />
+                        </RelativeLayout>
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/cover_photo_editing"
+                            android:drawableStart="@drawable/ef_ic_camera_white"
+                            android:drawablePadding="@dimen/padding_5dp"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginBottom="@dimen/margin_5dp"
+                            android:layout_marginEnd="@dimen/margin_5dp"
+                            android:padding="@dimen/padding_5dp"
+                            android:background="@drawable/background_gray"
+                            android:alpha="0.4" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/txtEditCover"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/cover_photo_editing"
+                            android:drawableStart="@drawable/ef_ic_camera_white"
+                            android:drawablePadding="@dimen/padding_5dp"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginBottom="@dimen/margin_5dp"
+                            android:layout_marginEnd="@dimen/margin_5dp"
+                            android:padding="@dimen/padding_5dp"
+                            tools:ignore="UseCompatTextViewDrawableXml" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tipLastNameCustomer"
+                        style="@style/AddressDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_70"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:hint="@string/hint_last_name_member">
+
+                        <vn.techres.line.widget.TechResEditText
+                            android:id="@+id/tvLastNameCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/padding_30dp"
+                            android:paddingTop="@dimen/padding_20dp"
+                            android:paddingEnd="@dimen/padding_20dp"
+                            android:paddingBottom="@dimen/padding_20dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_big"
+                            android:inputType="textCapSentences"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tipFirstNameCustomer"
+                        style="@style/AddressDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_70"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:hint="@string/hint_name_member">
+
+                        <vn.techres.line.widget.TechResEditText
+                            android:id="@+id/tvFirstNameCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/padding_30dp"
+                            android:paddingTop="@dimen/padding_20dp"
+                            android:paddingEnd="@dimen/padding_20dp"
+                            android:paddingBottom="@dimen/padding_20dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_big"
+                            android:inputType="textCapSentences"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tipNickNameCustomer"
+                        style="@style/AddressDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_70"
+                        android:hint="@string/hint_nick_name"
+                        android:layout_marginBottom="@dimen/margin_10dp">
+
+                        <vn.techres.line.widget.TechResEditText
+                            android:id="@+id/tvNickNameCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/padding_30dp"
+                            android:paddingTop="@dimen/padding_20dp"
+                            android:paddingEnd="@dimen/padding_20dp"
+                            android:paddingBottom="@dimen/padding_20dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_big" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/margin_20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/use_nickname"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_30dp" />
+
+                        <Switch
+                            android:id="@+id/swNickName"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_20dp"
+                            android:layout_marginEnd="@dimen/margin_20dp"
+                            android:minWidth="100dp"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tipPhoneCustomer"
+                        style="@style/AddressDetail"
+                        app:errorEnabled="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_70"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:hint="@string/hint_phone">
+
+                        <vn.techres.line.widget.TechResEditText
+                            android:id="@+id/tvPhoneCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/padding_30dp"
+                            android:paddingTop="@dimen/padding_20dp"
+                            android:paddingEnd="@dimen/padding_20dp"
+                            android:paddingBottom="@dimen/padding_20dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_big" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tipEmailCustomer"
+                        style="@style/AddressDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_70"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:hint="@string/hint_email">
+
+                        <vn.techres.line.widget.TechResEditText
+                            android:id="@+id/tvEmailCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/padding_30dp"
+                            android:paddingTop="@dimen/padding_20dp"
+                            android:paddingEnd="@dimen/padding_20dp"
+                            android:paddingBottom="@dimen/padding_20dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_big" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_marginEnd="@dimen/margin_20dp"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:gravity="center">
+
+                        <vn.techres.line.widget.TechResTextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/title_gender"
+                            android:textSize="@dimen/font_big"/>
+
+                        <RadioGroup
+                            android:id="@+id/rgGender"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <RadioButton
+                                android:id="@+id/rbMale"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/male"/>
+                            <RadioButton
+                                android:id="@+id/rbFemale"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/female"
+                                android:layout_gravity="end"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_65"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <vn.techres.line.widget.TechResTextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingTop="@dimen/padding_10dp"
+                            android:text="@string/title_date_of_birth"
+                            android:textSize="@dimen/font_big" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tipBirthdayCustomer"
+                            style="@style/AddressDetail"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="@string/hint_birthday"
+                            app:endIconDrawable="@drawable/ic_date_range"
+                            app:endIconMode="custom">
+
+                            <vn.techres.line.widget.TechResEditText
+                                android:id="@+id/tvBirthdayCustomer"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:focusableInTouchMode="false"
+                                android:paddingStart="@dimen/padding_30dp"
+                                android:paddingTop="@dimen/padding_20dp"
+                                android:paddingEnd="@dimen/padding_20dp"
+                                android:paddingBottom="@dimen/padding_20dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_big" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tipApartmentNumberCustomer"
+                        style="@style/AddressDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_70"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:hint="@string/apartment_number">
+
+                        <vn.techres.line.widget.TechResEditText
+                            android:id="@+id/tvApartmentNumberCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/padding_30dp"
+                            android:paddingTop="@dimen/padding_20dp"
+                            android:paddingEnd="@dimen/padding_20dp"
+                            android:paddingBottom="@dimen/padding_20dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_big"
+                            android:maxLines="1"
+                            android:ellipsize="end" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tipCitiesCustomer"
+                        style="@style/DropDownProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:hint="@string/city">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dropdownCitiesCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_60"
+                            android:focusableInTouchMode="false"
+                            android:paddingStart="@dimen/padding_30dp"
+                            android:textColor="@color/black"
+                            tools:ignore="LabelFor,RtlSymmetry" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tipDistrictsCustomer"
+                        style="@style/DropDownProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:hint="@string/district">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dropdownDistrictsCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_60"
+                            android:focusableInTouchMode="false"
+                            android:paddingStart="@dimen/padding_30dp"
+                            android:textColor="@color/black"
+                            tools:ignore="LabelFor,RtlSymmetry" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tipWardsCustomer"
+                        style="@style/DropDownProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:hint="@string/wards">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dropdownWardsCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_60"
+                            android:focusableInTouchMode="false"
+                            android:paddingStart="@dimen/padding_30dp"
+                            android:textColor="@color/black"
+                            tools:ignore="LabelFor,RtlSymmetry" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/corners_orange_8dp"
+            android:layout_margin="@dimen/margin_10dp"/>
+    </LinearLayout>
+</layout>

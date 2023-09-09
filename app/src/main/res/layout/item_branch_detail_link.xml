@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    android:tag="layout/item_restaurant_detail_link_0">
+
+    <View
+        android:id="@+id/vLine1"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:background="@color/divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imgWebsite"
+        style="@style/TvCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_12dp"
+        android:src="@drawable/ic_website_gray"
+        android:tag="binding_1"
+        app:layout_constraintTop_toBottomOf="@id/vLine1"
+        tools:ignore="ContentDescription,MissingConstraints"/>
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvWebsiteName"
+        style="@style/TvBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingTop="@dimen/padding_12dp"
+        android:paddingEnd="@dimen/padding_12dp"
+        android:paddingBottom="@dimen/padding_12dp"
+        android:singleLine="true"
+        android:tag="binding_2"
+        android:textColor="@color/fui_linkColor"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintLeft_toRightOf="@id/imgWebsite"
+        tools:ignore="MissingConstraints,RtlSymmetry" />
+
+    <View
+        android:id="@+id/vLine2"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:background="@color/divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWebsiteName" />
+
+    <ImageView
+        android:id="@+id/imgFanpage"
+        style="@style/TvCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_12dp"
+        android:src="@drawable/ic_facebook_gray"
+        android:tag="binding_3"
+        app:layout_constraintTop_toBottomOf="@id/vLine2"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvFanpageName"
+        style="@style/TvBody"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingTop="@dimen/padding_12dp"
+        android:paddingEnd="@dimen/padding_12dp"
+        android:paddingBottom="@dimen/padding_12dp"
+        android:singleLine="true"
+        android:tag="binding_4"
+        android:textColor="@color/fui_linkColor"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintLeft_toRightOf="@id/imgFanpage"
+        app:layout_constraintTop_toBottomOf="@id/vLine2"
+        tools:ignore="RtlSymmetry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

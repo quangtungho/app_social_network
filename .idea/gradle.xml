@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/libraries" />
+            <option value="$PROJECT_DIR$/libraries/AXEmojiView" />
+            <option value="$PROJECT_DIR$/libraries/LeonidsLib" />
+            <option value="$PROJECT_DIR$/libraries/LinkReview" />
+            <option value="$PROJECT_DIR$/libraries/ShapeRippleLibrary" />
+            <option value="$PROJECT_DIR$/libraries/bubbles_chat" />
+            <option value="$PROJECT_DIR$/libraries/compressvideo" />
+            <option value="$PROJECT_DIR$/libraries/datepicker" />
+            <option value="$PROJECT_DIR$/libraries/emoji" />
+            <option value="$PROJECT_DIR$/libraries/emoji-facebook" />
+            <option value="$PROJECT_DIR$/libraries/filepicker" />
+            <option value="$PROJECT_DIR$/libraries/heartlayout" />
+            <option value="$PROJECT_DIR$/libraries/imageeditlibrary" />
+            <option value="$PROJECT_DIR$/libraries/paper-onboarding" />
+            <option value="$PROJECT_DIR$/libraries/picture_library" />
+            <option value="$PROJECT_DIR$/libraries/ucrop" />
+            <option value="$PROJECT_DIR$/libraries/youtube-core" />
+            <option value="$PROJECT_DIR$/libraries/zxing-android-embedded" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

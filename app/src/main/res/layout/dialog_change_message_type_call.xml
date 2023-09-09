@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bottom_view_bg_popup_rounded_top_12"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+            <ImageView
+                android:layout_width="@dimen/size_200"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_call_switch_video"
+                android:contentDescription="@string/default_image"
+                android:layout_gravity="center"/>
+
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/change_call_video"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/change_call_video_note"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/bottom_separator"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:id="@+id/btn_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="@dimen/default_margin"
+                android:paddingRight="32dp"
+                android:paddingBottom="@dimen/default_margin">
+
+                <Button
+                    android:id="@+id/btnChange"
+                    style="@style/CustomBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50"
+                    android:backgroundTint="@color/main_bg"
+                    android:minWidth="120dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:text="@string/change"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnRemove"
+            android:background="@color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/container"
+            android:layout_alignEnd="@+id/container"
+            android:padding="8dp"
+            android:src="@drawable/ic_close"
+            android:contentDescription="@string/default_image" />
+
+    </RelativeLayout>
+</layout>

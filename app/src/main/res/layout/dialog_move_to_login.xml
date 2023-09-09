@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_24"
+        android:layout_marginTop="@dimen/size_24"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/title_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phiên đăng nhập của bạn đã hết hạn vui lòng đăng nhập lại !"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_24"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/btnGoToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size_4"
+                android:text="Đi tới đăng nhập"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

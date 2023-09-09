@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/lnHeaderComment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnCancel"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:src="@drawable/ic_vector_delete"/>
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_8dp"
+                android:layout_weight="1"
+                android:text="@string/comment_review" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin_10dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36"
+            android:elevation="0dp"
+            app:cardCornerRadius="@dimen/size_18"
+            app:cardElevation="0dp"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/owner_avatar_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/default_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_placeholder"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_round_light_gray_news"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/tagingCommentEdt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/btnAddSticker"
+                android:background="@null"
+                android:hint="@string/write_comment"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/secondaryText"
+                android:textSize="14sp"
+                android:maxLines="4"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:enabled="false"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_add_emo_comment"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/mediaIv"
+                android:layout_width="@dimen/size_45"
+                android:layout_height="@dimen/size_45"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:enabled="false"
+                android:padding="@dimen/_8sdp"
+                app:srcCompat="@drawable/ic_add_photo_comment" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgSent"
+                android:layout_width="@dimen/size_45"
+                android:layout_height="@dimen/size_45"
+                android:clickable="false"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_send_comment"
+                android:background="@color/transparent"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

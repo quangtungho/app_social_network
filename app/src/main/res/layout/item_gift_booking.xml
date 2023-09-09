@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/size_180"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin_4dp"
+    android:background="@drawable/bg_gift_booking"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnTitleGift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/imgCloseGiftBooking"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_4dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="@dimen/size_20"/>
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/tvTitleGift"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/default_image"
+            android:textAllCaps="true"
+            android:textColor="@color/buddha_gold"
+            android:textSize="@dimen/font_big" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnTotalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnTitleGift"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="@dimen/size_20"/>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/dark_green"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnQuality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnTotalPrice"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="@dimen/size_20"/>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvQuality"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnExpirationDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnQuality"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="@dimen/size_20"/>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvExpirationDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgCloseGiftBooking"
+        android:layout_width="@dimen/size_35"
+        android:layout_height="@dimen/size_35"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginEnd="@dimen/margin_4dp"
+        android:contentDescription="@string/default_image"
+        android:src="@drawable/ic_cancel"
+        app:tint="@color/black"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnUsingGift"
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_40"
+        android:background="@drawable/bg_button_gift_booking"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/pick_now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_small"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imgGiftUsed"
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_50"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_16dp"
+        android:src="@drawable/used"
+        android:contentDescription="@string/default_image"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imgGiftExpired"
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_50"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_16dp"
+        android:src="@drawable/expired"
+        android:contentDescription="@string/default_image"
+        android:visibility="gone"/>
+
+</RelativeLayout>

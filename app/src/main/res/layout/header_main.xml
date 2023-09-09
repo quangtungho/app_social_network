@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <merge>
+
+        <RelativeLayout
+            android:id="@+id/rlHeaderMain"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="@dimen/size_5">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTitleHomeHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/size_50"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:padding="@dimen/padding_15dp"
+                android:src="@drawable/back"
+                android:tint="@color/main_gray_dim"
+                tools:ignore="ContentDescription,UseAppTint" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_30"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="end|center_vertical"
+                tools:ignore="RelativeOverlap">
+
+                <ImageView
+                    android:id="@+id/btnAdd"
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    android:layout_gravity="end"
+                    android:background="@drawable/ic_add_white"
+                    android:tint="@color/white"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription,UseAppTint" />
+
+                <ImageView
+                    android:id="@+id/btnSearch"
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    android:layout_gravity="end"
+                    android:background="@drawable/ic_search_white_24dp"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btnPost"
+                    style="@style/TvButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:background="@drawable/bg_border_white"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/common_label_post"
+                    android:textColor="@color/main_bg"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnUpdateProfile"
+                    style="@style/TvButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/selector_view_transparent"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/repair"
+                    android:textAllCaps="true"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/btnMenuMore"
+                    android:layout_width="@dimen/size_50"
+                    android:layout_height="@dimen/size_50"
+                    android:background="@drawable/selector_view_transparent"
+                    android:padding="@dimen/padding_12dp"
+                    android:src="@drawable/ic_more_vertical"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </merge>
+
+</layout>
+
+

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_header_main_2"
+        tools:context=".fragment.chat.videocall.ChatCallFragment">
+
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/sfvRemoteVideoCall"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgBackgroundVideoCall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_header_main_2"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLocalVideoCall"
+            android:layout_width="@dimen/size_150"
+            android:layout_height="@dimen/size_200"
+            android:layout_margin="@dimen/margin_16dp"
+            android:visibility="invisible"
+            app:cardCornerRadius="@dimen/size_10"
+            app:cardElevation="@dimen/size_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <org.webrtc.SurfaceViewRenderer
+                android:id="@+id/sfvLocalVideoCall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/rlContainerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/lnActionVideoCall"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:elevation="@dimen/size_6"
+            app:layout_constraintBottom_toTopOf="@+id/lnActionVideoCall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UselessParent">
+
+            <com.skyfishjy.library.RippleBackground
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                app:rb_color="#ffffff"
+                app:rb_duration="3000"
+                app:rb_radius="75dp"
+                app:rb_rippleAmount="4"
+                app:rb_scale="2"
+                app:rb_type="fillRipple">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvVideoCall"
+                    android:layout_width="@dimen/size_150"
+                    android:layout_height="@dimen/size_150"
+                    app:cardCornerRadius="@dimen/size_75"
+                    app:cardElevation="@dimen/size_0">
+
+                    <ImageView
+                        android:id="@+id/imgAvatarCallVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription" />
+                </androidx.cardview.widget.CardView>
+            </com.skyfishjy.library.RippleBackground>
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvNameVideoCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvTypingVideoCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNameVideoCall"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lnActionVideoCall"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_200"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UselessLeaf">
+
+            <LinearLayout
+                android:id="@+id/lnMyCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:ignore="UselessParent">
+
+                <ImageButton
+                    android:id="@+id/imgCancelPhoneMy"
+                    android:layout_width="@dimen/size_70"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginEnd="@dimen/margin_30dp"
+                    android:background="@color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_phone_cancel"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/imgOkPhoneMy"
+                    android:layout_width="@dimen/size_70"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginStart="@dimen/margin_30dp"
+                    android:background="@color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_phone_accept"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnTheirCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/size_70"
+                    android:layout_height="@dimen/size_70">
+
+                    <ImageView
+                        android:id="@+id/imgSpeakerTheirBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_7dp"
+                        android:alpha="0.2"
+                        android:background="@drawable/border_white_50dp"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageButton
+                        android:id="@+id/imgSpeakerTheir"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_baseline_volume_down_24"
+                        android:backgroundTint="@color/black"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+                <ImageButton
+                    android:id="@+id/imgCancelPhoneTheir"
+                    android:layout_width="@dimen/size_70"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginStart="@dimen/margin_30dp"
+                    android:layout_marginEnd="@dimen/margin_30dp"
+                    android:background="@color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_phone_cancel"
+                    tools:ignore="ContentDescription" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/size_70"
+                    android:layout_height="@dimen/size_70">
+
+                    <ImageView
+                        android:id="@+id/imgMicTheirBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_7dp"
+                        android:alpha="0.2"
+                        android:background="@drawable/border_white_50dp"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageButton
+                        android:id="@+id/imgMicTheir"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_baseline_mic_24"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imgBackVideoCall"
+            android:layout_width="@dimen/size_70"
+            android:layout_height="@dimen/size_70"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_left_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/imgChangeCamera"
+            android:layout_width="@dimen/size_70"
+            android:layout_height="@dimen/size_70"
+            android:layout_margin="@dimen/margin_16dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_baseline_flip_camera_ios_24"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/imgCamera"
+            android:layout_width="@dimen/size_70"
+            android:layout_height="@dimen/size_70"
+            android:layout_margin="@dimen/margin_16dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_baseline_videocam_24"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

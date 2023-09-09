@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="@dimen/size_70"
+                android:layout_height="@dimen/size_70"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/lnContainerFood"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:gravity="center">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvNameFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/font_big"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:id="@+id/tvPriceFood"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_gravity="end"
+                        android:background="@drawable/corners_orange_20dp"
+                        android:paddingStart="@dimen/padding_10dp"
+                        android:paddingTop="@dimen/padding_5dp"
+                        android:paddingEnd="@dimen/padding_10dp"
+                        android:paddingBottom="@dimen/padding_5dp">
+
+                        <ImageButton
+                            android:id="@+id/imgMinus"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:background="@color/transparent"
+                            android:src="@drawable/ic_remove"
+                            android:tint="@color/white"
+                            android:contentDescription="@string/default_image" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvQuantityFood"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_big"
+                            android:layout_marginStart="@dimen/margin_5dp"
+                            android:layout_marginEnd="@dimen/margin_5dp" />
+
+                        <ImageButton
+                            android:id="@+id/imgPlus"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:src="@drawable/ic_add_green"
+                            android:tint="@color/white"
+                            android:background="@color/transparent"
+                            android:contentDescription="@string/default_image" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+    </LinearLayout>
+</layout>

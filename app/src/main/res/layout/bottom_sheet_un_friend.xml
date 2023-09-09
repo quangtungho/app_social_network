@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/lnUnFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+        <ImageView
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:src="@drawable/ic_vector_delete"
+            android:contentDescription="@string/description_place_image"
+            android:padding="@dimen/padding_10dp"/>
+        <vn.techres.line.widget.TechResTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/unfriend"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:gravity="center|start"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

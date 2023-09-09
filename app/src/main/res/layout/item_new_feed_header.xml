@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_10dp"
+                android:paddingEnd="@dimen/padding_10dp"
+                android:paddingTop="@dimen/padding_10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/size_40"
+                    android:layout_height="@dimen/size_40"
+                    app:cardCornerRadius="@dimen/size_20"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/default_image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user_placeholder" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/lnNamePost"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_gravity="center">
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvTimeCreate"
+                        style="@style/TvCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imgMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_more_horizontal_gray"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:contentDescription="@string/description_place_image" />
+            </LinearLayout>
+            <View
+                android:id="@+id/viewLineHeader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray"
+                android:layout_marginTop="@dimen/margin_10dp"/>
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_big"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:autoLink="web"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp" />
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:autoLink="web"
+                android:textColorLink="@color/blue_logo"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp" />
+        </LinearLayout>
+    </merge>
+
+</layout>

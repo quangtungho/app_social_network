@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/size_16">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <vn.techres.line.widget.TechResTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lý do khác"
+            android:gravity="center"
+            android:drawableTint="@color/main_bg"
+            android:drawablePadding="@dimen/padding_8dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_big"
+            android:layout_marginTop="@dimen/margin_16dp"/>
+
+        <vn.techres.line.widget.TechResEditText
+            android:id="@+id/edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_margin="@dimen/margin_16dp"
+            android:hint="Nhập lý do báo xấu"
+            android:maxLines="5"
+            android:minLines="5"
+            android:textSize="@dimen/font_normal"
+            android:gravity="top"
+            android:padding="@dimen/padding_8dp">
+            <requestFocus />
+        </vn.techres.line.widget.TechResEditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0_5"
+            android:background="@color/gray_bg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Hủy"
+                android:textAllCaps="false"
+                android:background="@color/transparent"/>
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/send"
+                android:textColor="@color/main_bg"
+                android:textAllCaps="false"
+                android:background="@color/transparent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

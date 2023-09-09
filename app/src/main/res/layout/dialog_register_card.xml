@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <vn.techres.line.widget.TechResTextViewBold
+        android:id="@+id/tvTitleRegisterCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/green_success"
+        android:textSize="@dimen/font_large"
+        android:text="@string/success_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleRegisterCard">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationViewSuccess"
+            android:layout_width="@dimen/size_200"
+            android:layout_height="@dimen/size_150"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="success_animation.json"
+            app:lottie_loop="false" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationViewError"
+            android:layout_width="@dimen/size_200"
+            android:layout_height="@dimen/size_150"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="error_animation.json"
+            app:lottie_loop="false" />
+    </RelativeLayout>
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvContentRegisterCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlContainer" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="@dimen/size_200"
+        android:layout_height="@dimen/size_50"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_24dp"
+        android:background="@drawable/bg_button_radius_green_success"
+        android:text="@string/arrge"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_big"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContentRegisterCard" />
+</androidx.constraintlayout.widget.ConstraintLayout>

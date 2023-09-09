@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_10"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:orientation="horizontal">
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:text="@string/title_order_food"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_large"
+                        tools:ignore="NestedWeights" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvNameRestaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5dp"
+                        android:gravity="center|start"
+                        android:textColor="@color/color_blue_techres"
+                        android:textSize="@dimen/font_large"
+                        tools:ignore="NestedWeights" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcBranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8dp" />
+
+                <LinearLayout
+                    android:id="@+id/lnFoodTakeAway"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:gravity="center|start"
+                        android:text="@string/title_restaurant_new"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_big"
+                        tools:ignore="NestedWeights" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcFoodTakeAway"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none" />
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:id="@+id/tvMoreFoodTakeAway"
+                        android:layout_width="@dimen/size_100"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:text="@string/title_more"
+                        android:textColor="@color/blue_logo"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/lnFoodTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/food_top"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_10dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcFoodTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:layout_marginEnd="@dimen/margin_5dp"
+                    android:scrollbars="none" />
+
+                <vn.techres.line.widget.TechResTextViewItalic
+                    android:id="@+id/txtMoreBranch"
+                    android:layout_width="@dimen/size_100"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:gravity="center"
+                    android:text="@string/title_more"
+                    android:textColor="@color/orange"
+                    android:visibility="gone" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtMoreFoodTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_more"
+                    android:textColor="@color/blue_logo"
+                    android:textSize="@dimen/font_big"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </merge>
+
+</layout>

@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="vn.techres.line"
+    tools:ignore="LockedOrientationActivity">
+
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality ssssss.
+    -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" /> <!-- contact -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" /> <!-- call log -->
+    <!-- android :name="android.permission.MANAGE_EXTERNAL_STORAGE" -->
+    <!-- tools:ignore="ScopedStorage" /> -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- Permissions : Allows access to change system settings for handling screen states -->
+    <!-- Keep the screen on -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!--  -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.CAPTURE_AUDIO_OUTPUT"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- floating notify -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- Permissions : Allows access to change system settings for handling screen states -->
+    <!-- <uses-permission android:name="android.permission.READ_CALL_LOG" /> -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".activity.TechResApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:supportsRtl"
+        tools:targetApi="q">
+        <activity
+            android:name=".activity.AlolineUseAccountActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain"  />
+        <activity
+            android:name=".activity.CreateBookingSuccessActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.ChooseFoodActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.CreateBookingActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.InformationMessageActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.PinnedDetailActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.RestaurantCardDetailActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.LanguageChangeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.FeedbackForDevelopersActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.ProductInformationActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.FormRegistryAdvertActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.SaveBranchActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.OrderReviewActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.AdvertisementActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.DetailBookingActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.AdvertPackageActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.PointCardActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.DisableAccountActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.BillActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.VATBillActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.MediaRestaurantFromAlbumActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.AlbumHomeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.ImageFromAlbumActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.RestaurantImageActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".call.AnswerCallChatActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".call.CallActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.DetailPostDraftsActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.game.LuckyWheelTetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AdvertisementRegistrySuccessActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.GiftActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.GiftDetailActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.GiftsActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.DraftsActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.game.LuckyWheelOfflineActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.game.LuckyWheelActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.BubbleChatActivity"
+            android:allowEmbedded="true"
+            android:exported="true"
+            android:label="@string/title_activity_bubble"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcut" />
+        </activity>
+        <activity
+            android:name=".activity.VoucherDetailActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activity.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.ProfileFriendActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.SystemContactActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.AddBestFriendActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.FriendRequestActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.FriendSuggestActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.ContactDeviceActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.TurnOnBubbleChatActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcut" />
+        </activity>
+        <activity
+            android:name=".activity.IntroActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.PrivacyPolicyActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.SearchNewsFeedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.ChooseBranchActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.ReactionDetailManagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.BranchDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.MyFriendActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.AddFriendActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.CreatePostNewsFeedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.CreateReviewNewsFeedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".activity.EditMyPostActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.CommentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize|locale"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".activity.ShowFullScreenYouTubeActivity" />
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <activity
+            android:name=".activity.MediaSliderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMediaSlider" />
+        <activity
+            android:name=".activity.SendBirthDayCardActivity"
+            android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize|locale"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="adjustResize" />
+
+        <receiver
+            android:name=".broadcast.BroadCastSMS"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.NotificationBroadcast"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.BroadCastMessage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.NetworkChangeReceiver"
+            android:exported="true"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider2123265311249012"
+            android:exported="false" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:hardwareAccelerated="true" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider322131985905971"
+            android:exported="false" />
+
+        <activity
+            android:name="vn.techres.photo.StartActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="com.xinlan.imageeditlibrary.picchooser.SelectPictureActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="vn.techres.photo.PrivacyActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="com.xinlan.imageeditlibrary.editimage.EditImageActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="vn.techres.photo.ShareActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="vn.techres.photo.gallery.CustomGalleryActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="vn.techres.photo.Activities.ScrapBookActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="vn.techres.photo.Activities.ThumbListActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="vn.techres.photo.Activities.CollageMakerlActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="vn.techres.photo.Activities.PIPActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="vn.techres.photo.CreationActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="vn.techres.photo.Activities.AddTextItemActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".activity.DefaultIntro"
+            android:screenOrientation="nosensor" /> <!-- <service -->
+        <!-- android:name=".chatheads.OverlayService" -->
+        <!-- android:exported="true" /> -->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="392" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="822" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" /> <!-- [START firebase_service] -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <service
+            android:name=".broadcast.MyFirebaseMessagingService"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- [END firebase_service] -->
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+    </application>
+
+</manifest>

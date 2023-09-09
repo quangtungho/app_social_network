@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/circle_gray_reply_message" />
+    <item android:drawable="@drawable/ic_reply_message"
+        android:left="@dimen/size_3"
+        android:right="@dimen/size_7"
+        android:top="@dimen/size_2"
+        android:bottom="@dimen/size_5"
+        />
+</layer-list>

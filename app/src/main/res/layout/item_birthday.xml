@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_marginStart="@dimen/size_20"
+        android:layout_marginEnd="@dimen/size_20"
+        android:layout_marginBottom="@dimen/size_10"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@color/gray"
+                android:id="@+id/rlbig"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_200"
+                android:orientation="vertical"
+                app:layout_constraintDimensionRatio="16:9"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+
+                <ImageView
+                    android:id="@+id/imgListNewBranchBig"
+                    android:scaleType="fitCenter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_200"
+                    app:layout_constraintDimensionRatio="16:9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_marginTop="-70dp"
+                    android:src="@drawable/circle_orange_main"
+                    tools:ignore="MissingConstraints" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_30"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:text="aaaaaaa"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <View
+                android:id="@id/view"
+                android:layout_width="fill_parent"
+                android:layout_height="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/rlbig"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/imvShape"
+                android:layout_width="328.0dip"
+                android:layout_height="0.0dip"
+                android:background="@drawable/voucher_big"
+                app:layout_constraintDimensionRatio="328:118"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBranchSmall"
+                android:layout_width="@dimen/size_48"
+                android:layout_height="@dimen/size_48"
+                app:cardCornerRadius="@dimen/size_24"
+                app:cardElevation="@dimen/size_0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imvShape">
+
+                <ImageView
+                    android:id="@+id/imgListNewBranchSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_aloline_placeholder"
+                    tools:ignore="ContentDescription" />
+            </androidx.cardview.widget.CardView>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtNameBranchList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardBranchSmall" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtadresslistbranch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNameBranchList"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtphonelistnew"
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/txtadresslistbranch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/size_45"
+                android:layout_height="@dimen/size_45"
+                android:src="@drawable/back"
+                android:padding="@dimen/size_15"
+                app:tint="@color/black" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/person_reaction"
+                android:textSize="@dimen/font_big"
+                android:textColor="@color/black"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0_5"
+            android:background="@color/gray" />
+        <!--
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/main_bg"
+            app:tabSelectedTextColor="@color/main_bg"
+            app:tabTextColor="@color/gray_text_title"
+            app:tabMode="scrollable"
+            app:tabTextAppearance="@style/MyCustomTabText"
+            app:tabInlineLabel="true"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white" />
+            -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayoutReaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:tabIndicatorColor="@color/main_bg"
+                app:tabSelectedTextColor="@color/main_bg"
+                app:tabTextColor="@color/nobel"
+                app:tabTextAppearance="@style/MyTabLayout"
+                app:tabMode="scrollable" />
+
+            <com.sbrukhanda.fragmentviewpager.FragmentViewPager
+                android:id="@+id/fragmentPagerReaction"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/gray_light" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

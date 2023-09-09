@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:padding="@dimen/padding_10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgCloseDialog"
+        android:layout_width="@dimen/size_55"
+        android:layout_height="@dimen/size_55"
+        android:background="@color/transparent"
+        android:padding="@dimen/padding_16dp"
+        android:src="@drawable/ic_messenger_close"
+        tools:ignore="ContentDescription" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvTitleDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:padding="@dimen/padding_15dp"
+        android:text="@string/title_choose_booking"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_huge"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvAddFoodBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_55"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:padding="@dimen/padding_10dp"
+        android:text="@string/more_text"
+        android:textColor="@color/main_bg"
+        android:textSize="@dimen/font_large"
+        tools:ignore="RelativeOverlap" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitleDialog">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcFoodBooking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rcFoodBooking"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:gravity="center"
+                android:text="@string/note_booking_vat"
+                android:textColor="@color/main_bg"/>
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTitleTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvNote"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:gravity="end"
+                android:text="@string/total_price"
+                android:textSize="@dimen/font_large"
+                android:textColor="@color/blue_home_item"
+                />
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTotalMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tvTitleTotalPrice"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvNote"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:paddingStart="@dimen/padding_10dp"
+                android:gravity="end"
+                android:textSize="@dimen/font_large"
+                android:textColor="@color/blue_home_item"
+                tools:ignore="RtlSymmetry" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

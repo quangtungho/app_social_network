@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/size_16">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <vn.techres.line.widget.TechResTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lý do báo xấu"
+            android:drawableTint="@color/main_bg"
+            android:drawablePadding="@dimen/padding_8dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_big"
+            android:layout_margin="@dimen/margin_16dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0_5"
+            android:background="@color/gray_bg"/>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtSensitiveContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung nhạy cảm"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:paddingStart="@dimen/padding_16dp"
+            android:paddingEnd="@dimen/padding_16dp"
+            android:background="@drawable/selecter_click_white"/>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtBother"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Làm phiền"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:paddingStart="@dimen/padding_16dp"
+            android:paddingEnd="@dimen/padding_16dp"
+            android:background="@drawable/selecter_click_white"/>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtCheat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lừa đảo"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:paddingStart="@dimen/padding_16dp"
+            android:paddingEnd="@dimen/padding_16dp"
+            android:background="@drawable/selecter_click_white"/>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtOtherReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhập lý do khác"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:paddingStart="@dimen/padding_16dp"
+            android:paddingEnd="@dimen/padding_16dp"
+            android:background="@drawable/selecter_click_white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0_5"
+            android:background="@color/gray_bg"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chặn người này sau khi báo xấu"
+            android:textSize="@dimen/font_small"
+            android:layout_margin="@dimen/margin_10dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

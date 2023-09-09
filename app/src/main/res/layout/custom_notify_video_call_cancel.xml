@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/lnContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/imgAvatarMissed"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cuộc gọi nhỡ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvNameMissed"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/font_normal"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgAvatarMissed"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right|center_vertical|center_horizontal|center|end"
+        android:padding="2dp"
+        android:src="@drawable/ic_user_placeholder"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tvReplyMissedCall"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lnContent"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Trả lời"
+        android:textSize="@dimen/font_normal"
+        android:textColor="#d0021b" />
+
+    <TextView
+        android:id="@+id/tvReCallMissedCall"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lnContent"
+        android:layout_toEndOf="@+id/tvReplyMissedCall"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/font_normal"
+        android:text="Gọi lại"
+        android:textColor="#d0021b" />
+</RelativeLayout>

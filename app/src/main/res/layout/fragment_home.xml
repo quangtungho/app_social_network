@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLuckyWheelOffline"
+            android:layout_width="@dimen/size_180"
+            android:layout_height="@dimen/size_60"
+            android:layout_marginStart="-50dp"
+            android:layout_marginTop="@dimen/margin_100dp"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/size_30">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_40"
+                android:background="@drawable/back_slide1"
+                android:src="@drawable/eventluckywheel" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nsvMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <include
+                            android:id="@+id/header"
+                            layout="@layout/header_info_restaurant" />
+
+                        <include
+                            android:id="@+id/utilities"
+                            layout="@layout/item_utilities_home" />
+
+                        <include
+                            android:id="@+id/birthday"
+                            layout="@layout/item_birthday_home" />
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/vpVoucher"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_200"
+                            android:paddingStart="@dimen/size_10"
+                            android:paddingEnd="@dimen/size_10"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/banner"
+                            layout="@layout/item_banner_home" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlBannerGame"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_200"
+                            android:layout_marginBottom="@dimen/margin_8dp"
+                            tools:ignore="MissingConstraints">
+                            <ImageView
+                                android:id="@+id/imgBannerGame"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                tools:ignore="ContentDescription" />
+                            <ImageView
+                                android:id="@+id/imgCloseBannerGame"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/close"
+                                android:visibility="gone"
+                                tools:ignore="ContentDescription" />
+                        </RelativeLayout>
+
+
+                        <include
+                            android:id="@+id/food"
+                            layout="@layout/item_food_top_home" />
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/rlCart"
+                    android:layout_width="@dimen/size_70"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fbCart"
+                        style="@style/FloatingButtonCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:layout_marginEnd="@dimen/margin_8dp"
+                        android:layout_marginBottom="@dimen/margin_8dp"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_basket" />
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvCountCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/circle_cart_food"
+                        android:elevation="@dimen/size_6"
+                        android:gravity="center"
+                        android:textColor="@color/main_bg" />
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ImageView
+            android:id="@+id/dGift"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="@dimen/size_100"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/size_100"
+            android:src="@drawable/giftanimation"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

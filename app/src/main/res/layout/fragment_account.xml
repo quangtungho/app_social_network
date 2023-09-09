@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvAccount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="always"
+        android:scrollbars="none"
+        tools:ignore="NestedWeights">
+
+        <LinearLayout
+            android:id="@+id/nsvMain"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lnInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_70"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/size_60"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_55"
+                        android:layout_height="@dimen/size_55"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/border_circle_gray"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/size_50"
+                        android:layout_height="@dimen/size_50"
+                        android:layout_centerInParent="true"
+                        app:cardCornerRadius="@dimen/size_25"
+                        app:cardElevation="0dp"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:id="@+id/avtAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            tools:ignore="ContentDescription" />
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvNameAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="@string/title_name_member"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_big"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/lnCurrentRank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_30dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:background="@drawable/bg_sent_message"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_20"
+                            android:layout_height="@dimen/size_20"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_10dp"
+                            android:contentDescription="@string/description_place_image"
+                            android:src="@drawable/ic_loyalty" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/memberCardRank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_15dp"
+                            android:layout_marginEnd="@dimen/margin_20dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_big" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtUpdateAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="end|center"
+                    android:text="@string/go_to_profile"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/llCodeBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_qr_code_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/membership_code"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/llChooseRestaurent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_choose_restaurant_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/choose_restaurent_you_want_tgot"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/user"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/login_method"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/lnRegistryAdvertisement"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_ads_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/registry_advertisement"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnManagerAdvertisement"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment"
+                android:visibility="gone">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_ads_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/manager_advertisement"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/llIntroduceFriends"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_share_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/recommend_to_friends"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/lnBookingInformation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_booking_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/reservation_information"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/llOrderManager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_order_manager_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/manage_orders"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/lnOrderReview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_review_order_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/order_review"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/lnDiscountCode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_discount_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tv_coupon_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/coupon_code"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/llSaveBranch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment,UseCompoundDrawables">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_save_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tv_saved"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/favorite_restaurant"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/looking_for_friends"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/looking_for_friends"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/lnNotification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_sound_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/notification"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/lnPrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_padlock_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/lnAlolineUseAccount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_tag_username"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="Điều khoản sử dụng Aloline"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_star_curved_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/reviewRatingApp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/app_reviews"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/suggestionsForDevelopers"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_email_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center"
+                    android:text="@string/suggestions_for_developers"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray"
+                tools:ignore="TooManyViews" />
+
+            <LinearLayout
+                android:id="@+id/lnProductInformation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_info_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_6dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/product_information"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/llSetting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                tools:ignore="TooManyViews">
+
+                <ImageView
+                    style="@style/IconAccount"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_settings_flat"
+                    tools:ignore="ContentDescription" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/size_6"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/setting"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0_5"
+                android:background="@color/gray" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_8dp"
+                android:gravity="center"
+                android:textColor="@color/gray_text_title" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

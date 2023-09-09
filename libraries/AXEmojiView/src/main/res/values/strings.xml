@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AXEmojiView</string>
+    <string name="location" translatable="false">Vị trí</string>
+    <string name="document" translatable="false">Tài liệu</string>
+    <string name="repeat" translatable="false">Nhắc hẹn</string>
+    <string name="business_card" translatable="false">Danh thiếp</string>
+    <string name="default_image" translatable="false">Hình mặc định</string>
+    <string name="vote" translatable="false">Bình chọn</string>
+
+</resources>

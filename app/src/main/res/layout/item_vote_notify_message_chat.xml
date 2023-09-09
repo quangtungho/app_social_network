@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_input_message"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_10dp"
+        android:paddingTop="@dimen/padding_5dp"
+        android:paddingRight="@dimen/padding_10dp"
+        android:paddingBottom="@dimen/padding_5dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:visibility="visible"
+        tools:ignore="UselessParent">
+        <ImageView
+            android:layout_width="@dimen/size_15"
+            android:layout_height="@dimen/size_15"
+            android:src="@drawable/ic_archive"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:contentDescription="@string/default_image"/>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvVoteMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_normal"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:textColor="@color/black"/>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvSee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_normal"
+            android:text="@string/see"
+            android:textColor="@color/blue_home_item"/>
+    </LinearLayout>
+</layout>

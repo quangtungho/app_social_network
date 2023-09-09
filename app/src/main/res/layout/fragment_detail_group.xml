@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                android:background="@color/transparent"
+                android:padding="@dimen/padding_15dp"
+                android:src="@drawable/back"
+                android:tint="@color/main_gray_dim"
+                tools:ignore="ContentDescription,UseAppTint" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/detail"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/rlHeader"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:id="@+id/rlAvatar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circle_white"
+                                    android:contentDescription="@string/default_image" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardView"
+                                    android:layout_width="@dimen/size_80"
+                                    android:layout_height="@dimen/size_80"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="@dimen/size_40">
+
+                                    <ImageView
+                                        android:id="@+id/imgGroupDetail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:contentDescription="@string/default_image"
+                                        android:scaleType="centerCrop" />
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/imgEditAvatarGroup"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/icn_avatar_profile" />
+                        </RelativeLayout>
+
+                        <vn.techres.line.widget.TechResTextViewBold
+                            android:id="@+id/tvNameGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_large"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/rlHeader"
+                            tools:ignore="MissingConstraints" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvTimeOffline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/font_big" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/lnSearchMessage"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                tools:ignore="UselessParent">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_40"
+                                    android:layout_height="@dimen/size_40"
+                                    android:background="@drawable/border_gray_40dp"
+                                    android:contentDescription="@string/default_image"
+                                    android:src="@drawable/icn_header_search"
+                                    app:tint="@color/black" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="@string/search_message_n"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_small" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnAddMemberGroup"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                tools:ignore="UselessParent">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_40"
+                                    android:layout_height="@dimen/size_40"
+                                    android:background="@drawable/border_gray_40dp"
+                                    android:contentDescription="@string/default_image"
+                                    android:padding="@dimen/padding_2dp"
+                                    android:src="@drawable/icn_header_add_member_white"
+                                    app:tint="@color/black" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/padding_3dp"
+                                    android:text="@string/add_member_n"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_small" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnChangeBackground"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                tools:ignore="UselessParent">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_40"
+                                    android:layout_height="@dimen/size_40"
+                                    android:background="@drawable/border_gray_40dp"
+                                    android:contentDescription="@string/default_image"
+                                    android:padding="@dimen/padding_4dp"
+                                    android:src="@drawable/icn_theme"
+                                    app:tint="@color/black" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/padding_3dp"
+                                    android:text="@string/change_background_n"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_small" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnNotificationGroup"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                tools:ignore="UselessParent">
+
+                                <ImageView
+                                    android:id="@+id/imgBellGroup"
+                                    android:layout_width="@dimen/size_40"
+                                    android:layout_height="@dimen/size_40"
+                                    android:background="@drawable/border_gray_40dp"
+                                    android:contentDescription="@string/default_image"
+                                    android:padding="@dimen/padding_8dp"
+                                    android:src="@drawable/ic_baseline_notifications_off_24" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:id="@+id/txtBellGroup"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/padding_3dp"
+                                    android:text="@string/turn_off_notification_n"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_small" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_5"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/lnMediaChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_marginEnd="@dimen/margin_10dp"
+                        android:contentDescription="@string/default_image"
+                        android:padding="@dimen/padding_7dp"
+                        android:src="@drawable/ic_gallery"
+                        app:tint="@color/primary_dark_material_light" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/margin_6dp"
+                            android:gravity="start|center"
+                            android:text="@string/seen_image_video_link_file"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnMediaShowChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginStart="@dimen/margin_55dp"
+                    android:layout_marginEnd="@dimen/margin_15dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/lnNullMedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:background="@drawable/corners_gray_5dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_35"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_12dp"
+                            android:contentDescription="@string/default_image"
+                            android:src="@drawable/ic_photo_chat_group" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:paddingStart="@dimen/padding_10dp"
+                            android:paddingEnd="@dimen/padding_10dp"
+                            android:text="@string/new_image_will_show_here"
+                            android:textSize="@dimen/font_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnMediaContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/rlMediaOne"
+                                android:layout_width="@dimen/size_60"
+                                android:layout_height="@dimen/size_60"
+                                android:layout_marginEnd="@dimen/margin_2dp">
+
+                                <ImageView
+                                    android:id="@+id/imgMediaOne"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@string/default_image"
+                                    android:scaleType="fitXY" />
+
+                                <ImageView
+                                    android:id="@+id/imgPlayOne"
+                                    android:layout_width="@dimen/size_15"
+                                    android:layout_height="@dimen/size_15"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/play_video"
+                                    android:visibility="gone"
+                                    tools:ignore="ContentDescription" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlMediaTwo"
+                                android:layout_width="@dimen/size_60"
+                                android:layout_height="@dimen/size_60"
+                                android:layout_marginEnd="@dimen/margin_2dp">
+
+                                <ImageView
+                                    android:id="@+id/imgMediaTwo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@string/default_image"
+                                    android:scaleType="fitXY" />
+
+                                <ImageView
+                                    android:id="@+id/imgPlayTwo"
+                                    android:layout_width="@dimen/size_15"
+                                    android:layout_height="@dimen/size_15"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/play_video"
+                                    android:visibility="gone"
+                                    tools:ignore="ContentDescription" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlMediaThree"
+                                android:layout_width="@dimen/size_60"
+                                android:layout_height="@dimen/size_60"
+                                android:layout_marginEnd="@dimen/margin_2dp"
+                                tools:ignore="TooManyViews">
+
+                                <ImageView
+                                    android:id="@+id/imgMediaThree"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@string/default_image"
+                                    android:scaleType="fitXY" />
+
+                                <ImageView
+                                    android:id="@+id/imgPlayThree"
+                                    android:layout_width="@dimen/size_15"
+                                    android:layout_height="@dimen/size_15"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/play_video"
+                                    android:visibility="gone"
+                                    tools:ignore="ContentDescription,TooManyViews" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlMediaFour"
+                                android:layout_width="@dimen/size_60"
+                                android:layout_height="@dimen/size_60"
+                                android:layout_marginEnd="@dimen/margin_2dp">
+
+                                <ImageView
+                                    android:id="@+id/imgMediaFour"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@string/default_image"
+                                    android:scaleType="fitXY" />
+
+                                <ImageView
+                                    android:id="@+id/imgPlayFour"
+                                    android:layout_width="@dimen/size_15"
+                                    android:layout_height="@dimen/size_15"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/play_video"
+                                    android:visibility="gone"
+                                    tools:ignore="ContentDescription" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnMediaChatNext"
+                            android:layout_width="@dimen/size_60"
+                            android:layout_height="@dimen/size_60"
+                            android:alpha="0.7"
+                            android:background="@drawable/conrners_orange_4dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/default_image"
+                                android:padding="@dimen/margin_20dp"
+                                android:src="@drawable/ic_right_arrow" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0_5"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/lnPinnedGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_10dp"
+                        android:contentDescription="@string/default_image"
+                        android:padding="@dimen/padding_3dp"
+                        android:src="@drawable/icn_csc_menu_newtopic_n"
+                        app:tint="@color/primary_dark_material_light" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_6dp"
+                        android:gravity="start|center"
+                        android:text="@string/messenger_ghim"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0_5"
+                    android:background="@color/gray"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/lnEditGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_10dp"
+                        android:contentDescription="@string/default_image"
+                        android:padding="@dimen/padding_7dp"
+                        android:src="@drawable/ic_edit"
+                        app:tint="@color/primary_dark_material_light" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_6dp"
+                        android:gravity="start|center"
+                        android:text="@string/change_name_group"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewEditName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0_5"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/lnMemberGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment,UselessParent"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_10dp"
+                        android:contentDescription="@string/default_image"
+                        android:padding="@dimen/padding_5dp"
+                        android:src="@drawable/ic_group_member"
+                        app:tint="@color/primary_dark_material_light" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_6dp"
+                        android:gravity="start|center"
+                        android:text="@string/watch_member"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|end">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:ignore="UselessParent">
+
+                            <RelativeLayout
+                                android:id="@+id/rlMemberOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                tools:ignore="UselessParent">
+
+                                <View
+                                    android:layout_width="@dimen/size_35"
+                                    android:layout_height="@dimen/size_35"
+                                    android:background="@drawable/circle_white"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="@dimen/size_30"
+                                    android:layout_height="@dimen/size_30"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="@dimen/size_15">
+
+                                    <ImageView
+                                        android:id="@+id/imgMemberOne"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:contentDescription="@string/default_image"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/logo_aloline_placeholder"
+                                        tools:ignore="TooDeepLayout" />
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlMemberTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/size_20"
+                                android:visibility="gone"
+                                tools:ignore="UselessParent">
+
+                                <View
+                                    android:layout_width="@dimen/size_35"
+                                    android:layout_height="@dimen/size_35"
+                                    android:background="@drawable/circle_white" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="@dimen/size_30"
+                                    android:layout_height="@dimen/size_30"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="@dimen/size_15">
+
+                                    <ImageView
+                                        android:id="@+id/imgMemberTwo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:contentDescription="@string/default_image"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/logo_aloline_placeholder"
+                                        tools:ignore="TooDeepLayout" />
+                                </com.google.android.material.card.MaterialCardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlMemberThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/size_40"
+                                android:visibility="gone"
+                                tools:ignore="UselessParent">
+
+                                <View
+                                    android:layout_width="@dimen/size_35"
+                                    android:layout_height="@dimen/size_35"
+                                    android:background="@drawable/circle_white" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="@dimen/size_30"
+                                    android:layout_height="@dimen/size_30"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="@dimen/size_15">
+
+                                    <ImageView
+                                        android:id="@+id/imgMemberThree"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:contentDescription="@string/default_image"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/logo_aloline_placeholder"
+                                        tools:ignore="TooDeepLayout" />
+                                </com.google.android.material.card.MaterialCardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlMemberMore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/size_60"
+                                android:visibility="gone"
+                                tools:ignore="UselessParent">
+
+                                <View
+                                    android:layout_width="@dimen/size_35"
+                                    android:layout_height="@dimen/size_35"
+                                    android:background="@drawable/circle_white" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="@dimen/size_30"
+                                    android:layout_height="@dimen/size_30"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="@dimen/size_15">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:contentDescription="@string/default_image"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/circle_orange_main"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:id="@+id/txtNumMember"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:textColor="@color/white" />
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_5"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:ignore="DisableBaselineAlignment"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_10dp"
+                        android:contentDescription="@string/default_image"
+                        android:padding="@dimen/padding_8dp"
+                        android:src="@drawable/ic_browser_report"
+                        app:tint="@color/primary_dark_material_light" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_6dp"
+                        android:gravity="start|center"
+                        android:text="@string/report_group"
+                        android:textColor="@color/black"
+                        app:tint="@color/primary_dark_material_light" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0_5"
+                    android:background="@color/gray"
+                    tools:ignore="TooManyViews" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:ignore="DisableBaselineAlignment"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_10dp"
+                        android:contentDescription="@string/default_image"
+                        android:padding="@dimen/padding_8dp"
+                        android:src="@drawable/icn_post_delete" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_6dp"
+                        android:gravity="start|center"
+                        android:text="@string/history_chat_delete"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0_5"
+                    android:background="@color/gray"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/lnDissolutionGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:ignore="DisableBaselineAlignment"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_10dp"
+                        android:contentDescription="@string/default_image"
+                        android:padding="@dimen/padding_8dp"
+                        android:src="@drawable/ic_dissolution_group" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_6dp"
+                        android:gravity="start|center"
+                        android:text="@string/dissolution_group"
+                        android:textColor="@color/app_color_red" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0_5"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/lnLeaveGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment,UseCompoundDrawables"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_10dp"
+                        android:contentDescription="@string/default_image"
+                        android:padding="@dimen/padding_7dp"
+                        android:src="@drawable/icn_signout"
+                        app:tint="@color/app_color_red" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_6dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/padding_10dp"
+                        android:gravity="start|center"
+                        android:text="@string/leave_group"
+                        android:textColor="@color/app_color_red" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

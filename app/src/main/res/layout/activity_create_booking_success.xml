@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <vn.techres.line.widget.TechResTextView
+            android:padding="@dimen/size_10"
+            android:layout_marginTop="@dimen/size_30"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_30"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_booking_success" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_marginTop="@dimen/size_20"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/size_200"
+            android:layout_height="@dimen/size_200"
+            app:lottie_autoPlay="true"
+            app:lottie_repeatMode="restart"
+            app:lottie_repeatCount="1"
+            app:lottie_fileName="checkMarkSuccess.json" />
+        <vn.techres.line.widget.TechResTextView
+            android:padding="@dimen/size_25"
+            android:layout_marginTop="@dimen/size_20"
+            android:textSize="@dimen/size_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/ordernote"
+            android:textColor="@color/blue_home_item" />
+
+        <LinearLayout
+            android:layout_margin="@dimen/size_50"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtCallBackMenu"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_50"
+                android:layout_marginEnd="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:layout_weight="1.0"
+                android:textColor="@color/main_bg"
+                android:background="@drawable/bg_add"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/exit" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/btnCallHotLine"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_50"
+                android:layout_marginStart="@dimen/size_10"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_btn_rectangle"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/call"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

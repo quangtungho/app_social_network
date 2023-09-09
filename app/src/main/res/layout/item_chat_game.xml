@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="@dimen/size_300"
+    android:layout_height="@dimen/size_300"
+    android:background="@drawable/bg_premium_gold"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/lnListMessage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginLeft="@dimen/size_25"
+            android:layout_marginTop="@dimen/size_40"
+            android:layout_marginRight="@dimen/size_25">
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lnListMessage"
+            android:layout_marginLeft="@dimen/size_25"
+            android:layout_marginRight="@dimen/size_25"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                android:text="Nhập tin nhắn"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:gravity="center"
+                android:src="@drawable/ic_send_comment_game"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Gửi">
+
+
+            </ImageView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_2dp">
+
+    <ImageView
+        android:id="@+id/leftIcon"
+        android:layout_width="@dimen/size_36"
+        android:layout_height="@dimen/size_36"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/padding_4dp"
+        android:src="@mipmap/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/edtContent"
+        app:layout_constraintStart_toEndOf="@+id/edtContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtContent" />
+
+    <EditText
+        android:id="@+id/edtContent"
+        style="@style/TextViewBody"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_35"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:paddingRight="@dimen/padding_12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgClear"
+        app:layout_constraintStart_toEndOf="@+id/leftIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/imgClear"
+        android:layout_width="@dimen/size_36"
+        android:layout_height="@dimen/size_36"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/padding_4dp"
+        android:src="@mipmap/ic_cancel_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/edtContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtContent"
+        app:layout_constraintTop_toTopOf="@+id/edtContent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

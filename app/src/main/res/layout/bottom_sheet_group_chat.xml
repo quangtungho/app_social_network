@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <Button
+        android:id="@+id/btnDissolutionGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dissolution_group"
+        android:textAllCaps="false"
+        android:background="@color/white"
+        android:gravity="center|start"
+        android:drawablePadding="@dimen/padding_8dp"
+        android:drawableStart="@drawable/ic_dissolution_group"
+        android:drawableTint="@color/black"
+        android:paddingLeft="@dimen/padding_16dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <include layout="@layout/view_line" />
+    <Button
+        android:id="@+id/btnDeleteGroupChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_group_chat"
+        android:textAllCaps="false"
+        android:background="@color/white"
+        android:gravity="center|start"
+        android:drawablePadding="@dimen/padding_8dp"
+        android:drawableStart="@drawable/ic_recycle_bin_24dp"
+        android:paddingLeft="@dimen/padding_16dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+</LinearLayout>

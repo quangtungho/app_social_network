@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.SendBirthDayCardActivity">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/item_header" />
+
+        <RelativeLayout
+            android:id="@+id/rltImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#E4EAF4"
+            android:gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBirthDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_20"
+                app:cardCornerRadius="@dimen/size_10"
+                app:cardElevation="0dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8dp"
+                    app:cardCornerRadius="@dimen/size_10"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:id="@+id/rootScreenshot"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imvBirthDayCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/background_happy_birthday" />
+
+                        <vn.techres.line.widget.TechResEditTextBirthDay
+                            android:id="@+id/edtMessage"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/background_edittext_birthday_card"
+                            android:gravity="center|top"
+                            android:padding="@dimen/ayp_8dp"
+                            android:textColor="@color/black"
+                            android:textSize="24sp" />
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ayp_8dp"
+                android:text="Chọn mẫu thiệp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/TextSize_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclBirthDayCart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/btnSendCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_32dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:background="@drawable/bg_corner_main_bt_happy_birthday"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_12dp">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gửi thiệp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/TextSize_16"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

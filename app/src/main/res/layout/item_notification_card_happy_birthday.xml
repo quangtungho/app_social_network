@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="@dimen/size_200"
+        android:layout_height="@dimen/size_230"
+        android:background="@drawable/bg_behind_notification_card_hpbd">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_12dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:cardCornerRadius="@dimen/size_16"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/background"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_150"
+                    android:background="@drawable/background_happy_birthday"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:paddingStart="@dimen/padding_2dp"
+                        android:paddingEnd="@dimen/padding_2dp"
+                        android:text="Happy Birthday"
+                        android:textColor="@color/grey_bg" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/txtMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:paddingStart="@dimen/padding_2dp"
+                        android:paddingEnd="@dimen/padding_2dp"
+                        android:text="Phạm Văn Nhân"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_big" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imv_avatar"
+                        android:layout_width="@dimen/size_64"
+                        android:layout_height="@dimen/size_64"
+                        android:layout_margin="@dimen/ayp_8dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bg_front_notification_card_hpbd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:text="Thiệp mừng sinh nhật"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:src="@drawable/ic_birthday_cake_image" />
+            </LinearLayout>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtOpenCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="Xem thiệp"
+                android:textColor="@color/main_bg" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

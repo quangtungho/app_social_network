@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvQualityFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="@dimen/padding_8dp"
+            android:paddingEnd="@dimen/padding_8dp"
+            android:paddingBottom="@dimen/padding_4dp"
+            android:paddingTop="@dimen/padding_4dp"
+            android:fontFamily="@font/thonburi"
+            android:text="1x"
+            android:textStyle="bold"
+            android:textColor="@color/main_bg"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNameFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/thonburi"
+            android:text="Milo Dầm Thập Cẩm"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toStartOf="@+id/tvAmount"
+            app:layout_constraintStart_toEndOf="@+id/tvQualityFood"
+            app:layout_constraintTop_toTopOf="@+id/tvQualityFood" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/thonburi"
+            android:text="Đơn giá: 120.000đ"
+            android:textSize="@dimen/font_small"
+            app:layout_constraintEnd_toEndOf="@+id/tvNameFood"
+            app:layout_constraintStart_toEndOf="@+id/tvQualityFood"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameFood" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/thonburi"
+            android:text="120.000đ"
+            android:textSize="@dimen/font_small"
+            android:textColor="@color/blue_gg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvQualityFood" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginTop="16dp"
+            android:background="@color/gray_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvPrice"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

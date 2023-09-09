@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:tag="layout/include_post_comment_item_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include android:id="@+id/firstComment" layout="@layout/item_comment_news_feed"/>
+    <include android:id="@+id/secondComment" layout="@layout/item_comment_news_feed"/>
+</LinearLayout>

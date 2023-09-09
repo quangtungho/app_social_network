@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_180"
+            android:layout_marginStart="@dimen/margin_5dp"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:elevation="@dimen/size_4"
+                android:orientation="horizontal">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="@dimen/size_120"
+                    android:layout_height="@dimen/size_50"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:background="@drawable/bg_choose_food_two"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_15dp"
+                    android:paddingEnd="@dimen/padding_20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_15"
+                        android:layout_height="@dimen/size_15"
+                        android:layout_marginEnd="@dimen/margin_4dp"
+                        android:contentDescription="@string/description_place_image"
+                        android:src="@drawable/star_on"
+                        tools:ignore="UseAppTint" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvTotalRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_large"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_180"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_marginEnd="@dimen/margin_30dp"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:background="@drawable/corners_white_20dp"
+                android:elevation="@dimen/size_2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15dp"
+                    android:layout_marginTop="@dimen/margin_15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_15"
+                        android:layout_height="@dimen/size_15"
+                        android:layout_marginEnd="@dimen/margin_4dp"
+                        android:contentDescription="@string/description_place_image"
+                        android:src="@drawable/ic_king"
+                        android:tint="@color/yellow_star"
+                        tools:ignore="UseAppTint" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5dp"
+                        android:text="@string/food_top"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_big" />
+                </LinearLayout>
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvNameFood"
+                    android:layout_width="@dimen/size_220"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15dp"
+                    android:layout_marginTop="@dimen/margin_15dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15dp"
+                    android:layout_marginTop="@dimen/margin_2dp"
+                    android:text="@string/title_Food"
+                    android:textSize="@dimen/font_big" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgFood"
+                android:layout_width="@dimen/size_140"
+                android:layout_height="@dimen/size_140"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:contentDescription="@string/description_place_image"
+                android:elevation="@dimen/size_3"
+                android:scaleType="centerCrop" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

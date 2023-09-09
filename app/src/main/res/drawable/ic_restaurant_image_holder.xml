@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_pressed="true">
+		<layer-list>
+			<item>
+				<shape android:shape="rectangle">
+					<solid android:color="#ffe2e2e2" />
+					<size android:height="50.0dip" android:width="50.0dip" />
+					<corners android:radius="3.0dip" />
+				</shape>
+			</item>
+			<item android:drawable="@drawable/restaurant_image_holder" />
+		</layer-list>
+	</item>
+	<item>
+		<layer-list>
+			<item>
+				<shape android:shape="rectangle">
+					<solid android:color="#ffe2e2e2" />
+					<size android:height="50.0dip" android:width="50.0dip" />
+					<corners android:radius="3.0dip" />
+				</shape>
+			</item>
+			<item android:drawable="@drawable/restaurant_image_holder" />
+		</layer-list>
+	</item>
+</selector>

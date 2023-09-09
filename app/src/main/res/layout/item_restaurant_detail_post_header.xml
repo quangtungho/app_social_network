@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ctItem"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingTop="@dimen/padding_8dp"
+        android:paddingEnd="@dimen/padding_8dp">
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvNameUserDrink"
+            style="@style/TvSubHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_12dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/imgMoreReview"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/imgAvatarPost"
+            app:layout_constraintRight_toLeftOf="@+id/txtTime"
+            app:layout_constraintStart_toEndOf="@+id/imgAvatarPost"
+            tools:ignore="MissingConstraints,RtlSymmetry"
+            tools:layout_editor_absoluteY="1dp" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@id/txtTime"
+            style="@style/TvCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imgAvatarPost"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgAvatarPost"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameUserDrink"
+            tools:ignore="MissingConstraints"
+            android:paddingStart="@dimen/padding_12dp" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtTextComment"
+            style="@style/TvCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbRateReview"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="@dimen/margin_4dp"/>
+
+        <RatingBar
+            android:id="@+id/rbRateReview"
+            style="@style/CustomRatingBarSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            app:layout_constraintTop_toBottomOf="@+id/imgAvatarPost"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="@dimen/margin_10dp" />
+
+        <ImageView
+            android:id="@+id/imgMoreReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_horizontal_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvNameUserDrink"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/rllMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgOneOne"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_400"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_400"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:orientation="horizontal"
+            android:id="@+id/lnImageTwo"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/imgOneTwo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/restaurant_holder"
+                android:layout_marginEnd="@dimen/margin_1dp"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgTwoTwo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/restaurant_holder"
+                android:layout_marginStart="@dimen/margin_1dp"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lnImageThree"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_400"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgOneThree"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:layout_marginBottom="@dimen/margin_1dp"
+                android:background="@drawable/restaurant_holder"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/imgTwoThree"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_1dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/margin_1dp"
+                    android:background="@drawable/restaurant_holder"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription,NestedWeights,RtlSymmetry" />
+
+                <ImageView
+                    android:id="@+id/imgThreeThree"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_1dp"
+                    android:layout_marginStart="@dimen/margin_1dp"
+                    android:background="@drawable/restaurant_holder"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription,RtlSymmetry" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:id="@+id/lnImageFour"
+            android:layout_height="@dimen/size_400"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgOneFour"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/restaurant_holder"
+                android:layout_marginEnd="@dimen/margin_1dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="@dimen/size_150"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/imgTwoFour"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/restaurant_holder"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription"
+                    android:layout_marginStart="@dimen/margin_1dp"
+                    android:layout_marginBottom="@dimen/margin_1dp"/>
+
+                <ImageView
+                    android:id="@+id/imgThreeFour"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/restaurant_holder"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription"
+                    android:layout_marginTop="@dimen/margin_1dp"
+                    android:layout_marginStart="@dimen/margin_1dp"
+                    android:layout_marginBottom="@dimen/margin_1dp"/>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/margin_1dp"
+                    android:layout_marginStart="@dimen/margin_1dp">
+
+                    <ImageView
+                        android:id="@+id/imgFourFour"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/restaurant_holder"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvMoreImage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_background_transparent"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

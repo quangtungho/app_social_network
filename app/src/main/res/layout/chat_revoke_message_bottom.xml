@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ayp_8dp"
+                android:layout_marginTop="@dimen/ayp_8dp"
+                android:layout_marginEnd="@dimen/ayp_8dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/reaction_popup_shadow"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/like_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_8dp"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:paddingBottom="@dimen/padding_8dp"
+                    android:orientation="vertical"
+                    android:src="@drawable/ic_like"
+                    android:background="@color/transparent"
+                    tools:ignore="NestedWeights" />
+
+                <ImageButton
+                    android:id="@+id/love_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/ayp_8dp"
+                    android:gravity="center"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_heart" />
+
+                <ImageButton
+                    android:id="@+id/smile_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/ayp_8dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_smile" />
+
+                <ImageButton
+                    android:id="@+id/wow_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/ayp_8dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_wow" />
+
+                <ImageButton
+                    android:id="@+id/angry_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/ayp_8dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_angry" />
+
+                <ImageButton
+                    android:id="@+id/sad_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/ayp_8dp"
+                    android:paddingBottom="@dimen/ayp_8dp"
+                    android:paddingLeft="@dimen/ayp_8dp"
+                    android:paddingRight="@dimen/size_16"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_sad" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/revokeReaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ayp_8dp"
+                android:layout_marginEnd="@dimen/ayp_8dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_revoke_reaction"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ayp_8dp"
+            android:background="@drawable/bg_border_reaction_popup_chat_white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/ayp_8dp">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtUserReaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/ayp_8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/ayp_8dp"
+                android:layout_marginEnd="@dimen/ayp_8dp"
+                android:background="@color/grey_line_" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lnAlL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/ayp_8dp">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/size_24"
+                                android:layout_gravity="center"
+                                tools:ignore="Suspicious0dp" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/all"
+                                android:textSize="@dimen/TextSize_12" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/txtCountAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/ayp_8dp"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/viewAll"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/ayp_8dp"
+                            android:layout_marginEnd="@dimen/ayp_8dp"
+                            android:background="@color/main_bg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnEmoji1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/ayp_8dp">
+
+                            <ImageView
+                                android:id="@+id/imgEmoji1"
+                                android:layout_width="@dimen/size_24"
+                                android:layout_height="@dimen/size_24"
+                                android:layout_gravity="center" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/txtCount1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/ayp_8dp"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/ayp_8dp"
+                            android:layout_marginEnd="@dimen/ayp_8dp"
+                            android:background="@color/main_bg"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnEmoji2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/ayp_8dp">
+
+                            <ImageView
+                                android:id="@+id/imgEmoji2"
+                                android:layout_width="@dimen/size_24"
+                                android:layout_height="@dimen/size_24"
+                                android:layout_gravity="center" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/txtCount2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/ayp_8dp"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/ayp_8dp"
+                            android:layout_marginEnd="@dimen/ayp_8dp"
+                            android:background="@color/main_bg"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnEmoji3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/ayp_8dp">
+
+                            <ImageView
+                                android:id="@+id/imgEmoji3"
+                                android:layout_width="@dimen/size_24"
+                                android:layout_height="@dimen/size_24"
+                                android:layout_gravity="center" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/txtCount3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/ayp_8dp"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/ayp_8dp"
+                            android:layout_marginEnd="@dimen/ayp_8dp"
+                            android:background="@color/main_bg"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnEmoji4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/ayp_8dp">
+
+                            <ImageView
+                                android:id="@+id/imgEmoji4"
+                                android:layout_width="@dimen/size_24"
+                                android:layout_height="@dimen/size_24"
+                                android:layout_gravity="center" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/txtCount4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/ayp_8dp"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/ayp_8dp"
+                            android:layout_marginEnd="@dimen/ayp_8dp"
+                            android:background="@color/main_bg"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnEmoji5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/ayp_8dp">
+
+                            <ImageView
+                                android:id="@+id/imgEmoji5"
+                                android:layout_width="@dimen/size_24"
+                                android:layout_height="@dimen/size_24"
+                                android:layout_gravity="center" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/txtCount5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/ayp_8dp"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/ayp_8dp"
+                            android:layout_marginEnd="@dimen/ayp_8dp"
+                            android:background="@color/main_bg"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnEmoji6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/ayp_8dp">
+
+                            <ImageView
+                                android:id="@+id/imgEmoji6"
+                                android:layout_width="@dimen/size_24"
+                                android:layout_height="@dimen/size_24"
+                                android:layout_gravity="center" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/txtCount6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/ayp_8dp"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view6"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/ayp_8dp"
+                            android:layout_marginEnd="@dimen/ayp_8dp"
+                            android:background="@color/main_bg"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclEmojiRevoke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/ayp_8dp"
+                android:paddingBottom="@dimen/ayp_8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

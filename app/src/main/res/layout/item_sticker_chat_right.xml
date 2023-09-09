@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_8dp"
+        android:orientation="vertical">
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/tvTimeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:paddingLeft="@dimen/padding_7dp"
+            android:paddingTop="@dimen/padding_1dp"
+            android:paddingRight="@dimen/padding_7dp"
+            android:paddingBottom="@dimen/padding_1dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_tiny"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgSticker"
+            android:layout_width="@dimen/size_120"
+            android:layout_height="@dimen/size_120"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/default_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeHeader"
+            tools:ignore="RtlHardcoded" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvTimeSticker"
+            style="@style/chat_time_style"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:paddingLeft="@dimen/padding_5dp"
+            android:paddingRight="@dimen/padding_5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small"
+            app:layout_constraintStart_toStartOf="@+id/imgSticker"
+            app:layout_constraintTop_toBottomOf="@+id/imgSticker"
+            tools:ignore="RtlHardcoded" />
+
+        <LinearLayout
+            android:id="@+id/lnReactionContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imgSticker"
+            app:layout_constraintEnd_toEndOf="@+id/imgSticker"
+            app:layout_constraintTop_toBottomOf="@+id/imgSticker">
+
+            <include
+                android:id="@+id/reaction"
+                layout="@layout/item_reaction_message" />
+
+        </LinearLayout>
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvStatusView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:drawableStart="@drawable/icn_bubble_chat_received"
+            android:drawablePadding="@dimen/padding_2dp"
+            android:paddingLeft="@dimen/padding_7dp"
+            android:paddingTop="@dimen/padding_1dp"
+            android:paddingRight="@dimen/padding_7dp"
+            android:paddingBottom="@dimen/padding_1dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_very_tiny"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/imgSticker"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeSticker" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcViewer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatusView"
+            app:reverseLayout="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

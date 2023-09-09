@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <merge>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/lnMediaFive"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_4dp">
+
+                <com.zhihu.matisse.internal.ui.widget.SquareFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_4dp">
+
+                        <ImageView
+                            android:id="@+id/imgOneTypeFive"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imgOneTypeFivePlay"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/play_video"
+                            android:visibility="gone"
+                            tools:ignore="ContentDescription" />
+                        <ImageView
+                            android:id="@+id/imgDeleteOneFive"
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:src="@drawable/ic_close"
+                            android:layout_margin="@dimen/margin_10dp"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </com.zhihu.matisse.internal.ui.widget.SquareFrameLayout>
+
+                <com.zhihu.matisse.internal.ui.widget.SquareFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgTwoTypeFive"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imgTwoTypeFivePlay"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/play_video"
+                            android:visibility="gone"
+                            tools:ignore="ContentDescription" />
+                        <ImageView
+                            android:id="@+id/imgDeleteTwoFive"
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:src="@drawable/ic_close"
+                            android:layout_margin="@dimen/margin_10dp"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </com.zhihu.matisse.internal.ui.widget.SquareFrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.zhihu.matisse.internal.ui.widget.SquareFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_4dp">
+
+                        <ImageView
+                            android:id="@+id/imgThreeTypeFive"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imgThreeTypeFivePlay"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/play_video"
+                            android:visibility="gone"
+                            tools:ignore="ContentDescription" />
+                        <ImageView
+                            android:id="@+id/imgDeleteThreeFive"
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:src="@drawable/ic_close"
+                            android:layout_margin="@dimen/margin_10dp"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </com.zhihu.matisse.internal.ui.widget.SquareFrameLayout>
+
+                <com.zhihu.matisse.internal.ui.widget.SquareFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_4dp">
+
+                        <ImageView
+                            android:id="@+id/imgFourTypeFive"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imgFourTypeFivePlay"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/play_video"
+                            android:visibility="gone"
+                            tools:ignore="ContentDescription" />
+                        <ImageView
+                            android:id="@+id/imgDeleteFourFive"
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:src="@drawable/ic_close"
+                            android:layout_margin="@dimen/margin_10dp"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </com.zhihu.matisse.internal.ui.widget.SquareFrameLayout>
+
+                <com.zhihu.matisse.internal.ui.widget.SquareFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgFiveTypeFive"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imgFiveTypeFivePlay"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/play_video"
+                            android:visibility="gone"
+                            tools:ignore="ContentDescription" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvMoreImage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@color/gray_background_transparent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/size_25"
+                            android:visibility="visible"
+                            tools:ignore="SpUsage" />
+                        <ImageView
+                            android:id="@+id/imgDeleteFiveFive"
+                            android:layout_width="@dimen/size_25"
+                            android:layout_height="@dimen/size_25"
+                            android:src="@drawable/ic_close"
+                            android:layout_margin="@dimen/margin_10dp"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </com.zhihu.matisse.internal.ui.widget.SquareFrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </merge>
+
+</layout>

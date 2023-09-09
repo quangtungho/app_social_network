@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".fragment.food.FoodDetailFragment">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/imgAvatarFood"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_350"
+                android:contentDescription="@string/default_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="320dp"
+                android:background="@drawable/bottom_sheet_radius_20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvNameFood"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Chocolate Sữa Trắng"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_big"
+                app:layout_constraintEnd_toStartOf="@+id/tvRatingFood"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewContainer" />
+
+            <TextView
+                android:id="@+id/tvPriceFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="20.000đ"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameFood" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvRatingFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawableStart="@drawable/ic_star_line_18"
+                android:drawablePadding="@dimen/padding_4dp"
+                android:drawableTint="@color/main_bg"
+                android:gravity="bottom"
+                android:text="4.8"
+                android:textColor="@color/main_bg"
+                android:textSize="@dimen/font_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewContainer" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hạt cacao sau khi sấy khô và lên men sẽ bao gồm phần bơ cacao và phần mảnh hạt cacao, với khối lượng tương đương. Bơ cacao mang lại cho chocolate cảm giác béo ngậy, còn các mảnh hạt cacao thì cung cấp mùi vị đặc biệt."
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="@dimen/size_3"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPriceFood" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/size_100"
+                android:layout_height="@dimen/size_50"
+                android:background="@drawable/background_gray_light_round_8dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imgMinus"
+                    android:layout_width="@dimen/size_35"
+                    android:layout_height="@dimen/size_50"
+                    android:contentDescription="@string/title_Barcode"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_minus_orangee" />
+
+                <TextView
+                    android:id="@+id/tvNumberChoose"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="99"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="@dimen/font_big"
+                    tools:ignore="NestedWeights" />
+
+                <ImageButton
+                    android:id="@+id/imgPlus"
+                    android:layout_width="@dimen/size_35"
+                    android:layout_height="@dimen/size_50"
+                    android:background="@color/transparent"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/title_Barcode"
+                    android:src="@drawable/ic_add_orange" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lnAddCart"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_50"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:background="@drawable/bg_btn_rectangle"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tvAddFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/book_now"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_big"
+                    android:textStyle="bold"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

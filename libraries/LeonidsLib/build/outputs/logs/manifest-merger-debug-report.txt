@@ -1,0 +1,37 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:2:1-17:12
+INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:2:1-17:12
+INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:2:1-17:12
+	package
+		ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:4:5-37
+		INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml
+		INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:6:5-30
+	xmlns:tools
+		ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:5:5-28
+uses-sdk
+ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:8:5-10:42
+INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:8:5-10:42
+INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:8:5-10:42
+INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:8:5-10:42
+INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:8:5-10:42
+	android:targetSdkVersion
+		ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:9:9-38
+		INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml
+		INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml
+	tools:ignore
+		ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:10:9-39
+	android:minSdkVersion
+		INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml
+		ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:8:5-10:42
+		INJECTED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml
+application
+ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:12:5-15:19
+	android:allowBackup
+		ADDED from /Users/hoquangtung/Documents/vn.techres.android.aloline/V1/libraries/LeonidsLib/src/main/AndroidManifest.xml:13:9-35

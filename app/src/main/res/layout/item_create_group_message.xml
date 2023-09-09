@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_32dp"
+        android:layout_marginBottom="@dimen/margin_32dp"
+        android:background="@drawable/corner_white_10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="@dimen/size_70"
+            android:layout_height="@dimen/size_70"
+            app:cardCornerRadius="@dimen/size_35"
+            app:cardElevation="@dimen/size_0"
+            app:layout_constraintEnd_toStartOf="@+id/cardView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgAvatarGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/default_image" />
+
+        </androidx.cardview.widget.CardView>
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/tvNameGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_big" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcMemberGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/imgAddFriend"
+                android:layout_width="@dimen/size_35"
+                android:layout_height="@dimen/size_35"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_green"
+                android:src="@drawable/ic_add_friend"
+                android:padding="@dimen/padding_5dp"
+                android:contentDescription="@string/default_image" />
+
+        </LinearLayout>
+
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/techResTextView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:gravity="center"
+            android:text="@string/choose_sticker_sent_to_welcome"
+            android:textColor="@color/color_text_chat" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcStickerWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_16dp" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="example.javatpoint.com.kotlincontextmenu.MainActivity">
+    <item
+        android:id="@+id/seeProfile"
+        android:orderInCategory="100"
+        android:title="@string/see_profile"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/chat"
+        android:orderInCategory="100"
+        android:title="@string/chat"
+        app:showAsAction="never" />
+</menu>

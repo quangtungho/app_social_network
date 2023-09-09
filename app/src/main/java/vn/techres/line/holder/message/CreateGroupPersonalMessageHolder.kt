@@ -1,0 +1,57 @@
+package vn.techres.line.holder.message
+
+import android.content.Context
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.RequestOptions
+import vn.techres.line.R
+import vn.techres.line.adapter.chat.StickerSuggestAdapter
+import vn.techres.line.data.model.chat.MessagesByGroup
+import vn.techres.line.data.model.utils.ConfigNodeJs
+import vn.techres.line.databinding.ItemCreatePersonalMessageBinding
+import vn.techres.line.helper.keyboard.UtilitiesChatHandler
+
+class CreateGroupPersonalMessageHolder(private val binding : ItemCreatePersonalMessageBinding) : RecyclerView.ViewHolder(binding.root) {
+    fun bind(
+        context: Context,
+        configNode: ConfigNodeJs,
+        message: MessagesByGroup,
+        utilitiesChatHandler: UtilitiesChatHandler?
+    ){
+        Glide.with(binding.imgAvatarUser)
+            .load(
+                String.format("%s%s", configNode.api_ads, message.list_member[0].avatar?.medium)
+            )
+            .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+            .centerCrop()
+            .placeholder(R.drawable.logo_aloline_placeholder)
+            .error(R.drawable.logo_aloline_placeholder)
+            .apply(
+                RequestOptions().placeholder(R.drawable.logo_aloline_placeholder)
+                    .error(R.drawable.logo_aloline_placeholder)
+            )
+            .into(binding.imgAvatarUser)
+
+        Glide.with(binding.imgAvatarFriend)
+            .load(
+                String.format("%s%s", configNode.api_ads, message.list_member[1].avatar?.medium)
+            )
+            .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+            .centerCrop()
+            .placeholder(R.drawable.logo_aloline_placeholder)
+            .error(R.drawable.logo_aloline_placeholder)
+            .apply(
+                RequestOptions().placeholder(R.drawable.logo_aloline_placeholder)
+                    .error(R.drawable.logo_aloline_placeholder)
+            )
+            .into(binding.imgAvatarFriend)
+
+        binding.tvTitleCreateProfile.text = message.message
+        val adapter = message.list_sticker?.let { StickerSuggestAdapter(context, it) }
+        binding.rcStickerWelcome.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+        binding.rcStickerWelcome.adapter = adapter
+        adapter?.setUtilitiesChatHandler(utilitiesChatHandler)
+    }
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnReviewPopup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="@dimen/size_350"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corners_white_8dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <vn.techres.line.widget.TechResTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:text="Hãy đặt tên Album của bạn"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_large"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <vn.techres.line.widget.TechResEditText
+                android:id="@+id/edtNameFolder"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10dp"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_margin="@dimen/margin_20dp">
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:layout_marginEnd="@dimen/margin_40dp"/>
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/txtSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:enabled="false"
+                android:textAllCaps="true"
+                android:textColor="@color/main_bg"
+                android:layout_marginEnd="@dimen/margin_10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_sticker"
+        icon="@drawable/ic_sticker_tab"
+        title="Sticker" />
+    <tab
+        id="@+id/tab_gif"
+        icon="@drawable/ic_emo_navigation"
+        title="Emoji" />
+</tabs>

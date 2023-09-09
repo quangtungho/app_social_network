@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:focusable="true">
+
+        <LinearLayout
+            android:id="@+id/rvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:elevation="5dp">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="@dimen/size_50"
+                    android:layout_height="@dimen/size_50"
+                    android:background="@color/transparent"
+                    android:src="@drawable/back"
+                    android:tint="@color/main_gray_dim"
+                    android:padding="@dimen/padding_15dp"
+                    tools:ignore="ContentDescription,UseAppTint" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/detail_infor"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/time"
+                layout="@layout/item_restaurant_detail_more_open_time" />
+
+            <include
+                android:id="@+id/utilities"
+                layout="@layout/item_restaurant_detail_more_utilities" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

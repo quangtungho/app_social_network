@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.booking.ProcessingBookingFragment">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcProcessing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/lnEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/default_image"
+                            android:src="@drawable/emptystate" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/empty_booking"
+                            android:textColor="@color/black_70"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/size_220"
+                        android:layout_height="wrap_content">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/empty_all_booking" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_view_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginStart="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:gravity="center">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_80"
+                                android:layout_height="@dimen/size_80"
+                                app:cardCornerRadius="@dimen/size_10"
+                                android:layout_marginEnd="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    tools:ignore="ContentDescription"
+                                    android:src="@color/gray" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="@dimen/size_120"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:padding="@dimen/margin_5dp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:background="@color/gray" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_chevron_right_black_24dp"
+                                android:contentDescription="@string/description_place_image" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dip"
+                            android:background="@color/gray_dark"
+                            android:layout_marginStart="@dimen/margin_10dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginStart="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:gravity="center">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_80"
+                                android:layout_height="@dimen/size_80"
+                                app:cardCornerRadius="@dimen/size_10"
+                                android:layout_marginEnd="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    tools:ignore="ContentDescription"
+                                    android:src="@color/gray" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="@dimen/size_120"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:padding="@dimen/margin_5dp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:background="@color/gray" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_chevron_right_black_24dp"
+                                android:contentDescription="@string/description_place_image" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dip"
+                            android:background="@color/gray_dark"
+                            android:layout_marginStart="@dimen/margin_10dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginStart="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:gravity="center">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_80"
+                                android:layout_height="@dimen/size_80"
+                                app:cardCornerRadius="@dimen/size_10"
+                                android:layout_marginEnd="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    tools:ignore="ContentDescription"
+                                    android:src="@color/gray" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="@dimen/size_120"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:padding="@dimen/margin_5dp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:background="@color/gray" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_chevron_right_black_24dp"
+                                android:contentDescription="@string/description_place_image" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dip"
+                            android:background="@color/gray_dark"
+                            android:layout_marginStart="@dimen/margin_10dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginStart="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:gravity="center">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_80"
+                                android:layout_height="@dimen/size_80"
+                                app:cardCornerRadius="@dimen/size_10"
+                                android:layout_marginEnd="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    tools:ignore="ContentDescription"
+                                    android:src="@color/gray" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="@dimen/size_120"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:padding="@dimen/margin_5dp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:background="@color/gray" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_chevron_right_black_24dp"
+                                android:contentDescription="@string/description_place_image" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dip"
+                            android:background="@color/gray_dark"
+                            android:layout_marginStart="@dimen/margin_10dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginStart="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:gravity="center">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_80"
+                                android:layout_height="@dimen/size_80"
+                                app:cardCornerRadius="@dimen/size_10"
+                                android:layout_marginEnd="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    tools:ignore="ContentDescription"
+                                    android:src="@color/gray" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="@dimen/size_120"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:padding="@dimen/margin_5dp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:background="@color/gray" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_chevron_right_black_24dp"
+                                android:contentDescription="@string/description_place_image" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dip"
+                            android:background="@color/gray_dark"
+                            android:layout_marginStart="@dimen/margin_10dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginStart="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:gravity="center">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_80"
+                                android:layout_height="@dimen/size_80"
+                                app:cardCornerRadius="@dimen/size_10"
+                                android:layout_marginEnd="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:id="@+id/imgLogoBranch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    tools:ignore="ContentDescription"
+                                    android:src="@color/gray" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="@dimen/size_120"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:padding="@dimen/margin_5dp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:background="@color/gray" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:background="@color/gray" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_chevron_right_black_24dp"
+                                android:contentDescription="@string/description_place_image" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dip"
+                            android:background="@color/gray_dark"
+                            android:layout_marginStart="@dimen/margin_10dp" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </RelativeLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+</layout>

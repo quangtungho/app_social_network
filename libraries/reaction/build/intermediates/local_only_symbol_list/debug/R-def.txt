@@ -1,0 +1,8 @@
+R_DEF: Internal format may change without notice
+local
+dimen reactions_item_margin
+dimen reactions_item_size
+dimen reactions_text_horizontal_padding
+dimen reactions_text_size
+dimen reactions_text_vertical_padding
+drawable reactions_text_background

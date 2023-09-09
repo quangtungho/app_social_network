@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctlInComing"
+        android:layout_width="match_parent"
+        android:background="@color/transparent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lnHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/headerAction"
+                layout="@layout/item_header_action_call" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.skyfishjy.library.RippleBackground
+            android:id="@+id/rippleBackground"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lnHeader"
+            app:rb_color="#ffffff"
+            app:rb_duration="3000"
+            app:rb_radius="@dimen/size_70"
+            app:rb_rippleAmount="4"
+            app:rb_scale="2"
+            app:rb_type="fillRipple">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop" />
+
+        </com.skyfishjy.library.RippleBackground>
+
+        <LinearLayout
+            android:id="@+id/linearLayout28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/rippleBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rippleBackground">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/font_big" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnReject"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="@dimen/size_100"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rippleBackgroundCall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rippleBackground"
+            app:layout_constraintVertical_bias="0.8">
+
+            <ImageView
+                android:id="@+id/buttonCallCancel"
+                android:layout_width="@dimen/size_60"
+                android:layout_height="@dimen/size_60"
+                android:contentDescription="@string/default_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/reject_call_button_selector" />
+        </LinearLayout>
+
+        <com.skyfishjy.library.RippleBackground
+            android:id="@+id/rippleBackgroundCall"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="@dimen/size_100"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lnReject"
+            app:layout_constraintTop_toBottomOf="@+id/rippleBackground"
+            app:layout_constraintVertical_bias="0.8"
+            app:rb_color="#ffffff"
+            app:rb_duration="3000"
+            app:rb_radius="@dimen/size_25"
+            app:rb_rippleAmount="4"
+            app:rb_scale="2"
+            app:rb_type="fillRipple">
+
+            <ImageView
+                android:id="@+id/imgAcceptCall"
+                android:layout_width="@dimen/size_60"
+                android:layout_height="@dimen/size_60"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/default_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/new_incall_answer_voice_button_selector" />
+        </com.skyfishjy.library.RippleBackground>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

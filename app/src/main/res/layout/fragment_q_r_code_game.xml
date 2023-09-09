@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/rlActionBar"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/bg_header_main_2">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                android:contentDescription="@string/default_image"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_15dp"
+                android:src="@drawable/back"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_30"
+                android:layout_centerVertical="true"
+                tools:ignore="NestedWeights">
+
+                <TextView
+                    android:id="@+id/txtTitleHomeHeader"
+                    style="@style/TvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:text="@string/qrCode"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_big" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <cn.bingoogolapple.qrcode.zbar.ZBarView
+                android:id="@+id/zbarview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:qrcv_animTime="1000"
+                app:qrcv_barcodeRectHeight="120dp"
+                app:qrcv_borderColor="@android:color/white"
+                app:qrcv_borderSize="1dp"
+                app:qrcv_cornerColor="@color/color_main"
+                app:qrcv_cornerLength="20dp"
+                app:qrcv_cornerSize="3dp"
+                app:qrcv_customGridScanLineDrawable="@mipmap/custom_scan_line"
+                app:qrcv_isAutoZoom="true"
+                app:qrcv_isBarcode="false"
+                app:qrcv_isOnlyDecodeScanBoxArea="false"
+                app:qrcv_isShowDefaultGridScanLineDrawable="true"
+                app:qrcv_isShowDefaultScanLineDrawable="true"
+                app:qrcv_isShowLocationPoint="true"
+                app:qrcv_isShowTipBackground="true"
+                app:qrcv_isShowTipTextAsSingleLine="false"
+                app:qrcv_isTipTextBelowRect="false"
+                app:qrcv_maskColor="#33FFFFFF"
+                app:qrcv_qrCodeTipText="@string/Move_the_code_into_the_frame"
+                app:qrcv_rectWidth="200dp"
+                app:qrcv_scanLineColor="@color/color_main"
+                app:qrcv_toolbarHeight="56dp"
+                app:qrcv_topOffset="80dp"
+                app:qrcv_verticalBias="-1"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <LinearLayout
+                android:id="@+id/lnControlQR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/size_40"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/choose_qrcde_from_gallery"
+                    style="@style/ImageButtonStyleCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_scan_image" />
+
+                <ImageButton
+                    android:id="@+id/open_flashlight"
+                    style="@style/ImageButtonStyleCustom"
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/size_32"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_flash_off" />
+
+                <ImageButton
+                    android:id="@+id/open_the_front_camera"
+                    style="@style/ImageButtonStyleCustom"
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="@dimen/size_24"
+                    android:layout_marginStart="@dimen/size_32"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_flip_camera" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/loading_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#60000000"
+                tools:viewBindingIgnore="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_bg_progress_dialog"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ProgressBar
+                        style="@style/ProgressBarCircleNormal"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:indeterminate="true"
+                        android:indeterminateBehavior="repeat"
+                        android:theme="@style/CircularProgress" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/txtTitleLoading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:padding="5dp"
+                        android:text="@string/loading"
+                        android:textSize="@dimen/TextSize_14"
+                        tools:ignore="SpUsage" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/incall_switch_camera_button_disabled" android:state_enabled="false" />
+    <item android:drawable="@drawable/incall_switch_camera_button_selected" android:state_enabled="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/incall_switch_camera_button_selected" android:state_enabled="true" android:state_pressed="false" android:state_selected="true" />
+    <item android:drawable="@drawable/incall_switch_camera_button" android:state_enabled="true" android:state_pressed="false" android:state_selected="false" />
+</selector>

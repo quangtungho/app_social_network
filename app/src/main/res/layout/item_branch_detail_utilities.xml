@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color">
+    <View
+        android:id="@id/vLine"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:background="@color/divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_view_white"
+        android:id="@+id/ctDetailUtilities"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/padding_12dp"
+        android:paddingTop="@dimen/padding_8dp"
+        android:paddingBottom="@dimen/padding_8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vLine"
+        tools:ignore="RtlSymmetry">
+
+        <ImageView
+            android:id="@id/imgLeft"
+            style="@style/TvCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_horizontal_gray"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@id/tv1"
+            style="@style/TvBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_12dp"
+            android:paddingRight="@dimen/padding_12dp"
+            android:paddingBottom="@dimen/padding_4dp"
+            android:text="@string/see_more_utilities"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintBottom_toBottomOf="@id/imgLeft"
+            app:layout_constraintLeft_toRightOf="@id/imgLeft"
+            app:layout_constraintTop_toTopOf="@id/imgLeft" />
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvCaption"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:maxLines="1"
+            android:paddingStart="@dimen/padding_12dp"
+            android:singleLine="true"
+            android:text="@string/see_more_utilities_content"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imgLeft"
+            app:layout_constraintTop_toBottomOf="@id/imgLeft"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:id="@id/imgRight"
+            style="@style/TvCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_go_to_detail"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

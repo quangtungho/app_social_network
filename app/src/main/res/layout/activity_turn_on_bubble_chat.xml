@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.TurnOnBubbleChatActivity"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="@dimen/size_200"
+            android:layout_height="0dp"
+            android:contentDescription="@string/description_place_image"
+            android:src="@drawable/bubblechat"
+            app:layout_constraintBottom_toTopOf="@+id/techResTextViewBold7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/size_100"
+            android:layout_height="@dimen/size_100"
+            android:contentDescription="@string/description_place_image"
+            android:src="@drawable/chatboxbubble"
+            app:layout_constraintBottom_toTopOf="@+id/techResTextViewBold7"
+            app:layout_constraintEnd_toEndOf="@+id/imageView16" />
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/techResTextViewBold7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/turn_on_bubble_chat"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_largexxx"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/techResTextView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_15dp"
+            android:text="@string/content_turn_on_bubble_chat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/techResTextViewBold7" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/techResTextView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/allow_bubble_chat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/techResTextView20" />
+
+        <Button
+            android:id="@+id/btnSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:background="@drawable/bg_button_orange_radius"
+            android:text="@string/go_to_setting"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/btnOtherTime" />
+
+        <Button
+            android:id="@+id/btnOtherTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:background="@color/transparent"
+            android:text="@string/other_time"
+            android:textColor="@color/main_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

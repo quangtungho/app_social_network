@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_gray_light"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshOrderReview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/lnOrderReviewNull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/lnEmptyNotifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/margin_10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/emptystate" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/empty_order_review_one"
+                                android:textColor="@color/black_70"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/size_200"
+                            android:layout_height="wrap_content">
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/empty_order_review_two" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_50"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerOrderReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_view_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_110"
+                                android:layout_height="@dimen/size_110"
+                                app:cardCornerRadius="@dimen/size_5"
+                                android:layout_margin="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@color/gray"
+                                    android:contentDescription="@string/description_place_image" />
+                            </androidx.cardview.widget.CardView>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/size_130">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="@dimen/margin_10dp"
+                                    android:layout_centerVertical="true"
+                                    tools:ignore="UselessParent">
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/font_big"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/blue_logo"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="2"
+                                        android:ellipsize="end"
+                                        android:textSize="@dimen/font_big"
+                                        android:textColor="@color/black"
+                                        android:layout_marginTop="@dimen/margin_5dp"
+                                        android:layout_marginBottom="@dimen/margin_20dp"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:id="@+id/txtDateTimeOrder"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:background="@color/gray" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_110"
+                                android:layout_height="@dimen/size_110"
+                                app:cardCornerRadius="@dimen/size_5"
+                                android:layout_margin="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@color/gray"
+                                    android:contentDescription="@string/description_place_image" />
+                            </androidx.cardview.widget.CardView>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/size_130">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="@dimen/margin_10dp"
+                                    android:layout_centerVertical="true"
+                                    tools:ignore="UselessParent">
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/font_big"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/blue_logo"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="2"
+                                        android:ellipsize="end"
+                                        android:textSize="@dimen/font_big"
+                                        android:textColor="@color/black"
+                                        android:layout_marginTop="@dimen/margin_5dp"
+                                        android:layout_marginBottom="@dimen/margin_20dp"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:background="@color/gray" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_110"
+                                android:layout_height="@dimen/size_110"
+                                app:cardCornerRadius="@dimen/size_5"
+                                android:layout_margin="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@color/gray"
+                                    android:contentDescription="@string/description_place_image" />
+                            </androidx.cardview.widget.CardView>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/size_130">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="@dimen/margin_10dp"
+                                    android:layout_centerVertical="true"
+                                    tools:ignore="UselessParent">
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/font_big"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/blue_logo"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="2"
+                                        android:ellipsize="end"
+                                        android:textSize="@dimen/font_big"
+                                        android:textColor="@color/black"
+                                        android:layout_marginTop="@dimen/margin_5dp"
+                                        android:layout_marginBottom="@dimen/margin_20dp"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:background="@color/gray" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_110"
+                                android:layout_height="@dimen/size_110"
+                                app:cardCornerRadius="@dimen/size_5"
+                                android:layout_margin="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@color/gray"
+                                    android:contentDescription="@string/description_place_image" />
+                            </androidx.cardview.widget.CardView>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/size_130">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="@dimen/margin_10dp"
+                                    android:layout_centerVertical="true"
+                                    tools:ignore="UselessParent">
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/font_big"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/blue_logo"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="2"
+                                        android:ellipsize="end"
+                                        android:textSize="@dimen/font_big"
+                                        android:textColor="@color/black"
+                                        android:layout_marginTop="@dimen/margin_5dp"
+                                        android:layout_marginBottom="@dimen/margin_20dp"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:background="@color/gray" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_110"
+                                android:layout_height="@dimen/size_110"
+                                app:cardCornerRadius="@dimen/size_5"
+                                android:layout_margin="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@color/gray"
+                                    android:contentDescription="@string/description_place_image" />
+                            </androidx.cardview.widget.CardView>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/size_130">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="@dimen/margin_10dp"
+                                    android:layout_centerVertical="true"
+                                    tools:ignore="UselessParent">
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/font_big"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/blue_logo"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="2"
+                                        android:ellipsize="end"
+                                        android:textSize="@dimen/font_big"
+                                        android:textColor="@color/black"
+                                        android:layout_marginTop="@dimen/margin_5dp"
+                                        android:layout_marginBottom="@dimen/margin_20dp"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:background="@color/gray" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/size_110"
+                                android:layout_height="@dimen/size_110"
+                                app:cardCornerRadius="@dimen/size_5"
+                                android:layout_margin="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@color/gray"
+                                    android:contentDescription="@string/description_place_image" />
+                            </androidx.cardview.widget.CardView>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/size_130">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="@dimen/margin_10dp"
+                                    android:layout_centerVertical="true"
+                                    tools:ignore="UselessParent">
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/font_big"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/blue_logo"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="2"
+                                        android:ellipsize="end"
+                                        android:textSize="@dimen/font_big"
+                                        android:textColor="@color/black"
+                                        android:layout_marginTop="@dimen/margin_5dp"
+                                        android:layout_marginBottom="@dimen/margin_20dp"
+                                        android:background="@color/gray" />
+
+                                    <vn.techres.line.widget.TechResTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:background="@color/gray" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

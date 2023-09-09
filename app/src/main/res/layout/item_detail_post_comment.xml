@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include android:id="@+id/itemNewsFeedHeader" layout="@layout/item_new_feed_header" />
+
+        <include android:id="@+id/itemNewsFeedLink" layout="@layout/item_new_feed_link" />
+
+        <include android:id="@+id/itemNewsFeedYouTube" layout="@layout/item_new_feed_youtube" />
+
+        <include android:id="@+id/itemNewsFeedMediaOne" layout="@layout/item_media_one" />
+
+        <include android:id="@+id/itemNewsFeedMediaTwo" layout="@layout/item_media_two" />
+
+        <include android:id="@+id/itemNewsFeedMediaThree" layout="@layout/item_media_three" />
+
+        <include android:id="@+id/itemNewsFeedMediaFour" layout="@layout/item_media_four" />
+
+        <include  android:id="@+id/itemNewsFeedMediaFive" layout="@layout/item_media_five" />
+
+        <include android:id="@+id/itemNewsFeedBranch" layout="@layout/item_new_feed_branch" />
+
+        <include android:id="@+id/itemNewsFeedReaction" layout="@layout/item_new_feed_reaction" />
+
+        <include android:id="@+id/itemNewsFeedValueCommentShare" layout="@layout/item_new_feed_value_comment_share" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0_5"
+            android:background="@color/gray"
+            android:layout_marginBottom="@dimen/margin_10dp"/>
+    </LinearLayout>
+</layout>

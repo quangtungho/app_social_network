@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_8dp">
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/tvTimeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:paddingLeft="@dimen/padding_7dp"
+            android:paddingTop="@dimen/padding_1dp"
+            android:paddingRight="@dimen/padding_7dp"
+            android:paddingBottom="@dimen/padding_1dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_tiny"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvNameImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_name_user_chat"
+            android:paddingStart="@dimen/padding_7dp"
+            android:paddingTop="@dimen/padding_2dp"
+            android:paddingEnd="@dimen/padding_7dp"
+            android:paddingBottom="@dimen/padding_2dp"
+            android:textSize="@dimen/font_tiny"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/lnImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeHeader"
+            tools:ignore="RtlSymmetry,SmallSp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImage"
+            android:layout_width="@dimen/size_30"
+            android:layout_height="@dimen/size_30"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="@dimen/size_15"
+            app:cardElevation="@dimen/size_0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvNameImage">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/default_image"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imgPermission"
+            android:layout_width="@dimen/size_15"
+            android:layout_height="@dimen/size_15"
+            android:background="@drawable/ic_key_vice_group"
+            android:contentDescription="@string/default_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/cvImage"
+            app:layout_constraintEnd_toEndOf="@+id/cvImage" />
+
+        <LinearLayout
+            android:id="@+id/lnImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/state_message_left_media"
+            app:layout_constraintStart_toEndOf="@+id/cvImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameImage"
+            app:layout_constraintWidth_max="wrap"
+            app:layout_constraintWidth_percent="0.7"
+            tools:ignore="UselessParent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvImageOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:background="@drawable/background_message_image"
+                app:cardCornerRadius="@dimen/size_8"
+                app:cardElevation="@dimen/size_0">
+
+                <ImageView
+                    android:id="@+id/imgOne"
+                    android:layout_width="@dimen/size_200"
+                    android:layout_height="@dimen/size_200"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/logo_aloline_placeholder"
+                    tools:ignore="ContentDescription" />
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/pbLoading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:max="100"
+                    app:indicatorColor="@color/blue_tag_name"
+                    app:indicatorSize="@dimen/size_30"
+                    app:trackColor="@color/blue_select_seek_bar"
+                    app:trackThickness="@dimen/size_1"
+                    app:trackCornerRadius="@dimen/size_10"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:layout_marginBottom="@dimen/margin_16dp"
+                    android:visibility="gone"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvImageMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="@dimen/size_8"
+                app:cardElevation="@dimen/size_0"
+                tools:ignore="RtlSymmetry">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcImgMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="@color/transparent"
+                    tools:ignore="RtlHardcoded" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvTimeImage"
+            style="@style/chat_time_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:paddingLeft="@dimen/padding_5dp"
+            android:paddingRight="@dimen/padding_5dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/lnImage"
+            app:layout_constraintTop_toBottomOf="@+id/lnImage" />
+
+        <LinearLayout
+            android:id="@+id/lnReactionContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/lnImage"
+            app:layout_constraintEnd_toEndOf="@+id/lnImage"
+            app:layout_constraintTop_toBottomOf="@+id/lnImage">
+
+            <include
+                android:id="@+id/reaction"
+                layout="@layout/item_reaction_message" />
+
+        </LinearLayout>
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvStatusView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_text_bg"
+            android:drawableStart="@drawable/icn_bubble_chat_received"
+            android:drawablePadding="@dimen/padding_2dp"
+            android:paddingLeft="@dimen/padding_7dp"
+            android:paddingTop="@dimen/padding_1dp"
+            android:paddingRight="@dimen/padding_7dp"
+            android:paddingBottom="@dimen/padding_1dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_very_tiny"
+
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/lnImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeImage" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcViewer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatusView"
+            app:reverseLayout="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

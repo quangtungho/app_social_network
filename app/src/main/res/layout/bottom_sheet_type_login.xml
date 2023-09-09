@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20dp">
+
+        <vn.techres.line.widget.TechResTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/padding_15dp"
+            android:text="@string/login_or_register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_huge"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/size_20"
+            android:layout_height="@dimen/size_20"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_15dp"
+            android:src="@drawable/ic_close" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/lnLoginFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_item_login_dark_blue"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_20dp">
+        <ImageView
+            android:layout_width="@dimen/size_48"
+            android:layout_height="@dimen/size_48"
+            android:src="@mipmap/ic_facebook_login"
+            android:padding="@dimen/padding_15dp"/>
+        <vn.techres.line.widget.TechResTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/login_label_login_as_facebook"
+            android:textSize="@dimen/font_big"
+            android:gravity="center|start"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnLoginPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_item_login_primary2"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_20dp">
+        <ImageView
+            android:layout_width="@dimen/size_48"
+            android:layout_height="@dimen/size_48"
+            android:src="@mipmap/ic_phone_white"
+            android:padding="@dimen/padding_10dp"/>
+        <vn.techres.line.widget.TechResTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/login_label_login_as_phone_number"
+            android:gravity="center|start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_big"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:gravity="center">
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtNotAccount"
+            style="@style/TvSubHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/you_have_accout"
+            android:textColor="@color/black" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtRegister"
+            style="@style/TvSubHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:text="@string/sign"
+            android:textColor="@color/blue_out_of_name"
+            android:layout_marginStart="@dimen/margin_10dp"/>
+    </LinearLayout>
+</LinearLayout>

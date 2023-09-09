@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtFoodName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="ABC dắt dê đi ĩa"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:padding="@dimen/margin_10dp" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtVATAmountBefore"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="wrap_content"
+            android:text="2,456"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_10dp"
+            android:gravity="end" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtVATAmountAfter"
+            android:layout_width="@dimen/size_80"
+            android:layout_height="wrap_content"
+            android:text="2,456"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_10dp"
+            android:gravity="end" />
+    </LinearLayout>
+</layout>

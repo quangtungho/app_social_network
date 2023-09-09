@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingEnd="@dimen/padding_8dp"
+            android:layout_gravity="center"
+            tools:ignore="RtlSymmetry">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMember"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                app:cardCornerRadius="@dimen/size_20"
+                app:cardElevation="@dimen/size_0"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/imgMemberGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_aloline_placeholder"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imgPermission"
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                android:background="@drawable/ic_key_vice_group"
+                android:contentDescription="@string/default_image"
+                android:layout_alignBottom="@+id/cvMember"
+                android:layout_alignEnd="@+id/cvMember"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_80"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/margin_8dp">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNameMemberGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvMemberPermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2dp"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgAddFriend"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24"
+            android:layout_gravity="center_vertical"
+            tools:ignore="ContentDescription"
+            android:padding="@dimen/margin_8dp"
+            />
+    </LinearLayout>
+</layout>

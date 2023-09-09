@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Comment.Wrapper">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAvatar"
+        android:layout_width="@dimen/size_36"
+        android:layout_height="@dimen/size_36"
+        app:cardElevation="@dimen/size_0"
+        app:cardCornerRadius="@dimen/size_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/avatar_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/comment_content"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardAvatar"
+        app:layout_constraintTop_toTopOf="@id/cardAvatar">
+
+        <RelativeLayout
+            android:id="@+id/comment_bubble"
+            style="@style/Comment.BodyWrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/username_tv"
+                style="@style/Comment.UserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phạm Văn Nhân"/>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/body_tv"
+                style="@style/Comment.Body"
+                android:autoLink="web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username_tv"
+                android:text="asdas đá asd asd asd á dá dá đá asd asd asd asd asd asd asd asd asd asd asd asd asd á dsa dasfsadfasd " />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/media_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment_bubble"
+            android:visibility="visible"
+            android:paddingTop="4.0dip"
+            android:paddingBottom="4.0dip"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/comment_bubble">
+
+            <ImageView
+                android:id="@+id/overlayBodyImg"
+                android:layout_width="@dimen/size_200"
+                android:layout_height="@dimen/size_200"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_comment_body_img"
+                android:src="@drawable/ic_chat_say_hello"
+                />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/social_wr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/comment_content"
+        app:layout_constraintTop_toBottomOf="@+id/comment_content"
+        android:layout_marginStart="@dimen/margin_10dp">
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/ago_tv"
+            style="@style/Techres.TextView.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="10 giờ" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/like_tv"
+            style="@style/Techres.TextView.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:paddingStart="@dimen/padding_20dp"
+            android:paddingEnd="@dimen/padding_20dp"
+            android:text="Thích"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/avatar_img"
+            app:layout_constraintTop_toBottomOf="@id/comment_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/reply_tv"
+            style="@style/Techres.TextView.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="Trả lời"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sub_comment"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/comment_content"
+        app:layout_constraintTop_toBottomOf="@id/social_wr">
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/comment_read_more"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56.0dip"
+            android:layout_marginLeft="56.0dip" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/first_subcomment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

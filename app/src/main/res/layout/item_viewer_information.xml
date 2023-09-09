@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:gravity="center">
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            app:cardCornerRadius="@dimen/size_25"
+            app:cardElevation="@dimen/size_0">
+            <ImageView
+                android:id="@+id/imgAvatarUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/default_image"/>
+        </androidx.cardview.widget.CardView>
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/font_small"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</layout>

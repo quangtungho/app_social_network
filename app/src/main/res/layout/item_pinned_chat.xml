@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/lnPinned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_input_message"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_10dp"
+        android:paddingTop="@dimen/padding_5dp"
+        android:paddingRight="@dimen/padding_10dp"
+        android:paddingBottom="@dimen/padding_5dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:visibility="visible"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="@dimen/size_10"
+            android:layout_height="@dimen/size_10"
+            android:layout_marginEnd="@dimen/margin_5dp"
+            android:contentDescription="@string/default_image"
+            android:src="@drawable/icn_msg_pinned"
+            tools:ignore="RtlSymmetry" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/messagePinned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text_chat"
+            android:textSize="@dimen/font_tiny"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+</LinearLayout>

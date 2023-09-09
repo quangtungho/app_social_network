@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnBranchBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgLogoBranch"
+                        android:layout_width="@dimen/size_70"
+                        android:layout_height="@dimen/size_70"
+                        android:layout_margin="@dimen/margin_10dp"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/txtNameBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/txtAddressBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:ellipsize="end"
+                            android:maxLines="1" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/txtStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_5dp"
+                            android:paddingStart="@dimen/padding_20dp"
+                            android:paddingEnd="@dimen/padding_20dp"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_8"
+                    android:background="@color/gray_dark"
+                    app:layout_constraintTop_toBottomOf="@+id/lnBranchBooking" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/techResTextViewBold3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8dp"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:text="@string/title_time_booking"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/txtDateTime"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:text="@string/title_time"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintBottom_toBottomOf="@+id/techResTextViewBold3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/techResTextViewBold3"
+                    app:layout_constraintTop_toTopOf="@+id/techResTextViewBold3" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/techResTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8dp"
+                    android:drawableStart="@drawable/ic_people_booking"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:gravity="center"
+                    android:text="@string/number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDateTime" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/txtNumberPeople"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/zero"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintBottom_toBottomOf="@+id/techResTextView4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/techResTextView4"
+                    app:layout_constraintTop_toTopOf="@+id/techResTextView4" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/techResTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8dp"
+                    android:drawableStart="@drawable/ic_interview"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:text="@string/request"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/techResTextView3" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtRequest"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintBottom_toBottomOf="@+id/techResTextView5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/techResTextView5"
+                    app:layout_constraintTop_toTopOf="@+id/techResTextView5" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/techResTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8dp"
+                    android:drawableStart="@drawable/ic_deposit"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:text="@string/deposit"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/techResTextView4" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/txtDeposit"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/zero"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintBottom_toBottomOf="@+id/techResTextView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/techResTextView3"
+                    app:layout_constraintTop_toTopOf="@+id/techResTextView3" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/techResTextView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_8dp"
+                    android:layout_marginTop="@dimen/padding_8dp"
+                    android:drawableStart="@drawable/ic_tray"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:text="@string/ordered_food"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/techResTextViewBold2" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvQualityFood"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintBottom_toBottomOf="@+id/techResTextView6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/techResTextView6"
+                    app:layout_constraintTop_toTopOf="@+id/techResTextView6" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcBookingFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.842"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/techResTextView6" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/techResTextViewBold2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8dp"
+                    android:drawableStart="@drawable/ic_money"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:text="@string/total_price_estimate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/techResTextView5" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvTotalPriceBooking"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    app:layout_constraintBottom_toBottomOf="@+id/techResTextViewBold2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/techResTextViewBold2"
+                    app:layout_constraintTop_toTopOf="@+id/techResTextViewBold2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelBooking"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_8dp"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_15dp"
+                android:text="@string/booking_cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_small"
+                app:icon="@drawable/close"
+                app:iconTint="@color/main_bg"
+                app:strokeColor="@color/main_bg"
+                tools:ignore="ButtonStyle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCall"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_8dp"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_15dp"
+                android:text="@string/call_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small"
+                app:backgroundTint="@color/main_bg"
+                app:icon="@drawable/ic_phone_black_24dp"
+                app:iconPadding="@dimen/padding_1dp"
+                app:iconTint="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

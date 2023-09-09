@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <merge>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lvrBranchUtility2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgRestaurantUtility2"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:layout_marginEnd="@dimen/margin_12dp"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_utility_2" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvRestaurantUtility2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:paddingEnd="@dimen/padding_12dp"
+                    android:paddingBottom="@dimen/padding_8dp"
+                    android:text="@string/restaurant_utility_2"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lvRestaurantUtility4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgRestaurantUtility4"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:layout_marginEnd="@dimen/margin_12dp"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_utility_4" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvRestaurantUtility4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:paddingEnd="@dimen/padding_12dp"
+                    android:paddingBottom="@dimen/padding_8dp"
+                    android:text="@string/restaurant_utility_4"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lvRestaurantUtility6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgRestaurantUtility6"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:layout_marginRight="@dimen/margin_12dp"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_utility_6"
+                    tools:ignore="RtlHardcoded" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvRestaurantUtility6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:paddingRight="@dimen/padding_12dp"
+                    android:paddingBottom="@dimen/padding_8dp"
+                    android:text="@string/restaurant_utility_6"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lvRestaurantUtility7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgRestaurantUtility8"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:layout_marginEnd="@dimen/margin_12dp"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_utility_8" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvRestaurantUtility8"
+                    style="@style/TvCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:paddingEnd="@dimen/padding_12dp"
+                    android:paddingBottom="@dimen/padding_8dp"
+                    android:text="@string/restaurant_utility_8"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lvRestaurantUtility10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgRestaurantUtility10"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:layout_marginEnd="@dimen/margin_12dp"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_utility_10" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvRestaurantUtility10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:paddingEnd="@dimen/padding_12dp"
+                    android:paddingBottom="@dimen/padding_8dp"
+                    android:text="@string/restaurant_utility_10"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lvRestaurantUtility11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgRestaurantUtility12"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:layout_marginRight="@dimen/margin_12dp"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_utility_12"
+                    tools:ignore="RtlHardcoded" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvRestaurantUtility12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:paddingEnd="@dimen/padding_12dp"
+                    android:paddingBottom="@dimen/padding_8dp"
+                    android:text="@string/restaurant_utility_12"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lvRestaurantUtility14"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgRestaurantUtility14"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:layout_marginRight="@dimen/margin_12dp"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_utility_14"
+                    tools:ignore="RtlHardcoded" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvRestaurantUtility14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:paddingRight="@dimen/padding_12dp"
+                    android:paddingBottom="@dimen/padding_8dp"
+                    android:text="@string/restaurant_utility_14"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+            </LinearLayout>
+        </LinearLayout>
+    </merge>
+
+</layout>
+

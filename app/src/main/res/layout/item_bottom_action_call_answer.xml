@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <merge>
+
+        <RelativeLayout
+            android:id="@+id/control_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="88dp"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/size_40"
+                android:orientation="vertical">
+
+                <com.skyfishjy.library.RippleBackground
+                    android:id="@+id/rippleBackground"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    app:rb_color="#ffffff"
+                    app:rb_duration="3000"
+                    app:rb_radius="12dp"
+                    app:rb_rippleAmount="4"
+                    app:rb_scale="4"
+                    app:rb_type="fillRipple">
+
+                    <Button
+                        android:id="@+id/btnAnswer"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/call_accept_switch_video_selector"
+                        android:scaleType="centerCrop" />
+                </com.skyfishjy.library.RippleBackground>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="88dp"
+                    android:text="Trả lời"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/size_40"
+                android:orientation="vertical">
+
+                <com.skyfishjy.library.RippleBackground
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:padding="@dimen/size_10"
+                    app:rb_color="#ffffff"
+                    app:rb_duration="3000"
+                    app:rb_radius="30dp"
+                    app:rb_rippleAmount="4"
+                    app:rb_scale="2"
+                    app:rb_type="fillRipple">
+
+                    <Button
+                        android:id="@+id/btnReject"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/new_incall_decline_button_selector"
+                        android:scaleType="centerCrop" />
+                </com.skyfishjy.library.RippleBackground>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="88dp"
+                    android:text="Từ chối"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </merge>
+</layout>

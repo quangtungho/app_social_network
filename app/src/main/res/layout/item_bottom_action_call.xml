@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <merge>
+
+        <RelativeLayout
+            android:id="@+id/lnBottomCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/size_40"
+            android:layout_marginEnd="@dimen/size_40"
+            android:paddingBottom="@dimen/size_80">
+
+            <LinearLayout
+                android:id="@+id/lnState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_render_state_container_call"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imvOffCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingEnd="4dp"
+                    android:src="@drawable/ic_call_mini_off_cam"
+                    android:visibility="gone"
+                    tools:ignore="RtlSymmetry"
+                    android:contentDescription="@string/default_image" />
+
+                <ImageView
+                    android:id="@+id/imvOffMic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingEnd="4dp"
+                    android:src="@drawable/ic_call_mini_off_mic"
+                    android:visibility="gone"
+                    tools:ignore="RtlSymmetry"
+                    android:contentDescription="@string/default_image" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnState">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnSpeaker"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/incall_speaker_button_selector" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvSpeaker"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="@string/loudspeaker"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/btnDecline"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/new_incall_decline_button_selector" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="@string/end"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnTakeAShot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    tools:ignore="RelativeOverlap">
+
+                    <Button
+                        android:id="@+id/btnMute"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/incall_btn_mute_selector" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/tvMute"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="@string/mic"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </merge>
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/padding_16dp"
+        android:layout_marginBottom="@dimen/margin_8dp">
+
+        <ImageView
+            android:id="@+id/imgDevice"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:layout_margin="@dimen/margin_16dp"
+            android:contentDescription="@string/default_image" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNameDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/black"/>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvLoginDirection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_small" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvLocationLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_small" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:layout_width="@dimen/size_100"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_25"
+                android:layout_centerInParent="true"
+                android:text="@string/logout"
+                android:textSize="@dimen/font_small"
+                android:visibility="visible"
+                android:background="@drawable/background_gray_radius_16"/>
+
+            <TextView
+                android:id="@+id/tvLoggedOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/logged_out"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

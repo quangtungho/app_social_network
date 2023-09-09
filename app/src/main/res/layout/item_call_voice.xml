@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/lnViewCall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:visibility="visible">
+
+            <include
+                android:id="@+id/headerAction"
+                layout="@layout/item_header_action_call" />
+
+            <include
+                android:id="@+id/content"
+                layout="@layout/item_content_call" />
+
+            <include
+                android:id="@+id/bottomAction"
+                layout="@layout/item_bottom_action_call" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lnChangeCall"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lnHeaderCall"
+                android:layout_marginStart="@dimen/size_16"
+                android:layout_marginTop="@dimen/size_24"
+                android:layout_marginEnd="@dimen/size_16">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/TextSize_17" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/lnContentCall"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="80dp"
+                        android:gravity="center">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/logo_aloline_placeholder" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="320dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <vn.techres.line.widget.TechResTextViewBold
+                            android:id="@+id/name"
+                            style="@style/AutoTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/lnState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_render_state_container_call"
+                            android:orientation="horizontal"
+                            android:paddingStart="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="4dp"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/imvOffCamera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingEnd="4dp"
+                                android:src="@drawable/ic_call_cam_on"
+                                android:visibility="visible"
+                                tools:ignore="RtlSymmetry"
+                                android:contentDescription="@string/default_image" />
+
+                            <vn.techres.line.widget.TechResTextView
+                                android:id="@+id/tvState"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/start_camera"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/control_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="88dp"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/size_40"
+                    android:orientation="vertical"
+                    tools:ignore="RelativeOverlap">
+
+                    <com.skyfishjy.library.RippleBackground
+                        android:id="@+id/rippleBackground"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        app:rb_color="#ffffff"
+                        app:rb_duration="3000"
+                        app:rb_radius="12dp"
+                        app:rb_rippleAmount="4"
+                        app:rb_scale="4"
+                        app:rb_type="fillRipple">
+
+                        <Button
+                            android:id="@+id/btnAnswer"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/call_accept_switch_video_selector"
+                            android:scaleType="centerCrop" />
+                    </com.skyfishjy.library.RippleBackground>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="88dp"
+                        android:text="@string/accept"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/size_40"
+                    android:orientation="vertical">
+
+                    <com.skyfishjy.library.RippleBackground
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:padding="@dimen/size_10"
+                        app:rb_color="#ffffff"
+                        app:rb_duration="3000"
+                        app:rb_radius="30dp"
+                        app:rb_rippleAmount="4"
+                        app:rb_scale="2"
+                        app:rb_type="fillRipple">
+
+                        <Button
+                            android:id="@+id/btnReject"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_close"
+                            android:scaleType="centerCrop" />
+                    </com.skyfishjy.library.RippleBackground>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="88dp"
+                        android:text="@string/no_accept"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

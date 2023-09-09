@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            app:cardCornerRadius="@dimen/size_25"
+            app:cardElevation="@dimen/size_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/default_image"
+                android:scaleType="centerCrop" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNameAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large"
+                android:visibility="visible" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imgRemove"
+            android:layout_width="@dimen/size_20"
+            android:layout_height="@dimen/size_20"
+            android:src="@drawable/ic_close_12dp"
+            android:padding="@dimen/padding_5dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView5"
+            app:layout_constraintTop_toTopOf="@+id/cardView5"
+            android:contentDescription="@string/default_image"
+            android:background="@drawable/circle_white"
+            android:elevation="@dimen/size_1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/VN"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/margin_4dp"
+            android:layout_marginRight="@dimen/margin_4dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_4dp">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/techResTextView23"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/padding_12dp"
+                android:gravity="center_vertical"
+                android:text="@string/Vietnamese"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgVN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check"
+                app:layout_constraintBottom_toBottomOf="@+id/techResTextView24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/techResTextView23" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/techResTextView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Default"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/techResTextView23" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/view_divider_thin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/EN"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50"
+            android:layout_marginLeft="@dimen/margin_4dp"
+            android:layout_marginRight="@dimen/margin_4dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_4dp">
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/techResTextView26"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/padding_12dp"
+                android:gravity="center_vertical"
+                android:text="@string/English"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/techResTextView27"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgEN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/techResTextView27"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/techResTextView26" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/techResTextView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ENG"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/view_divider_thin" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

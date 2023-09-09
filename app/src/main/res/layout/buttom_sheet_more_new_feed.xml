@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <Button
+        android:id="@+id/btnEditPostsNewFeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_posts"
+        android:textAllCaps="false"
+        android:background="@color/white"
+        android:gravity="center|start"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:drawableStart="@drawable/ic_note_pen"
+        android:paddingLeft="20dp"/>
+
+    <include layout="@layout/view_line" />
+
+    <Button
+        android:id="@+id/btnDeletePostsNewFeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_posts"
+        android:textAllCaps="false"
+        android:background="@color/white"
+        android:gravity="center|start"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:drawableStart="@drawable/ic_recycle_bin_24dp"
+        android:paddingLeft="20dp"/>
+
+</LinearLayout>

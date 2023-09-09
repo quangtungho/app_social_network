@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <vn.techres.line.widget.TechResTextViewBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Báo cáo nội dung này"
+        android:drawableStart="@drawable/ic_warning"
+        android:drawableTint="@color/main_bg"
+        android:drawablePadding="@dimen/padding_8dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin_16dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0_5"
+        android:background="@color/gray_bg"/>
+    <vn.techres.line.widget.TechResTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng để lại báo cáo chi tiết, cám ơn bạn đã đóng \n góp với Aloline"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_16dp"/>
+    <vn.techres.line.widget.TechResEditText
+        android:id="@+id/edtContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_gray"
+        android:layout_margin="@dimen/margin_16dp"
+        android:hint="Nội dung..."
+        android:maxLines="5"
+        android:minLines="5"
+        android:textSize="@dimen/font_normal"
+        android:gravity="top"
+        android:padding="@dimen/padding_8dp">
+        <requestFocus/>
+    </vn.techres.line.widget.TechResEditText>
+    <Button
+        android:id="@+id/btnSendReport"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:text="Gửi báo cáo"
+        android:textColor="@color/white_bg"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button_orange_radius"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"/>
+
+</LinearLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:id="@+id/svLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="layout/activity_login_0"
+        android:background="@drawable/bg_login2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="binding_1">
+
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="@dimen/size_204"
+                android:layout_height="@dimen/size_84"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/logo_line_horizontal"
+                tools:ignore="ContentDescription"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvSlogan"
+                style="@style/TvSubHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:gravity="center"
+                android:text="@string/login_label_slogan"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnLoginFB"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_48"
+                android:layout_marginLeft="@dimen/margin_32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="@dimen/margin_32dp"
+                android:background="@drawable/selector_item_login_dark_blue"
+                android:gravity="center_vertical"
+                android:ignoreGravity="@id/imageView4"
+                android:orientation="horizontal"
+                android:tag="binding_3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSlogan">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_48"
+                        android:layout_height="@dimen/size_48"
+                        android:src="@mipmap/ic_facebook_login"
+                        android:padding="@dimen/padding_15dp" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="@string/login_label_login_as_facebook"
+                        android:textSize="@dimen/font_big"
+                        android:gravity="center|start"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_48"
+                android:layout_marginLeft="@dimen/margin_32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="@dimen/margin_32dp"
+                android:background="@drawable/selector_item_login_primary2"
+                android:gravity="center_vertical"
+                android:ignoreGravity="@id/imageView"
+                android:orientation="horizontal"
+                android:tag="binding_5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnLoginFB">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_48"
+                        android:layout_height="@dimen/size_48"
+                        android:src="@mipmap/ic_phone_white"
+                        android:padding="@dimen/padding_10dp" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="@string/login_label_login_as_phone_number"
+                        android:gravity="center|start"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_big" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerRegister"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_48"
+                android:layout_marginLeft="@dimen/margin_32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="@dimen/margin_32dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:ignoreGravity="@id/imageView"
+                android:orientation="horizontal"
+                android:tag="binding_5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/containerPhoneNumber">
+
+                <ImageView
+                    android:id="@+id/imageViewsss"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_48"
+                    android:paddingStart="@dimen/padding_25dp"
+                    android:paddingEnd="@dimen/padding_25dp"
+                    android:src="@mipmap/ic_phone_white"
+                    tools:ignore="ContentDescription,MissingConstraints" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtNotAccount"
+                    style="@style/TvSubHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/you_have_accout"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewsss" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/btnRegistry"
+                    style="@style/TvSubHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:text="@string/sign"
+                    android:textColor="@color/blue_out_of_name"
+                    app:layout_constraintStart_toEndOf="@+id/txtNotAccount"
+                    android:layout_marginStart="@dimen/margin_10dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <vn.techres.line.widget.TechResTextView
+                style="@style/TvSubHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_12dp"
+                android:background="@drawable/selector_view_transparent"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_8dp"
+                android:paddingTop="@dimen/padding_12dp"
+                android:paddingRight="@dimen/padding_8dp"
+                android:paddingBottom="@dimen/padding_8dp"
+                android:tag="binding_6"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

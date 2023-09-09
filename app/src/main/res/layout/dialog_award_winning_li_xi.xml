@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_250"
+        app:cardCornerRadius="@dimen/size_8"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        tools:ignore="MissingClass">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/women_day">
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="@dimen/icon_32"
+                android:layout_height="@dimen/icon_32"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/close_game"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/techResTextViewBold9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Chúc mừng"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_largexxxx"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/techResTextView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Bạn đã nhận được"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/techResTextViewBold9" />
+
+            <ImageView
+                android:id="@+id/imgGift"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="@dimen/size_64"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="@dimen/size_75"
+                android:layout_marginStart="@dimen/margin_40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/techResTextViewBold9" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

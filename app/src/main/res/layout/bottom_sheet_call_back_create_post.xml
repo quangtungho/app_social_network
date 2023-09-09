@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <vn.techres.line.widget.TechResTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_sheet_you_want_complete_post"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_5dp"/>
+    <vn.techres.line.widget.TechResTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_sheet_save_post"
+        android:layout_marginStart="@dimen/margin_10dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_2dp"
+        android:paddingTop="@dimen/padding_20dp"
+        android:paddingBottom="@dimen/padding_20dp"
+        android:background="@drawable/selecter_click_white"
+        tools:ignore="RtlSymmetry">
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="@dimen/size_45"
+            android:layout_height="@dimen/size_45"
+            android:padding="@dimen/padding_10dp"
+            android:src="@drawable/ic_text"
+            app:layout_constraintBottom_toBottomOf="@+id/techResTextView14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/techResTextView18"
+            android:contentDescription="@string/description_place_image" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/techResTextView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_to_draft"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/techResTextView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_will_received_message"
+            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:layout_constraintTop_toBottomOf="@+id/techResTextView18" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <vn.techres.line.widget.TechResTextView
+        style="@style/style_bottom_sheet"
+        android:id="@+id/txtCanclePost"
+        android:text="@string/cancle_post"
+        android:drawableStart="@drawable/ic_delete"
+        android:drawablePadding="@dimen/padding_10dp" />
+
+    <vn.techres.line.widget.TechResTextView
+        style="@style/style_bottom_sheet"
+        android:id="@+id/txtEditContinue"
+        android:text="@string/continue_edit"
+        android:textColor="@color/main_bg"
+        android:drawableStart="@drawable/ic_check_black_24dp"
+        android:drawableTint="@color/main_bg"
+        android:drawablePadding="@dimen/padding_10dp"/>
+</LinearLayout>

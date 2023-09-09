@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="@dimen/padding_16dp"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:orientation="horizontal"
+            android:id="@+id/lnReplyShare"
+            tools:ignore="RtlSymmetry">
+
+            <View
+                android:layout_width="@dimen/size_3"
+                android:layout_height="fill_parent"
+                android:background="@drawable/chat_reply_line"
+                android:backgroundTint="@color/main_bg" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAvatar"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                app:cardCornerRadius="@dimen/size_20"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rlReplyThumbContainer"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_8dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvMediaReply"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/size_6"
+                    app:cardElevation="@dimen/size_0">
+                    <ImageView
+                        android:id="@+id/imgReply"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/default_image"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imgReplyPlay"
+                        android:layout_width="@dimen/size_18"
+                        android:layout_height="@dimen/size_18"
+                        android:layout_gravity="center"
+                        android:background="@drawable/play_video"
+                        tools:ignore="ContentDescription" />
+                </androidx.cardview.widget.CardView>
+
+
+                <ImageView
+                    android:id="@+id/imgReplyAudio"
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_baseline_mic_24" />
+                <ImageView
+                    android:id="@+id/imgFile"
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_40"
+                    android:adjustViewBounds="true"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/icon_file_ai"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvReplyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color_text_chat"
+                    android:textSize="@dimen/font_normal" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvReplyContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColorLink="@color/blue_tag_name"
+                    android:textColor="@color/text_last_message"
+                    android:textSize="@dimen/font_small" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgReplyClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:contentDescription="@string/default_image"
+                android:focusable="true"
+                android:paddingStart="@dimen/padding_8dp"
+                android:paddingTop="@dimen/padding_10dp"
+                android:paddingEnd="@dimen/padding_16dp"
+                android:paddingBottom="@dimen/padding_10dp"
+                app:srcCompat="@drawable/ic_clear_black" />
+
+        </LinearLayout>
+    </merge>
+</layout>

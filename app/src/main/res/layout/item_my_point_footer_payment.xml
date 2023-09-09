@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_16dp"
+            android:paddingRight="@dimen/padding_16dp"
+            android:background="@color/white"
+            android:id="@+id/lnUsingPoint"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:layout_marginBottom="@dimen/margin_5dp">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/title_point"
+                        android:textSize="@dimen/font_big"
+                        android:textColor="@color/black"
+                        android:paddingEnd="@dimen/padding_32dp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvPoint"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingEnd="@dimen/padding_8dp"
+                        android:textSize="@dimen/font_big"
+                        android:textColor="@color/black"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:id="@+id/lnUsePoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_30">
+
+                        <ImageView
+                            android:id="@+id/imgCheckUsePoint"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:src="@drawable/ic_check"
+                            android:layout_marginEnd="@dimen/margin_8dp"
+                            android:visibility="gone"
+                            android:contentDescription="@string/description_place_image" />
+
+                        <Button
+                            android:id="@+id/btnUsePoint"
+                            android:layout_width="@dimen/size_70"
+                            android:layout_height="@dimen/size_30"
+                            android:gravity="center"
+                            android:text="@string/use"
+                            android:textSize="@dimen/font_small"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:background="@drawable/bg_button_orange_radius"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btnCancelPoint"
+                            android:layout_width="@dimen/size_70"
+                            android:layout_height="@dimen/size_30"
+                            android:gravity="center"
+                            android:text="@string/common_dialog_btn_cancel"
+                            android:textSize="@dimen/font_small"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:background="@drawable/corners_red_4dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_small"
+                    android:text="@string/use_point_maximum_in_bill"
+                    android:layout_marginBottom="@dimen/margin_8dp" />
+
+                <include layout="@layout/view_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:layout_marginBottom="@dimen/margin_5dp">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/title_accumulate_point"
+                        android:textSize="@dimen/font_big"
+                        android:textColor="@color/black"
+                        android:paddingEnd="@dimen/padding_32dp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvAccumulatePoint"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingEnd="@dimen/padding_8dp"
+                        android:textSize="@dimen/font_big"
+                        android:textColor="@color/black"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:id="@+id/lnUseAccumulatePoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_30">
+
+                        <ImageView
+                            android:id="@+id/imgCheckUseCumulativePoint"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:src="@drawable/ic_check"
+                            android:layout_marginEnd="@dimen/margin_8dp"
+                            android:visibility="gone"
+                            android:contentDescription="@string/description_place_image" />
+
+                        <Button
+                            android:id="@+id/btnUseCumulativePoint"
+                            android:layout_width="@dimen/size_70"
+                            android:layout_height="@dimen/size_30"
+                            android:gravity="center"
+                            android:text="@string/use"
+                            android:textSize="@dimen/font_small"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:background="@drawable/bg_button_orange_radius"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btnCancelAccumulativePoint"
+                            android:layout_width="@dimen/size_70"
+                            android:layout_height="@dimen/size_30"
+                            android:gravity="center"
+                            android:text="@string/common_dialog_btn_cancel"
+                            android:textSize="@dimen/font_small"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:background="@drawable/corners_red_4dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_small"
+                    android:text="@string/use_point_maximum_in_bill"
+                    android:layout_marginBottom="@dimen/margin_8dp" />
+
+                <include layout="@layout/view_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:layout_marginBottom="@dimen/margin_8dp">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/title_promotion_point"
+                        android:textSize="@dimen/font_big"
+                        android:paddingEnd="@dimen/padding_8dp"
+                        android:textColor="@color/black"
+                        tools:ignore="RtlSymmetry" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvPromotionPoint"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingEnd="@dimen/padding_8dp"
+                        android:textSize="@dimen/font_big"
+                        android:textColor="@color/black"
+                        tools:ignore="RtlSymmetry" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="end"
+                        android:textSize="@dimen/font_normal" />
+
+                    <LinearLayout
+                        android:id="@+id/lnUsePromotionPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_30">
+
+                        <ImageView
+                            android:id="@+id/imgCheckUsePromotionPoint"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:src="@drawable/ic_check"
+                            android:layout_marginEnd="@dimen/margin_8dp"
+                            android:visibility="gone"
+                            android:contentDescription="@string/description_place_image" />
+
+                        <Button
+                            android:id="@+id/btnUsePromotionPoint"
+                            android:layout_width="@dimen/size_70"
+                            android:layout_height="@dimen/size_30"
+                            android:gravity="center"
+                            android:text="@string/use"
+                            android:textSize="@dimen/font_small"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:background="@drawable/bg_button_orange_radius"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btnCancelPromotionPoint"
+                            android:layout_width="@dimen/size_70"
+                            android:layout_height="@dimen/size_30"
+                            android:gravity="center"
+                            android:text="@string/common_dialog_btn_cancel"
+                            android:textSize="@dimen/font_small"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:background="@drawable/corners_red_4dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvNotePromotionPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_small"
+                    android:layout_marginBottom="@dimen/margin_8dp" />
+
+                <include layout="@layout/view_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/padding_8dp"
+                    android:layout_marginBottom="@dimen/margin_8dp"
+                    tools:ignore="UselessParent">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/title_value_point"
+                        android:textSize="@dimen/font_big"
+                        android:textColor="@color/black"
+                        android:paddingEnd="@dimen/padding_40dp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvValuePoint"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingEnd="@dimen/padding_8dp"
+                        android:textSize="@dimen/font_big"
+                        android:textColor="@color/black"
+                        tools:ignore="RtlSymmetry" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/txtPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:gravity="end"
+                        android:textSize="@dimen/font_normal" />
+
+                    <LinearLayout
+                        android:id="@+id/lnUseValuePoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_30">
+
+                        <ImageView
+                            android:id="@+id/imgCheckUseValuePoint"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:src="@drawable/ic_check"
+                            android:layout_marginEnd="@dimen/margin_8dp"
+                            android:visibility="gone"
+                            android:contentDescription="@string/description_place_image" />
+
+                        <Button
+                            android:id="@+id/btnUseValuePoint"
+                            android:layout_width="@dimen/size_70"
+                            android:layout_height="@dimen/size_30"
+                            android:gravity="center"
+                            android:text="@string/use"
+                            android:textSize="@dimen/font_small"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:background="@drawable/bg_button_orange_radius"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btnCancelValuePoint"
+                            android:layout_width="@dimen/size_70"
+                            android:layout_height="@dimen/size_30"
+                            android:gravity="center"
+                            android:text="@string/common_dialog_btn_cancel"
+                            android:textSize="@dimen/font_small"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:background="@drawable/corners_red_4dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvNoteAloPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_small"
+                    android:layout_marginBottom="@dimen/margin_8dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_2"
+                android:background="@color/gray" />
+
+        </LinearLayout>
+    </merge>
+
+</layout>

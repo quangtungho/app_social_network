@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:tag="layout/item_restaurant_detail_header_action_0">
+
+    <com.custom.sliderimage.logic.SliderImage
+        android:id="@+id/imageLogoBranch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_200"
+        app:layout_collapseMode="parallax"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/tvRestaurantName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvRestaurantName"
+        style="@style/TvSubHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/padding_12dp"
+        android:paddingTop="@dimen/padding_12dp"
+        android:paddingRight="@dimen/padding_12dp"
+        android:paddingBottom="@dimen/padding_4dp"
+        android:tag="binding_2"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_big"
+        app:layout_constraintBottom_toTopOf="@+id/rbBranchRate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rbBranchRate"
+        style="@style/CustomRatingBarSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_12dp"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginBottom="@dimen/margin_4dp"
+        android:isIndicator="true"
+        android:tag="binding_3"
+        app:layout_constraintBottom_toTopOf="@id/tvBranchType"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvTotalRate"
+        style="@style/TvBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:textSize="@dimen/font_normal"
+        android:tag="binding_4"
+        app:layout_constraintBottom_toBottomOf="@+id/rbBranchRate"
+        app:layout_constraintLeft_toRightOf="@+id/rbBranchRate"
+        app:layout_constraintTop_toTopOf="@+id/rbBranchRate" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvBranchType"
+        style="@style/TvBody"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_restaurant_type"
+        android:drawablePadding="@dimen/padding_12dp"
+        android:maxLines="2"
+        android:paddingStart="@dimen/padding_12dp"
+        android:paddingTop="@dimen/padding_4dp"
+        android:paddingBottom="@dimen/padding_4dp"
+        android:textSize="@dimen/font_normal"
+        android:tag="binding_5"
+        app:layout_constraintBottom_toTopOf="@id/tvStatus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="RtlSymmetry"/>
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@id/tvStatus"
+        style="@style/TvBody"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_open_time"
+        android:drawablePadding="@dimen/padding_12dp"
+        android:maxLines="1"
+        android:paddingStart="@dimen/padding_12dp"
+        android:paddingTop="@dimen/padding_4dp"
+        android:paddingBottom="@dimen/padding_4dp"
+        android:textSize="@dimen/font_normal"
+        android:singleLine="true"
+        android:tag="binding_6"
+        app:layout_constraintBottom_toTopOf="@id/tvPrice"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvTimeOpen"
+        style="@style/TvBody"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingStart="@dimen/padding_4dp"
+        android:paddingTop="@dimen/padding_4dp"
+        android:paddingBottom="@dimen/padding_4dp"
+        android:textSize="@dimen/font_normal"
+        android:singleLine="true"
+        android:tag="binding_7"
+        android:textColor="@color/text_gray"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvStatus"
+        app:layout_constraintLeft_toRightOf="@id/tvStatus"
+        tools:ignore="RtlSymmetry" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvPrice"
+        style="@style/TvBody"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_price_grey"
+        android:drawablePadding="@dimen/padding_12dp"
+        android:maxLines="1"
+        android:paddingStart="@dimen/padding_12dp"
+        android:paddingTop="@dimen/padding_4dp"
+        android:paddingBottom="@dimen/padding_4dp"
+        android:singleLine="true"
+        android:tag="binding_8"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintBottom_toTopOf="@+id/vSpace"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <View
+        android:id="@id/vSpace"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/size_8"
+        android:layout_marginBottom="@dimen/margin_12dp"
+        android:background="@color/back_ground_app"
+        app:layout_constraintBottom_toTopOf="@+id/llRatingReview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <LinearLayout
+        android:id="@+id/llRatingReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/vLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <RatingBar
+            android:id="@+id/rbStar"
+            style="@style/CustomRatingBarNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            app:layout_constraintBottom_toTopOf="@id/tvRateDescription"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:isIndicator="true"/>
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvRateDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_12dp"
+            android:text="@string/rate_restaurant_description"
+            android:textSize="@dimen/font_normal"
+            />
+    </LinearLayout>
+    <View
+        android:id="@id/vLine"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toTopOf="@id/lnTemp1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/lnTemp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/vLine">
+
+        <LinearLayout
+            android:id="@+id/lnCheckIn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_view_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="binding_24">
+
+            <ImageView
+                android:layout_width="@dimen/size_28"
+                android:layout_height="@dimen/size_28"
+                android:src="@drawable/ic_check_in_action"
+                tools:ignore="ContentDescription"
+                android:layout_marginBottom="@dimen/margin_4dp"
+                android:layout_marginTop="@dimen/margin_4dp"/>
+
+            <vn.techres.line.widget.TechResTextView
+                style="@style/TvBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/check_in"
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/color_main"
+                android:layout_marginBottom="@dimen/margin_8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnSave"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_view_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="binding_25">
+
+            <com.like.LikeButton
+                android:id="@+id/imgSaveBranch"
+                android:layout_width="45dp"
+                android:layout_height="36dp"
+                app:anim_scale_factor="2.0"
+                app:circle_end_color="@color/blue_gg"
+                app:circle_start_color="@color/main_bg"
+                app:dots_primary_color="@color/blue_gg"
+                app:dots_secondary_color="@color/main_bg"
+                app:icon_size="28.0dip"
+                app:icon_type="heart"
+                app:is_enabled="true"
+                app:like_drawable="@drawable/ic_bookmark_orange"
+                app:unlike_drawable="@drawable/ic_bookmark_gray"
+                tools:ignore="MissingConstraints,RtlSymmetry"/>
+
+            <vn.techres.line.widget.TechResTextView
+                style="@style/TvBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:tag="binding_27"
+                android:text="@string/favorite"
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/color_main"
+                android:layout_marginBottom="@dimen/margin_8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_header_main_2"
+        tools:context=".fragment.qr.QRCodeManagerFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/bg_header_main_2"
+                    android:elevation="@dimen/size_5">
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="@dimen/size_50"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:padding="@dimen/padding_15dp"
+                        android:src="@drawable/back"
+                        android:tint="@color/white"
+                        tools:ignore="ContentDescription,UseAppTint" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_30"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_big" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnTitleCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_10"
+                        android:gravity="center"
+                        android:text="@string/title_cardview"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtQrCodePhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_30dp"
+                        android:layout_marginEnd="@dimen/margin_30dp"
+                        android:layout_marginBottom="@dimen/size_10"
+                        android:gravity="center"
+                        android:text="@string/title_carview_support"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/ayp_8dp"
+                    android:layout_marginBottom="@dimen/margin_16dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/size_16"
+                    app:cardElevation="@dimen/size_0">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@+id/pager"
+                            app:layout_constraintEnd_toEndOf="@+id/pager"
+                            app:layout_constraintStart_toStartOf="@+id/pager"
+                            app:tabIndicatorColor="@color/main_bg"
+                            app:tabSelectedTextColor="@color/main_bg"
+                            app:tabTextColor="@color/nobel" />
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/tabLayout"
+                            android:background="@color/main_gray_light" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/groupController"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ayp_8dp"
+                    android:visibility="invisible">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/lnController"
+                        android:layout_width="@dimen/size_200"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/background_white_radius_16dp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ayp_8dp"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:id="@+id/imgChangeCamera"
+                            android:layout_width="@dimen/size_65"
+                            android:layout_height="@dimen/size_65"
+                            android:layout_weight="0.5"
+                            android:layout_marginStart="@dimen/margin_16dp"
+                            android:contentDescription="@string/default_image"
+                            android:padding="@dimen/padding_16dp"
+                            android:src="@drawable/ic_baseline_camera_switch_12"
+                            app:tint="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/imgFlashLight"
+                            android:layout_width="@dimen/size_65"
+                            android:layout_height="@dimen/size_65"
+                            android:layout_weight="0.5"
+                            android:layout_marginStart="@dimen/margin_16dp"
+                            android:layout_marginEnd="@dimen/margin_16dp"
+                            android:contentDescription="@string/default_image"
+                            android:padding="@dimen/padding_16dp"
+                            android:src="@drawable/ic_baseline_flash_on_24"
+                            app:tint="@color/black" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

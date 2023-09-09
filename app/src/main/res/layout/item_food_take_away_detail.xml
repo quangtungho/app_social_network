@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_195sdp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgAvatarFood"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_150"
+            android:contentDescription="@string/default_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/tvNameFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingStart="@dimen/padding_8dp"
+            android:paddingEnd="@dimen/padding_8dp"
+            android:text="Chocolate Ngon Tuyệt Chocolate Ngon Tuyệt Chocolate Ngon Tuyệt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgAvatarFood" />
+
+        <TextView
+            android:id="@+id/tvPriceFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:text="2.000.000.000đ"
+            android:textSize="@dimen/font_big"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/thonburi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.like.LikeButton
+            android:id="@+id/imgHeartAction"
+            android:layout_width="@dimen/size_30"
+            android:layout_height="@dimen/size_30"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            app:anim_scale_factor="2.0"
+            app:circle_end_color="@color/light_cyan"
+            app:circle_start_color="@color/tear"
+            app:dots_primary_color="@color/light_cyan"
+            app:dots_secondary_color="@color/tear"
+            app:icon_size="30.0dip"
+            app:icon_type="heart"
+            app:is_enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:like_drawable="@drawable/ic_heart_fill"
+            app:unlike_drawable="@drawable/ic_heart_gray"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvRatingFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableStart="@drawable/ic_star_line_18"
+            android:drawablePadding="@dimen/padding_4dp"
+            android:drawableTint="@color/main_bg"
+            android:gravity="bottom"
+            android:text="4.8"
+            android:textColor="@color/main_bg"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintBottom_toTopOf="@+id/tvPriceFood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameFood" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

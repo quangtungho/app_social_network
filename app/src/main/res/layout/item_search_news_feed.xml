@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtTitleSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="ádasdasdasda"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/padding_10dp"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_12dp"
+            android:background="@drawable/selecter_click_white" />
+    </LinearLayout>
+</layout>

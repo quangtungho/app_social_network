@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvContact"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:layout_marginStart="@dimen/margin_16dp"
+            app:cardCornerRadius="@dimen/size_25">
+
+            <ImageView
+                android:id="@+id/imgContact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/default_image" />
+        </androidx.cardview.widget.CardView>
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvNameContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_toEndOf="@+id/cvContact"
+            android:layout_marginEnd="@dimen/margin_16dp" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvPhoneContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_small"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_below="@+id/tvNameContact"
+            android:layout_toEndOf="@+id/cvContact"
+            android:layout_marginEnd="@dimen/margin_16dp"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/gray"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_below="@+id/cvContact"
+            android:layout_marginStart="@dimen/margin_16dp" />
+    </RelativeLayout>
+</layout>

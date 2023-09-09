@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_white_round_rectangle_border"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_50"
+        android:background="@color/back_ground_app"
+        android:orientation="horizontal">
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/selector_view_transparent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp"
+            android:id="@+id/btnCacel"
+            android:text="@string/cancel"
+            android:textColor="@color/main_bg" />
+
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvBody"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/title_edit_image" />
+        <vn.techres.line.widget.TechResTextView
+            style="@style/TvButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/selector_view_transparent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_12dp"
+            android:paddingRight="@dimen/padding_12dp"
+            android:id="@+id/btnUpdate"
+            android:text="@string/update_comment"
+            android:textColor="@color/main_bg" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@id/edtContent"
+        style="@style/TvBody"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_12dp"
+        android:background="@drawable/bg_gray_border"
+        android:gravity="center|left|top"
+        android:hint="@string/hint_input_comment"
+        android:minLines="5"
+        android:padding="@dimen/padding_12dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlPhoto"
+        android:layout_width="@dimen/size_120"
+        android:layout_height="@dimen/size_120"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_12dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/size_10"
+            android:layout_margin="@dimen/margin_8dp">
+            <ImageView
+                android:id="@+id/imgPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imgDeletePhoto"
+            android:layout_width="@dimen/size_20"
+            android:layout_height="@dimen/size_20"
+            android:layout_alignParentEnd="true"
+            android:elevation="2dp"
+            android:src="@drawable/ic_close" />
+    </RelativeLayout>
+</LinearLayout>

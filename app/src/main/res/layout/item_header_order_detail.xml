@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="@dimen/padding_8dp"
+    android:paddingEnd="@dimen/padding_8dp">
+    <LinearLayout
+        android:id="@+id/frag_layout_title_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:background="@drawable/bg_listview_receipt"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_5dp"
+        android:weightSum="11"
+        tools:ignore="UselessParent">
+        <vn.techres.line.widget.TechResTextViewBold
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="start"
+            android:textSize="@dimen/font_normal"
+            android:text="@string/phone_invoice_header_items_label"
+            android:textColor="@color/black"
+            tools:ignore="RtlSymmetry" />
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/frag_detail_bill_total_quantity"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:text="@string/phone_invoice_header_quantity_label"
+            android:textColor="@color/black"
+            />
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:gravity="end"
+            android:text="@string/phone_invoice_header_price_label"
+            android:paddingEnd="@dimen/padding_20dp"
+            android:textColor="@color/black"
+            tools:ignore="RtlSymmetry" />
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/vn.aloapp.lite.widget.TechResTextView13"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:gravity="center|end"
+            android:paddingEnd="@dimen/padding_30dp"
+            android:text="@string/phone_invoice_header_amount_label"
+            android:textColor="@color/black"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+</LinearLayout>

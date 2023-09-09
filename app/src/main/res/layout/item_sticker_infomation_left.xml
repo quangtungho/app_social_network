@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTimeHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin_10dp"
+                android:background="@drawable/time_text_bg"
+                android:paddingLeft="@dimen/padding_7dp"
+                android:paddingTop="@dimen/padding_1dp"
+                android:paddingRight="@dimen/padding_7dp"
+                android:paddingBottom="@dimen/padding_1dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny"
+                android:visibility="visible" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNameSticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTimeHeader"
+                android:layout_alignStart="@+id/imgSticker"
+                android:layout_marginBottom="@dimen/margin_2dp"
+                android:background="@drawable/bg_name_user_chat"
+                android:paddingStart="@dimen/padding_7dp"
+                android:paddingTop="@dimen/padding_2dp"
+                android:paddingEnd="@dimen/padding_7dp"
+                android:paddingBottom="@dimen/padding_2dp"
+                android:textSize="@dimen/font_tiny"
+                android:visibility="visible"
+                tools:ignore="RtlSymmetry,SmallSp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSticker"
+                android:layout_width="@dimen/size_30"
+                android:layout_height="@dimen/size_30"
+                android:layout_below="@+id/tvNameSticker"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/size_15"
+                app:cardElevation="@dimen/size_0">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imgPermission"
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                android:layout_alignEnd="@+id/cvSticker"
+                android:layout_alignBottom="@+id/cvSticker"
+                android:background="@drawable/ic_key_vice_group"
+                android:contentDescription="@string/default_image"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgSticker"
+                android:layout_width="@dimen/size_120"
+                android:layout_height="@dimen/size_120"
+                android:layout_below="@+id/tvNameSticker"
+                android:layout_gravity="right"
+                android:layout_toEndOf="@+id/cvSticker"
+                android:contentDescription="@string/default_image"
+                tools:ignore="RtlHardcoded" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvTimeSticker"
+                style="@style/chat_time_style"
+                android:layout_below="@+id/imgSticker"
+                android:layout_alignStart="@+id/imgSticker"
+                android:layout_marginTop="@dimen/padding_5dp"
+                android:background="@drawable/time_text_bg"
+                android:paddingLeft="@dimen/padding_5dp"
+                android:paddingRight="@dimen/padding_5dp"
+                android:textColor="@color/white"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:id="@+id/lnReactionContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@id/imgSticker"
+                android:layout_alignEnd="@+id/imgSticker"
+                android:layout_marginTop="-5dp">
+
+                <include
+                    android:id="@+id/reaction"
+                    layout="@layout/item_reaction_message" />
+            </LinearLayout>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvStatusView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTimeSticker"
+                android:layout_alignStart="@+id/tvTimeSticker"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:background="@drawable/time_text_bg"
+                android:drawableStart="@drawable/icn_bubble_chat_received"
+                android:drawablePadding="@dimen/padding_2dp"
+                android:paddingLeft="@dimen/padding_7dp"
+                android:paddingTop="@dimen/padding_1dp"
+                android:paddingRight="@dimen/padding_7dp"
+                android:paddingBottom="@dimen/padding_1dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_very_tiny"
+                android:visibility="gone"
+
+                />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvSeen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvStatusView"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:text="@string/seen"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_big" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcViewerSeen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSeen"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:orientation="vertical" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rcViewerSeen"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="@string/received"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_big" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcViewerReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvReceived"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:orientation="vertical" />
+        </RelativeLayout>
+    </ScrollView>
+
+</layout>

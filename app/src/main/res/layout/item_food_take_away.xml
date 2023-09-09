@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/size_300"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_10"
+        android:layout_marginEnd="@dimen/size_20"
+        android:layout_marginBottom="@dimen/size_10"
+        app:cardCornerRadius="@dimen/size_8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlbig"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_200"
+                android:background="@color/gray"
+                android:orientation="vertical"
+                app:layout_constraintDimensionRatio="16:9"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <ImageView
+                    android:id="@+id/imgBigTakeAway"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_200"
+                    android:scaleType="fitXY"
+                    app:layout_constraintDimensionRatio="16:9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_150"
+                    android:layout_height="@dimen/size_150"
+                    android:layout_marginStart="-20dp"
+                    android:layout_marginTop="-70dp"
+                    android:src="@drawable/circle_orange"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription,MissingConstraints" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_30"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:id="@id/view"
+                android:layout_width="fill_parent"
+                android:layout_height="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/rlbig"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/imvShape"
+                android:layout_width="328.0dip"
+                android:layout_height="0.0dip"
+                android:background="@drawable/voucher_big"
+                app:layout_constraintDimensionRatio="328:118"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewSmall"
+                android:layout_width="@dimen/size_48"
+                android:layout_height="@dimen/size_48"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                app:cardElevation="@dimen/size_0"
+                app:cardCornerRadius="@dimen/size_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imvShape">
+
+                <ImageView
+                    android:id="@+id/imgSmallTakeAway"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_circle_skeleton"
+                    tools:ignore="ContentDescription" />
+            </androidx.cardview.widget.CardView>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNameFoodTakeAway"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewSmall" />
+
+            <ImageView
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/ic_coin"
+                app:layout_constraintBottom_toTopOf="@+id/tvNameFoodTakeAway"
+                app:layout_constraintEnd_toStartOf="@+id/tvPriceTakeAway"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/cardViewSmall"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvPriceTakeAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginEnd="16dp"
+                android:gravity="end"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cardViewSmall"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

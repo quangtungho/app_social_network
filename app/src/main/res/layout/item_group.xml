@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/padding_16dp"
+            android:paddingEnd="@dimen/padding_16dp"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:gravity="center"
+           >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/size_55"
+                android:layout_height="@dimen/size_55"
+                app:cardCornerRadius="@dimen/size_27_5"
+                app:cardElevation="@dimen/size_0">
+                <ImageView
+                    android:id="@+id/imageGroupChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/default_image"
+                    />
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:orientation="vertical"
+                emojicon:ignore="UselessParent">
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toStartOf="@+id/tvTimeGroupChat"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/app_name"
+                    android:textColor="@color/grey_90"
+                    android:textSize="@dimen/font_big" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/lnMessageContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvGroupName"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvMessageContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/pinned_bg"
+                        android:textSize="@dimen/font_tiny"
+                        android:visibility="invisible" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipStranger"
+                        style="@style/ChipMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_tiny"
+                        android:visibility="gone" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvMessageGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lnMessageContent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_4dp"
+                    android:layout_toStartOf="@+id/tvCountChat"
+                    android:drawablePadding="@dimen/padding_8dp"
+                    android:drawableTint="@color/main_bg"
+                    android:maxLines="1"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:singleLine="true"
+                    android:text="@string/no_message_yet"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/font_small"
+                    emojicon:emojiconSize="24dp" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvTimeGroupChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_small"
+                    android:textColor="@color/grey_60"
+                    android:layout_marginStart="@dimen/margin_4dp"
+                    android:layout_marginTop="@dimen/margin_2dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvCountChat"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/counter_bg"
+                    android:paddingStart="@dimen/padding_5dp"
+                    android:paddingEnd="@dimen/padding_5dp"
+                    android:layout_marginBottom="@dimen/margin_3dp"
+                    android:layout_marginStart="@dimen/margin_4dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgCall"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/new_incall_answer_voice_button_selector"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separate_line"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_0_5"
+            android:layout_marginStart="@dimen/margin_82dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:background="@color/gray" />
+
+    </LinearLayout>
+</layout>

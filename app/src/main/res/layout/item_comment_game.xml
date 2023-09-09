@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <merge>
+        <RelativeLayout
+            android:id="@+id/commentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_gradient_from_bottom"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <vn.techres.line.view.CustomTagRecyclerView
+                android:id="@+id/rcvChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lnCommentGame"
+                android:fadingEdgeLength="48dp"
+                android:requiresFadingEdge="none|horizontal|vertical"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <LinearLayout
+                android:id="@+id/lnCommentGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/layoutKeyboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/padding_8dp"
+                android:paddingBottom="@dimen/padding_8dp">
+
+                <LinearLayout
+                    android:id="@+id/relative_compose_message"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/size_180">
+
+                    <RelativeLayout
+                        style="@style/LiveStreamLinearLayout"
+                        android:background="@drawable/background_live_stream_white_transparent">
+
+                        <EditText
+                            android:id="@+id/edt_comment"
+                            style="@style/LiveStreamEditTextComment"
+                            android:layout_toStartOf="@+id/imgSticker"
+                            android:autofillHints="@string/livestream_text_message_hint"
+                            android:gravity="center_vertical"
+                            android:maxLines="5"
+                            tools:ignore="LabelFor,TooDeepLayout" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgSticker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/padding_4dp"
+                            android:src="@drawable/ic_sticker_tab"
+                            android:tint="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgSend"
+                    style="@style/LiveStreamSendComment"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgMoreAction"
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    android:tint="@color/white"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_keyboard_arrow_right_gray_24dp"/>
+                <LinearLayout
+                    android:id="@+id/lnReaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_react_like"
+                        style="@style/LiveStreamImageReact"
+                        android:layout_marginStart="0dp"
+                        app:srcCompat="@drawable/ic_like" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_react_love"
+                        style="@style/LiveStreamImageReact"
+                        app:srcCompat="@drawable/ic_heart" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_react_haha"
+                        style="@style/LiveStreamImageReact"
+                        app:srcCompat="@drawable/ic_smile" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_react_wow"
+                        style="@style/LiveStreamImageReact"
+                        app:srcCompat="@drawable/ic_wow" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_react_cry"
+                        style="@style/LiveStreamImageReact"
+                        app:srcCompat="@drawable/ic_sad" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_react_angry"
+                        style="@style/LiveStreamImageReact"
+                        android:layout_marginEnd="@dimen/margin_16dp"
+                        app:srcCompat="@drawable/ic_angry" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.aghajari.emojiview.view.AXEmojiPopupLayout
+                android:id="@+id/layoutKeyboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+
+            <tyrantgit.widget.HeartLayout
+                android:id="@+id/heart_layout"
+                android:layout_width="@dimen/size_100"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/lnCommentGame"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </merge>
+
+</layout>
+

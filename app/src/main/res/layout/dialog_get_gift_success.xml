@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center">
+    <RelativeLayout
+        android:layout_width="@dimen/size_350"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_sheet_layout_chat"
+            android:orientation="vertical">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:gravity="center"
+                android:text="Bạn đã nhận quà thành công"
+                android:textAllCaps="true"
+                android:textSize="@dimen/font_big" />
+
+            <ImageView
+                android:layout_width="@dimen/size_200"
+                android:layout_height="@dimen/size_200"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_20dp"
+                android:src="@drawable/ic_gift_box" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:gravity="center"
+                android:text="Phần quà đã được gửi đến bạn, hãy vào mục quà tặng trên màn hình trang chủ để sử dụng." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnExit"
+                    android:layout_width="@dimen/size_100"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_gray_dark_5dp"
+                    android:text="@string/close"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_bg"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/btnGoGift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:background="@drawable/bg_button_orange_radius"
+                    android:paddingStart="@dimen/padding_20dp"
+                    android:paddingEnd="@dimen/padding_20dp"
+                    android:text="Đi đến mục quà tặng"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

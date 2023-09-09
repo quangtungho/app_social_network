@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+              android:paddingLeft="5dp"
+              android:paddingRight="5dp">
+
+    <vn.techres.photo.colorpicker.ColorPickerView
+        android:id="@+id/color_picker_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layerType="software"
+        android:tag="portrait"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_7sdp"
+        android:orientation="horizontal">
+
+        <!-- <com.kessi.photopipcollagemaker.colorpicker.ColorPickerPanelView-->
+        <!--<com.kessi.photopipcollagemaker.colorpicker.ColorPickerPanelView-->
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/old_color_panel"
+            android:layout_width="0px"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/ic_topbar"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/header_text_color"
+            android:textSize="@dimen/_14sdp"
+            android:layout_weight="0.4" />
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/new_color_panel"
+            android:layout_width="0px"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_weight="0.4"
+            android:background="@drawable/ic_topbar"
+            android:gravity="center"
+            android:text="Ok"
+            android:textColor="@color/header_text_color"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+</LinearLayout>

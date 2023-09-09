@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp">
+
+        <ImageView
+            android:id="@+id/imgFood"
+            android:layout_width="@dimen/size_80"
+            android:layout_height="@dimen/size_80"
+            android:contentDescription="@string/default_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/food_demo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvNameFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Chocolate Trắng Chocolate Trắng Chocolate Trắng"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_big"
+            app:layout_constraintEnd_toStartOf="@+id/tvAmout"
+            app:layout_constraintStart_toEndOf="@+id/imgFood"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="200.000.000đ"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgFood"
+            app:layout_constraintTop_toTopOf="@+id/lnQuantity" />
+
+        <TextView
+            android:id="@+id/tvAmout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="200.000.000đ"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/lnQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_30"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:visibility="visible">
+            <ImageButton
+                android:id="@+id/imgDecrease"
+                android:layout_width="@dimen/size_25"
+                android:layout_height="@dimen/size_25"
+                android:src="@drawable/ic_minus_24"
+                android:tint="@color/main_bg"
+                android:background="@drawable/circle_cart_food"
+                tools:ignore="UseAppTint"
+                android:padding="@dimen/padding_4dp"/>
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_5dp"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp"/>
+            <ImageButton
+                android:id="@+id/imgIncrease"
+                android:layout_width="@dimen/size_25"
+                android:layout_height="@dimen/size_25"
+                android:src="@drawable/ic_plus_orange_24dp"
+                android:background="@drawable/circle_cart_food"
+                android:padding="@dimen/padding_4dp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

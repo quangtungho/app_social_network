@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslFood"
+        android:layout_width="@dimen/size_200"
+        android:layout_height="@dimen/size_260"
+        android:layout_marginStart="@dimen/margin_16dp">
+
+        <ImageView
+            android:id="@+id/imgAvatarFood"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_150"
+            android:contentDescription="@string/default_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvNameFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/font_normal"
+            android:text="Chocolate Ngon Tuyệt Chocolate Ngon Tuyệt Chocolate Ngon Tuyệt"
+            android:textColor="@color/black"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingStart="@dimen/padding_8dp"
+            android:paddingEnd="@dimen/padding_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgAvatarFood" />
+
+        <TextView
+            android:id="@+id/tvPriceFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical|end"
+            android:text="2.000.000.000đ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="bold"
+            android:fontFamily="@font/thonburi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toEndOf="@+id/lnRatingFood" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/tvAddressFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="303, Phạm Văn Đồng"
+            android:textSize="@dimen/font_small"
+            app:layout_constraintBottom_toTopOf="@+id/tvPriceFood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <LinearLayout
+            android:id="@+id/lnRatingFood"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_22"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                android:layout_marginEnd="@dimen/margin_4dp"
+                android:contentDescription="@string/description_place_image"
+                android:src="@drawable/star_on"
+                tools:ignore="UseAppTint" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvTotalRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.like.LikeButton
+            android:id="@+id/imgHeartAction"
+            android:layout_width="@dimen/size_40"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:paddingBottom="@dimen/padding_10dp"
+            app:anim_scale_factor="2.0"
+            app:circle_end_color="@color/light_cyan"
+            app:circle_start_color="@color/tear"
+            app:dots_primary_color="@color/light_cyan"
+            app:dots_secondary_color="@color/tear"
+            app:icon_size="30.0dip"
+            app:icon_type="heart"
+            app:is_enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:like_drawable="@drawable/ic_heart_fill"
+            app:unlike_drawable="@drawable/ic_heart_gray"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

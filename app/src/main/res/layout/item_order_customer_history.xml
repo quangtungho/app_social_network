@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_150dp"
+        android:layout_margin="@dimen/margin_10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_ahihi"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/margin_20dp">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTimeOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_10dp"
+                android:paddingEnd="@dimen/padding_10dp"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvOrderDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/padding_2dp"
+                    android:layout_marginBottom="@dimen/padding_2dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_largexxxxxx"
+                    tools:ignore="RtlSymmetry" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/size_28"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/margin_3dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvOrderMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/white" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvOrderYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvOrderCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_3dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_big" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvOrderTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_3dp"
+                    android:layout_marginStart="50dp"
+                    android:gravity="center"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvOnlineOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_small"
+                android:layout_marginTop="@dimen/margin_5dp" />
+
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvNameBranchOrderCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:textColor="@color/black" />
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTotalOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_money"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:textColor="@color/main_bg"
+                android:textSize="@dimen/font_largexxx"
+                android:layout_marginTop="@dimen/margin_10dp" />
+
+            <LinearLayout
+                android:id="@+id/lnOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_blue_opacity"
+                android:orientation="horizontal"
+                android:layout_gravity="end|bottom"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/margin_8dp">
+
+                <ImageView
+                    android:id="@+id/imgOrderStatus"
+                    android:layout_width="@dimen/size_25"
+                    android:layout_height="@dimen/size_25"
+                    android:src="@drawable/ic_food_tray"
+                    android:contentDescription="@string/description_place_image" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvStatusOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_5dp"
+                    android:paddingEnd="@dimen/padding_10dp"
+                    android:text="@string/serving"
+                    android:textColor="@color/blue_logo" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

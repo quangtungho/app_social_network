@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5dp"
+            android:background="@drawable/background_chat_group_left"
+            android:fillViewport="true"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:id="@+id/post_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_16dp"
+                    android:paddingTop="@dimen/padding_10dp"
+                    android:paddingRight="@dimen/padding_16dp"
+                    android:paddingBottom="@dimen/padding_12dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="@dimen/size_36"
+                        android:layout_height="@dimen/size_36"
+                        app:cardCornerRadius="@dimen/size_18"
+                        app:cardElevation="@dimen/size_0">
+
+                        <ImageView
+                            android:id="@+id/imgPinnedUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/default_image"
+                            android:scaleType="centerCrop" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvPinnedName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_normal" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvPinnedTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_last_message"
+                            android:textSize="@dimen/font_small" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imgPinnedMore"
+                        android:padding="@dimen/padding_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_baseline_more_horiz_24"
+                        android:tint="@color/grey"
+                        tools:ignore="UseAppTint" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnPinnedContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_16dp"
+                    android:paddingTop="@dimen/padding_10dp"
+                    android:paddingRight="@dimen/padding_16dp"
+                    android:paddingBottom="@dimen/padding_12dp">
+
+                    <View
+                        android:layout_width="3.0dip"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/chat_reply_line"
+                        android:backgroundTint="@color/main_bg" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/padding_12dp"
+                        android:orientation="vertical">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvSenderPinned"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_normal" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvPinnedMessage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_big" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlPinnedLinkContainer"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_6dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rlPinnedLink"
+                                android:layout_width="@dimen/size_60"
+                                android:layout_height="@dimen/size_60">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvMedia"
+                                    android:layout_width="@dimen/size_60"
+                                    android:layout_height="@dimen/size_60"
+                                    android:background="@drawable/bg_image_pinned"
+                                    app:cardCornerRadius="@dimen/size_6"
+                                    app:cardElevation="@dimen/size_0">
+
+                                    <ImageView
+                                        android:id="@+id/imgLink"
+                                        android:layout_width="@dimen/size_60"
+                                        android:layout_height="@dimen/size_60"
+                                        android:adjustViewBounds="true"
+                                        android:contentDescription="@string/default_image"
+                                        android:scaleType="centerCrop"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <ImageView
+                                        android:id="@+id/imgPinnedPlay"
+                                        android:layout_width="@dimen/size_28"
+                                        android:layout_height="@dimen/size_28"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/play_video"
+                                        android:layout_gravity="center"
+                                        tools:ignore="ContentDescription" />
+                                </androidx.cardview.widget.CardView>
+
+                                <ImageView
+                                    android:id="@+id/imgAudio"
+                                    android:layout_width="@dimen/size_30"
+                                    android:layout_height="@dimen/size_30"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="gone"
+                                    android:contentDescription="@string/default_image"
+                                    android:src="@drawable/ic_baseline_mic_24"/>
+                                <ImageView
+                                    android:id="@+id/imgFile"
+                                    android:layout_width="@dimen/size_50"
+                                    android:layout_height="@dimen/size_60"
+                                    android:adjustViewBounds="true"
+                                    android:contentDescription="@string/default_image"
+                                    android:scaleType="centerCrop"
+                                    tools:src="@drawable/icon_file_ai"
+                                    android:visibility="gone"
+                                    />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/margin_12dp"
+                                android:layout_toEndOf="@+id/rlPinnedLink"
+                                android:orientation="vertical">
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:id="@+id/tvLinkTitle"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/font_normal" />
+
+                                <vn.techres.line.widget.TechResTextView
+                                    android:id="@+id/tvLinkDescription"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_4dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/font_small" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

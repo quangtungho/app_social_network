@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="@dimen/size_350"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_bottom_sheet_layout_chat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/margin_10dp">
+                <ImageView
+                    android:layout_width="@dimen/size_200"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/contactpermission"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_30dp"/>
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:gravity="center"
+                    android:text="@string/allow_contact"
+                    android:textSize="@dimen/font_big"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/content_allow_contact_one"
+                    android:paddingTop="@dimen/padding_20dp"
+                    android:paddingStart="@dimen/padding_20dp"
+                    android:paddingEnd="@dimen/padding_20dp"
+                    android:paddingBottom="@dimen/padding_10dp"
+                    android:gravity="start"/>
+
+                <vn.techres.line.widget.TechResTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/content_allow_contact_two"
+                    android:paddingBottom="@dimen/padding_20dp"
+                    android:paddingStart="@dimen/padding_20dp"
+                    android:paddingEnd="@dimen/padding_20dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_orange_50dp"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginEnd="@dimen/margin_20dp"
+                android:text="@string/arrge"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnNo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:layout_margin="@dimen/margin_20dp"
+                android:text="@string/not_now"
+                android:textAllCaps="false"
+                android:textColor="@color/main_bg"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

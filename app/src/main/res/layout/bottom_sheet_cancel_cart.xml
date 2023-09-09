@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/padding_16dp"
+    android:paddingEnd="@dimen/padding_16dp"
+    android:paddingBottom="@dimen/padding_16dp">
+
+    <vn.techres.line.widget.TechResTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bạn có muốn đặt món ở nhà hàng này?"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_large"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:gravity="center"/>
+
+    <vn.techres.line.widget.TechResTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chuyện nhỏ! Nhưng những món bạn đã chọn từ\nnhà hàng trước sẽ bị xóa khỏi giỏ hàng nhé."
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_32dp">
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/size_45"
+            android:background="@drawable/ic_rim_orange"
+            android:text="@string/cancel"
+            android:textColor="@color/main_bg"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_big"
+            android:layout_marginEnd="8dp"
+            style="?android:attr/borderlessButtonStyle"/>
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/size_45"
+            android:background="@drawable/border_orange_50dp"
+            android:text="@string/continuee"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_big"
+            android:layout_marginStart="8dp"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+
+</LinearLayout>

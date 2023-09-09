@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_16dp">
+
+        <ImageView
+            android:id="@+id/imgSticker"
+            android:layout_width="@dimen/size_65"
+            android:layout_height="@dimen/size_65"
+            android:contentDescription="@string/default_image"
+            android:src="@drawable/logo_aloline_placeholder"/>
+    </RelativeLayout>
+</layout>

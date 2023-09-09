@@ -1,0 +1,2126 @@
+<resources>
+    <string name="app_name" translatable="false">ALOLINE</string>
+    <string name="title_activity_bubble" translatable="false">BubbleActivity</string>
+    <string name="app_name_custom" translatable="false">Alo Line</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="title_activity_base" translatable="false">BaseActivity</string>
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_demo" translatable="false">DemoActivity</string>
+
+    <string name="input_name" translatable="false">Tên </string>
+    <string name="address" translatable="false">Địa chỉ</string>
+    <string name="input_phone" translatable="false">Điện thoại</string>
+    <string name="continuee" translatable="false">Tiếp tục</string>
+    <string name="conform" translatable="false">Xác nhận</string>
+
+    <string name="login_label_slogan" translatable="false">Mạng xã hội kết nối ngành F&amp;B - khách hàng</string>
+    <string name="login_label_login_as_facebook" translatable="false">Đăng nhập bằng Facebook</string>
+    <string name="login_label_login_as_google" translatable="false">Đăng nhập bằng Google</string>
+    <string name="login_label_login_as_phone_number" translatable="false">Đăng nhập bằng số điện thoại</string>
+    <string name="login_label_login_success" translatable="false">Đăng nhập thành công</string>
+    <string name="login_label_password" translatable="false">Mật khẩu</string>
+    <string name="login_label_phone_must_not_be_empty" translatable="false">Số điện thoại không được để trống</string>
+    <string name="login_label_password_must_not_be_empty" translatable="false">Mật khẩu không được để trống</string>
+    <string name="login_label_phone_number" translatable="false">Số điện thoại</string>
+    <string name="login_label_register" translatable="false">Chưa có tài khoản?&lt;b&gt; Đăng ký&lt;/b&gt;</string>
+    <string name="login_require" translatable="false">Bạn phải đăng nhập để thực hiện chức năng này</string>
+    <string name="logtin_type_label_phone_number_exist" translatable="false">Số điện thoại đã tồn tại</string>
+
+    <string name="login_label_login" translatable="false">Đăng nhập</string>
+    <string name="register_lable_register" translatable="false">Đăng ký</string>
+    <string name="register_now" translatable="false">Đăng ký ngay</string>
+    <string name="login_label_forgot_password" translatable="false">Quên mật khẩu?</string>
+    <string name="Free" translatable="false">Miễn phí</string>
+    <string name="Sale" translatable="false">-40%</string>
+    <string name="Tiger_Sugar_Delivery" translatable="false">[Tiger_Sugar_Delivery] Giảm 40% toàn menu</string>
+    <string name="nation" translatable="false">Quốc gia</string>
+    <string name="country" translatable="false">Tiếng Việt - Tiếng Việt</string>
+    <string name="Lang" translatable="false">Ngôn ngữ</string>
+    <string name="notification_settings" translatable="false">Cài đặt thông báo</string>
+    <string name="change_password" translatable="false">Thay đổi mật khẩu</string>
+    <string name="disable_account" translatable="false">Xoá tài khoản</string>
+    <string name="logout" translatable="false">Đăng xuất</string>
+    <string name="setting" translatable="false">Cài đặt</string>
+    <string name="back_again" translatable="false">Nhấn 1 lần nữa để thoát khỏi ALO LINE</string>
+
+    <string name="title_order" translatable="false">Đơn hàng</string>
+
+    <string name="title_home_page" translatable="false">Trang chủ</string>
+    <string name="title_review" translatable="false">Review</string>
+    <string name="title_message" translatable="false">Tin Nhắn</string>
+    <string name="title_inbox" translatable="false">Thông báo</string>
+    <string name="title_account" translatable="false">Tài khoản</string>
+    <string name="make_friend" translatable="false">Kết bạn</string>
+    <string name="sent_friend" translatable="false">Đã gửi lời mời</string>
+    <string name="friend_request" translatable="false">Lời mời kết bạn</string>
+
+    <string name="livestream_comment_share" translatable="false">Chia sẻ</string>
+    <string name="livestream_text_message_hint" translatable="false">Bình luận</string>
+
+    <!--    define resource Account fragment -->
+
+    <!--Nhân-->
+    <string name="account_name" translatable="false">Kelvin Nguyen</string>
+    <string name="view_activity" translatable="false">Thông tin</string>
+    <string name="membership_code" translatable="false">Mã của tôi</string>
+    <string name="login_method" translatable="false">Phương thức đăng nhập</string>
+    <string name="recommend_to_friends" translatable="false">Giới thiệu cho bạn bè</string>
+    <string name="registry_advertisement" translatable="false">Đăng ký chạy quảng cáo</string>
+    <string name="history_advertisement" translatable="false">Lịch sử chạy quảng cáo</string>
+    <string name="manager_advertisement" translatable="false">Quản lý quảng cáo</string>
+    <string name="reservation_information" translatable="false">Thông tin đặt chỗ</string>
+    <string name="manage_orders" translatable="false">Quản lý đơn hàng</string>
+    <string name="coupon_code" translatable="false">Mã giảm giá</string>
+    <string name="favorite_restaurant" translatable="false">Nhà hàng yêu thích</string>
+    <string name="looking_for_friends" translatable="false">Tìm kiếm bạn bè</string>
+    <string name="privacy_policy" translatable="false">Chính sách bảo mật</string>
+    <string name="terms_use" translatable="false">Điều khoản sử dụng</string>
+    <string name="app_reviews" translatable="false">Đánh giá ứng dụng</string>
+    <string name="suggestions_for_developers" translatable="false">Góp ý cho nhà phát triển</string>
+    <string name="product_information" translatable="false">Thông tin phần mềm</string>
+    <string name="hello" translatable="false">Chào mừng bạn quay trở lại</string>
+    <string name="mylogin" translatable="false">Đăng nhập bằng tài khoản của bạn</string>
+    <string name="newfeed" translatable="false">Có gì mới?</string>
+    <string name="promotion" translatable="false">Ưu đãi</string>
+    <string name="namenewfeed" translatable="false">Phạm Văn Nhân</string>
+    <string name="datenewfeed" translatable="false">29/02/2020 3:15</string>
+    <string name="tcfh" translatable="false">THE COFFEE HOUSE</string>
+    <string name="review" translatable="false">Đánh giá</string>
+    <string name="note_address" translatable="false">359 Hém 445, Phước Long B, Quận 9, Hồ Chí Minh 359 Hém 445, Phước Long B, Quận 9, Hồ Chí Minh 359 Hém 445, Phước Long B, Quận 9, Hồ Chí Minh</string>
+    <string name="like" translatable="false">Thích</string>
+    <string name="comment" translatable="false">Bình luận</string>
+    <string name="Share" translatable="false">Share</string>
+    <string name="like1" translatable="false">thích</string>
+    <string name="comment1" translatable="false">bình luận</string>
+    <string name="Share1" translatable="false">Share</string>
+    <string name="new1" translatable="false">Mới nhất</string>
+    <string name="textnew" translatable="false">GIẢM 30% DUY NHẤT VÀO THỨ 4</string>
+    <string name="km" translatable="false">1.15Km</string>
+    <string name="typerestaurant" translatable="false">LOẠI HÌNH NHÀ HÀNG</string>
+    <string name="refreshingcoffee" translatable="false">Café giải khác</string>
+    <string name="buffet" translatable="false">Buffet</string>
+    <string name="ricestore" translatable="false">Quán cơm</string>
+    <string name="luxurious" translatable="false">Sang trọng</string>
+    <string name="seafoodrestaurant" translatable="false">Nhà hàng đặc sản</string>
+    <string name="pubs" translatable="false">Quán bia, rựu, nhậu</string>
+    <string name="barclub" translatable="false">Bar/Pub/Club</string>
+    <string name="breakfastbar" translatable="false">Quán ăn sáng/ăn vặt</string>
+    <string name="createboking" translatable="false">THÊM ĐẶT CHỖ</string>
+    <string name="date" translatable="false">Ngày đến</string>
+    <string name="title_time" translatable="false">_ : _</string>
+    <string name="datecreatebooking" translatable="false">_ / _ / _</string>
+    <string name="number" translatable="false">Số người:</string>
+    <string name="arrivaltime" translatable="false">Giờ đến</string>
+    <string name="feedback" translatable="false">Góp ý</string>
+    <string name="request" translatable="false">Yêu cầu khác:</string>
+    <string name="input_request" translatable="false">Bạn có cần trang trí những gì cho buổi tiệc của mình không?</string>
+    <string name="booking" translatable="false">ĐẶT CHỖ</string>
+    <string name="sender" translatable="false">Người gửi*</string>
+    <string name="email" translatable="false">Email*</string>
+    <string name="phone_feedback" translatable="false">Điện thoại*</string>
+    <string name="what_feedback" translatable="false">Bạn muốn góp ý gì?</string>
+    <string name="content_feedback" translatable="false">Nội dung góp ý</string>
+    <string name="more_feedback" translatable="false">Góp ý thêm</string>
+    <string name="cancel" translatable="false">Hủy</string>
+    <string name="send" translatable="false">Gửi</string>
+    <string-array name="feedback1">
+        <item>Yêu cầu nâng cấp, cải tiến</item>
+        <item>yc1</item>
+        <item>yc2</item>
+        <item>yc3</item>
+        <item>yc4</item>
+        <item>yc5</item>
+    </string-array>
+    <string name="choosefood" translatable="false">Hãy chọn một số món trước</string>
+    <string name="click_choose_food" translatable="false">Nhấn vào đây để chọn món ăn</string>
+    <string name="click_choose_date" translatable="false">Chọn ngày</string>
+    <string name="click_choose_time" translatable="false">Chọn giờ</string>
+    <string name="choose_restaurant" translatable="false">Vui lòng chọn nhà hàng</string>
+    <string name="choose_all_create_booking" translatable="false">Vui lòng nhập đủ ngày, giờ và số người</string>
+    <string name="create_booking" translatable="false">Đặt bàn</string>
+    <string name="create_booking_success" translatable="false">Đặt bàn thành công</string>
+    <string name="point_available" translatable="false">Điểm hiện có</string>
+    <string name="minus_point" translatable="false">Điểm đã trừ</string>
+    <string name="point_remaining" translatable="false">Điểm còn lại</string>
+    <string name="food_choose" translatable="false">Món</string>
+    <string name="food_selected" translatable="false">Món đã chọn</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="point_not_enough" translatable="false">Điểm của bạn không đủ</string>
+    <string name="redeem_point" translatable="false">Đổi điểm</string>
+    <string name="day_now" translatable="false">Yêu cầu nhập ngày lớn hơn ngày hiện tại</string>
+    <string name="processing" translatable="false">Đang xử lý</string>
+    <string name="booking_information" translatable="false">Thông tin đặt chỗ</string>
+    <string name="booking_cancel" translatable="false">Hủy đặt chỗ</string>
+    <string name="cancel_reason" translatable="false">Lí do hủy bỏ</string>
+
+
+    <!--    String restaurant detail Create by HuuThang-->
+    <string name="name_restaurant_detail" translatable="false">CAFE TRÂM BABY</string>
+    <string name="rating_detail" translatable="false">0 đánh giá</string>
+    <string name="status_detail" translatable="false">Đang mở cửa</string>
+    <string name="time_open_detail" translatable="false">06:30 AM - 10:00 PM</string>
+    <string name="price_detail" translatable="false">30.000 VN/ Người</string>
+    <string name="evaluate_detail" translatable="false">Viết đánh giá của bạn về nhà hàng</string>
+    <string name="post_image" translatable="false">Đăng ảnh</string>
+    <string name="check_in" translatable="false">Check-in</string>
+    <string name="order" translatable="false">Thực đơn</string>
+    <string name="order_product" translatable="false">Bí đao, Ca cao, Cafe bạc xỉu, Cafe đá xay, Cafe...</string>
+    <string name="word_web" translatable="false">http://cafeduongphovn090.chiliweb.org/</string>
+    <string name="fb" translatable="false">http://facebook.com/CafeTramBaby</string>
+    <string name="motor" translatable="false">Giữ xe máy miễn phí</string>
+    <string name="air_condi" translatable="false">Có điều hòa</string>
+    <string name="wifi" translatable="false">Có wifi</string>
+    <string name="moreinfor" translatable="false">Xem thêm thông tin</string>
+    <string name="more_text" translatable="false">Thêm</string>
+    <string name="wifi_pass" translatable="false">Mật khẩu wifi</string>
+    <string name="moredetails" translatable="false">Chi tiết giờ mở cửa, tiệc ích khác...</string>
+    <string name="add_new_restaurant_wifi" translatable="false">Mật khẩu Wifi</string>
+    <string name="add_wifi" translatable="false">Thêm</string>
+
+    <string name="rate_restaurant_description" translatable="false">Viết đánh giá của bạn về nhà hàng</string>
+    <string name="take_picture_restaurant" translatable="false">Đăng ảnh</string>
+    <string name="save_in" translatable="false">Lưu lại</string>
+    <string name="restaurant_do_not_has_location" translatable="false">Nhà hàng chưa cập nhật vị trí</string>
+    <string name="call" translatable="false">Gọi điện</string>
+    <string name="direction" translatable="false">Chỉ đường</string>
+    <string name="menu" translatable="false">Thực đơn</string>
+    <string name="see_more_utilities" translatable="false">Xem thêm thông tin</string>
+    <string name="see_more_utilities_content" translatable="false">Chi tiết giờ mở cửa, tiện ích khác…</string>
+    <string name="rate_restaurant_hint" translatable="false">Viết đánh giá của bạn về nhà hàng…</string>
+    <string name="share_fb" translatable="false">Chia sẻ</string>
+    <string name="common_label_post" translatable="false">Đăng</string>
+    <string name="hint_input_review" translatable="false">Nhập nội dung cho bài đánh giá</string>
+    <string name="hint_input_share_content" translatable="false">Nhập nội dung cho bài đăng (có thể kèm theo link)</string>
+    <string name="review_edit" translatable="false">Đánh giá</string>
+    <string name="restaurant_open_time" translatable="false">Giờ mở cửa</string>
+    <string name="restaurant_utility_1" translatable="false">Có thanh toán bằng thẻ</string>
+    <string name="restaurant_utility_10" translatable="false">Có bàn ngoài trời</string>
+    <string name="restaurant_utility_11" translatable="false">Có chỗ chơi cho trẻ em</string>
+    <string name="restaurant_utility_12" translatable="false">Có nhạc sống</string>
+    <string name="restaurant_utility_13" translatable="false">Có karaoke</string>
+    <string name="restaurant_utility_14" translatable="false">Có xuất hóa đơn đỏ</string>
+    <string name="restaurant_utility_2" translatable="false">Có đặt chỗ trực tuyến</string>
+    <string name="restaurant_utility_3" translatable="false">Có order trực tuyến</string>
+    <string name="restaurant_utility_4" translatable="false">Có giao hàng</string>
+    <string name="restaurant_utility_5" translatable="false">Có chỗ để ô tô</string>
+    <string name="restaurant_utility_6" translatable="false">Giữ xe máy miễn phí</string>
+    <string name="restaurant_utility_7" translatable="false">Có điều hòa</string>
+    <string name="restaurant_utility_8" translatable="false">Có wifi</string>
+    <string name="restaurant_utility_9" translatable="false">Có phòng riêng</string>
+    <string name="utility" translatable="false">Tiện ích</string>
+    <string name="common_label_done" translatable="false">Xong</string>
+    <string name="hint_input_comment" translatable="false">Nhập nội dung bình luận</string>
+    <string name="edit_comment_title" translatable="false">Sửa bình luận</string>
+    <string name="update_comment" translatable="false">Cập nhật</string>
+    <string name="feed_write_a_comment" translatable="false">Viết bình luận…</string>
+    <string name="choose_proof_image" translatable="false">Chọn hình ảnh</string>
+
+    <!--    define resource Member Mannager fragment -->
+    <string name="title_card" translatable="false">Thẻ</string>
+
+    <!--    define resource Member Mannager fragment -->
+    <string name="title_cardview" translatable="false">Tính điểm khi ăn tại quán</string>
+    <string name="title_carview_support" translatable="false">Bằng cách đưa mã này cho nhân viên phục vụ quét để tích điểm cho bạn.</string>
+    <string name="title_Barcode" translatable="false">343244975</string>
+    <string name="AM" translatable="false">AM</string>
+    <string name="PM" translatable="false">PM</string>
+    <string name="luuLai" translatable="false">Lưu lại</string>
+    <string name="average_price" translatable="false">VNĐ/Người</string>
+    <string name="rating" translatable="false">Đánh giá</string>
+    <string name="restaurant_active_close" translatable="false">Đang đóng cửa</string>
+    <string name="restaurant_active_open" translatable="false">Đang mở cửa</string>
+    <string name="call_now" translatable="false">Gọi điện</string>
+    <string name="range_km" translatable="false">350 km</string>
+    <string name="look_street" translatable="false">Chỉ đường</string>
+
+    <!--    define fragment_booking_information and define fragment_booking_details  của Lộc nhé !!!-->
+    <string name="processed" translatable="false">Đã xử lý</string>
+    <string name="un_confirmed" translatable="false">Chưa xác nhận</string>
+    <string name="phone" translatable="false">Số điện thoại</string>
+    <string name="password" translatable="false">Mật khẩu </string>
+
+    <string name="phone_number" translatable="false">Số điện thoại</string>
+    <string name="numberpeople" translatable="false">Số người</string>
+    <string name="Other_requirements" translatable="false">Yêu cầu khác</string>
+    <string name="Call" translatable="false">Gọi điện</string>
+    <string name="cancel_reservation" translatable="false">Hủy đặt chỗ</string>
+    <string name="Nodata" translatable="false">Không có dữ liệu</string>
+    <string name="empty_order" translatable="false">Bạn chưa có đơn hàng nào</string>
+    <string name="welcome_to_back" translatable="false">Chào mừng bạn quay chở lại</string>
+    <string name="login_by_phone" translatable="false">Đăng nhập bằng tài khoản của bạn</string>
+    <string name="you_have_accout" translatable="false">Bạn chưa có tài khoản?</string>
+
+    <string name="card" translatable="false">Card</string>
+    <string name="food" translatable="false">Thức ăn</string>
+    <string name="unknown" translatable="false">Khác</string>
+    <string name="title_Food" translatable="false">Món ăn</string>
+    <string name="title_Drink" translatable="false">Đồ uống</string>
+    <string name="title_Combo" translatable="false">Combo</string>
+    <string name="title_oder" translatable="false">Khác</string>
+    <string name="title_Foods" translatable="false">Món ăn</string>
+    <string name="title_Drinks" translatable="false">Thức uống</string>
+    <string name="title_seafood" translatable="false">Hải sản</string>
+    <string name="empty_notifi" translatable="false">Danh sách thông báo đang trống </string>
+    <string name="empty_title" translatable="false">Tất cả thông báo sẽ được hiển thị trong màn hình này</string>
+    <string name="bill" translatable="false">Bill</string>
+    <string name="MuaVe" translatable="false">MUA VE</string>
+    <string name="DatCho" translatable="false">DAT CHO</string>
+    <string name="nsl" translatable="false">Nhập số lượng</string>
+    <string name="giam" translatable="false">Giảm</string>
+    <string name="tang" translatable="false">Tăng</string>
+    <string name="X" translatable="false">X</string>
+    <string name="bay" translatable="false">7</string>
+    <string name="tam" translatable="false">8</string>
+    <string name="chin" translatable="false">9</string>
+    <string name="mot" translatable="false">1</string>
+    <string name="hai" translatable="false">2</string>
+    <string name="ba" translatable="false">3</string>
+    <string name="bon" translatable="false">4</string>
+    <string name="nam" translatable="false">5</string>
+    <string name="sau" translatable="false">6</string>
+    <string name="khong" translatable="false">0</string>
+    <string name="phay" translatable="false">,</string>
+    <string name="done" translatable="false">Hoàn tất</string>
+    <string name="title_score" translatable="false"> Điểm hiện tại:</string>
+    <string name="title_count_foods" translatable="false">Tổng số món:</string>
+    <string name="title_total_score" translatable="false">Tổng điểm :</string>
+    <string name="title_confirm" translatable="false">Xong</string>
+    <string name="point_mini" translatable="false">điểm</string>
+    <string name="title_total_menu" translatable="false">Món</string>
+    <string name="note" translatable="false">Nhập ghi chú: VD: 2 sting, món làm không cay...</string>
+    <string name="common_dialog_btn_cancel" translatable="false">Hủy bỏ</string>
+    <string name="arrge" translatable="false">Đồng Ý</string>
+
+    <!--    defint login fragment order by Chien !!!-->
+    <string name="title_order_notification" translatable="false">Danh sách đơn hàng đang trống</string>
+    <string name="title_order_note" translatable="false">Tất cả các đơn hàng sẽ được hiển thị trong màn hình này.</string>
+    <string name="description_order" translatable="false">Erro</string>
+    <!--    defint login fragment Order Detail by Chien !!!-->
+    <string name="title_price" translatable="false">18000000</string>
+    <string name="title_price_null" translatable="false">0</string>
+    <string name="title_seller" translatable="false">Bán bởi Nguyen Le Anh Tuan</string>
+    <string name="title_location" translatable="false">Chi nhánh mặc định</string>
+    <string name="title_origin" translatable="false">Nguồn Web</string>
+    <string name="title_pay" translatable="false">Chưa thanh toán</string>
+
+    <string name="title_seller_name" translatable="false">anh tuan</string>
+    <string name="title_test" translatable="false">---</string>
+    <string name="title_accept" translatable="false">Xác nhận</string>
+    <string name="title_pack" translatable="false">Đang nấu</string>
+    <string name="title_goods_issue" translatable="false">Đang giao</string>
+    <string name="title_finish" translatable="false">Hoàn thành</string>
+
+    <string name="hours_order" translatable="false">14:46</string>
+    <string name="date_order" translatable="false">5/3/2020</string>
+    <string name="hours_accept" translatable="false">14:46</string>
+    <string name="date_accept" translatable="false">5/3/2020</string>
+    <string name="hours_pack" translatable="false">14:46</string>
+    <string name="date_pack" translatable="false">5/3/2020</string>
+    <string name="hours_goods_issue" translatable="false">14:46</string>
+    <string name="date_goods_issue" translatable="false">5/3/2020</string>
+    <string name="hours_finish" translatable="false">14:46</string>
+    <string name="date_finish" translatable="false">5/3/2020</string>
+
+    <string name="title_bill_food" translatable="false">Hóa đơn đã đặt :</string>
+
+    <string name="title_total_price" translatable="false">Tổng tiền</string>
+    <string name="title_total_tax" translatable="false">Thuế</string>
+    <string name="title_total_discount" translatable="false">Chiết khấu</string>
+    <string name="title_total_delivery_charges" translatable="false">Phí giao hàng</string>
+    <string name="title_total_pay" translatable="false">Khách phải trả</string>
+
+    <string name="title_delivery" translatable="false">Giao hàng</string>
+    <string name="title_code_orders" translatable="false">FUN0002</string>
+    <string name="title_code" translatable="false">Hủy</string>
+    <string name="title_order_status" translatable="false">Chờ giao hàng</string>
+    <string name="title_status_pay" translatable="false">Chưa thanh toán</string>
+
+    <string name="title_note" translatable="false">Thêm ghi chú</string>
+    <string name="title_name_member" translatable="false">Tên thành viên</string>
+    <string name="name_menber" translatable="false">Kelvin Nguyen</string>
+    <string name="title_gender" translatable="false">Giới tính</string>
+    <string name="title_date_of_birth" translatable="false">Ngày sinh</string>
+    <string name="title_phone" translatable="false">Điện thoại</string>
+    <string name="title_email" translatable="false">Email</string>
+    <string name="title_address" translatable="false">Địa chỉ</string>
+    <string name="email_menber" translatable="false">kelvinnguyenaloapp@gmail.com</string>
+    <string name="title_profile" translatable="false">Thông Tin Cá Nhân</string>
+    <string name="repair" translatable="false">Sửa</string>
+    <string name="title_apartment_number" translatable="false">Số 155, Chu Văn An, Bình Thạnh, Hồ Chí Minh</string>
+
+    <string name="hint_apartment_number" translatable="false">Nhập số nhà</string>
+    <string name="apartment_number" translatable="false">Số Nhà, Đường</string>
+    <string name="title_wards" translatable="false">Khu Vực :</string>
+    <string name="title_district" translatable="false">Quận, Huyện :</string>
+    <string name="title_city" translatable="false">Thành Phố, Tỉnh :</string>
+    <string name="choose_birthday" translatable="false">Chọn ngày</string>
+    <string name="hint_phone" translatable="false">Nhập số điện thoại</string>
+    <string name="hint_email" translatable="false">Nhập địa chỉ email</string>
+
+    <string name="list_branch" translatable="false">Danh sách chuỗi nhà hàng</string>
+    <string name="add_points" translatable="false">Nạp điểm</string>
+    <string name="title_return" translatable="false">Trở về</string>
+    <string name="accumulated_points" translatable="false">Điểm tích lũy</string>
+    <string name="please_enter_the_code_to_load_points" translatable="false">Vui lòng nhập mã để nạp điểm</string>
+    <string name="please_enter_the_code_to_up_points" translatable="false">Vui lòng nhập mã quà tặng để nạp điểm</string>
+    <string name="view_all" translatable="false">Xem tất cả</string>
+    <string name="history_up_points" translatable="false">Lịch sử giao dịch</string>
+    <string name="add_score_present" translatable="false">Tích điểm hiện tại</string>
+    <string name="add_score_lable" translatable="false">+</string>
+    <string name="success" translatable="false">Thành công</string>
+    <string name="transation_history" translatable="false">LỊCH SỬ GIAO DỊCH</string>
+    <string name="infomation" translatable="false">Chức năng này chỉ để gửi nhanh các phản hồi đến TECHRES.VN. Nếu trong quá trình sử dụng phần mềm, bạn cần biết thêm thông tin và có nhu cầu được tư vấn, xin vui lòng liên hệ với TECHRES.VN qua các cách sau đây:</string>
+    <string name="infomation_note" translatable="false">Lưu ý: Khi gọi điện đến tổng đài 0904 010 143, bạn sẽ trả cước phí điện thoại theo quy định của nhà cung cấp dịch vụ viễn thông.</string>
+    <string name="infomation_thankyou" translatable="false">Mọi ý kiến đóng góp, phản hồi của bạn là rất quý giá để TECHRES.VN có thể nâng cao chất lượng dịch vụ để phục vụ bạn ngày càng tốt hơn. Xin trân trọng cảm ơn.</string>
+    <string name="infomation_support_text" translatable="false">Gửi nội dung cần tư vấn hỗ trợ đến Email:</string>
+    <string name="infomation_support_mail" translatable="false">support@techres.vn</string>
+    <string name="infomation_phone_text" translatable="false">Gọi điện tới tổng đài tư vấn và hỗ trợ khách hàng:</string>
+    <string name="infomation_phone_number" translatable="false">0904 010 143</string>
+    <string name="infomation_website" translatable="false">Trao đổi tại website TECHRES.VN</string>
+    <string name="infomation_website_link" translatable="false">http://techres.vn/</string>
+    <string name="feedback_text" translatable="false">Bạn muốn góp ý điều gì</string>
+    <string name="one" translatable="false">1</string>
+    <string name="two" translatable="false">2</string>
+    <string name="three" translatable="false">3</string>
+    <string name="four" translatable="false">4</string>
+    <string name="five" translatable="false">5</string>
+    <string name="six" translatable="false">6</string>
+    <string name="seven" translatable="false">7</string>
+    <string name="eight" translatable="false">8</string>
+    <string name="nice" translatable="false">9</string>
+    <string name="send_person" translatable="false">Người gửi</string>
+    <string name="start" translatable="false">*</string>
+    <string name="start_welcome" translatable="false">Bắt đầu</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="dot" translatable="false">•</string>
+    <string name="todo1" translatable="false">TODO</string>
+    <string name="imgLogo" translatable="false">TODO</string>
+    <string name="textTest" translatable="false">Một mình vẫn ổn :(Một mình vẫn ổn :( Một mình vẫn ổn :( Một mình vẫn ổn :( Một mình vẫn ổn :( Một mình vẫn ổn :( Một mình vẫn ổn :( Một mình vẫn ổn :( Một mình vẫn ổn :( Một mình vẫn ổn :( vMột mình vẫn ổn :( Một mình vẫn ổn :( Một mình vẫn ổn :( Một mình vẫn ổn :(Một mình vẫn ổn :( Một mình vẫn ổn :(</string>
+    <string-array name="feedback_for_dev">
+        <item quantity="1">Yêu cầu nâng cấp, cải tiến</item>
+        <item quantity="2">Góp ý phát triển thêm</item>
+        <item quantity="3">Báo lỗi</item>
+    </string-array>
+    <string name="endow" translatable="false">Ưu đãi</string>
+    <string name="still_validated" translatable="false">Còn hiệu lực</string>
+    <string name="expire" translatable="false">Hết hạn</string>
+    <string name="used" translatable="false">Đã sử dụng</string>
+    <string name="website" translatable="false">Website</string>
+    <string name="help" translatable="false">Trợ giúp</string>
+    <string name="copyright" translatable="false">Copyright 2017-2021 ALOAPP JSC</string>
+    <string name="aloapp" translatable="false">ALOAPP JSC</string>
+    <string name="save" translatable="false">Lưu</string>
+    <string name="hint_name_member" translatable="false">Nhập tên của bạn</string>
+    <string name="hint_gender" translatable="false">Chọn giới tính</string>
+    <string name="title_detail_restaurant" translatable="false">Chi tiết nhà hàng</string>
+    <string name="title_photo" translatable="false">Ảnh/Video</string>
+    <string name="title_feeling" translatable="false">Cảm xúc</string>
+    <string name="title_checkin" translatable="false">Check In</string>
+    <string name="title_tag" translatable="false">Gắn thẻ</string>
+    <string name="title_camera" translatable="false">Camera</string>
+    <string name="title_newfeed" translatable="false">Bạn đang nghĩ gì?</string>
+    <string name="title_addtoyourpost" translatable="false">Thêm vào bài viết của bạn</string>
+    <string name="sent" translatable="false">Đã gửi</string>
+    <string name="history" translatable="false">Lịch sử</string>
+    <string name="verify_phone_text" translatable="false">Mã xác nhận đã được gửi về Zalo hoặc số điện thoại đăng ký.</string>
+    <string name="verify_phone_text_done" translatable="false">Vui lòng nhập mã xác nhận để hoàn tất.</string>
+    <string name="send_code_verify" translatable="false">GỬI LẠI MÃ XÁC NHẬN</string>
+    <string name="code_verify" translatable="false">Mã xác nhận</string>
+    <string name="start_" translatable="false">(*)</string>
+    <string name="title_like" translatable="false">•</string>
+
+    <string name="title_add_image" translatable="false">Thêm ảnh</string>
+    <string name="title_edit_image" translatable="false">Chỉnh sửa</string>
+    <string name="title_addmoney" translatable="false">Nạp tiền</string>
+    <string name="title_qr" translatable="false">Quét \n mã QR </string>
+    <string name="accumulate_points" translatable="false">Tích lũy\nđiểm</string>
+    <string name="title_core" translatable="false">Đổi điểm</string>
+    <string name="title_mv" translatable="false">Mua mang về</string>
+    <string name="title_promotion" translatable="false">Ưu đãi</string>
+    <string name="title_booking" translatable="false">Đặt bàn</string>
+    <string name="title_point_donate" translatable="false">Số điểm thưởng</string>
+    <string name="title_birthday" translatable="false">Quà sinh nhật</string>
+    <string name="title_more" translatable="false">Xem thêm...</string>
+    <string name="title_restaurant_new" translatable="false">Món ăn mang về :</string>
+    <string name="title_order_food" translatable="false">Nhà hàng:</string>
+    <string name="caption_drop_image" translatable="false">Chỉnh Sửa Hình Ảnh</string>
+    <string name="caption_drop_image_done" translatable="false">Lưu</string>
+    <string name="oldPassword" translatable="false">Nhập lại mật khẩu</string>
+    <string name="newPassword" translatable="false">Nhập mật khẩu</string>
+    <string name="reNewPassword" translatable="false">Nhập lại mật khẩu </string>
+    <string name="confirm" translatable="false">Xác nhận</string>
+    <string name="accept" translatable="false">Chấp nhận</string>
+    <string name="title_add_food" translatable="false">Thêm món</string>
+    <string name="title_delivered_to" translatable="false">Giao tới</string>
+    <string name="title_change_address" translatable="false">Đổi địa chỉ</string>
+    <string name="title_note_address" translatable="false">Lưu ý về địa chỉ</string>
+    <string name="title_delivery_time" translatable="false">Thời gian giao hàng</string>
+    <string name="title_delivery_now" translatable="false">Giao ngay</string>
+    <string name="title_change" translatable="false">Thay đổi</string>
+    <string name="title_order_summary" translatable="false">Tóm tắt đơn hàng</string>
+    <string name="title_total_provisional" translatable="false">Tổng tạm tính</string>
+    <string name="title_fees_apply" translatable="false">Phí vận chuyển</string>
+    <string name="title_payment_methods" translatable="false">Phương thức thanh toán</string>
+    <string name="title_cash" translatable="false">Tiền mặt</string>
+    <string name="title_more_promotion" translatable="false">Thêm khuyến mãi</string>
+    <string name="title_total" translatable="false">Tổng cộng :</string>
+    <string name="order_food" translatable="false">Xác nhận đơn hàng</string>
+    <string name="title_food" translatable="false">Trà sữa MatCha</string>
+    <string name="inputStringPhoneNumber" translatable="false">Nhập số điện thoại</string>
+    <string name="passSendToYourPhone" translatable="false">Mã xác nhận sẽ gửi về số điện thoại của bạn</string>
+    <string name="numberPhone" translatable="false">Số điện thoại:</string>
+    <string name="inputVerifyCode" translatable="false">Nhập mã Verify Code</string>
+    <string name="feedbackOne" translatable="false">Yêu cầu nâng cấp, cải tiến</string>
+    <string name="feedbackTwo" translatable="false">Góp ý phát triển thêm</string>
+    <string name="feedbackThree" translatable="false">Báo lỗi</string>
+    <string-array name="tile_spinner">
+        <item>Lựa chọn phản hồi</item>
+
+    </string-array>
+    <string name="addtofood" translatable="false">Cập nhập giỏ hàng</string>
+    <string name="chooseRestaurants" translatable="false">Chọn nhà hàng, quán ăn, quán nhậu bạn muốn đặt tiệc...</string>
+    <string name="bill_pay" translatable="false">Hóa đơn</string>
+    <string name="number_bill" translatable="false">Số HĐ:</string>
+    <string name="pay" translatable="false">Tính tiền</string>
+    <string name="listfoods" translatable="false">Danh sách món ăn</string>
+    <string name="quality_item_cart" translatable="false">x</string>
+
+    <string name="collect_money" translatable="false">Thu tiền</string>
+    <string name="invoice_detail_table_receipt" translatable="false">Bàn:</string>
+    <string name="name_employee_receipt" translatable="false">Nhân viên:</string>
+    <string name="phone_invoice_header_items_label" translatable="false">Tên món</string>
+    <string name="phone_invoice_header_price_label" translatable="false">ĐG</string>
+    <string name="phone_invoice_header_quantity_label" translatable="false">SL</string>
+    <string name="phone_invoice_header_amount_label" translatable="false">TT</string>
+    <string name="provisional_date_receipt" translatable="false">Ngày:</string>
+    <string name="print_and_get_payment" translatable="false">In và Thu tiền</string>
+    <string name="phone_invoice_title" translatable="false">Thu tiền</string>
+    <string name="vat" translatable="false">VAT</string>
+    <string name="payment_title_take_money_card" translatable="false">Thẻ</string>
+    <string name="payment_title_take_money_cash" translatable="false">Tiền mặt</string>
+    <string name="phone_invoice_title_label" translatable="false">HÓA ĐƠN</string>
+    <string name="provisional_code_receipt" translatable="false">Số HĐ:</string>
+
+    <string name="phone_invoice_footer_amount" translatable="false">Thành tiền</string>
+    <string name="phone_invoice_footer_amount_discount_percent" translatable="false">Giảm giá(%s)</string>
+    <string name="phone_invoice_footer_amount_discount_money" translatable="false">Giảm giá</string>
+    <string name="phone_invoice_footer_delivery_amount" translatable="false">Phí giao hàng</string>
+    <string name="phone_invoice_footer_deposit_amount" translatable="false">Đặt cọc</string>
+    <string name="phone_invoice_footer_promotion_amount" translatable="false">Khuyến mại</string>
+    <string name="phone_invoice_footer_receive_from_customer" translatable="false">Nhập tiền khách đưa</string>
+    <string name="phone_invoice_footer_ref_no" translatable="false">Số: %s</string>
+    <string name="phone_invoice_footer_return_amount" translatable="false">Tiền trả lại cho khách</string>
+    <string name="phone_invoice_footer_service_amount" translatable="false">Phí dịch vụ</string>
+    <string name="phone_invoice_footer_subtotal_amount" translatable="false">Tổng tiền cần thanh toán</string>
+    <string name="phone_invoice_footer_vat_amount" translatable="false">Thuế GTGT (10%)</string>
+    <string name="phone_invoice_footer_thank" translatable="false">Trân trọng cảm ơn quý khách !</string>
+    <string name="phone_invoice_footer_note" translatable="false">(%s)</string>
+    <string name="creat_address" translatable="false">Thêm địa chỉ</string>
+    <string name="employee_name" translatable="false">Nhân viên:</string>
+    <string name="tax" translatable="false">Thuế GTGT</string>
+    <string name="please_no_pay_if_no_bill" translatable="false">Vui lòng không thanh toán khi chưa có hóa đơn giấy !</string>
+    <string name="count_point_get" translatable="false">Tổng điểm nhận được:</string>
+    <string name="money_bonus_next" translatable="false">Tiền thưởng kế tiếp</string>
+    <string name="point_bonus_next" translatable="false">Điểm thưởng kế tiếp</string>
+    <string name="denominations" translatable="false">đ</string>
+    <string name="parentheses" translatable="false">(</string>
+    <string name="parentheses_percent" translatable="false">%)</string>
+    <string name="title_name" translatable="false">Họ tên</string>
+    <string name="shipping_address" translatable="false">Địa chỉ nhận hàng</string>
+    <string name="city" translatable="false">Tỉnh/Thành Phố</string>
+    <string name="district" translatable="false">Quận/Huyện</string>
+    <string name="wards" translatable="false">Phường/Xã</string>
+    <string name="default_address" translatable="false">Đặt làm địa chỉ mặc định</string>
+    <string name="update_profile" translatable="false">Thông Tin Khách Hàng</string>
+    <string name="address_detail" translatable="false">Thông Tin Địa Chỉ</string>
+    <string name="address_list" translatable="false">Danh sách địa chỉ</string>
+    <string name="title_delete_image" translatable="false">Xóa</string>
+    <string name="title_address_default" translatable="false">Địa chỉ mặc định</string>
+    <string name="qrCode" translatable="false">Quét mã</string>
+    <string name="note_phone_emtry" translatable="false">Tên hoặc Số điện thoại không được để rỗng</string>
+    <string name="bar_code" translatable="false">Quét mã thành viên</string>
+    <string name="amount_food" translatable="false">x1</string>
+    <string name="name_food" translatable="false">Saigon Special Lon</string>
+    <string name="update_item_cart" translatable="false">Cập nhật giỏ hàng</string>
+    <string name="note_special" translatable="false">Lưu ý đặc biệt</string>
+    <string name="ordersuccess" translatable="false">Đặt hàng thành công</string>
+    <string name="orderid" translatable="false">Mã đơn hàng của bạn:</string>
+    <string name="ordernote" translatable="false">Cảm ơn bạn đã đặt niềm tin ở nhà hàng chúng tôi. Nhân viên nhà hàng sẽ gọi lại cho bạn để xác nhận trong vài phút tới.</string>
+    <string name="backmenu" translatable="false">Trở về menu</string>
+    <string name="point" translatable="false">Điểm</string>
+    <string name="dong" translatable="false">VNĐ</string>
+    <string name="title_order_customer" translatable="false">Mã đơn hàng :</string>
+    <string name="creat_by" translatable="false">Được tạo bởi</string>
+    <string name="delete_item_cart" translatable="false">Xóa khỏi giỏ hàng</string>
+    <string name="search" translatable="false">Tìm kiếm</string>
+    <string name="member_card" translatable="false">Thẻ thành viên</string>
+    <string name="note_item_cart" translatable="false">Thêm lưu ý về món ăn</string>
+    <string name="cooking" translatable="false">Đang nấu</string>
+    <string name="OrderHome" translatable="false">Mang Về</string>
+    <string name="name_customer" translatable="false">Tên khách hàng</string>
+    <string name="note_form_birthday" translatable="false">Hãy để lại thông tin của bạn, nhân viên nhà hàng sẽ liên hệ và hướng dẫn bạn nhận quà</string>
+    <string name="shipping_fee" translatable="false">Phí vận chuyển là chi phí mà người mua hàng phải trả cho shiper tương ứng với công sức mà họ đã bỏ ra để chuyển hàng đến tay khách</string>
+    <string name="add_promotion" translatable="false">Xin lỗi quý khách, chức năng này hiện tại chúng tôi đang phát triển</string>
+    <string name="title_order_com_firmed" translatable="false">Đơn hàng đã xử lý</string>
+    <string name="details_member_card" translatable="false">Chi tiết giao dịch thẻ</string>
+    <string name="addPoint" translatable="false">Cộng điểm</string>
+    <string name="subPoint" translatable="false">Trừ điểm</string>
+    <string name="facebook_app_id" translatable="false">322131985905971</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb322131985905971</string>
+    <string name="edit_review" translatable="false">Sửa bình luận</string>
+    <string name="delete_review" translatable="false">Xóa bình luận</string>
+    <string name="bill_point_card" translatable="false">Hóa đơn #</string>
+    <string name="day" translatable="false">Ngày</string>
+    <string name="total_price" translatable="false">Tổng tiền:</string>
+    <string name="noted" translatable="false">Lưu ý</string>
+    <string name="delete_notification" translatable="false">Bạn chỉ có thể đặt tất cả món của nhà hàng hiện đang có trong giỏ hàng. Bạn có muốn xóa các món ăn đã đặt trong nhà hàng này không?</string>
+    <string name="branch_random" translatable="false">BranchRandom</string>
+    <string name="branch_choose" translatable="false">BranchChoose</string>
+    <string name="detail_food_take_away" translatable="false">DetailFoodTakeAway</string>
+    <string name="list_promotion" translatable="false">Danh sách ưu đãi đang trống</string>
+    <string name="title_promotion_notification" translatable="false">Tất cả danh sách ưu đãi sẽ hiện trên màn hình này</string>
+    <string name="note_food_take_away" translatable="false">Ghi chú món ăn....</string>
+    <string name="emtiBD" translatable="false">Hiện tại bạn không có món quà nào</string>
+    <string name="emtibd" translatable="false">Tất cả quà tặng sẽ được hiển thị trong màn hình này</string>
+
+    <string name="notify_member_card" translatable="false">Tất cả thẻ thành viên sẽ được hiển thị trong màn hình này</string>
+    <string name="list_member_card_emtry" translatable="false">Danh sách thẻ thành viên đang trống</string>
+    <string name="sign" translatable="false"> Đăng ký</string>
+    <string name="alerbirthday" translatable="false">Chúc mừng sinh nhật bạn</string>
+    <string name="clickgift" translatable="false">Click vào để nhận quà</string>
+    <string name="nofi_Tks" translatable="false">Những góp ý chân thành của bạn là nguồn động lực để chúng tôi phát triển sản phẩm tốt hơn.</string>
+    <string name="tks_fb" translatable="false">Xin cảm ơn</string>
+    <string name="order_with_point" translatable="false">Gọi món bằng điểm</string>
+    <string name="apply_point" translatable="false">Áp dụng điểm giảm giá món</string>
+    <string name="please_input_content" translatable="false">\"Vui lòng nhập nội dung góp ý của bạn \"</string>
+    <string name="choose_feedback" translatable="false">Lựa chọn góp ý:</string>
+    <string name="orderCustomerConFirm" translatable="false">2,5,8</string>
+    <string name="orderCustomerUnConFirm" translatable="false">0,1,3,4,6,7,9</string>
+    <string name="title_note_cancel_order" translatable="false">Hủy Đơn Hàng</string>
+    <string name="note_cancel_order" translatable="false">Lý do mà bạn hủy đơn hàng này</string>
+    <string name="hash_tag" translatable="false">#</string>
+    <string name="order_online" translatable="false">Đơn hàng mang về</string>
+    <string name="order_offline" translatable="false">Đơn hàng tại quán</string>
+    <string name="serving" translatable="false">Đang phục vụ</string>
+    <string name="waiting_payment" translatable="false">Đang chờ thanh toán</string>
+    <string name="merged" translatable="false">Gộp</string>
+    <string name="waiting_complete" translatable="false">Chờ hoàn tất</string>
+    <string name="debt" translatable="false">Ghi nợ</string>
+    <string name="pending" translatable="false">Chờ xác nhận</string>
+    <string name="detail_food" translatable="false">Chi tiết món ăn</string>
+    <string name="notification_point" translatable="false">Số điểm hiện tại của bạn không đủ để đặt thêm món. Xin vui lòng quay lại sau !</string>
+    <string name="delete_posts" translatable="false">Xóa bài viết</string>
+    <string name="edit_posts" translatable="false">Chỉnh sửa bài viết</string>
+    <string name="membership_point_used" translatable="false">Điểm đã sử dụng</string>
+    <string name="membership_point_used_amount" translatable="false">Tổng tiền(Điểm)</string>
+    <string name="Vietnamese" translatable="false">Tiếng Việt</string>
+    <string name="Default" translatable="false">Mặc định hệ thống</string>
+    <string name="English" translatabldelete_postse="false">English</string>
+    <string name="ENG" translatable="false">Tiếng Anh</string>
+    <string name="language" translatable="false">Ngôn ngữ</string>
+    <string name="list_food_take_away" translatable="false">Danh sách món ăn mang về</string>
+    <string name="header_order" translatable="false">Đơn hàng</string>
+    <string name="order_detail" translatable="false">Chi tiết đơn hàng</string>
+    <string name="edit_cancel_order" translatable="false">Bạn hãy nhập lý do hủy đơn hàng này!!!</string>
+    <string name="bill_fragment" translatable="false">BillFragment</string>
+    <string name="choose_food_point" translatable="false">ChooseFoodPoint</string>
+    <string name="point_bonus" translatable="false">Điểm thưởng</string>
+    <string name="old_password" translatable="false">Nhập mật khẩu cũ</string>
+    <string name="old_password_not_correct" translatable="false">Mật khẩu cũ không đúng</string>
+    <string name="password_not_correct" translatable="false">Mật khẩu xác nhận không đúng</string>
+    <string name="password_not_four_char" translatable="false">Mật khẩu phải hơn 3 ký tự</string>
+    <string name="password_not" translatable="false">Mật khẩu cũ không được bỏ trống</string>
+    <string name="login" translatable="false">Đăng nhập</string>
+    <string name="note_no_account" translatable="false">Chưa có tài khoản?</string>
+    <string name="note_email" translatable="false">\@\gmail.com</string>
+    <string name="hint_birthday" translatable="false">Chọn ngày sinh</string>
+    <string name="point_add" translatable="false">Điểm nạp :</string>
+    <string name="point_accumulated" translatable="false">Điểm tích lũy :</string>
+    <string name="point_discount" translatable="false">Điểm khuyến mãi :</string>
+    <string name="email_special" translatable="false">\@\</string>
+    <string name="details_customer" translatable="false">Chi tiết khách hàng</string>
+    <string name="con_firm_order" translatable="false">Xác nhận đơn hàng</string>
+
+    <string name="play_game" translatable="false">Chơi game</string>
+    <string name="number_point_add" translatable="false">Số điểm nạp</string>
+    <string name="number_point_promotion" translatable="false">Số điểm khuyến mãi</string>
+    <string name="number_point_accumulated" translatable="false">Số điểm tích lũy</string>
+    <string name="hello_home" translatable="false">Xin chào,</string>
+    <string name="utilities" translatable="false">Tiện ích</string>
+    <string name="give_gift" translatable="false">Đặt quà tặng</string>
+    <string name="gift" translatable="false">Quà tặng</string>
+    <string name="point_history" translatable="false">Lịch sử điểm</string>
+    <string name="order_by_point" translatable="false">Sử dụng\nđiểm order</string>
+    <string name="promote" translatable="false">Khuyến mãi</string>
+    <string name="news" translatable="false">Tin tức</string>
+    <string name="price" translatable="false">Giá:</string>
+    <string name="put_gift" translatable="false">Đặt quà</string>
+    <string name="restaurant" translatable="false">Nhà hàng</string>
+    <string name="shipping_address_error" translatable="false">Bạn hãy nhập số nhà và tên đường</string>
+    <string name="name_address_error" translatable="false">Bạn hãy nhập tên của người nhận</string>
+    <string name="phone_address_error" translatable="false">Bạn hãy nhập số điện thoại của người nhận</string>
+    <string name="name_customer_error" translatable="false">Bạn hãy nhập tên của bạn</string>
+    <string name="phone_customer_error" translatable="false">Số điện thoại của bạn đã được cố định trên tài khoản</string>
+    <string name="email_customer_error" translatable="false">Bạn hãy nhập email của bạn</string>
+    <string name="apartment_number_customer_error" translatable="false">Bạn hãy nhập số nhà, đường mà bạn đang ở</string>
+    <string name="history_point" translatable="false">Lịch sử đổi điểm</string>
+    <string name="sent_cart" translatable="false">Giỏ hàng</string>
+    <string name="address_con_firm" translatable="false">Nhấn vào để thêm và chọn địa chỉ</string>
+    <string name="birthday_profile" translatable="false">Chọn ngày sinh</string>
+    <string name="first_title_chat" translatable="false">Hãy bắt đầu thảo luận về công việc của bạn</string>
+    <string name="txt_user_typing_without_name" translatable="false">Đang soạn tin</string>
+    <string name="txt_hint_message_here" translatable="false">Nhập tin nhắn</string>
+    <string name="more_message" translatable="false">Tin nhắn mới</string>
+    <string name="time_stamp" translatable="false">Hom qua</string>
+    <string name="chat_message_sending" translatable="false">Đang gửi …</string>
+    <string name="time_header_chat" translatable="false">12 : 00</string>
+    <string name="name_chat" translatable="false">Huu thang</string>
+    <string name="time_message" translatable="false">16:30</string>
+    <string name="more_image_chat" translatable="false">+7</string>
+    <string name="time_image_chat" translatable="false">12:00</string>
+    <string name="time_picker_chat" translatable="false">12:00</string>
+    <string name="time_video_chat" translatable="false">12:00</string>
+    <string name="play_lucky_wheel" translatable="false">PLAY</string>
+    <string name="default_image" translatable="false">Hình mặc định</string>
+    <string name="comment_new_feed" translatable="false">PLAY</string>
+    <string name="success_review_restaurant" translatable="false">Đăng bài thành công</string>
+    <string name="comment_review_restaurant_error" translatable="false">Bạn hãy nhập nội dung đánh giá</string>
+    <string name="star_review_restaurant_error" translatable="false">Bạn hãy chọn số sao đánh giá</string>
+    <string name="star_comment_review_restaurant_error" translatable="false">Bạn hãy nhập nội dung và đánh giá sao</string>
+    <string name="evaluate" translatable="false">Đánh giá</string>
+    <string name="progress" translatable="false">Chức năng này đang phát triển</string>
+    <string name="choose_branch_new_feed" translatable="false">Choose Branch New Feed</string>
+    <string name="create_post" translatable="false">Tạo bài viết</string>
+    <string name="post" translatable="false">Đăng</string>
+    <string name="branch_review" translatable="false">Bạn hãy chọn nhà hàng cần review</string>
+    <string name="a_like" translatable="false">1 Thích</string>
+    <string name="add_member_group" translatable="false">Thêm thành viên</string>
+    <string name="search_message" translatable="false">Tìm tin nhắn</string>
+    <string name="change_background" translatable="false">Đổi hình nền</string>
+    <string name="off_notification" translatable="false">Tắt thông báo</string>
+    <string name="media_area" translatable="false">Kho media</string>
+    <string name="view_all_media" translatable="false">Xem tất cả</string>
+    <string name="error_title_post" translatable="false">Tiêu đề của bạn không được để trống</string>
+    <string name="error_branch_post" translatable="false">Bạn hãy chọn nhà hàng cần review</string>
+    <string name="done_" translatable="false">Xong</string>
+    <string name="add_name_group" translatable="false">Bạn hãy nhập tên nhóm…</string>
+    <string name="search_user" translatable="false">Tìm kiếm tên bạn bè của bạn…</string>
+    <string name="suggestions" translatable="false">Gợi ý</string>
+    <string name="no_message_yet" translatable="false">Chưa có tin nhắn</string>
+    <bool name="is_right_to_left">false</bool>
+    <string name="yesterday" translatable="false">Hôm qua</string>
+    <string name="header_title_chat" translatable="false">Giờ đây bạn có thể</string>
+    <string name="footer_text_chat" translatable="false">thảo luận và trò chuyện với bạn bè</string>
+    <string name="new_chat" translatable="false">Tin nhắn mới</string>
+    <string name="input_message" translatable="false">Nhập tin nhắn</string>
+    <string name="revoke_message" translatable="false">Tin nhắn đã được thu hồi</string>
+    <string name="msg_loading" translatable="false">Please wait&#8230;</string>
+    <string name="useragent" translatable="false">Techres/</string>
+    <string name="revoke_my" translatable="false">Bạn đã thu hồi tin nhắn</string>
+    <string name="revoke_you" translatable="false">Đã thu hồi 1 tin nhắn</string>
+    <string name="two_dots" translatable="false">:</string>
+    <string name="writing_message" translatable="false">đang soạn tin nhắn</string>
+    <string name="send_card" translatable="false">Gửi thiệp</string>
+    <string name="send_beautiful_card" translatable="false">Gửi tặng một tấm thiệp đẹp</string>
+    <string name="send_a_photo" translatable="false">đã gửi ảnh</string>
+    <string name="send_a_sticker" translatable="false">đã gửi nhãn dán</string>
+    <string name="send_a_video" translatable="false">đã gửi video</string>
+    <string name="send_a_file" translatable="false">đã gửi file</string>
+    <string name="send_a_reply" translatable="false">đã trả lời tin nhắn</string>
+    <string name="happy_birthday" translatable="false">Happy Birthday</string>
+    <string name="type_text" translatable="false">text</string>
+    <string name="type_image" translatable="false">image</string>
+    <string name="type_video" translatable="false">video</string>
+    <string name="type_audio" translatable="false">audio</string>
+    <string name="file" translatable="false">file</string>
+    <string name="you" translatable="false">Bạn</string>
+    <string name="sendFile" translatable="false">sendFile</string>
+    <string name="send_file" translatable="false">send_file</string>
+    <string name="group" translatable="false">Nhóm</string>
+    <string name="type_group" translatable="false">3</string>
+    <string name="type_personal" translatable="false">4</string>
+    <string name="delete_group_chat" translatable="false">Xóa</string>
+    <string name="revoke" translatable="false">Thu hồi</string>
+    <string name="copy" translatable="false">Sao chép</string>
+    <string name="name_group_error" translatable="false">Vui lòng nhập tên nhóm!</string>
+    <string name="avatar_group_error" translatable="false">Bạn chưa chọn avatar group</string>
+    <string name="remove_group_successfully" translatable="false">Bạn đã xóa group thành công</string>
+    <string name="rationale_camera" translatable="false">Ứng dụng này cần truy cập vào máy ảnh của bạn để bạn có thể chụp ảnh.</string>
+    <string name="member" translatable="false">Thành viên</string>
+    <string name="notification" translatable="false">Thông báo</string>
+    <string name="leave_group" translatable="false">Rời nhóm</string>
+    <string name="seen_image_video_link_file" translatable="false">Ảnh, link, file đã gửi</string>
+    <string name="detail_group" translatable="false">Chi tiết group</string>
+    <string name="background_choose" translatable="false">Chọn hình nền</string>
+    <string name="choose" translatable="false">Chọn</string>
+    <string name="member_group" translatable="false">Thành Viên Nhóm</string>
+    <string name="turn_on" translatable="false">Bật</string>
+    <string name="turn_off" translatable="false">Tắt</string>
+    <string name="admin" translatable="false">Trưởng nhóm</string>
+    <string name="online_group" translatable="false">Đang hoạt động</string>
+    <string name="before" translatable="false">Trước</string>
+    <string name="watch_again" translatable="false">Xem lại</string>
+    <string name="png" translatable="false">png</string>
+    <string name="jpg" translatable="false">jpg</string>
+    <string name="jpe" translatable="false">jpe</string>
+    <string name="Authorization" translatable="false">Authorization</string>
+    <string name="fileName" translatable="false">fileName=</string>
+    <string name="confirmed_booking" translatable="false">Đã xác nhận</string>
+    <string name="ordered_food" translatable="false">Các món ăn đã đặt: </string>
+    <string name="use_now" translatable="false">Dùng Ngay</string>
+    <string name="equal" translatable="false">=</string>
+    <string name="check_authorize_admin" translatable="false">Bạn phải chuyển quyền trưởng nhóm cho thành viên trước khi rời nhóm</string>
+    <string name="move_on" translatable="false">Chuyển</string>
+    <string name="title_address_branch" translatable="false">Chi Nhánh :</string>
+    <string name="choose_restaurent_you_want_tgot" translatable="false">Chọn nhà hàng bạn muốn đến</string>
+    <string name="function_developing" translatable="false">Chức năng hiện đang phát triển</string>
+    <string name="user_registed_ads" translatable="false">Các khách hàng đã đăng ký quảng cáo</string>
+    <string name="interest" translatable="false">Quyền lợi</string>
+    <string name="context_policy" translatable="false">Triết lý về quảng cáo\n
+        - Tại Techres, chúng tôi tin rằng quảng cáo cần góp phần tạo nên trải nghiệm chung của người xem và phù hợp trải nghiệm đang thưởng thức trong lĩnh vực nhà hàng, coffee.
+        Các nguyên tắc này không phải là tư vấn về mặt pháp lý và việc tuân theo các nguyên tắc này không nhất thiết cấu thành sự tuân thủ pháp lý.
+        Nhà quảng cáo có trách nhiệm đảm bảo quảng cáo của họ tuân thủ tất cả các luật, quy chế và quy định áp dụng.\n
+        Ví dụ và giải thích thêm về chính sách của chúng tôi có tại trung tâm trợ giúp.\n
+        I.\u0009Thông tin chung:\n
+        \u00091. Nguyên tắc quảng cáo của chúng tôi bao gồm tiêu chí về nội dung quảng cáo, tiêu chuẩn cộng đồng và các yêu cầu có thể áp dụng khác.\n
+        \u00092. Nguyên tắc quảng cáo cũng như chính sách sử dụng dữ liệu và tuyên bố về quyền và trách nhiệm áp dụng cho tất cả quảng cáo và nội dung thương mại (“quảng cáo”) do Techres cung cấp hoặc xuất hiện trên Techres.\n
+        \u00093. Quảng cáo xuất hiện trong các ứng dụng trên nền tảng Techres phải tuân thủ tất cả các chính sách nền tảng của Techres bổ sung.\n
+        \u00094. Quảng cáo không được chứa luận điệu hoặc nội dung sai lệch, lừa dối, gian lận hoặc dễ gây nhầm lẫn.\n
+        \u0009A. Độ chính xác:\n
+        - Quảng cáo phải thể hiện rõ công ty, sản phẩm, dịch vụ hoặc nhãn hiệu sẽ được quảng cáo. Sản phẩm và dịch vụ được quảng cáo trong mẫu quảng cáo phải được thể hiện rõ trên trang web chính, không được cung cấp hay liên kết đến bất kỳ sản phẩm hay dịch vụ nào bị cấm.\n
+        \u0009B. Thuộc tính:\n
+        - Quảng cáo không được khẳng định hay ngụ ý, dù trực tiếp hay gián tiếp, dù trong nội dung quảng cáo hay bằng cách nhắm mục tiêu, về đặc điểm cá nhân của người dùng trong các vấn đề sau:\n
+        \u0009\u0009i. Chủng tộc hoặc nguồn gốc dân tộc.\n
+        \u0009\u0009ii. Tín ngưỡng tôn giáo hoặc triết học.\n
+        \u0009\u0009iii. Độ tuổi.\n
+        \u0009\u0009iv. Khuynh hướng tình dục hoặc đời sống tình dục.\n
+        \u0009\u0009v. Giới tính.\n
+        \u0009\u0009vi. Tình trạng khuyết tật hoặc bệnh lý (bao gồm sức khỏe thể chất hoặc tâm thần).\n
+        \u0009\u0009vii. Tình trạng hoặc thông tin tài chính.\n
+        \u0009\u0009viii. Tư cách thành viên trong nghiệp đoàn.\n
+        \u0009\u0009ix. Hồ sơ phạm tội.\n
+        \u0009\u0009x. Họ tên.\n
+        \u0009C. Hình ảnh:\n
+        - Quảng cáo và các tin được tài trợ trong Bảng tin không được chứa hình ảnh có văn bản chiếm hơn 20%.\n
+        \u0009D. Nhắm mục tiêu:\n
+        - Quảng cáo phải luôn áp dụng tiêu chí nhắm mục tiêu phù hợp và không được sử dụng tiêu chí nhắm mục tiêu để kích động người dùng.
+        Quảng cáo cho hàng hóa và dịch vụ bị kiểm soát (ví dụ: đồ uống có cồn và đánh bạc) phải tuân theo tất cả các luật, quy định và quy tắc ngành áp dụng.
+        Yêu cầu cụ thể đối với dịch vụ hẹn hò, đồ uống có cồn, đánh bạc, phương tiện tránh thai và dịch vụ thuê bao phải tuân theo các yêu cầu liệt kê tại trung tâm trợ giúp trong các phần nội dung áp dụng.\n
+        II.\u0009Nội dung quảng cáo:\n
+        - Nhà quảng cáo phải đảm bảo quảng cáo của họ tuân thủ tất cả các luật, quy định và nguyên tắc áp dụng. Mọi luận điệu trong quảng cáo phải được chứng minh thỏa đáng.
+        Quảng cáo không được xúc phạm người dùng. Quảng cáo và mọi ưu đãi được quảng bá trong quảng cáo không được sai lệch, dễ gây nhầm lẫn, lừa dối.
+        Quảng cáo không được chứa hoặc quảng bá cho các sản phẩm hoặc dịch vụ phi pháp. Quảng cáo không được vi phạm quyền của bất kỳ bên thứ ba nào.
+        Các nguyên tắc nội dung cụ thể sau sẽ được áp dụng:\n
+        \u00091. Sản phẩm người lớn.\n
+        - Quảng cáo không được quảng bá việc bán hoặc sử dụng các sản phẩm hoặc dịch vụ người lớn, bao gồm nhưng không giới hạn đồ chơi, video, ấn phẩm, chương trình biểu diễn trực tiếp hoặc sản phẩm kích dục.\n
+        \u00092. Đồ uống có cồn:\n
+        \u0009\u0009i. Quảng cáo quảng bá hoặc giới thiệu đồ uống có cồn bị cấm tại các quốc gia sau: Afghanistan, Brunei, Bangladesh, Ai Cập, Gambia, Kuwait, Libya, Na Uy, Pakistan, Nga, Ả Rập Xê Út, Các tiểu Vương quốc Ả Rập Thống nhất, Yemen và bất kỳ khu vực thẩm quyền nào khác mà quảng cáo này bị cấm theo luật.\n
+        \u0009\u0009ii. Tại những nơi được phép, quảng cáo quảng bá hoặc giới thiệu đồ uống có cồn phải: (i) Tuân thủ tất cả luật địa phương áp dụng, các quy tắc ngành, nguyên tắc, giấy phép và phê duyệt bắt buộc hoặc được khuyến nghị và (ii) áp dụng tiêu chí nhắm mục tiêu theo độ tuổi.\n
+        \u00093. Hẹn hò:\n
+        - Quảng cáo dành cho trình tìm bạn bè người lớn hoặc các trang web hẹn hò có tính khiêu dâm là không được phép. Những quảng cáo này phải tuân theo các yêu cầu nhắm mục tiêu hẹn hò và tên của sản phẩm hoặc dịch vụ phải được đưa vào văn bản hoặc hình ảnh quảng cáo.\n
+        \u00094. Ma túy và Thuốc lá:\n
+        - Quảng cáo không được quảng bá hoặc tạo điều kiện cho việc buôn bán hoặc tiêu thụ ma túy hoặc thuốc kích thích, các sản phẩm thuốc lá, đồ dùng để sử dụng ma túy hoặc thuốc lá.\n
+        \u00095. Đánh bạc và xổ số:\n
+        - Không quảng cáo hoặc tạo điều kiện cho đánh bạc trực tuyến, các trò chơi kỹ năng hoặc xổ số, bao gồm sòng bạc trực tuyến, cá cược thể thao\n
+        \u00096. Dược phẩm và vi chất bổ sung:\n
+        \u0009\u0009i. Quảng cáo không được quảng bá cho việc bán dược phẩm theo toa. Quảng cáo cho các nhà thuốc trực tuyến bị nghiêm cấm ngoại trừ quảng cáo cho các nhà thuốc được chứng nhận có thể được cho phép khi có phê duyệt trước từ Techres.\n
+        \u0009\u0009ii. Quảng cáo quảng bá vi chất dinh dưỡng dùng để ăn kiêng và thảo dược thường được cho phép, miễn sao các quảng cáo này không quảng bá cho sản phẩm có chứa steroid đồng hóa, chitosan, comfrey, dehydroepiandrosterne, ephedra, hormone sinh trưởng của người, melatonin và bất kỳ sản phẩm phụ nào khác có vẻ không an toàn hoặc đáng ngờ theo quyết định riêng của Techres.\n
+        \u00097. Phần mềm:\n
+        \u0009\u0009i. Quảng cáo không được giới thiệu trực tiếp hay gián tiếp đến một trang web cấm hoặc 1 ứng dụng nào có chứa bản tải về phần mềm gián điệp/phần mềm xấu, phần mềm cho vay tiền, hoàn tiền hoặc bất kỳ phần mềm nào dẫn đến trải nghiệm người dùng không mong đợi, dễ gây nhầm lẫn hoặc không công bằng, bao gồm nhưng không giới hạn phần mềm.\n
+        \u0009\u0009ii. Có thể vi phạm hoặc xâm phạm quyền sở hữu trí tuệ của bất kỳ bên thứ ba nào, bao gồm bản quyền, thương hiệu, bằng sáng chế hoặc bất kỳ quyền sở hữu nào khác.\n
+        \u00098. Dịch vụ thuê bao:\n
+        - Quảng cáo cho các dịch vụ thuê bao, hoặc quảng cáo quảng bá cho các sản phẩm hoặc dịch vụ bao gồm tùy chọn từ chối, gia hạn tự động, các sản phẩm lập hóa đơn chuyển đổi từ miễn phí sang trả phí hoặc tiếp thị di động phải tuân theo các yêu cầu sau:\n
+        \u0009\u0009i. Văn bản quảng cáo phải công bố rõ ràng và cụ thể thành phần thanh toán định kỳ (ví dụ: “thuê bao bắt buộc”).\n
+        \u0009\u0009ii. Trang đích phải:\n
+        \u0009\u0009\u0009a. Hiển thị giá và khoảng thời gian thanh toán ở bất kỳ đâu người dùng được nhắc nhập thông tin nhận dạng cá nhân.\n
+        \u0009\u0009\u0009b. Bao gồm hộp kiểm đăng ký đã bỏ chọn.\n
+        \u0009\u0009\u0009c. Bao gồm ngôn ngữ thông báo cho người dùng về cách hủy thuê bao hoặc tư cách thành viên của họ.\n
+        \u0009\u0009iii. Mỗi yêu cầu ở trên phải được đặt ở vị trí nổi bật trên trang đích của bạn, theo xác định của riêng techres, và phải dễ tìm, dễ đọc và dễ hiểu.\n
+        \u00099. Mô hình kinh doanh không thể chấp nhận:\n
+        - Quảng cáo không được quảng bá cho mô hình hoặc hoạt động kinh doanh mà Techres, theo quyết định riêng của mình, coi là không thể chấp nhận hoặc trái với triết lý quảng cáo chung của Techres hay bất kỳ luật áp dụng nào, bao gồm nhưng không giới hạn mô hình tiếp thị đa cấp hoặc quảng cáo cho các mưu đồ bất chính.\n
+        \u000910. Vũ khí và Chất nổ:\n
+        - Quảng cáo không được quảng bá cho việc bán hoặc sử dụng vũ khí, đạn dược hoặc chất nổ.\n
+        \u000911. Các doanh nghiệp cùng lĩnh vực, cùng nghành nghề.\n
+        \u000912. Quảng cáo không hỗ trợ cho các doanh nghiệp cùng lĩnh vực nhà hàng, coffee.\n
+        III.\u0009Tiêu chuẩn cộng đồng quảng cáo:\n
+        - Quảng cáo, hoặc các loại quảng cáo, nhận được nhiều phản hồi tiêu cực của người dùng hoặc bị coi là vi phạm các tiêu chuẩn cộng đồng của chúng tôi, đều bị cấm và có thể bị xóa.
+        Trong mọi trường hợp, Techres bảo lưu quyền xác định, theo quyết định riêng của mình, xem nội dung cụ thể có vi phạm tiêu chuẩn cộng đồng của chúng tôi hay không.\n
+        - Hoạt động phi pháp.\n
+        - Quảng cáo không được cấu thành, tạo điều kiện hoặc quảng bá cho hoạt động phi pháp.\n
+        \u00092. Quấy rối:\n
+        - Quảng cáo không được lăng mạ, công kích, quấy rối, bắt nạt, đe dọa, hạ nhục hoặc mạo danh người khác.\n
+        \u00093. Ngôn từ kích động thù địch:\n
+        - Quảng cáo không được chứa “ngôn từ kích động thù địch”, bất kể hướng tới một cá nhân hay một nhóm, dựa trên tư cách thành viên trong một tập thể nhất định.
+        Các tập thể này bao gồm nhưng không giới hạn chủng tộc, giới tính, tín ngưỡng, nguồn gốc quốc gia, liên kết tôn giáo, tình trạng hôn nhân, khuynh hướng tình dục, giới tính hoặc ngôn ngữ.\n
+        \u00094. Trẻ vị thành niên:\n
+        - Quảng cáo nhắm mục tiêu đến trẻ vị thành niên không được quảng bá cho sản phẩm hoặc dịch vụ mà trẻ vị thành niên không được phép sử dụng tại khu vực thẩm quyền của họ, hoặc các sản phẩm hoặc dịch vụ được coi là không an toàn hoặc không phù hợp.\n
+        \u00095. Tình dục/Ảnh khỏa thân:\n
+        - Quảng cáo không được chứa nội dung người lớn, bao gồm ảnh khỏa thân, hình vẽ mô tả con người ở tư thế gợi dục hoặc các hoạt động kích dục quá mức.\n
+        \u00096. Hành động bạo lực, ám ảnh, kinh dị…\n
+        - Quảng cáo không được gây chấn động, giật gân hoặc thiếu tôn trọng hay minh họa hành vi bạo lực, tại nạn, chết người, hình ảnh máu, vết thương của người hay động vật.\n
+        IV.\u0009Quyền của người khác:\n
+        - Quảng cáo không được chứa nội dung vi phạm quyền của bất kỳ bên thứ ba nào, bao gồm bản quyền, thương hiệu, quyền riêng tư, quyền công khai hoặc các quyền cá nhân hoặc sở hữu trí tuệ khác.\n
+        - Chúng tôi bảo lưu quyền từ chối, phê duyệt hoặc xóa bỏ mọi quảng cáo vì bất kỳ lý do gì, theo quyết định riêng của chúng tôi, bao gồm các quảng cáo ảnh hưởng tiêu cực đến mối quan hệ của chúng tôi với người dùng hoặc các quảng cáo quảng bá cho nội dung, dịch vụ hoặc hoạt động trái với vị thế cạnh tranh, lợi ích hoặc triết lý quảng cáo của chúng tôi. Các nguyên tắc này có thể thay đổi bất cứ khi nào.
+    </string>
+
+    <string name="activate_now" translatable="false">Kích hoạt ngay</string>
+    <string name="context_policy1" translatable="false">Nguyên tắc quảng cáo trên Techres</string>
+    <string name="agree_to_these_terms" translatable="false">Tôi đồng ý với các điều khoản này</string>
+    <string name="learn_policy" translatable="false">Tìm hiểu chính sách</string>
+    <string name="friends" translatable="false">Bạn bè</string>
+    <string name="group_chat" translatable="false">Nhóm chat</string>
+    <string name="choose_friend" translatable="false">Chọn bạn bè</string>
+    <string name="name_phonenumber_friend" translatable="false">Nhập tên, số điện thoại bạn bè</string>
+    <string name="male" translatable="false">Nam</string>
+    <string name="female" translatable="false">Nữ</string>
+    <string name="other" translatable="false">Khác</string>
+    <string name="add_friend" translatable="false">Thêm bạn</string>
+    <string name="unfriend" translatable="false">Xóa bạn</string>
+    <string name="was_friend" translatable="false">Đã là bạn bè</string>
+    <string name="declined" translatable="false">Đã từ chối</string>
+    <string name="note_confirm" translatable="false">Ghi chú :</string>
+    <string name="sync_contact" translatable="false">Cập nhật danh bạ</string>
+
+    <string name="title_placeholder" translatable="false">Title</string>
+    <string name="news_placeholder" translatable="false">News</string>
+    <string name="sports_info_placeholder" translatable="false">Here is some news</string>
+    <string name="empty_screen" translatable="false">We do not have anything\nhere right now. Please Retry</string>
+    <string name="btn_retry" translatable="false">Retry</string>
+
+    <string-array name="sports_images">
+        <item>https://androidwave.com/media/images/img_baseball.jpg</item>
+        <item>https://androidwave.com/media/images/img_badminton.jpg</item>
+        <item>https://androidwave.com/media/images/img_basketball.jpg</item>
+        <item>https://androidwave.com/media/images/img_bowling.jpg</item>
+        <item>https://androidwave.com/media/images/img_cycling.jpg</item>
+        <item>https://androidwave.com/media/images/img_golf.jpg</item>
+        <item>https://androidwave.com/media/images/img_running.jpg</item>
+        <item>https://androidwave.com/media/images/img_soccer.jpg</item>
+        <item>https://androidwave.com/media/images/img_swimming.jpg</item>
+        <item>https://androidwave.com/media/images/img_tabletennis.jpg</item>
+        <item>https://androidwave.com/media/images/img_tennis.jpg</item>
+    </string-array>
+    <string-array name="sports_titles">
+        <item>Baseball</item>
+        <item>Badminton</item>
+        <item>Basketball</item>
+        <item>Bowling</item>
+        <item>Cycling</item>
+        <item>Golf</item>
+        <item>Running</item>
+        <item>Soccer</item>
+        <item>Swimming</item>
+        <item>Table Tennis</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <string-array name="sports_info">
+        <item>Nike Enters 10-Year Partnership With Major League Baseball! </item>
+        <item>Indonesia Masters &#8211; Saina Nehwal sails into semifinals PV Sindhu, Kidambi Srikanth lose in quarters!</item>
+        <item>College Basketball 2018&#8211;19 Player of the Year Power Rankings Everyone is chasing Dukes Zion Williamson!</item>
+        <item>Local bowler lands 132 perfect games, shares his secret for success!</item>
+        <item>Sierra solos to win at womens Cadel Evans Great Ocean Road Race!</item>
+        <item>Tiger Woods Friday live blog: Woods overcomes mid-round hiccup to make the cut at Torrey Pines!</item>
+        <item>The 5km fun run was organised by Ironman England as part of its annual three-day triathlon festival in Bolton, Manchester in a bid to attract more female runners to the event!</item>
+        <item>Soccer insider notes: Liverpool not the only Premier League club eyeing Weston McKennie!</item>
+        <item>Chloe Grimme, a USA Swimming Scholastic All American from Land O Lakes, Florida, announced on social media that she has verbally committed to the University of Florida for 2020&#8211;21!</item>
+        <item>Table Tennis Federation Revokes Soumyajit Ghoshs Suspension, 9 Months After Rape Allegations!</item>
+        <item>2019 Australian Open odds, predictions for mens finals!</item>
+    </string-array>
+    <string name="refuse" translatable="false">Từ chối</string>
+    <string name="see_profile" translatable="false">Xem trang cá nhân</string>
+    <string name="chat" translatable="false">Nhắn tin</string>
+    <string name="edit_comment" translatable="false">Sửa bình luận</string>
+    <string name="delete_comment" translatable="false">Xóa bình luận</string>
+    <string name="title_reply" translatable="false">Trả lời</string>
+    <string name="share_my_chat" translatable="false">Chuyển tiếp</string>
+    <string name="pin_my_chat" translatable="false">Ghim tin nhắn</string>
+    <string name="information" translatable="false">Thông tin</string>
+    <string name="download" translatable="false">Tải xuống</string>
+    <string name="restaurant_style" translatable="false">Loại hình </string>
+    <string name="sticker_game" translatable="false">Sticker</string>
+    <string name="emoji_game" translatable="false">Emoji</string>
+    <string name="copied" translatable="false">Đã sao chép</string>
+    <string name="downloading" translatable="false">Đang tải xuống</string>
+    <string name="belong_to_restaurant" translatable="false">Thuộc về</string>
+    <string name="cover_photo_editing" translatable="false">Chỉnh sửa ảnh bìa</string>
+    <string name="personal_page" translatable="false">Trang cá nhân</string>
+    <string name="two_personal" translatable="false">TWO_PERSONAL</string>
+    <string name="detail" translatable="false">Chi tiết</string>
+    <string name="favorite" translatable="false">Yêu thích</string>
+    <string name="two_personal_chat" translatable="false">two_personal</string>
+    <string name="choose_restaurant_review" translatable="false">Bạn vui lòng chọn nhà hàng để review</string>
+    <string name="detail_booking" translatable="false">Chi tiết đặt chỗ</string>
+    <string name="name_restaurant_review" translatable="false">Tên nhà hàng</string>
+    <string name="create_group_success" translatable="false">Tạo group thành công</string>
+    <string name="hint_message" translatable="false">Nhập tin nhắn</string>
+    <string name="tag_all_member" translatable="false">Báo cho cả nhóm</string>
+    <string name="feeling_about_restaurant" translatable="false">Cảm nhận về nhà hàng</string>
+    <string name="felling_text_popup_header_restaurant" translatable="false">Anh/Chị dành chút thời gian nhận xét để chúng tôi có thể hiểu để phục vụ được tốt hơn.</string>
+    <string name="service_rate" translatable="false">Dịch vụ :</string>
+    <string name="food_rate" translatable="false">Món ăn :</string>
+    <string name="hygiene_rate" translatable="false">Vệ sinh :</string>
+    <string name="space_rate" translatable="false">Không gian :</string>
+    <string name="price_rate" translatable="false">Giá cả :</string>
+    <string name="bad" translatable="false">Tệ</string>
+    <string name="least" translatable="false">Kém</string>
+    <string name="tamduoc" translatable="false">Tạm được</string>
+    <string name="okey" translatable="false">Tạm</string>
+    <string name="rather" translatable="false">Khá</string>
+    <string name="great" translatable="false">Tuyệt</string>
+    <string name="list_pinned" translatable="false">Danh sách ghim</string>
+    <string name="unpin" translatable="false">Bỏ ghim</string>
+    <string name="pinned" translatable="false">pinned</string>
+    <string name="pinned_image" translatable="false">[Hình ảnh]</string>
+    <string name="pinned_business_card" translatable="false">[Danh thiếp]</string>
+    <string name="pinned_video" translatable="false">[Video]</string>
+    <string name="pinned_sticker" translatable="false">[Sticker]</string>
+    <string name="pinned_audio" translatable="false">[Tin nhắn thoại]</string>
+    <string name="pinned_link" translatable="false">[Link]</string>
+    <string name="pinned_file" translatable="false">[File]</string>
+    <string name="not_pinned_message" translatable="false">Tin nhắn này đã được ghim trước đó</string>
+    <string name="error_gif" translatable="false">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
+    <string name="type_chat_demo" translatable="false">demo</string>
+    <string name="type_chat_live" translatable="false">live</string>
+    <string name="lbl_edit_photo" translatable="false">Chỉnh sửa ảnh</string>
+    <string name="see_more" translatable="false">Xem thêm</string>
+    <string name="random_string" translatable="false">ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="str_empty_pinned" translatable="false">Bấm giữ một tin nhắn và chọn Ghim để gây chú ý cho cả nhóm.</string>
+    <string name="link" translatable="false">link</string>
+    <string name="pinned_user" translatable="false">đã ghim tin nhắn</string>
+    <string name="retry_pinned" translatable="false">Ghim lại</string>
+    <string name="un_pinned" translatable="false">Bỏ ghim</string>
+    <string name="delete_pinned" translatable="false">Xóa ghim</string>
+    <string name="success_unpinned" translatable="false">Ghim đã được gỡ</string>
+    <string name="success_retry_pinned" translatable="false">Ghim đã được ghim lại</string>
+    <string name="success_delete_pinned" translatable="false">Ghim đã xóa</string>
+    <string name="photo_editor_dialog_color_picker" translatable="false">Color Picker</string>
+    <string name="select_color" translatable="false">Select Color</string>
+    <string name="horizontal" translatable="false">Horizontal</string>
+    <string name="vertical" translatable="false">Vertical</string>
+    <string name="instructions" translatable="false">Drag or stretch photos</string>
+    <string name="share" translatable="false">Share</string>
+    <string name="Add" translatable="false">Add</string>
+    <string name="select_frame_guide" translatable="false">Select the picture you want to use</string>
+    <string name="create_frame_guide" translatable="false">Double-tap to view more options</string>
+    <string name="select_frame" translatable="false">Select frame</string>
+    <string name="create_frame" translatable="false">Create frame</string>
+    <string name="photocollage" translatable="false">Photo</string>
+    <string name="select" translatable="false">Select</string>
+    <string name="remove" translatable="false">Remove</string>
+    <string name="alter_background" translatable="false">Background Photo</string>
+    <string name="border_shadow" translatable="false">Border shadow</string>
+    <string name="camera" translatable="false">Camera</string>
+    <string name="photo_library" translatable="false">Photo library</string>
+    <string name="sticker" translatable="false">Sticker</string>
+    <string name="sticker_chat" translatable="false">sticker</string>
+    <string name="color_border" translatable="false">Color border</string>
+    <string name="choose_picture" translatable="false">Choose picture</string>
+    <string name="clear_cache_menu" translatable="false">Clear Caches</string>
+    <string name="clear_cache_complete_toast" translatable="false">Caches have been cleared</string>
+    <string name="imageview_description" translatable="false">Image Thumbnail</string>
+    <string name="no_network_connection_toast" translatable="false">No network connection found</string>
+    <string name="confirm_delete_photo" translatable="false">Are you sure you want to delete this all photos?</string>
+    <string name="exit" translatable="false">Thoát</string>
+    <string name="border_color" translatable="false">Color border</string>
+    <string name="edit" translatable="false">Edit</string>
+    <string name="border_size" translatable="false">Border size</string>
+    <string name="shadow_size" translatable="false">Shadow size</string>
+    <string name="gallery" translatable="false">Gallery</string>
+    <string name="guide_add_image" translatable="false">Tap to add photos, stickers or background</string>
+    <string name="guide_select_image" translatable="false">Tap to select the image</string>
+    <string name="guide_drag_image" translatable="false">Press to drag</string>
+    <string name="guide_zoom_in" translatable="false">Use two fingers to zoom in and rotate</string>
+    <string name="guide_zoom_out" translatable="false">Use two fingers to zoom out and rotate</string>
+    <string name="guide_option" translatable="false">Double tap to select options</string>
+    <string name="guide_long_press" translatable="false">Long press and drag drop to swap two images</string>
+    <string name="guide_share" translatable="false">Tap to share image</string>
+    <string name="create_from_photo" translatable="false">Create freely</string>
+    <string name="create_from_frame" translatable="false">Create from frame</string>
+    <string name="create_from_template" translatable="false">Create from template</string>
+    <string name="waring_out_of_memory" translatable="false">Not enough memory. Please remove images or your program will be crashed.!!!</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="album" translatable="false">Album</string>
+    <string name="store" translatable="false">Store</string>
+    <string name="guide_add_text_item" translatable="false">Click on left button to select color. Click right button to select font.</string>
+    <string name="create_text_item" translatable="false">Create text item</string>
+    <string name="default_font" translatable="false">Default Font</string>
+    <string name="loading" translatable="false">Loading...</string>
+    <string name="sort_by_time" translatable="false">Sort by time</string>
+    <string name="sort_by_hot_item" translatable="false">Hot items</string>
+    <string name="default_backgrounds" translatable="false">Backgrounds mặc định</string>
+    <string name="default_stickers" translatable="false">Stickers mặc định</string>
+    <string name="change" translatable="false">Thay đổi</string>
+    <string name="delete" translatable="false">Xoá</string>
+    <string name="gallery_albums" translatable="false">Gallery Albums</string>
+    <string name="album_image" translatable="false">Album Images</string>
+    <string name="please_select_photo" translatable="false">Vui lòng chọn %d photo(s)</string>
+    <string name="please_select_photo_without_counting" translatable="false">Please select photo(s)</string>
+    <string name="you_need_photo" translatable="false">You only need %d photo(s)</string>
+    <string name="warning_uninstall_default_package" translatable="false">You can not remove default packages</string>
+    <!--Permission text-->
+    <string name="permission_record_audio" translatable="false">RECORD AUDIO</string>
+    <string name="permission_access_coarse_location" translatable="false">ACCESS_COARSE_LOCATION</string>
+    <string name="permission_access_fine_location" translatable="false">ACCESS_FINE_LOCATION</string>
+    <string name="permission_read_contacts" translatable="false">READ_CONTACTS</string>
+    <string name="permission_write_contacts" translatable="false">WRITE_CONTACTS</string>
+    <string name="permission_write_ex_storage" translatable="false">WRITE_EXTERNAL_STORAGE</string>
+    <string name="permission_read_ex_storage" translatable="false">READ_EXTERNAL_STORAGE</string>
+    <string name="permission_camera" translatable="false">CAMERA</string>
+    <string name="permission_get_account" translatable="false">GET_ACCOUNTS</string>
+    <string name="permission_system_alert_window" translatable="false">SYSTEM_ALERT_WINDOW</string>
+    <string name="permission_process_outgoing_calls" translatable="false">PROCESS_OUTGOING_CALLS</string>
+    <string name="permission_guide" translatable="false">You need to allow Photo Collage Grid Frame app to access the following dangerous permissions to use this app:</string>
+    <string name="permission_denied_and_guide_to_setting" translatable="false">Permission denied! Please enable all permission</string>
+    <string name="background_color" translatable="false">Background Color</string>
+    <string name="select_text_color" translatable="false">Chọn màu chữ</string>
+    <string name="text_font" translatable="false">Chọn font chữ</string>
+    <string name="creating" translatable="false">Tạo...</string>
+    <string name="golden_ratio" translatable="false">Golden Ratio</string>
+    <string name="photo_editor_square" translatable="false">Square</string>
+    <string name="fit" translatable="false">Fit</string>
+    <string name="collage" translatable="false">Collage</string>
+    <string name="select_ratio" translatable="false">Select Ratio</string>
+    <string name="layout_ration" translatable="false">Layout Ratio</string>
+    <string name="get" translatable="false">Get</string>
+    <string name="rate_app" translatable="false">Rate App</string>
+    <string name="app_not_found" translatable="false">App not found</string>
+    <string name="guide_list_view_settings" translatable="false">Swipe to left on list view to get more actions</string>
+    <string name="get_pro" translatable="false">Remove Ads</string>
+    <string name="text_images" translatable="false">Selected %1$d</string>
+
+    <string name="photo_collage" translatable="false">Photo\nCollage</string>
+    <string name="photo_editor" translatable="false">Photo\nEditor</string>
+    <string name="pip_collage" translatable="false">PIP\nCollage</string>
+    <string name="scrap_book" translatable="false">Scrap\nBook</string>
+    <string name="my_creation" translatable="false">My\nCreation</string>
+
+
+    <!--admob ids-->
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_banner_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--fb ad ids-->
+    <string name="fbad_banner_id" translatable="false">IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID</string>
+    <string name="fbad_interstitial_id" translatable="false">VID_HD_9_16_39S_APP_INSTALL#YOUR_PLACEMENT_ID</string>
+    <string name="title_select_frame" translatable="false">Select Frame</string>
+    <string name="layout" translatable="false">Layout</string>
+    <string name="adjust" translatable="false">Adjust</string>
+    <string name="bg_color" translatable="false">Bg Color</string>
+    <string name="photo_collage_header" translatable="false">Photo Collage</string>
+    <string name="str_sticker" translatable="false">Sticker</string>
+    <string name="str_text" translatable="false">Text</string>
+    <string name="str_pip_collage" translatable="false">PIP Collage</string>
+    <string name="restaurant_nearby" translatable="false">Nhà hàng gần đây</string>
+    <string name="category_sticker" translatable="false">category-sticker</string>
+    <string name="tab_drink" translatable="false">Thức uống</string>
+    <string name="tab_rules" translatable="false">Thể lệ</string>
+
+
+    <string name="cancel_all_uploads" translatable="false">Cancel all uploads</string>
+    <string name="select_file" translatable="false">Select file to upload</string>
+    <string name="parameter_name_hint" translatable="false">Parameter name</string>
+    <string name="parameter_value_hint" translatable="false">Parameter value</string>
+    <string name="header_name_hint" translatable="false">Header name</string>
+    <string name="header_value_hint" translatable="false">Header value</string>
+    <string name="use_only_ascii" translatable="false">Use only ASCII characters here!</string>
+    <string name="provide_parameter_name" translatable="false">Please provide a parameter name</string>
+    <string name="provide_parameter_value" translatable="false">Please provide a parameter value</string>
+    <string name="provide_header_name" translatable="false">Please provide a header name</string>
+    <string name="provide_header_value" translatable="false">Please provide a header value</string>
+    <string name="new_multipart_upload" translatable="false">New Multipart Upload</string>
+    <string name="no_whitespaces_here" translatable="false">Whitespaces are not allowed here!</string>
+    <string name="add" translatable="false">Thêm</string>
+    <string name="cancel_upload" translatable="false">Hủy</string>
+    <string name="uploading" translatable="false">Tiến trình - [[PROGRESS]]</string>
+    <string name="upload_success" translatable="false">Tải lên thành công trong [[ELAPSED_TIME]]</string>
+    <string name="upload_error" translatable="false">Lỗi xảy ra khi tải lên</string>
+    <string name="upload_cancelled" translatable="false">Trình tải lên đã hủy</string>
+    <string name="multipart_upload" translatable="false">Tải lên Server</string>
+    <string name="new_binary_upload" translatable="false">New Binary Upload</string>
+    <string name="ftp_upload" translatable="false">FTP Upload</string>
+    <string name="settings" translatable="false">Settings</string>
+    <string name="port" translatable="false">Port (e.g. 21)</string>
+    <string name="ftp_server_url" translatable="false">FTP Server IP or domain</string>
+    <string name="ftp_username_hint" translatable="false">FTP Username</string>
+    <string name="ftp_password_hint" translatable="false">FTP Password</string>
+    <string name="server_address" translatable="false">https://your.server.com</string>
+    <string name="add_parameter" translatable="false">Add parameter</string>
+    <string name="add_file" translatable="false">Add file</string>
+    <string name="set_file" translatable="false">Set file</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="next_welcome" translatable="false">Tiếp tục</string>
+    <string name="next_instructions" translatable="false">Fill in the parameter name and tap on next to select the file</string>
+    <string name="file_not_found" translatable="false">File %1$s not found! It will not be added to the upload request!</string>
+    <string name="empty_multipart_upload" translatable="false">Empty upload, add some files!\nYou can also add headers and parameters</string>
+    <string name="empty_binary_upload" translatable="false">Empty upload!\nAdd the file to be sent in the body of the request. You can also add headers.</string>
+    <string name="empty_ftp_upload" translatable="false">Empty upload, add at least one file!</string>
+    <string name="provide_valid_host" translatable="false">Provide a valid IP Address or domain</string>
+    <string name="file_remote_path_hint" translatable="false">Remote path (e.g. /home/user/)</string>
+    <string name="provide_remote_path" translatable="false">Please provide a remote FTP path where to upload the file</string>
+    <string name="provide_valid_port" translatable="false">Please provide a valid port</string>
+    <string name="provide_remote_path_next_instructions" translatable="false">Provide a remote FTP path where to upload the file and tap on next to select it</string>
+
+    <string name="cant_using_point" translatable="false">Số điểm hiện tại không đủ để thanh toán vui lòng chọn loại điểm khác</string>
+    <string name="join_room_game_success" translatable="false">Vào phòng thành công</string>
+    <string name="join_room_game_false" translatable="false">Phòng không tồn tại, vui lòng kiểm tra lại</string>
+    <string name="empty_game" translatable="false">Hiện tại danh sách game đang trống, vui lòng\n quay lại trong đợt sự kiện khác</string>
+    <string name="how_many_minutes" translatable="false">Anh mấy phút em mấy lần</string>
+    <string name="total_vote" translatable="false">Tổng lượt chọn</string>
+    <string name="out_of_move" translatable="false">Số lượt chơi hiện tại của bạn đã hết.</string>
+    <string name="remaining_plays" translatable="false">Số lượt chơi hiện tại của bạn còn lại</string>
+    <string name="remaining_plays_2" translatable="false">lượt. Bạn có muốn tiếp tục chơi không ?</string>
+    <string name="success_drink_game" translatable="false">Bạn đã chọn đúng!!! Xin vui lòng liên hệ nhân viên để nhận phần thưởng.</string>
+    <string name="error_drink_game" translatable="false">Bạn đã chọn sai!!! Chúc bạn may mắn lần sau</string>
+    <string name="times" translatable="false">lượt</string>
+    <string name="slogan_home" translatable="false">Hôm nay bạn muốn ăn món gì?</string>
+    <string name="change_avatar" translatable="false">vừa thay đổi ảnh nhóm</string>
+    <string name="change_background_group" translatable="false">vừa thay đổi hình nền nhóm</string>
+    <string name="choose_food_and_choose_restaurant" translatable="false">Chọn quán, món bạn thích</string>
+    <string name="add_member" translatable="false">đã mời ai đó vào nhóm</string>
+    <string name="kick_member" translatable="false">đã mời một người ra khỏi group</string>
+    <string name="authorize_member" translatable="false">nhường quyền trưởng nhóm</string>
+
+    <string name="what_on_your_mind" translatable="false">Hãy review về nhà hàng bạn vừa trải nghiệm...</string>
+    <string name="what_on_your_mind1" translatable="false">Hãy viết cảm nghĩ của ban hôm nay</string>
+    <string name="label_take_photo" translatable="false">Chụp ảnh</string>
+    <string name="photo_video" translatable="false">Chọn ảnh</string>
+    <string name="choose_video" translatable="false">Chọn video</string>
+    <string name="gam" translatable="false">g</string>
+    <string name="mililitre" translatable="false">mL</string>
+    <string name="can" translatable="false">lon</string>
+    <string name="net_weight" translatable="false">Khối lượng tịnh</string>
+    <string name="weight" translatable="false">Trọng lượng</string>
+    <string name="barrel" translatable="false">Thùng</string>
+
+    <string name="place_review" translatable="false">Địa điểm</string>
+    <string name="click_restaurant_review" translatable="false">Nhấn vào để chọn nhà hàng</string>
+    <string name="title_name_group" translatable="false">Tên nhóm</string>
+    <string name="title_introduce_group" translatable="false">Giới thiệu nhóm</string>
+    <string name="hint_introduce_group" translatable="false">Mô tả về nhóm của bạn...</string>
+    <string name="branch" translatable="false">Chi nhánh</string>
+    <string name="star_card" translatable="false">Sao</string>
+    <string name="write_comment" translatable="false">Viết bình luận...</string>
+
+    <string name="turn_on_notification_n" translatable="false">Bật thông báo</string>
+    <string name="turn_off_notification_n" translatable="false">Tắt thông báo</string>
+    <string name="search_message_n" translatable="false">Tìm \ntin nhắn</string>
+    <string name="change_background_n" translatable="false">Đổi hình nền</string>
+    <string name="add_member_n" translatable="false">Thêm \nthành viên</string>
+    <string name="watch_member" translatable="false">Xem thành viên</string>
+    <string name="report_group" translatable="false">Báo Cáo</string>
+    <string name="history_chat_delete" translatable="false">Xóa lịch sử trò chuyện</string>
+    <string name="messenger_ghim" translatable="false">Tin nhắn đã ghim</string>
+    <string name="set_group_name" translatable="false">Đặt tên nhóm</string>
+    <string name="message_block" translatable="false">Chặn tin nhắn</string>
+    <string name="archive_chat" translatable="false">Kho lưu trữ</string>
+    <string name="new_image_will_show_here" translatable="false">Hình mới nhất của cuộc trò chuyện sẽ xuất hiện tại đây</string>
+    <string name="food_top" translatable="false">Top món bán chạy</string>
+    <string name="create_group" translatable="false">Tạo nhóm</string>
+    <string name="check_save_group" translatable="false">Bạn có muốn lưu không?</string>
+    <string name="coming_soon" translatable="false">Sắp ra mắt</string>
+    <string name="category_for_you" translatable="false">Danh mục dành cho bạn</string>
+    <string name="food_nuong" translatable="false">Món nướng</string>
+    <string name="food_nau" translatable="false">Món nấu</string>
+    <string name="food_xao" translatable="false">Món xào</string>
+    <string name="server_type" translatable="false">Loại hình phục vụ</string>
+    <string name="force_version_title_new_version" translatable="false">Hiện tại đã có phiên bản mới ALOLINE</string>
+    <string name="force_version_title_sub_title" translatable="false">Nâng cấp ngay để trải nghiệm và sử dụng những tính năng mới nhất. Nhấn vào nút bên dưới để cập nhật ngay!!!</string>
+    <string name="force_version_btn_update_now" translatable="false">Nâng cấp ngay</string>
+    <string name="force_version_description" translatable="false">Nếu không cập nhật phiên bản mới nhất, chương trình có thể bị lỗi hoặc sai dữ liệu</string>
+    <string name="empty_restaurant" translatable="false">Danh sách nhà hàng đang trống</string>
+    <string name="empty_restaurant_one" translatable="false">Tất cả nhà hàng gần đây sẽ được hiển thị trong màn hình này</string>
+    <string name="customer_name" translatable="false">Tên khách hàng:</string>
+    <string name="customer_phonenumber" translatable="false">SĐT khách hàng:</string>
+    <string name="title_point" translatable="false">Điểm nạp:</string>
+    <string name="title_accumulate_point" translatable="false">Điểm tích lũy:</string>
+    <string name="title_promotion_point" translatable="false">Điểm khuyến mãi:</string>
+    <string name="title_value_point" translatable="false">Điểm value:</string>
+    <string name="use" translatable="false">Sử dụng</string>
+    <string name="point_bill" translatable="false">Điểm</string>
+    <string name="point_used" translatable="false">Số điểm đã sử dụng</string>
+    <string name="month" translatable="false">Tháng</string>
+    <string name="year" translatable="false">Năm</string>
+    <string name="choose_date" translatable="false">Chọn ngày sinh</string>
+
+    <string name="function_close" translatable="false">Chức năng này đang tạm đóng bởi nhà phát triển.</string>
+    <string name="review_count" translatable="false">Lượt đánh giá</string>
+
+    <string name="login_now_content" translatable="false">Bạn cần phải đăng nhập để sử dụng các tính năng của ứng dụng.</string>
+    <string name="login_now" translatable="false">Đăng nhập ngay</string>
+    <string name="login_or_register" translatable="false">Đăng nhập hoặc đăng ký</string>
+    <string name="person_reaction" translatable="false">Người đã bày tỏ cảm xúc</string>
+
+    <string name="all" translatable="false">Tất cả</string>
+    <string name="value" translatable="false">Giá trị</string>
+    <string name="exciting" translatable="false">Thú vị</string>
+    <string name="favourite" translatable="false">Yêu thích</string>
+    <string name="beautiful" translatable="false">Đẹp</string>
+    <string name="meaning" translatable="false">Ý nghĩa</string>
+    <string name="meaningless" translatable="false">Vô nghĩa</string>
+    <string name="negative" translatable="false">Tiêu cực</string>
+    <string name="moving" translatable="false">Cảm động</string>
+    <string name="form_of_accumulating_points" translatable="false">Hình thức tích điểm</string>
+    <string name="normal_question" translatable="false">Câu hỏi thường gặp</string>
+
+    <string name="changpasword_success" translatable="false">Đổi mật khẩu thành công</string>
+    <string name="add_image_video" translatable="false">Thêm ảnh/video</string>
+    <string name="choose_image_video" translatable="false">Chọn ảnh/video</string>
+    <string name="registry_advertisement_success" translatable="false">Đăng ký quảng cáo\nthành công</string>
+    <string name="content_advertisement" translatable="false">Thông tin đăng ký quảng cáo của anh chị đã gửi thành công.\nTECHRES sẽ kiểm duyệt trước khi bạn có thể upload video quảng cáo của Công Ty bạn lên hệ thống màn hình led của TECHRES.</string>
+    <string name="please_access_policy" translatable="false">Bạn cần phải chấp nhận chính sách của nhà hàng trước khi đăng ký.</string>
+    <string name="comment_review" translatable="false">Bình luận bài viết</string>
+    <string name="collapse" translatable="false">Thu gọn</string>
+    <string name="point_value" translatable="false">Điểm giá trị :</string>
+    <string name="review_please" translatable="false">Xin vui lòng đánh giá về chúng tôi</string>
+    <string name="service_thanks" translatable="false">Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi</string>
+    <string name="title_account_dot" translatable="false">Tài khoản:</string>
+    <string name="title_time_dot" translatable="false">Vào lúc:</string>
+    <string name="title_receive_dot" translatable="false">Bạn nhận được:</string>
+    <string name="notifical_accumulate_points" translatable="false">Thông báo tích điểm</string>
+    <string name="review_underline" translatable="false"> <u>Đánh giá</u></string>
+    <string name="line" translatable="false"> Line</string>
+    <string name="last_remove_pinned" translatable="false">đã thu hồi ghim</string>
+    <string name="last_revoke_message" translatable="false">đã thu hồi tin nhắn</string>
+    <string name="last_update_name" translatable="false">đã đổi tên nhóm</string>
+    <string name="last_update_avatar" translatable="false">đã đổi hình đại diện nhóm</string>
+    <string name="last_update_background" translatable="false">đã đổi hình nền nhóm</string>
+    <string name="order_review_restaurant_name" translatable="false">Từ nhà hàng:</string>
+    <string name="order_review" translatable="false">Đánh giá đơn hàng</string>
+    <string name="review_now" translatable="false">Đánh giá ngay</string>
+    <string name="success_order_review" translatable="false">Đánh giá đơn hàng thành công</string>
+    <string name="empty_order_review_one" translatable="false">Danh sách đơn hàng cần đánh giá đang trống</string>
+    <string name="empty_order_review_two" translatable="false">Tất cả đơn hàng sẽ được hiển thị trong màn hình này</string>
+    <string name="last_member_leave_group" translatable="false">đã rời khỏi nhóm</string>
+    <string name="minus" translatable="false">-</string>
+    <string name="plus" translatable="false">+</string>
+    <string name="admin_kick_member" translatable="false">Bạn có muốn mời người này khỏi nhóm?</string>
+    <string name="kick" translatable="false">Xóa</string>
+    <string name="downloading_message" translatable="false">Đang tải...</string>
+    <string name="notify_update" translatable="false">Chức năng này sẽ được cập nhật trong một số phiên bản sắp tới</string>
+    <string name="using" translatable="false">Sử dụng</string>
+    <string name="using_point_notification" translatable="false">Bạn có chắc rằng muốn sử dụng điểm này cho đơn hàng không?</string>
+    <string name="updating" translatable="false">Đang chờ cập nhật</string>
+    <string name="success_toast" translatable="false">Thành công 😍</string>
+    <string name="success_create_group" translatable="false">Tạo nhóm thành công!</string>
+    <string name="cancel_using_point_notification" translatable="false">Bạn có chắc rằng muốn ngưng sử dụng điểm này cho đơn hàng này không?</string>
+    <string name="cancel_using_point" translatable="false">Ngưng</string>
+    <string name="review_order_btn" translatable="false">Nhận xét</string>
+    <string name="unit_quantity" translatable="false">x</string>
+    <string name="make_life_more_value" translatable="false">Giúp cho cuộc sống giá trị hơn</string>
+    <string name="sever_error" translatable="false">Quá trình đăng tải gặp sự cố hãy thử kết nối lại</string>
+    <string name="hint_input_title_review" translatable="false">Nhập tiêu đề cho bài đánh giá (nếu có) hoặc có thể bỏ qua</string>
+    <string name="post_review_new_feed" translatable="false">Hãy review về nhà\nhàng / quán ăn / coffee bạn vừa trải nghiệm</string>
+    <string name="post_new_feed" translatable="false">Hãy chia sẻ điều gì đó mà bạn cảm thấy thú vị</string>
+    <string name="content_review_restaurant_error" translatable="false">Bạn hãy nhập nội dung đánh giá</string>
+    <string name="title_review_restaurant_error" translatable="false">Tiêu đề không được để trống</string>
+    <string name="content_review_restaurant_error_share" translatable="false">Bạn hãy nhập nội dung chia sẻ</string>
+    <string name="detail_review" translatable="false">Chi tiết đánh giá</string>
+    <string name="title_contacts" translatable="false">Danh bạ</string>
+    <string name="title_tag_all" translatable="false">Thông báo cho cả nhóm</string>
+    <string name="symbol_tag_all" translatable="false">\@\All</string>
+    <string name="value_en" translatable="false">Value</string>
+    <string name="votes" translatable="false">Lượt</string>
+    <string name="note_share" translatable="false">Viết ghi chú...</string>
+    <string name="type_reply" translatable="false">reply</string>
+    <string name="type_share" translatable="false">share</string>
+    <string name="type_revoke" translatable="false">revoke</string>
+    <string name="sure_delete_post" translatable="false">Bạn có chắc muốn xóa bài viết này không?</string>
+    <string name="delete_now" translatable="false">Xóa ngay</string>
+    <string name="success_delete_draft" translatable="false">Xóa bài viết nháp thành công</string>
+    <string name="please_express_your_thoughts_on_the_article" translatable="false">Hãy bày tỏ đúng suy nghĩ của bạn về bài viết</string>
+    <string name="search_friend" translatable="false">Tìm bạn bè</string>
+    <string name="friend" translatable="false">Người bạn</string>
+    <string name="hint_input_content_share_null" translatable="false">Nội dung chia sẻ không được để trống...</string>
+    <string name="uploading_please" translatable="false">Đang tải lên, vui lòng đợi...</string>
+    <string name="image_image" translatable="false">Ảnh</string>
+    <string name="image_image_album" translatable="false">ảnh</string>
+    <string name="video_video" translatable="false">Video</string>
+    <string name="video_video_album" translatable="false">video</string>
+    <string name="loading_call_video" translatable="false">Đang liên lạc, vui lòng đợi...</string>
+    <string name="profile_post" translatable="false">Đăng bài</string>
+    <string name="cancel_request_friend" translatable="false">Hủy yêu cầu</string>
+    <string name="create_album" translatable="false">Tạo album</string>
+    <string name="album_name" translatable="false">Tên album</string>
+    <string name="create" translatable="false">Tạo</string>
+    <string name="no_accept" translatable="false">Không chấp nhận</string>
+    <string name="title_restaurant_card_detail" translatable="false">Chi tiết thẻ</string>
+    <string name="default_point" translatable="false">0 điểm</string>
+    <string name="success_booking_cancel" translatable="false">Hủy đặt chỗ thành công</string>
+    <string name="choose_food" translatable="false">Chọn món</string>
+    <string name="food_take_away" translatable="false">Món ăn mang về</string>
+    <string name="intro_1" translatable="false">Nhận Quà</string>
+    <string name="intro_1_key" translatable="false">Nhận quà từ các nhà hàng</string>
+    <string name="intro_2" translatable="false">Gọi Món</string>
+    <string name="intro_2_key" translatable="false">Gọi món mang về</string>
+    <string name="intro_3" translatable="false">Khuyến Mãi, Giảm Giá</string>
+    <string name="intro_3_key" translatable="false">Nhận khuyến mãi, giảm giá</string>
+    <string name="intro_4" translatable="false">Tích Điểm</string>
+    <string name="intro_4_key" translatable="false">Tích điểm đổi quà</string>
+    <string name="intro_5" translatable="false">Đánh Giá</string>
+    <string name="intro_5_key" translatable="false">Đánh giá, review nhà hàng bạn vừa trải nghiệm</string>
+    <string name="intro_6" translatable="false">Đặt Bàn</string>
+    <string name="intro_6_key" translatable="false">Đặt bàn nhận các ưu đãi từ nhà hàng mà bạn đăng kí trở thành viên</string>
+    <string name="accumulation" translatable="false">Tích lũy</string>
+    <string name="promotion_point_card" translatable="false">Khuyến mãi</string>
+    <string name="deposit" translatable="false">Tiền cọc:</string>
+    <string name="empty_image" translatable="false">Danh sách hình ảnh đang trống</string>
+    <string name="empty_title_image" translatable="false">Tất cả hình ảnh sẽ được hiển thị trong màn hình này</string>
+    <string name="empty_video" translatable="false">Danh sách video đang trống</string>
+    <string name="empty_title_video" translatable="false">Tất cả video sẽ được hiển thị trong màn hình này</string>
+    <string name="limit_count_chat" translatable="false">99+</string>
+    <string name="send_a_audio" translatable="false">đã gửi hội thoại</string>
+    <string name="awaiting_payment" translatable="false">Đang chờ thanh toán</string>
+    <string name="merged_bill" translatable="false">Đang gộp bàn</string>
+    <string name="error_audio" translatable="false">Hội thoại của bạn quá ngắn, vui lòng thử lại!</string>
+    <string name="tag_all_chat" translatable="false">All</string>
+    <string name="send_OTP" translatable="false">Chúng tôi sẽ gửi cho bạn mã OTP qua\nsố điện thoại này.</string>
+    <string name="rule_register" translatable="false">Nhập số điện thoại của bạn và một số thông tin để nhà hàng gửi quà tặng tới cho bạn.</string>
+    <string name="set_verify_password" translatable="false">Mật khẩu phải từ 4 đến 50 kí tự, bao gồm chữ thường, chữ hoa, số hoặc các kí tự đặc biệt</string>
+    <string name="set_verify_password_new" translatable="false">Vui lòng nhập lại mật khẩu mới để chúng tôi có thể xác nhận tài khoản của bạn.</string>
+    <string name="edit_information" translatable="false">Chỉnh sửa thông tin</string>
+    <string name="edit_post_review" translatable="false">Chỉnh sửa thành công</string>
+    <string name="empty_booking" translatable="false">Danh sách đặt chỗ hiện đang trống</string>
+    <string name="empty_all_booking" translatable="false">Tất cả danh sách đặt chỗ sẽ được hiển thị trong màn hình này.</string>
+    <string name="empty_choose_member_group" translatable="false">Bạn hãy chọn thêm thành viên và nhấn tiếp tục!!!</string>
+    <string name="hint_input_title_post" translatable="false">Nhập tiêu đề cho bài đăng (nếu có) hoặc có thể bỏ qua</string>
+    <string name="birthday" translatable="false">Sinh nhật</string>
+    <string name="about" translatable="false">Giới thiệu</string>
+    <string name="title_point_home" translatable="false">0 Điểm</string>
+    <string name="status_member_1" translatable="false">Bạn bè</string>
+
+    <string name="status_member_2" translatable="false">Đã gửi lời mời kết bạn</string>
+    <string name="status_member_3" translatable="false">Đang chờ được bạn đồng ý</string>
+    <string name="status_member_4" translatable="false">Người lạ</string>
+    <string name="title_hours" translatable="false">Giờ</string>
+    <string name="title_minutes" translatable="false">Phút</string>
+    <string name="title_choose_time_booking" translatable="false">Chọn thời gian đặt bàn</string>
+    <string name="title_choose_booking" translatable="false">Các món đã chọn</string>
+    <string name="note_time_booking" translatable="false">Thời gian đặt bàn của bạn phải sớm hơn ít nhất là 30 phút trước khi bắt đầu buổi tiệc.</string>
+    <string name="note_authorize_admin" translatable="false">Bạn có chắc muốn nhượng quyền nhóm trưởng cho</string>
+    <string name="note_booking_vat" translatable="false">Tổng tiền hiển thị ở đây không bao gồm phí VAT.</string>
+    <string name="dissolution_group" translatable="false">Giải tán nhóm</string>
+    <string name="dissolution_group_success" translatable="false">Giải tán nhóm thành công</string>D
+    <string name="choose_date_booking" translatable="false">Chọn ngày đặt bàn</string>
+    <string name="title_time_booking" translatable="false">Thời gian đặt tiệc: </string>
+    <string name="delete_group_success" translatable="false">Xóa tin nhắn thành công</string>
+    <string name="total_price_estimate" translatable="false">Tổng tiền ước tính:</string>
+    <string name="hint_last_name_member" translatable="false">Nhập họ của bạn</string>
+    <string name="notification_dissolution_group" translatable="false">Nhóm này sẽ bị giải tán nếu như bạn xác nhận. Bạn có chắc không?</string>
+    <string name="dissolution" translatable="false">Giải tán</string>
+    <string name="input_first_last_name" translatable="false">Bạn phải nhập đầy đủ Họ và Tên.</string>
+    <string name="input_enough" translatable="false">Bạn phải nhập đầy đủ avatar và các trường trước khi đăng ký !!!</string>
+    <string name="input_phone_false" translatable="false">Số điện thoại không chính xác</string>
+    <string name="input_birthday_true" translatable="false">Hãy nhập chính xác ngày sinh của bạn để nhận quà từ các nhà hàng.</string>
+    <string name="phone_securate" translatable="false">Hãy nhập chính xác ngày sinh của bạn để nhận quà từ các nhà hàng.</string>
+    <string name="hint_nick_name" translatable="false">Nhập nickname của bạn</string>
+    <string name="error_sever_post" translatable="false">Đăng bài hiện tại đang có lỗi xảy ra!!!</string>
+    <string name="title_version" translatable="false">Phiên bản:</string>
+    <string name="title_security_phone" translatable="false">(Số điện thoại của bạn sẽ được bảo mật tuyệt đối.)</string>
+    <string name="nothing" translatable="false">Vô vị</string>
+    <string name="title_name_company_contact" translatable="false">Nhập tên công ty liên hệ</string>
+    <string name="title_address_advert" translatable="false">Nhập địa chỉ liên hệ</string>
+    <string name="title_description_advert" translatable="false">Bạn có thể mô tả cụ thể về hướng quảng cáo mà bạn muốn đăng ký...</string>
+    <string name="title_dialog_advert" translatable="false">Thông tin đăng ký</string>
+    <string name="address_error" translatable="false">Địa chỉ của bạn không được để trống.</string>
+    <string name="name_company_error" translatable="false">Tên công ty của bạn không được để trống.</string>
+    <string name="api_error" translatable="false">Đã xảy ra lỗi!!! Vui lòng thử lại.</string>
+    <string name="hit_name_contact_advert" translatable="false">Nhập tên của người liên hệ</string>
+    <string name="hit_phone_contact_advert" translatable="false">Nhập số điện thoại của người liên hệ</string>
+    <string name="hit_email_contact_advert" translatable="false">Nhập email người của liên hệ</string>
+    <string name="friend_new" translatable="false">Bạn mới</string>
+    <string name="friend_new_new" translatable="false">Mới</string>
+    <string name="friend_from_system_contact" translatable="false">Bạn từ danh bạ máy</string>
+    <string name="add_friend_from_system" translatable="false">Thêm bạn từ hệ thống</string>
+    <string name="request_sent_to_you" translatable="false">Đã gửi lời mời đến bạn</string>
+    <string name="accepted_friend" translatable="false">Đã chấp nhận lời mời kết bạn</string>
+    <string name="friend_online" translatable="false">Bạn bè vừa mới truy cập</string>
+    <string name="not_yet_status" translatable="false">Chưa có bạn bè nào cập nhật trạng thái</string>
+    <string name="best_friend" translatable="false">Bạn thường xuyên liên lạc</string>
+    <string name="add_best_friend" translatable="false">Hãy thêm bạn thường xuyên liên lạc</string>
+    <string name="title_video_demo_advert" translatable="false">Video đang được triển khai</string>
+    <string name="not_accepted_friend" translatable="false">Đã từ chối kết bạn</string>
+    <string name="i" translatable="false">Tôi</string>
+    <string name="cash_back_to_point_percent" translatable="false">Chiết khấu</string>
+    <string name="percent" translatable="false">\%</string>
+    <string name="note_point_and_accumulate_point" translatable="false">Được phép sử dụng tối đa điểm của bạn là</string>
+    <string name="note_alo_point_1" translatable="false">Sử dụng tối đa</string>
+    <string name="note_alo_point_2" translatable="false">trên tổng bill và không quá</string>
+    <string name="note_promotion_point" translatable="false">trên tổng bill</string>
+    <string name="delete_best_friend" translatable="false">Gỡ bỏ</string>
+    <string name="note_alo_point_no_support" translatable="false">hiện tại chưa hỗ trợ sử dụng điểm value</string>
+    <string name="wallet_value" translatable="false">Ví value</string>
+    <string name="request_permission" translatable="false">Vui lòng cho phép sử dụng tính năng này!!!</string>
+    <string name="request_permission_cancel" translatable="false">Quyền bị vô hiệu hóa, Vui lòng cho phép quyền sử dụng tính năng này!!!</string>
+    <string name="list_friend" translatable="false">Danh sách bạn bè</string>
+    <string name="list_drafts_post" translatable="false">Danh sách bài viết nháp</string>
+    <string name="not_found_branch_new" translatable="false">Bài viết không tồn tại!!!</string>
+    <string name="update_now" translatable="false">Cập nhật ngay</string>
+    <string name="permission_advert_1" translatable="false">Quyền lợi 1: Khách hàng sẽ bị thu hút dễ dàng.</string>
+    <string name="permission_advert_1_1" translatable="false">Khách hàng sẽ bị thu hút trực tiếp khi ngồi ăn tại nhà hàng với màn hình LED 200inch cùng khả năng
+        trình chiếu đa dạng và vô cùng ấn tượng sẽ dễ dàng thu hút được nhiều người,
+	tiếp cận được nhiều đối tượng khách hàng. Cùng với đó, màn hình quảng cáo cũng có khả năng trình phát được cả video lẫn hình ảnh ở nhiều
+	dạng File khác nhau, khiến cho nội dung hiển thị liên tục được thay đổi, tạo cảm giác bắt mắt, khó quên trong mắt người xem.</string>
+    <string name="permission_advert_2" translatable="false">Quyền lợi 2: Khách hàng sẽ hiểu sâu thông điệp của quảng cáo.</string>
+    <string name="permission_advert_2_1" translatable="false">Với việc lặp đi lặp lại video quảng cáo tại nhà hàng thì khách hàng sẽ có cơ hội xem được nhiều
+        lần quảng cáo, giúp cho khách hàng hiểu sâu hơn về thông điệp của thương hiệu và sản phẩm.</string>
+    <string name="permission_advert_3" translatable="false">Quyền lợi 3: Dễ dàng điều chỉnh nội dụng quảng cáo.</string>
+    <string name="permission_advert_3_1" translatable="false">Được hỗ trợ phần mềm quản lý tập trung mới nhất tính đến thời điểm hiện tại, người dùng rất dễ dàng trong việc
+        điều chỉnh nội dung được hiển thị tiện lợi về tính năng sử dụng, tiết kiệm thời gian hơn so với các hình thức quảng cáo cũ như Poster, tờ rơi,…</string>
+    <string name="permission_advert_4" translatable="false">Quyền lợi 4: Tiết kiệm chi phí.</string>
+    <string name="permission_advert_4_1" translatable="false">Quảng cáo màn hình LED tiết kiệm chi phí rất nhiều so với việc quảng cáo xen giữa các chương trình giải trí hay
+        những bộ phim ăn khách (TV) – đây là kênh quảng cáo truyền thông hiệu quả nhưng tính về chi phí thì không phải doanh nghiệp nào cũng có đủ chi phí cho quảng cáo đắt đỏ này.\n
+	Hình thức quảng cáo qua màn hình LED sẽ dễ dàng tiếp cận đến với khách hàng khi không cần mọi người phải có internet, không cần kết nối với bất cứ thiết bị nào.</string>
+    <string name="permission_advert_5" translatable="false">Quyền lợi 5: Quảng cáo trên các màn hình LED tại chuỗi nhà hàng Techres.</string>
+    <string name="history_value" translatable="false">Lịch sử điểm value</string>
+    <string name="update_avatar" translatable="false">Hãy cập nhật avatar, thông tin của bạn\nđể bạn bè dể nhận biết bạn.</string>
+    <string name="there_are_many_friends_here" translatable="false">Có thể bạn quen</string>
+    <string name="mutual_friends" translatable="false">Bạn chung</string>
+    <string name="success_register" translatable="false">Đăng ký thành công</string>
+    <string name="note_success_register" translatable="false">Bạn đã đăng ký thành công thẻ của nhà hàng này.</string>
+    <string name="error_register" translatable="false">Đăng ký không thành công</string>
+    <string name="confirm_booking_gift" translatable="false">Món đã được đưa vào đơn hàng booking của bạn.</string>
+    <string name="pick_now" translatable="false">Lấy Ngay</string>
+    <string name="note_food_bill" translatable="false">Ghi chú</string>
+    <string name="quality" translatable="false">Số lượng</string>
+
+    <string name="total_value" translatable="false">Tổng trị giá</string>
+    <string name="expiration_date" translatable="false">Hạn sử dụng</string>
+    <string name="note_gift_bill" translatable="false">Đây là món quà mà nhà hàng tặng cho bạn khi ăn tại nhà hàng.</string>
+    <string name="check_password_new" translatable="false">Mật khẩu mới của bạn nhập không trùng khớp với nhau.</string>
+    <string name="change_password_success" translatable="false">Bạn đã đổi mật khẩu thành công.</string>
+    <string name="loaded" translatable="false">Nạp</string>
+    <string name="use_nickname" translatable="false">Sử dụng nickname</string>
+    <string name="copied_clipboard" translatable="false">Đã sao chép văn bản bào bộ nhớ tạm</string>
+    <string name="copy_text" translatable="false">Sao chép văn bản</string>
+    <string name="update" translatable="false">Cập nhật</string>
+    <string name="received_gifts" translatable="false">Đã nhận quà</string>
+    <string name="received_not_gifts" translatable="false">Chưa nhận quà</string>
+    <string name="note_not_yet_supported_use_point_value" translatable="false">hiện tại chưa hỗ trợ sử dụng điểm value</string>
+    <string name="update_avatar_success" translatable="false">Cập nhật avatar thành công</string>
+    <string name="delete_notify" translatable="false">Xóa thông báo này</string>
+    <string name="seen_notify" translatable="false">Đánh dấu đã đọc thông báo này</string>
+    <string name="time_to_use" translatable="false">Còn hạn</string>
+    <string name="use_point_maximum_in_bill" translatable="false">Sử dụng tối đa trên bill</string>
+    <string name="only_using_point_and_accumulate" translatable="false">(Chỉ áp dụng cho điểm nạp và tích lũy)</string>
+    <string name="suggest_rule_advert" translatable="false">Tôi đồng ý với các điều khoản này</string>
+    <string name="skip" translatable="false">Bỏ qua</string>
+    <string name="rule_password" translatable="false">Mật khẩu phải lớn hơn 4 ký tự</string>
+    <string name="update_avatar_title" translatable="false">Hình như bạn chưa có ảnh đại diện</string>
+    <string name="update_avatar_content" translatable="false">Hãy cập nhật ảnh đại diện, giúp mọi người nhận biết và kết nỗi với bạn tốt hơn.</string>
+    <string name="change_name_group" translatable="false">Đổi tên nhóm</string>
+    <string name="open" translatable="false">Mở</string>
+    <string name="received" translatable="false">Đã nhận</string>
+    <string name="seen" translatable="false">Đã xem</string>
+    <string name="edit_content" translatable="false">Chỉnh sửa nội dung</string>
+    <string name="copy_content" translatable="false">Sao chép nội dung</string>
+    <string name="choose_sticker_sent_to_welcome" translatable="false">Chọn một sticker dưới đây để gửi lời chào</string>
+    <string name="sent_file_to_message" translatable="false">đã gửi một file</string>
+    <string name="last_message_create_group" translatable="false">Giờ đây mọi người trong nhóm có thể trò chuyện với nhau</string>
+    <string name="last_message_create_group_personal_you" translatable="false">đang chờ bạn trả lời</string>
+    <string name="last_message_create_group_personal_me" translatable="false">đã gửi lời chào đến người kia</string>
+    <string name="last_message_share" translatable="false">đã chia sẻ một tin nhắn</string>
+    <string name="last_message_link" translatable="false">đã chia sẻ một đường dẫn</string>
+    <string name="recharge_now" translatable="false">Nạp ngay</string>
+    <string name="mobile_recharge" translatable="false">Nạp tiền điện thoại</string>
+    <string name="content_permission_contact" translatable="false">
+        Vui lòng cho phép AloLine truy cập %s để bạn có thể thao tác chọn số điện thoại nhanh hơn.\nNhấn "Cho phép truy cập và Đồng ý / Allow".\nHoặc:
+    </string>
+    <string name="title_permission_contact" translatable="false">Cho phép truy cập Danh bạ</string>
+    <string name="title_permission_location" translatable="false">Cho phép truy cập Vị trí</string>
+    <string name="step_one_open_permission" translatable="false">1. Tại mục Cài đặt, chọn Quyền / Permission</string>
+    <string name="step_two_open_permission" translatable="false">2. Bật truy cập Danh bạ / Contacts</string>
+    <string name="step_two_open_location" translatable="false">2. Bật truy cập Vị trí / Location</string>
+    <string name="allow_access" translatable="false">Cho phép truy cập</string>
+    <string name="note_permission_contact" translatable="false">Cho phép truy cập danh bạ sẽ giúp bạn chọn nhanh và chính xác những bạn bè đang có trong danh bạ của bạn.</string>
+    <string name="note_empty_contact" translatable="false">Danh bạ của bạn hiện tại đang trống. </string>
+    <string name="recharge_for" translatable="false">Nạp cho</string>
+    <string name="home_network" translatable="false">Nhà mạng</string>
+    <string name="transaction_fee" translatable="false">Phí giao dịch</string>
+    <string name="input_password" translatable="false">Nhập mật khẩu</string>
+    <string name="point_source" translatable="false">Nguồn điểm</string>
+    <string name="transaction_detail" translatable="false">Chi tiết giao dịch</string>
+
+    <string name="cancel_dot" translatable="false">· Hủy</string>
+    <string name="answering" translatable="false">Đang trả lời</string>
+    <string name="go_to_profile" translatable="false">Vào trang cá nhân</string>
+    <string name="title_post_detail" translatable="false">Bài viết</string>
+    <string name="title_header_create_review" translatable="false">Tạo bài đánh giá</string>
+    <string name="bottom_sheet_you_want_complete_post" translatable="false">Bạn muốn hoàn thành bài viết của mình sau?</string>
+    <string name="bottom_sheet_save_post" translatable="false">Lưu thành bản nháp hoặc tiếp tục chỉnh sửa.</string>
+    <string name="save_to_draft" translatable="false">Lưu làm bản nháp</string>
+    <string name="success_save_to_draft" translatable="false">Lưu vào bản nháp thành công</string>
+    <string name="you_will_received_message" translatable="false"> Bản nháp của bạn sẽ được lưu ở danh sách bản nháp</string>
+    <string name="cancle_post" translatable="false">Bỏ bài viết</string>
+    <string name="continue_edit" translatable="false">Tiếp tục chỉnh sửa</string>
+    <string name="not_support_mobile_recharge" translatable="false">Dịch vụ nạp thẻ hiện tại chưa kích hoạt.</string>
+    <string name="mobile_recharge_home" translatable="false">Nạp tiền điện\nthoại</string>
+    <string name="notify_over_mobile_recharge" translatable="false">Xin lỗi anh/chị %s số tiền của nhà hàng hiện tại không đủ để thanh toán thẻ cào này. Vui lòng liên hệ %s để hỗ trợ tốt hơn.</string>
+    <string name="toast_check_rating_review" translatable="false">5 tiêu chí đánh giá ít nhất phải 1 sao và không được để trống!!!</string>
+    <string name="message" translatable="false">Tin nhắn</string>
+    <string name="title_activity_media_slider" translatable="false">MediaSliderActivity</string>
+
+    <string name="title_approve_permission_micro" translatable="false">Cho phép AloLine truy cập Micro</string>
+    <string name="description_permission_micro" translatable="false">AloLine sẽ kết nối đến Micro, để bạn có thể trò chuyện với mọi người dễ dàng hơn chỉ qua một vài thao tác chọn giữ (để nói) và buông hoặc thả để gửi.\n
+        Nhấn "Cho phép truy cập và Đồng ý / Allow".\n
+        Hoặc:
+    </string>
+    <string name="title_permission_micro_step_two" translatable="false">2. Bật truy cập Micro</string>
+    <string name="location" translatable="false">Vị trí</string>
+    <string name="document" translatable="false">Tài liệu</string>
+    <string name="repeat" translatable="false">Nhắc hẹn</string>
+    <string name="business_card" translatable="false">Danh thiếp</string>
+    <string name="search_group_chat" translatable="false">Tìm kiếm tin nhắn...</string>
+    <string name="search_contact" translatable="false">Tìm kiếm số danh bạ và nhật ký...</string>
+    <string name="vote" translatable="false">Bình chọn</string>
+    <string name="corner_review" translatable="false">1 phút review</string>
+    <string name="pinned_header_group" translatable="false">Ghim lên đầu nhóm trò chuyện</string>
+    <string name="make_a_question_vote" translatable="false">Đặt câu hỏi bình chọn</string>
+    <string name="add_plan_vote" translatable="false">Thêm phương án</string>
+    <string name="create_vote_setting" translatable="false">Thêm quyền bình chọn, thời hạn,...</string>
+    <string name="allows_to_select_multiple_plan" translatable="false">Cho phép chọn nhiều phương án</string>
+    <string name="allows_to_add_plan" translatable="false">Cho phép thêm phương án</string>
+    <string name="set_up" translatable="false">Thiết lập</string>
+    <string name="voting_time" translatable="false">Thời gian bình chọn</string>
+    <string name="detail_vote" translatable="false">Chi tiết bình chọn</string>
+    <string name="list_vote" translatable="false">Danh sách tin bình chọn</string>
+    <string name="vote_lock" translatable="false">Khóa bình chọn</string>
+    <string name="vote_reopen" translatable="false">Mở lại bình chọn</string>
+    <string name="create_vote" translatable="false">Tạo bình chọn</string>
+    <string name="see" translatable="false">Xem</string>
+    <string name="unlimited_time" translatable="false">Không giới hạn thời gian</string>
+    <string name="choose_the_end_time" translatable="false">Chọn thời gian kết thúc</string>
+    <string name="plan" translatable="false">Phương án</string>
+    <string name="add_limited_plan" translatable="false">Được thêm tối đa 20 phương án</string>
+    <string name="time_default" translatable="false">0:00</string>
+    <string name="my_post_null" translatable="false">Bài đăng của bạn hiện tại đang trống. Bạn vui lòng nhập tiêu đề hoặc nội dung hoặc chọn ảnh.</string>
+    <string name="error_link" translatable="false">Đã có lỗi xảy ra!!!</string>
+    <string name="send_link_and_copy" translatable="false">Gửi link vừa copy</string>
+    <string name="send_now" translatable="false">Gửi ngay</string>
+    <string name="resend" translatable="false">Gửi lại</string>
+    <string name="tab_image" translatable="false">Ảnh</string>
+    <string name="tab_video" translatable="false">Video</string>
+    <string name="tab_link" translatable="false">Link</string>
+    <string name="tab_file" translatable="false">File</string>
+    <string name="seen_profile" translatable="false">Xem trang cá nhân</string>
+    <string name="promoted_vice_group" translatable="false">Bổ nhiệm làm phó nhóm</string>
+    <string name="quit_the_role_of_vice_group" translatable="false">Xóa vai trò phó nhóm</string>
+    <string name="kick_member_group" translatable="false">Mời ra khỏi nhóm</string>
+    <string name="information_member_group" translatable="false">Thông tin thành viên</string>
+    <string name="group_vice" translatable="false">Phó nhóm</string>
+    <string name="moved_on_authorize_permission" translatable="false">Nhường quyền trưởng nhóm</string>
+    <string name="send_friend_invitation" translatable="false">Đã gửi lời mời kết bạn</string>
+    <string name="close" translatable="false">Đóng</string>
+    <string name="result_not_found" translatable="false">Không tìm thấy kết quả</string>
+    <string name="search_results" translatable="false">Kết quả tìm kiếm</string>
+    <string name="title_permission_media" translatable="false">Cho phép AloLine truy cập Thư Viện</string>
+    <string name="description_permission_media" translatable="false">
+        AloLine sẽ kết nối đến Thư Viện, để bạn có thể chọn /  gửi hình ảnh, video, file,... trong kho Thư Viện\n
+        Nhấn "Cho phép truy cập và Đồng ý / Allow".\n
+        Hoặc:
+    </string>
+    <string name="title_permission_media_step_two" translatable="false">2. Bật truy cập Thư Viện</string>
+    <string name="write_the_answer" translatable="false">Viết câu trả lời...</string>
+    <string name="information_message" translatable="false">Chi tiết tin nhắn</string>
+    <string name="other_time" translatable="false">Lúc khác</string>
+    <string name="turn_on_bubble_chat" translatable="false">Bật bong bóng chat</string>
+    <string name="go_to_setting" translatable="false">Đi tới cài đặt</string>
+    <string name="allow_bubble_chat" translatable="false">Bật "Cho phép kéo qua ứng dụng khác"</string>
+    <string name="content_turn_on_bubble_chat" translatable="false">Với bong bóng chat, bạn có thể trò chuyện trên\nAloLine ngay cả khi đang dùng ứng dụng khác.</string>
+    <string name="recall" translatable="false">Gọi lại</string>
+    <string name="last_message_call_video" translatable="false">Cuộc gọi video đi</string>
+    <string name="last_message_call_video_miss_call" translatable="false">Cuộc gọi video nhỡ</string>
+    <string name="last_message_call_phone" translatable="false">Cuộc gọi thoại đi</string>
+    <string name="last_message_call_phone_miss_call" translatable="false">Cuộc gọi thoại nhỡ</string>
+    <string name="press_to_call_phone" translatable="false">Nhấn để đi đến cuộc gọi thoại</string>
+    <string name="press_to_call_video" translatable="false">Nhấn để đi đến cuộc gọi video</string>
+    <string name="content_permission_video_call" translatable="false">
+        Vui lòng cho phép AloLine truy cập %s để bạn có thể thao tác thực hiện cuộc gọi.\nNhấn "Cho phép truy cập và Đồng ý / Allow".\nHoặc:
+    </string>
+    <string name="title_permission_camera_step_two" translatable="false">2. Bật truy cập Camera</string>
+    <string name="title_permission_micro_step_three" translatable="false">3. Bật truy cập Micro</string>
+    <string name="title_permission_video_call" translatable="false">Cho phép AloLine truy cập Camera và Micro</string>
+
+    <string name="bubble_chat" translatable="false">Bong bóng chat</string>
+    <string name="you_missed" translatable="false">Bạn bị nhỡ</string>
+    <string name="recipient_not_responding" translatable="false">Người nhận không trả lời</string>
+    <string name="you_cancel" translatable="false">Bạn đã hủy</string>
+    <string name="receiver_refused" translatable="false">Người nhận từ chối</string>
+    <string name="call_busy" translatable="false">Người nhận bận</string>
+    <string name="call_phone_away" translatable="false">Cuộc gọi thoại đi</string>
+    <string name="call_video_away" translatable="false">Cuộc gọi video đi</string>
+    <string name="call_phone_to" translatable="false">Cuộc gọi thoại đến</string>
+    <string name="call_video_to" translatable="false">Cuộc gọi video đến</string>
+    <string name="incoming_call" translatable="false">Cuộc gọi đến</string>
+    <string name="you_refused" translatable="false">Bạn đã từ chối</string>
+    <string name="call_phone" translatable="false">Cuộc gọi thoại</string>
+    <string name="call_video" translatable="false">Cuộc gọi video</string>
+    <string name="minimize" translatable="false">Thu nhỏ</string>
+    <string name="half" translatable="false">Chia đôi</string>
+    <string name="micro" translatable="false">Mic</string>
+    <string name="null_time" translatable="false">0 phút 0 giây</string>
+
+    <!--config video call-->
+    <string name="disconnect_call" translatable="false">Disconnect Call</string>
+    <string name="room_description" translatable="false">
+        Please enter a room name. Room names are shared with everyone, so think
+        of something unique and send it to a friend.
+    </string>
+    <string name="favorites" translatable="false">Favorites</string>
+    <string name="no_favorites" translatable="false">No favorites</string>
+    <string name="invalid_url_title" translatable="false">Invalid URL</string>
+    <string name="invalid_url_text" translatable="false">The URL or room name you entered resulted in an invalid URL: %1$s
+    </string>
+    <string name="channel_error_title" translatable="false">Connection error</string>
+    <string name="connecting_to" translatable="false">Connecting to: %1$s</string>
+    <string name="missing_url" translatable="false">FATAL ERROR: Missing URL to connect to.</string>
+    <string name="camera2_texture_only_error" translatable="false">Camera2 only supports capturing to texture. Either disable Camera2 or enable capturing to texture in the options.</string>
+    <string name="switch_camera" translatable="false">Switch front/back camera</string>
+    <string name="capture_format_change_text" translatable="false">Slide to change capture format</string>
+    <string name="muted" translatable="false">Muted</string>
+    <string name="toggle_debug" translatable="false">Toggle debug view</string>
+    <string name="toggle_mic" translatable="false">Toggle microphone on/off</string>
+    <string name="action_loopback" translatable="false">Loopback connection</string>
+    <string name="connect_description" translatable="false">Connect to the room</string>
+    <string name="add_favorite_description" translatable="false">Add favorite</string>
+    <string name="format_description" translatable="false">%1$dx%2$d @ %3$d fps</string>
+    <string name="missing_permissions_try_again" translatable="false">The application is missing permissions. It might not work correctly. Do you want to try again?</string>
+    <string name="yes" translatable="false">Yes</string>
+    <string name="no" translatable="false">No</string>
+
+    <!-- Settings strings. -->
+    <string name="pref_room_key" translatable="false">room_preference</string>
+    <string name="pref_room_list_key" translatable="false">room_list_preference</string>
+
+    <string name="pref_videosettings_key" translatable="false">video_settings_key</string>
+    <string name="pref_videosettings_title" translatable="false">WebRTC video settings.</string>
+
+    <string name="pref_videocall_key" translatable="false">videocall_preference</string>
+    <string name="pref_videocall_title" translatable="false">Video call.</string>
+    <string name="pref_videocall_dlg" translatable="false">Enable video in a call.</string>
+    <string name="pref_videocall_default" translatable="false">true</string>
+
+    <string name="pref_screencapture_key" translatable="false">screencapture_preference</string>
+    <string name="pref_screencapture_title" translatable="false">Use screencapture.</string>
+    <string name="pref_screencapture_default" translatable="false">false</string>
+
+    <string name="pref_camera2_key" translatable="false">camera2_preference</string>
+    <string name="pref_camera2_title" translatable="false">Use Camera2.</string>
+    <string name="pref_camera2_default" translatable="false">true</string>
+    <string name="pref_camera2_not_supported" translatable="false">Not supported on this device.</string>
+
+    <string name="pref_resolution_key" translatable="false">resolution_preference</string>
+    <string name="pref_resolution_title" translatable="false">Video resolution.</string>
+    <string name="pref_resolution_dlg" translatable="false">Enter AppRTC local video resolution.</string>
+    <string name="pref_resolution_default" translatable="false">Default</string>
+
+    <string name="pref_fps_key" translatable="false">fps_preference</string>
+    <string name="pref_fps_title" translatable="false">Camera fps.</string>
+    <string name="pref_fps_dlg" translatable="false">Enter local camera fps.</string>
+    <string name="pref_fps_default" translatable="false">Default</string>
+
+    <string name="pref_capturequalityslider_key" translatable="false">capturequalityslider_preference</string>
+    <string name="pref_capturequalityslider_title" translatable="false">Capture quality slider.</string>
+    <string name="pref_capturequalityslider_dlg" translatable="false">Enable slider for changing capture quality.</string>
+    <string name="pref_capturequalityslider_default" translatable="false">false</string>
+
+    <string name="pref_maxvideobitrate_key" translatable="false">maxvideobitrate_preference</string>
+    <string name="pref_maxvideobitrate_title" translatable="false">Maximum video bitrate setting.</string>
+    <string name="pref_maxvideobitrate_dlg" translatable="false">Maximum video bitrate setting.</string>
+    <string name="pref_maxvideobitrate_default" translatable="false">Default</string>
+
+    <string name="pref_maxvideobitratevalue_key" translatable="false">maxvideobitratevalue_preference</string>
+    <string name="pref_maxvideobitratevalue_title" translatable="false">Video encoder maximum bitrate.</string>
+    <string name="pref_maxvideobitratevalue_dlg" translatable="false">Enter video encoder maximum bitrate in kbps.</string>
+    <string name="pref_maxvideobitratevalue_default" translatable="false">1700</string>
+
+    <string name="pref_videocodec_key" translatable="false">videocodec_preference</string>
+    <string name="pref_videocodec_title" translatable="false">Default video codec.</string>
+    <string name="pref_videocodec_dlg" translatable="false">Select default video codec.</string>
+    <string name="pref_videocodec_default" translatable="false">VP8</string>
+
+    <string name="pref_hwcodec_key" translatable="false">hwcodec_preference</string>
+    <string name="pref_hwcodec_title" translatable="false">Video codec hardware acceleration.</string>
+    <string name="pref_hwcodec_dlg" translatable="false">Use hardware accelerated video codec (if available).</string>
+    <string name="pref_hwcodec_default" translatable="false">true</string>
+
+    <string name="pref_capturetotexture_key" translatable="false">capturetotexture_preference</string>
+    <string name="pref_capturetotexture_title" translatable="false">Video capture to surface texture.</string>
+    <string name="pref_capturetotexture_dlg" translatable="false">Capture video to textures (if available).</string>
+    <string name="pref_capturetotexture_default" translatable="false">true</string>
+
+    <string name="pref_flexfec_key" translatable="false">flexfec_preference</string>
+    <string name="pref_flexfec_title" translatable="false">Codec-agnostic Flexible FEC.</string>
+    <string name="pref_flexfec_dlg" translatable="false">Enable FlexFEC.</string>
+    <string name="pref_flexfec_default" translatable="false">false</string>
+
+    <string name="pref_value_enabled" translatable="false">Enabled</string>
+    <string name="pref_value_disabled" translatable="false">Disabled</string>
+
+    <string name="pref_audiosettings_key" translatable="false">audio_settings_key</string>
+    <string name="pref_audiosettings_title" translatable="false">WebRTC audio settings.</string>
+
+    <string name="pref_startaudiobitrate_key" translatable="false">startaudiobitrate_preference</string>
+    <string name="pref_startaudiobitrate_title" translatable="false">Audio bitrate setting.</string>
+    <string name="pref_startaudiobitrate_dlg" translatable="false">Audio bitrate setting.</string>
+    <string name="pref_startaudiobitrate_default" translatable="false">Default</string>
+
+    <string name="pref_startaudiobitratevalue_key" translatable="false">startaudiobitratevalue_preference</string>
+    <string name="pref_startaudiobitratevalue_title" translatable="false">Audio codec bitrate.</string>
+    <string name="pref_startaudiobitratevalue_dlg" translatable="false">Enter audio codec bitrate in kbps.</string>
+    <string name="pref_startaudiobitratevalue_default" translatable="false">32</string>
+
+    <string name="pref_audiocodec_key" translatable="false">audiocodec_preference</string>
+    <string name="pref_audiocodec_title" translatable="false">Default audio codec.</string>
+    <string name="pref_audiocodec_dlg" translatable="false">Select default audio codec.</string>
+    <string name="pref_audiocodec_default" translatable="false">OPUS</string>
+
+    <string name="pref_noaudioprocessing_key" translatable="false">audioprocessing_preference</string>
+    <string name="pref_noaudioprocessing_title" translatable="false">Disable audio processing.</string>
+    <string name="pref_noaudioprocessing_dlg" translatable="false">Disable audio processing pipeline.</string>
+    <string name="pref_noaudioprocessing_default" translatable="false">false</string>
+
+    <string name="pref_aecdump_key" translatable="false">aecdump_preference</string>
+    <string name="pref_aecdump_title" translatable="false">Create aecdump.</string>
+    <string name="pref_aecdump_dlg" translatable="false">Enable diagnostic audio recordings.</string>
+    <string name="pref_aecdump_default" translatable="false">false</string>
+
+    <string name="pref_enable_save_input_audio_to_file_key" translatable="false">enable_key</string>
+    <string name="pref_enable_save_input_audio_to_file_title" translatable="false">Save input audio to file.</string>
+    <string name="pref_enable_save_input_audio_to_file_dlg" translatable="false">Save input audio to file.</string>
+    <string name="pref_enable_save_input_audio_to_file_default" translatable="false">false</string>
+
+    <string name="pref_opensles_key" translatable="false">opensles_preference</string>
+    <string name="pref_opensles_title" translatable="false">Use OpenSL ES for audio playback.</string>
+    <string name="pref_opensles_dlg" translatable="false">Use OpenSL ES for audio playback.</string>
+    <string name="pref_opensles_default" translatable="false">false</string>
+
+    <string name="pref_disable_built_in_aec_key" translatable="false">disable_built_in_aec_preference</string>
+    <string name="pref_disable_built_in_aec_title" translatable="false">Disable hardware AEC.</string>
+    <string name="pref_disable_built_in_aec_dlg" translatable="false">Disable hardware AEC.</string>
+    <string name="pref_disable_built_in_aec_default" translatable="false">false</string>
+    <string name="pref_built_in_aec_not_available" translatable="false">Hardware AEC is not available</string>
+
+    <string name="pref_disable_built_in_agc_key" translatable="false">disable_built_in_agc_preference</string>
+    <string name="pref_disable_built_in_agc_title" translatable="false">Disable hardware AGC.</string>
+    <string name="pref_disable_built_in_agc_dlg" translatable="false">Disable hardware AGC.</string>
+    <string name="pref_disable_built_in_agc_default" translatable="false">false</string>
+    <string name="pref_built_in_agc_not_available" translatable="false">Hardware AGC is not available</string>
+
+    <string name="pref_disable_built_in_ns_key" translatable="false">disable_built_in_ns_preference</string>
+    <string name="pref_disable_built_in_ns_title" translatable="false">Disable hardware NS.</string>
+    <string name="pref_disable_built_in_ns_dlg" translatable="false">Disable hardware NS.</string>
+    <string name="pref_disable_built_in_ns_default" translatable="false">false</string>
+    <string name="pref_built_in_ns_not_available" translatable="false">Hardware NS is not available</string>
+
+    <string name="pref_disable_webrtc_agc_and_hpf_key" translatable="false">disable_webrtc_agc_and_hpf_preference</string>
+    <string name="pref_disable_webrtc_agc_and_hpf_title" translatable="false">Disable WebRTC AGC and HPF.</string>
+    <string name="pref_disable_webrtc_agc_default" translatable="false">false</string>
+
+    <string name="pref_speakerphone_key" translatable="false">speakerphone_preference</string>
+    <string name="pref_speakerphone_title" translatable="false">Speakerphone.</string>
+    <string name="pref_speakerphone_dlg" translatable="false">Speakerphone.</string>
+    <string name="pref_speakerphone_default" translatable="false">auto</string>
+
+    <string name="pref_datasettings_key" translatable="false">data_settings_key</string>
+    <string name="pref_datasettings_title" translatable="false">WebRTC data channel settings.</string>
+
+    <string name="pref_enable_datachannel_key" translatable="false">enable_datachannel_preference</string>
+    <string name="pref_enable_datachannel_title" translatable="false">Enable datachannel.</string>
+    <string name="pref_enable_datachannel_default" translatable="false">true</string>
+
+    <string name="pref_ordered_key" translatable="false">ordered_preference</string>
+    <string name="pref_ordered_title" translatable="false">Order messages.</string>
+    <string name="pref_ordered_default" translatable="false">true</string>
+
+    <string name="pref_data_protocol_key" translatable="false">Subprotocol</string>
+    <string name="pref_data_protocol_title" translatable="false">Subprotocol.</string>
+    <string name="pref_data_protocol_dlg" translatable="false">Enter subprotocol.</string>
+    <string name="pref_data_protocol_default" translatable="false"></string>
+
+    <string name="pref_negotiated_key" translatable="false">negotiated_preference</string>
+    <string name="pref_negotiated_title" translatable="false">Negotiated.</string>
+    <string name="pref_negotiated_default" translatable="false">false</string>
+
+    <string name="pref_max_retransmit_time_ms_key" translatable="false">max_retransmit_time_ms_preference</string>
+    <string name="pref_max_retransmit_time_ms_title" translatable="false">Max delay to retransmit.</string>
+    <string name="pref_max_retransmit_time_ms_dlg" translatable="false">Enter max delay to retransmit (in ms).</string>
+    <string name="pref_max_retransmit_time_ms_default" translatable="false">-1</string>
+
+    <string name="pref_max_retransmits_key" translatable="false">max_retransmits_preference</string>
+    <string name="pref_max_retransmits_title" translatable="false">Max attempts to retransmit.</string>
+    <string name="pref_max_retransmits_dlg" translatable="false">Enter max attempts to retransmit.</string>
+    <string name="pref_max_retransmits_default" translatable="false">-1</string>
+
+    <string name="pref_data_id_key" translatable="false">data_id_preference</string>
+    <string name="pref_data_id_title" translatable="false">Data id.</string>
+    <string name="pref_data_id_dlg" translatable="false">Enter data channel id.</string>
+    <string name="pref_data_id_default" translatable="false">-1</string>
+
+    <string name="pref_miscsettings_key" translatable="false">misc_settings_key</string>
+    <string name="pref_miscsettings_title" translatable="false">Miscellaneous settings.</string>
+
+    <string name="pref_room_server_url_key" translatable="false">room_server_url_preference</string>
+    <string name="pref_room_server_url_title" translatable="false">Room server URL.</string>
+    <string name="pref_room_server_url_dlg" translatable="false">Enter a room server URL.</string>
+    <string name="pref_room_server_url_default" translatable="false">https://appr.tc</string>
+
+    <string name="pref_displayhud_key" translatable="false">displayhud_preference</string>
+    <string name="pref_displayhud_title" translatable="false">Display call statistics.</string>
+    <string name="pref_displayhud_dlg" translatable="false">Display call statistics.</string>
+    <string name="pref_displayhud_default" translatable="false">false</string>
+
+    <string name="pref_tracing_key" translatable="false">tracing_preference</string>
+    <string name="pref_tracing_title" translatable="false">Debug performance tracing.</string>
+    <string name="pref_tracing_dlg" translatable="false">Debug performance tracing.</string>
+    <string name="pref_tracing_default" translatable="false">false</string>
+
+    <string name="pref_enable_rtceventlog_key" translatable="false">enable_rtceventlog_key</string>
+    <string name="pref_enable_rtceventlog_title" translatable="false">Enable RtcEventLog.</string>
+    <string name="pref_enable_rtceventlog_default" translatable="false">false</string>
+    <!--end config-->
+    <string name="change_camera" translatable="false">Xoay</string>
+    <string name="transfer" translatable="false">Chuyển</string>
+    <string name="note_permission_reject" translatable="false">
+        %s đã từ chối quyền truy cập %s. Chức năng này sẽ không hoạt động nếu quyền %s chưa bật
+    </string>
+    <string name="note_permission_denied" translatable="false">
+        %s đã từ chối và vô hiệu hóa quyền truy cập %s. Chức năng này sẽ không hoạt động nếu quyền %s chưa bật
+    </string>
+    <string name="brother_and_sister" translatable="false">Anh / Chị </string>
+    <string name="title_permission" translatable="false">Cho phép AloLine truy cập %s</string>
+    <string name="content_permission_location" translatable="false">
+        Vui lòng cho phép AloLine truy cập %s để bạn có thể tìm kiếm những nhà hàng gần nhất nhanh hơn.\nNhấn "Cho phép truy cập và Đồng ý / Allow".\nHoặc:
+    </string>
+    <string name="step_two_open_permission_location" translatable="false">2. Bật truy cập Vị trí / Location</string>
+    <string name="recently" translatable="false">Gần đây</string>
+    <string name="saved" translatable="false">Đã lưu</string>
+
+    <string name="allow_contact" translatable="false">Cho phép truy cập danh bạ</string>
+    <string name="allow_location" translatable="false">Cho phép truy cập vị trí</string>
+    <string name="content_allow_contact_one" translatable="false">Thông tin liên lạc ( Danh bạ) </string>
+    <string name="content_allow_contact_two" translatable="false">Sổ địa chỉ của bạn được lưu trữ trong máy chủ của chúng tôi để tối ưu hóa trải nghiệm ứng dụng của bạn và giúp bạn kết nối tốt hơn với bạn bè của mình. Sổ địa chỉ của bạn không được xuất bản hoặc tiết lộ cho bất kỳ mục đích nào khác mà không có sự đồng ý của bạn.</string>
+    <string name="content_allow_location_one" translatable="false">Thông tin địa điểm(Vị trí)  </string>
+    <string name="content_allow_location_two" translatable="false">Thông tin vị trí của bạn được lưu trữ trong máy chủ của chúng tôi để giúp bạn chia sẻ thông tin với bạn bè, tìm kiếm nhà hàng dễ dàng và tối ưu hóa trải nghiệm tìm kiếm của bạn.</string>
+
+    <string name="not_now" translatable="false">Không phải bây giờ</string>
+
+    <string name="note_permission_diary" translatable="false">Cho phép truy cập nhật ký sẽ giúp bạn chọn nhanh và chính xác những bạn bè đang có trong nhật ký của bạn.</string>
+
+    <string name="title_permission_diary_step_two" translatable="false">2. Bật truy cập Nhật ký / Diary</string>
+
+    <string name="to" translatable="false">Đến</string>
+
+    <string name="go" translatable="false">Đi</string>
+
+    <string name="missed_call" translatable="false">Gọi nhỡ</string>
+
+    <string name="refused" translatable="false">Đã từ chối</string>
+
+    <string name="blocked" translatable="false">Đã chặn</string>
+
+    <string name="disconnect" translatable="false">Không kết nối</string>
+
+    <string name="select_all" translatable="false">Chọn tất cả</string>
+    <string name="selected_file_picker" translatable="false">Chọn đã %s</string>
+    <string name="empty_list_file_picker" translatable="false">Danh sách hiện tại đang trống</string>
+    <string name="message_important" translatable="false">Tin nhắn quan trọng</string>
+    <string name="mark_message" translatable="false">Tin nhắn đã đánh dấu</string>
+    <string name="tick" translatable="false">Đánh dấu</string>
+    <string name="unmarked" translatable="false">Đã gở đánh dấu</string>
+    <string name="marked" translatable="false">Đã đánh dấu</string>
+    <string name="pin" translatable="false">Ghim</string>
+    <string name="title_search_food_take_away" translatable="false">Tìm kiếm và lựa chọn\nMón ngon</string>
+    <string name="search_food_take_away" translatable="false">Tìm kiếm món ăn...</string>
+    <string name="suggestions_for_you" translatable="false">Gợi ý cho bạn:</string>
+    <string name="book_now" translatable="false">Đặt ngay</string>
+    <string name="open_door" translatable="false">Mở cửa</string>
+    <string name="time" translatable="false">Thời gian</string>
+    <string name="cart" translatable="false">Giỏ hàng</string>
+    <string name="title_add_note_address" translatable="false">Ghi chú thêm cho tài xế...</string>
+    <string name="title_add_note_restaurant" translatable="false">Ghi chú thêm cho nhà hàng...</string>
+    <string name="discount" translatable="false">Giảm giá</string>
+    <string name="total" translatable="false">Tổng</string>
+    <string name="back_list" translatable="false">Trở về danh sách</string>
+    <string name="order_completion" translatable="false">Hoàn tất đơn hàng</string>
+    <string name="maximum_cart_food" translatable="false">+9</string>
+    <string name="choose_ward" translatable="false">Chọn</string>
+    <string name="choose_city" translatable="false">Chọn thành phố/tỉnh</string>
+    <string name="choose_size" translatable="false">Chọn kích thước</string>
+    <string name="important" translatable="false">Quan trọng</string>
+    <string name="choose_address_default" translatable="false">Chọn địa chỉ mặc định</string>
+    <string name="order_tracking_of_you" translatable="false">Theo dõi đơn hàng của bạn</string>
+    <string name="qr_code_restaurant" translatable="false">Quét thẻ khác hàng</string>
+    <string name="qr_code" translatable="false">Mã QR</string>
+    <string name="scan_qr" translatable="false">Quét mã</string>
+    <string name="your_qr_code" translatable="false">Mã của bạn</string>
+    <string name="empty_flash_light" translatable="false">Thiết bị hiện tại của bạn chưa có đèn led</string>
+    <string name="stranger" translatable="false">Người lạ</string>
+    <string name="wait_for_your_reply_friend" translatable="false">Chờ bạn trả lời kết bạn</string>
+    <string name="message_stranger" translatable="false">Tin nhắn từ người lạ</string>
+    <string name="title_approve_permission_camera" translatable="false">Cho phép AloLine truy cập Camera</string>
+    <string name="description_permission_camera" translatable="false">Vui lòng cho phép AloLine truy cập Camera của bạn có thể thao tác thực hiện quét mã QR code.\nNhấn "Cho phép truy cập và Đồng ý / Allow".\nHoặc:</string>
+    <string name="recharge" translatable="false">Nạp tiền</string>
+    <string name="scan_qr_code_error" translatable="false">Mã code không hợp lệ. Vui lòng thử lại</string>
+    <string name="choose_best_friend" translatable="false">Chọn bạn thường xuyên liên lạc</string>
+    <string name="list_contact_save_phone" translatable="false">Danh sách liên hệ bạn có lưu số trong danh bạ</string>
+    <string name="warehouse_image" translatable="false">Kho ảnh</string>
+    <string name="warehouse_video" translatable="false">Kho video</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="title_search_address" translatable="false">Nhập địa chỉ của bạn...</string>
+    <string name="confirm_address" translatable="false">Xác nhận địa chỉ</string>
+    <string name="input_address" translatable="false">Nhập địa chỉ</string>
+    <string name="delivery_to" translatable="false">Giao đến</string>
+    <string name="my_address" translatable="false">Địa chỉ của tôi</string>
+    <string name="title_home" translatable="false">Nhà</string>
+    <string name="company" translatable="false">Công ty</string>
+    <string name="save_address" translatable="false">Lưu địa chỉ</string>
+    <string name="near_address" translatable="false">Địa chỉ gần đây</string>
+    <string name="add_address" translatable="false">Thêm địa chỉ</string>
+    <string name="repair_address" translatable="false">Sửa địa chỉ</string>
+    <string name="search_address" translatable="false">Tìm kiếm địa chỉ</string>
+    <string name="example_note_address" translatable="false">Vd: Vào hẻm kế nhà hàng, cuối hẻm, lên tầng,...</string>
+    <string name="empty_content_address" translatable="false">. . . .</string>
+    <string name="empty_name_address" translatable="false">Bạn chưa nhập tên địa chỉ</string>
+    <string name="empty_address" translatable="false">Bạn chưa nhập địa chỉ</string>
+    <string name="tks_feedback_for_your" translatable="false">Cám ơn nội dung đóng góp ý kiến của bạn.</string>
+    <string name="form_registry_advert" translatable="false">Xác nhận đăng ký</string>
+    <string name="see_detail" translatable="false">Xem chi tiết</string>
+    <string name="see_map" translatable="false">Xem bản đồ</string>
+    <string name="order_location" translatable="false">Nơi lấy hàng</string>
+    <string name="delivery_place" translatable="false">Nơi giao hàng</string>
+    <string name="my_location" translatable="false">Địa chỉ của bạn</string>
+    <string name="title_support_aloline" translatable="false">Liên hệ - CSKH AloLine</string>
+    <string name="description_support_aloline" translatable="false">Liên hệ với chúng tôi trong trường hợp bạn gặp sự cố về đơn hàng để được hỗ trợ.\nHotline: 0904010143\nEmail:support@techres.vn\nWebsite:http://techres.vn/</string>
+    <string name="code_order" translatable="false">Mã đơn hàng</string>
+    <string name="where_to_get" translatable="false">Nơi lấy</string>
+    <string name="empty_my_location_shipping" translatable="false">Hiện tại bạn chưa có địa chỉ giao hàng, nhấn vào đây để cập nhật.</string>
+    <string name="choose_shipping_unit" translatable="false">Đơn vị vận chuyển</string>
+    <string name="total_payment" translatable="false">Tổng thanh toán</string>
+    <string name="message_dot" translatable="false">Tin nhắn:</string>
+    <string name="add_to_card" translatable="false">Thêm vào giỏ hàng</string>
+    <string name="incoming_voice_call" translatable="false">Cuộc gọi thoại đến</string>
+    <string name="incoming_video_call" translatable="false">Cuộc gọi video đến</string>
+    <string name="end" translatable="false">Kết thúc</string>
+    <string name="end_call" translatable="false">Kết thúc cuộc gọi</string>
+    <string name="today" translatable="false">Hôm nay</string>
+    <string name="voice_call_with_stranger" translatable="false">Gọi thoại với người lạ</string>
+    <string name="video_call_with_stranger" translatable="false">Gọi video với người lạ</string>
+    <string name="permission_stranger" translatable="false">Quyền người lạ</string>
+    <string name="permdesc_systemAlertWindow" translatable="false">SYSTEM_ALERT_WINDOW</string>
+    <string name="note_promotion_bill" translatable="false">Mã giảm giá chỉ áp dụng cho món ăn</string>
+    <string name="promotions_detail" translatable="false">Chi tiết quà tặng</string>
+    <string name="voucher_used" translatable="false">Đã sử dụng</string>
+    <string name="not_used" translatable="false">Chưa sử dụng</string>
+    <string name="list_voucher_null" translatable="false">Danh sách voucher đang trống</string>
+    <string name="title_voucher_note" translatable="false">Tất cả các voucher sẽ được hiển thị trong màn hình này.</string>
+    <string name="rule_lucky_wheel" translatable="false">Luật vòng quay</string>
+    <string name="list_room" translatable="false">Danh sách phòng</string>
+    <string name="take_a_photo" translatable="false">Chụp ảnh</string>
+    <string name="round" translatable="false">Vòng</string>
+    <string name="get_it_now_code" translatable="false">Nhận mã</string>
+    <string name="advert" translatable="false">Quảng cáo</string>
+    <string name="leave" translatable="false">Rời đi</string>
+    <string name="joining" translatable="false">Tham gia</string>
+    <string name="title_me_joining_room" translatable="false">đã tham gia</string>
+    <string name="title_leave_game_lucky_wheel" translatable="false">Nếu bạn thoát khỏi phòng sẽ mất lượt tham gia trúng thưởng khi bắt đầu vòng quay. Bạn có chắc chắn muốn thoát!!!</string>
+    <string name="branch_name" translatable="false">Tên chi nhánh</string>
+    <string name="show_dislay" translatable="false">Lượt hiển thị</string>
+    <string name="money_use" translatable="false">Số tiền sử dụng</string>
+    <string name="not_yet_title" translatable="false">Bài viết chưa có tiêu đề</string>
+    <string name="not_yet_content" translatable="false">Bài viết chưa có nội dung</string>
+    <string name="drafts" translatable="false">Bài nháp</string>
+    <string name="click_to_choose" translatable="false">nhấn vào để xem.</string>
+    <string name="send_require" translatable="false">Gửi yêu cầu</string>
+    <string name="search_room_game" translatable="false">Tìm kiếm số phòng, tên phòng...</string>
+    <string name="search_game" translatable="false">Tìm kiếm trò chơi...</string>
+    <string name="title_game_hot" translatable="false">Trò chơi đang hot</string>
+    <string name="lucky_wheel" translatable="false">Vòng quay may mắn</string>
+    <string name="reward" translatable="false">Phần thưởng</string>
+
+    <string name="scan_qr_code_wrong_room" translatable="false">Mã phòng không hợp lệ. Vui lòng thử lại</string>
+    <string name="scan_qr_code_wrong_restaurant" translatable="false">Nhà hàng không hợp lệ. Vui lòng thử lại</string>
+    <string name="title_warning_login" translatable="false">Cảnh báo đăng nhập từ thiết bị lạ!</string>
+    <string name="title_warning_note" translatable="false"><b>CẢNH BÁO</b>: Nếu không phải bạn, hãy nhấn nút <b>khóa tài khoản khẩn cấp</b> đẻ bảo vệ tài khoản.</string>
+    <string name="lock_account_urgent" translatable="false">Khóa tài khoản khẩn cấp</string>
+    <string name="lock_account_urgent_note" translatable="false">Tài khoản của bạn đã đăng nhập trên thiết bị %s vào lúc %s</string>
+    <string name="list_device" translatable="false">Danh sách thiết bị</string>
+    <string name="logged_out" translatable="false">Đã đăng xuấṭ</string>
+    <string name="monday_vn" translatable="false">Thứ 2</string>
+    <string name="tuesday_vn" translatable="false">Thứ 3</string>
+    <string name="wednesday_vn" translatable="false">Thứ 4</string>
+    <string name="thursday_vn" translatable="false">Thứ 5</string>
+    <string name="friday_vn" translatable="false">Thứ 6</string>
+    <string name="saturday_vn" translatable="false">Thứ 7</string>
+    <string name="sunday_vn" translatable="false">Chú nhật</string>
+    <string name="video" translatable="false">Video</string>
+    <string name="banner" translatable="false">Banner</string>
+    <string name="second" translatable="false">Giây</string>
+    <string name="approved" translatable="false">Đã duyệt</string>
+    <string name="running" translatable="false">Đang chạy</string>
+    <string name="pending_a" translatable="false">Chờ duyệt</string>
+    <string name="pause" translatable="false">Tạm ngưng</string>
+    <string name="try_again" translatable="false">Thử lại</string>
+    <string name="get_it_now" translatable="false">Nhận ngay</string>
+    <string name="empty_gift" translatable="false">Danh sách quà tặng hiện đang trống</string>
+    <string name="my_gift" translatable="false">Quà của tôi</string>
+    <string name="advert_list" translatable="false">Danh sách quảng cáo</string>
+    <string name="reply_label" translatable="false">Trả lời</string>
+    <string name="play_now" translatable="false">Chơi Ngay</string>
+    <string name="detail_infor" translatable="false">Chi tiết thông tin</string>
+    <string name="link_youtube_1" translatable="false">youtu.be/</string>
+    <string name="link_youtube_2" translatable="false">youtube.com/</string>
+    <string name="link_youtube_4" translatable="false">youtube.com/watch?v=</string>
+    <string name="link_youtube_3" translatable="false">youtube.com/shorts/</string>
+    <string name="important_message" translatable="false">Tin nhắn quan trọng</string>
+    <string name="sync_contact_success" translatable="false">Cập nhật danh bạ thành công</string>
+    <string name="password_cannot_than_50_character" translatable="false">Mật khẩu không được lớn hơn 50 kí tự</string>
+    <string name="Move_the_code_into_the_frame" translatable="false">Di chuyển mã vào khung</string>
+
+    <string name="change_call_video" translatable="false">Chuyển sang cuộc gọi video ?</string>
+    <string name="change_call_video_note" translatable="false">Lưu ý: Camera sẽ được bật.</string>
+    <string name="start_camera" translatable="false">Muốn bạn bật camera.</string>
+    <string name="loudspeaker" translatable="false">Loa</string>
+    <string name="mic" translatable="false">Mic</string>
+    <string name="recipient_is_busy" translatable="false">Người nhận đang bận</string>
+    <string name="time_format_1" translatable="false">%d phút %d giây</string>
+    <string name="take_a_shot" translatable="false">Chụp</string>
+    <string name="ringing" translatable="false">Đang đổ chuông</string>
+    <string name="connecting" translatable="false">Đang kết nối</string>
+    <string name="user_off_mic" translatable="false">%s đang tắt mic.</string>
+    <string name="user_off_camera" translatable="false">%s đã tắt camera.</string>
+    <string name="user_off_camera_and_mic" translatable="false">%s đang tắt camera và mic.</string>
+    <string name="recipient_rejects" translatable="false">Người nhận từ chối cuộc gọi</string>
+    <string name="reverse" translatable="false">Đảo</string>
+    <string name="birthday_card" translatable="false">Thiệp mừng sinh nhật</string>
+    <string name="vat_bill" translatable="false">Thuế giá trị gia tăng (VAT)</string>
+    <string name="at" translatable="false">vào lúc</string>
+    <string name="account_logged" translatable="false">Tài khoản của bạn đã đăng nhập trên thiết bị</string>
+    <string name="with_ip_" translatable="false">với IP :</string>
+    <string name="warning_account" translatable="false">CẢNH BÁO : Nếu không phải là bạn, hãy bấm nút khóa tài khoản khẩn cấp để bảo vệ tài khoản của bạn.</string>
+    <string name="emergency_account_lockout" translatable="false">Khóa tài khoản khẩn cấp</string>
+    <string name="warning_unknown_device" translatable="false">Cảnh báo đăng nhập từ thiết bị lạ !</string>
+    <string name="options" translatable="false">Tuỳ chọn</string>
+    <string name="choose_member" translatable="false">Chọn thành viên</string>
+    <string name="please_choose_2_or_more_members" translatable="false">Vui lòng chọn từ 2 thành viên trở lên!</string>
+    <string name="success_download" translatable="false">Tải xuống thành công</string>
+    <string name="personal" translatable="false">Cá nhân</string>
+    <string name="key_google_map" translatable="false">AIzaSyC08oInBJwDgGeSo4TctLmkgJ0qmoDsxRM</string>
+    <string name="content_disable_account_one" translatable="false">• Xoá thông tin tài khoản, tên và hình đại diện</string>
+    <string name="content_disable_account_two" translatable="false">• Xoá tất cả tin nhắn, nhật ký, bạn bè</string>
+    <string name="content_disable_account_three" translatable="false">• Không thể khôi phục lại dữ liệu sau khi xoá tài khoản</string>
+    <string name="biometric_title" translatable="false">TouchID cho Aloline</string>
+    <string name="biometric_subtitle" translatable="false">Đăng nhập bằng thông tin xác thực sinh trắc học của bạn</string>
+    <string name="biometric_negative_button_text" translatable="false">Sử dụng mật khẩu</string>
+    <string name="repost" translatabldelete_postse="false">Báo cáo</string>
+    <string name="post_repost" translatabldelete_postse="false">Báo cáo bài viết</string>
+    <string name="notification_report" translatabldelete_postse="false">Thông báo</string>
+    <string name="enter_content_please" translatabldelete_postse="false">Vui lòng nhập nội dung</string>
+</resources>
+
+
+

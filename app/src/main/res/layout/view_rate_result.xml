@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_8dp"
+    android:paddingTop="@dimen/padding_12dp"
+    android:paddingRight="@dimen/padding_8dp"
+    android:paddingBottom="@dimen/padding_12dp">
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvRateName"
+        style="@style/TextViewBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <ImageView
+        android:id="@+id/imgRate"
+        android:layout_width="@dimen/size_35"
+        android:layout_height="@dimen/size_35"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:src="@mipmap/ic_rate_3_gray" />
+
+    <vn.techres.line.widget.TechResTextView
+        android:id="@+id/tvRateValue"
+        style="@style/TextViewBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1" />
+</LinearLayout>

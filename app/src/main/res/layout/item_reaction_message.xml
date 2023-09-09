@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <merge>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lnReaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_reactions"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_2dp"
+                android:paddingTop="@dimen/padding_1dp"
+                android:paddingRight="@dimen/padding_2dp"
+                android:paddingBottom="@dimen/padding_1dp"
+                android:visibility="visible"
+                tools:ignore="UselessParent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgReactionOne"
+                    android:layout_width="@dimen/size_12"
+                    android:layout_height="@dimen/size_12"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_like"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgReactionTwo"
+                    android:layout_width="@dimen/size_12"
+                    android:layout_height="@dimen/size_12"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_like"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgReactionThree"
+                    android:layout_width="@dimen/size_12"
+                    android:layout_height="@dimen/size_12"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_like"
+                    android:visibility="visible" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvReactionCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/padding_2dp"
+                    android:paddingEnd="@dimen/padding_1dp"
+                    android:src="@drawable/ic_like"
+                    android:textSize="@dimen/font_tiny"
+                    tools:ignore="RtlSymmetry,SmallSp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnReactionPress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:background="@drawable/bg_reactions"
+                android:elevation="@dimen/size_5"
+                android:gravity="center"
+                android:padding="@dimen/padding_3dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgReactionPress"
+                    android:layout_width="@dimen/size_15"
+                    android:layout_height="@dimen/size_15"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_heart_border_black"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </merge>
+
+</layout>

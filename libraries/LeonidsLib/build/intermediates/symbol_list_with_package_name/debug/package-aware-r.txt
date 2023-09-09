@@ -1,0 +1,12 @@
+com.plattysoft.leonids
+string define_leonids
+string library_leonids_author
+string library_leonids_authorWebsite
+string library_leonids_classPath
+string library_leonids_isOpenSource
+string library_leonids_libraryDescription
+string library_leonids_libraryName
+string library_leonids_libraryVersion
+string library_leonids_libraryWebsite
+string library_leonids_licenseId
+string library_leonids_repositoryLink

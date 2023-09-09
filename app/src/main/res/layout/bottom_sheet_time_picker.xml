@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <vn.techres.line.widget.TechResTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/padding_15dp"
+            android:text="@string/title_choose_time_booking"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_huge"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/size_20"
+            android:layout_height="@dimen/size_20"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_15dp"
+            android:src="@drawable/ic_close_12dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15dp"
+        android:layout_marginEnd="@dimen/margin_15dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:orientation="horizontal">
+
+        <vn.techres.line.widget.TechResTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingEnd="@dimen/padding_30dp"
+            android:text="@string/title_hours"
+            android:textColor="@color/blue_logo"
+            android:textSize="@dimen/font_big"
+            tools:ignore="RtlSymmetry" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:paddingStart="@dimen/padding_20dp"
+            android:text="@string/title_minutes"
+            android:textColor="@color/blue_logo"
+            android:textSize="@dimen/font_big"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15dp"
+        android:background="@drawable/bg_button_orange_radius"
+        android:text="@string/title_accept"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_large" />
+</LinearLayout>

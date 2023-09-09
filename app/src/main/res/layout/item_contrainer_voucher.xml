@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_10dp"
+    app:cardCornerRadius="6dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/kbvBanner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/description_place_image" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/margin_10dp"
+                android:paddingTop="@dimen/padding_8dp"
+                android:paddingEnd="@dimen/margin_10dp"
+                android:paddingBottom="@dimen/padding_8dp">
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/font_small"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/black" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/font_tiny"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_marginTop="@dimen/margin_2dp"/>
+            </LinearLayout>
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/txtGetNow"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_30"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:text="@string/get_it_now_code"
+                android:background="@drawable/bg_button_orange_radius"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:paddingStart="@dimen/padding_5dp"
+                android:paddingEnd="@dimen/padding_5dp"/>
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/txtUse"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_30"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:text="@string/use"
+                android:background="@drawable/corners_blue_4dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:paddingStart="@dimen/padding_5dp"
+                android:paddingEnd="@dimen/padding_5dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

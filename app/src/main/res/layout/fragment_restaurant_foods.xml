@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="14"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/linearLayout12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ignoreGravity="@id/slRestaurantFood"
+                android:text="@string/hello_blank_fragment"
+                app:layout_scrollFlags="scroll">
+
+                <com.custom.sliderimage.logic.SliderImage
+                    android:id="@+id/slRestaurantFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_200" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/txtDetailNameFoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/slRestaurantFood"
+                    android:layout_marginStart="@dimen/size_10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_huge" />
+
+                <LinearLayout
+                    android:id="@+id/llTypeBranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDetailNameFoods"
+                    android:orientation="vertical">
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/txtTypeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size_10"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/txtStar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:drawableStart="@drawable/ic_star_black_24dp"
+                        android:gravity="center|left"
+                        tools:ignore="RtlHardcoded" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewBranchFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_10"
+                    android:layout_below="@+id/llTypeBranch"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:background="@color/gray" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/txtNameListFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewBranchFood"
+                    android:layout_margin="@dimen/margin_5dp"
+                    android:text="@string/listfoods"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_20"
+                    tools:ignore="SpUsage" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtNameListFood"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewFoodTakeAway"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/lnSeenCart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50"
+        android:layout_margin="@dimen/margin_20dp"
+        android:background="@drawable/bg_btn_rectangle"
+        android:gravity="center"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/txtAddFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_10"
+            android:layout_weight="1"
+            android:text="@string/sent_cart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_15"
+            tools:ignore="NestedWeights,SpUsage" />
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/txtTotalFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_15"
+            tools:ignore="SpUsage" />
+
+        <vn.techres.line.widget.TechResTextViewBold
+            android:id="@+id/txtTotalMoney"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_15"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+</LinearLayout>

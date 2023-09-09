@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTimeHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/time_text_bg"
+                android:paddingLeft="@dimen/padding_7dp"
+                android:paddingTop="@dimen/padding_1dp"
+                android:paddingRight="@dimen/padding_7dp"
+                android:paddingBottom="@dimen/padding_1dp"
+                android:layout_margin="@dimen/margin_10dp"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvNameVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/cvVideoContainer"
+                android:layout_below="@+id/tvTimeHeader"
+                android:background="@drawable/bg_name_user_chat"
+                android:paddingTop="@dimen/padding_2dp"
+                android:paddingEnd="@dimen/padding_7dp"
+                android:paddingStart="@dimen/padding_7dp"
+                android:paddingBottom="@dimen/padding_2dp"
+                android:layout_marginBottom="@dimen/margin_2dp"
+                android:textSize="@dimen/font_tiny"
+                tools:ignore="RtlSymmetry,SmallSp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvVideo"
+                android:layout_width="@dimen/size_30"
+                android:layout_height="@dimen/size_30"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvNameVideo"
+                app:cardCornerRadius="@dimen/size_15"
+                app:cardElevation="@dimen/size_0">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imgPermission"
+                android:layout_width="@dimen/size_15"
+                android:layout_height="@dimen/size_15"
+                android:background="@drawable/ic_key_vice_group"
+                android:contentDescription="@string/default_image"
+                android:layout_alignBottom="@+id/cvVideo"
+                android:layout_alignEnd="@+id/cvVideo"
+                android:visibility="gone"
+                />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvVideoContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNameVideo"
+                android:layout_toEndOf="@+id/cvVideo"
+                android:background="@drawable/state_message_left"
+                app:cardCornerRadius="@dimen/size_10"
+                app:cardElevation="@dimen/size_0">
+                <com.google.android.exoplayer2.ui.AspectRatioFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:resize_mode="fixed_width">
+                    <com.google.android.exoplayer2.ui.PlayerView
+                        android:id="@+id/playerViewMessage"
+                        android:layout_width="@dimen/size_200"
+                        android:layout_height="@dimen/size_280"
+                        android:layout_gravity="center"
+                        app:repeat_toggle_modes="none"
+                        app:resize_mode="fixed_width"
+                        app:surface_type="texture_view"
+                        app:show_buffering="when_playing"
+                        app:use_controller="false" />
+
+
+                    <ImageView
+                        android:id="@+id/imgPlayerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/default_image" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/padding_4dp"
+                        android:orientation="horizontal">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvTimeFileVideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_small"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:layout_width="@dimen/size_18"
+                            android:layout_height="@dimen/size_18"
+                            android:layout_marginStart="@dimen/margin_2dp"
+                            android:src="@drawable/ic_volume_turn_off"
+                            app:tint="@color/white"
+                            android:contentDescription="@string/default_image" />
+                    </LinearLayout>
+                </com.google.android.exoplayer2.ui.AspectRatioFrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvTimeVideo"
+                style="@style/chat_time_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvVideoContainer"
+                android:layout_alignStart="@+id/cvVideoContainer"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/padding_5dp"
+                android:background="@drawable/time_text_bg"
+                android:paddingLeft="@dimen/padding_5dp"
+                android:paddingRight="@dimen/padding_5dp"
+                android:textColor="@color/white"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:id="@+id/lnReactionContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvVideoContainer"
+                android:layout_alignEnd="@id/cvVideoContainer"
+                android:layout_marginTop="-5dp"
+                android:visibility="gone">
+
+                <include
+                    android:id="@+id/reaction"
+                    layout="@layout/item_reaction_message" />
+
+            </LinearLayout>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvStatusView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTimeVideo"
+                android:layout_alignStart="@+id/tvTimeVideo"
+                android:background="@drawable/time_text_bg"
+                android:textSize="@dimen/font_very_tiny"
+                android:textColor="@color/white"
+                android:paddingLeft="@dimen/padding_7dp"
+                android:paddingTop="@dimen/padding_1dp"
+                android:paddingRight="@dimen/padding_7dp"
+                android:paddingBottom="@dimen/padding_1dp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:drawableStart="@drawable/icn_bubble_chat_received"
+                android:drawablePadding="@dimen/padding_2dp"
+                android:visibility="gone"
+
+                />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvSeen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/seen"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_big"
+                android:layout_below="@+id/tvStatusView"
+                android:layout_marginStart="@dimen/margin_8dp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcViewerSeen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_below="@+id/tvSeen"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/tvReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/received"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_big"
+                android:layout_below="@+id/rcViewerSeen"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcViewerReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_below="@+id/tvReceived"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                />
+        </RelativeLayout>
+    </ScrollView>
+</layout>

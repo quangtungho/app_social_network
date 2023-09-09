@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_gray_light"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_gray_light">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/svAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:theme="@style/SearchView"
+                    app:closeIcon="@drawable/ic_messenger_close"
+                    app:iconifiedByDefault="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/title_search_address"
+                    app:searchIcon="@drawable/ic_search" />
+
+                <ImageButton
+                    android:id="@+id/imgPlacePoint"
+                    android:layout_width="@dimen/size_50"
+                    android:layout_height="@dimen/size_50"
+                    android:src="@drawable/map"
+                    android:background="@color/white"
+                    app:tint="@color/main_gray_dim"
+                    android:contentDescription="@string/default_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvTitleAddressMy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/my_address"
+                    android:textSize="@dimen/font_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/svAddress" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvRepairAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/repair"
+                    android:textColor="@color/main_bg"
+                    android:textSize="@dimen/font_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/svAddress" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/lnHomeAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleAddressMy">
+                    <ImageView
+                        android:layout_width="@dimen/size_25"
+                        android:layout_height="@dimen/size_25"
+                        android:src="@drawable/ic_home"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:contentDescription="@string/default_image"/>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:orientation="vertical">
+                        <vn.techres.line.widget.TechResTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_big"
+                            android:text="@string/title_home"
+                            android:textColor="@color/black"/>
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvHomeAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_small"
+                            android:text="@string/save_address" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <ImageView
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_35"
+                        android:src="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:contentDescription="@string/default_image"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0_5"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/gray_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lnHomeAddress" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/lnCompanyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view1">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_25"
+                        android:layout_height="@dimen/size_25"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_work" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/margin_16dp"
+                        android:orientation="vertical">
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/company"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_big" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvCompanyAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/save_address"
+                            android:textSize="@dimen/font_small" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_35"
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_keyboard_arrow_right_gray_24dp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0_5"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/gray_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lnCompanyAddress" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcSavedAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/lnAddAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rcSavedAddress">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_50"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_4dp"
+                        android:contentDescription="@string/default_image"
+                        android:padding="@dimen/padding_18dp"
+                        android:src="@drawable/ic_add"
+                        app:tint="@color/main_bg" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_4dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/add_address"
+                        android:textColor="@color/main_bg"
+                        android:textSize="@dimen/font_big" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvTitleNearAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/near_address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lnAddAddress" />
+
+                <vn.techres.line.widget.TechResTextViewBold
+                    android:id="@+id/tvDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/delete"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lnAddAddress" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcNearAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleNearAddress" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="tvTitleNearAddress,tvDelete,rcNearAddress,tvTitleAddressMy,lnHomeAddress,view1,tvRepairAddress,view2,lnAddAddress,lnCompanyAddress"
+                    tools:layout_editor_absoluteX="135dp"
+                    tools:layout_editor_absoluteY="71dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcSearchAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/svAddress"
+                    android:visibility="gone"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

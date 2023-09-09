@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <merge>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            
+            android:elevation="@dimen/size_5"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin">
+
+                <ImageButton
+                    android:id="@+id/toolbar_back"
+                    style="@style/ImageButtonStyleCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_head_back" />
+            </RelativeLayout>
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/TextSize_16"
+                tools:text="@string/app_name" />
+
+            <vn.techres.line.widget.TechResTextView
+                android:id="@+id/toolbar_action"
+                style="@style/AutoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:background="@drawable/ripple_animation_button_back_header"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSize_16"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/toolbar_button_action"
+                style="@style/ImageButtonStyleCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:visibility="visible" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </merge>
+</layout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ayp_8dp"
+            android:layout_marginTop="@dimen/ayp_8dp"
+            android:layout_marginEnd="@dimen/ayp_8dp"
+            app:cardCornerRadius="@dimen/ayp_8dp"
+            app:cardElevation="@dimen/ayp_8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_8dp">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="@dimen/size_35"
+                    android:layout_height="@dimen/size_35"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_user_placeholder_circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/lnTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+                    app:layout_constraintTop_toTopOf="@+id/imgAvatar"
+                    app:layout_constraintVertical_bias="0.0">
+
+
+                    <vn.techres.line.widget.TechResTextViewBold
+                        android:id="@+id/tvName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@+id/tvDateMessage"
+                        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+                        app:layout_constraintTop_toTopOf="@+id/imgAvatar" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvDateMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:layout_marginEnd="@dimen/margin_8dp"
+                        android:layout_weight="1"
+                        android:text="20/09/2021 10:20 AM"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvName" />
+
+                    <ImageButton
+                        android:id="@+id/imgStart"
+                        android:layout_width="@dimen/size_30"
+                        android:layout_height="@dimen/size_30"
+                        android:background="@color/white"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_star_solid_24"
+                        app:tint="@color/yellow_star" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvAudio"
+                    android:layout_width="@dimen/size_200"
+                    android:layout_height="@dimen/size_45"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="@dimen/size_25"
+                    app:cardElevation="@dimen/size_0"
+                    app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+                    app:layout_constraintTop_toBottomOf="@+id/lnTitle">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blue_chat_right"
+                        android:visibility="visible">
+
+                        <SeekBar
+                            android:id="@+id/seekBarAudio"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="-16dp"
+                            android:layout_marginEnd="-16dp"
+                            android:progressDrawable="@drawable/seek_bar_right"
+                            android:thumb="@color/transparent" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_2"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/margin_64dp"
+                            android:background="@color/white"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/imgPlayAudio"
+                            android:layout_width="@dimen/size_30"
+                            android:layout_height="@dimen/size_30"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/margin_8dp"
+                            android:contentDescription="@string/default_image"
+                            android:paddingLeft="@dimen/padding_5dp"
+                            android:paddingRight="@dimen/padding_5dp"
+                            android:src="@drawable/ic_play_button"
+                            android:visibility="visible"
+                            app:tint="@color/white" />
+
+                        <vn.techres.line.widget.TechResTextView
+                            android:id="@+id/tvTimePlayAudio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_16dp"
+                            android:background="@drawable/corners_white_20dp"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/padding_5dp"
+                            android:paddingTop="@dimen/padding_2dp"
+                            android:paddingEnd="@dimen/padding_5dp"
+                            android:paddingBottom="@dimen/padding_2dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_tiny"
+                            android:visibility="visible"
+                            tools:ignore="RelativeOverlap" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size_0_5"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/main_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/cvAudio"
+                    app:layout_constraintTop_toBottomOf="@+id/cvAudio" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

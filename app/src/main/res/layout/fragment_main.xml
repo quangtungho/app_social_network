@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+
+        android:id="@+id/rlControllerABC"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cvUtil"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvUtil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardElevation="@dimen/size_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/rlHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/margin_2dp">
+
+                    <ImageView
+                        android:id="@+id/imgHome"
+                        android:layout_width="@dimen/size_22"
+                        android:layout_height="@dimen/size_22"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_home" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_15"
+                        android:layout_below="@+id/imgHome"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/title_home_page"
+                        android:textSize="@dimen/font_tiny" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlContacts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/margin_2dp">
+
+                    <ImageView
+                        android:id="@+id/imgContacts"
+                        android:layout_width="@dimen/size_22"
+                        android:layout_height="@dimen/size_22"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_contact"
+                        android:paddingTop="@dimen/padding_2dp" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvContacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_15"
+                        android:layout_below="@+id/imgContacts"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/title_contacts"
+                        android:textSize="@dimen/font_tiny" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlNewFeed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:layout_marginBottom="@dimen/margin_5dp">
+
+                    <ImageView
+                        android:id="@+id/imgNewFeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_50"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/logo_aloline_tab_gray"
+                        android:visibility="visible" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvNewFeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_20dp"
+                        android:layout_below="@+id/imgNewFeed"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/title_review"
+                        android:textSize="@dimen/font_tiny"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlChat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/margin_2dp">
+
+                    <ImageView
+                        android:id="@+id/imgChat"
+                        android:layout_width="@dimen/size_22"
+                        android:layout_height="@dimen/size_22"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/default_image"
+                        android:paddingTop="@dimen/padding_2dp"
+                        android:src="@drawable/ic_chat" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvChat"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_15"
+                        android:layout_below="@+id/imgChat"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/chat"
+                        android:textSize="@dimen/font_tiny" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvCountChat"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/counter_bg"
+                        android:layout_marginStart="-5dp"
+                        android:paddingStart="@dimen/padding_5dp"
+                        android:paddingEnd="@dimen/padding_5dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_tiny"
+
+                        android:layout_toEndOf="@+id/imgChat" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/margin_2dp">
+
+                    <ImageView
+                        android:id="@+id/imgAccount"
+                        android:layout_width="@dimen/size_22"
+                        android:layout_height="@dimen/size_22"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_icon_account_tab"
+                        android:paddingTop="@dimen/padding_2dp" />
+
+                    <vn.techres.line.widget.TechResTextView
+                        android:id="@+id/tvAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_15"
+                        android:layout_below="@+id/imgAccount"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/title_account"
+                        android:textSize="@dimen/font_tiny" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

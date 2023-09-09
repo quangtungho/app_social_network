@@ -1,0 +1,560 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+        google()
+        mavenCentral()
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            force 'net.sf.proguard:proguard-base:6.1.0'
+        }
+    }
+}
+
+//apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+    maven { url 'https://github.com/FireZenk/maven-repo/raw/master/' }
+}
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+// Apply the Performance Monitoring plugin
+apply plugin: 'com.google.firebase.firebase-perf'
+
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+//        manifestPlaceholders = [
+//                onesignal_app_id : '64b25434-c793-4922-b7f4-a66efef26ba7',
+//                // Project number pulled from dashboard, local value is ignored.
+//                onesignal_google_project_number: 'REMOTE'
+//        ]
+        applicationId "vn.techres.line"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 59
+        versionName "0.0.92"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+
+        release { //Thêm một khối debug nếu muốn
+            minifyEnabled false //Thu gọn code, false nếu không dùng
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+        debug {
+
+            minifyEnabled false
+            shrinkResources false
+            //Không làm rối code
+            testCoverageEnabled = true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            lintOptions {
+
+                checkReleaseBuilds false
+                abortOnError false
+            }
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+            mavenCentral()
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs += [
+                '-Xjvm-default=enable'
+        ]
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/library_release.kotlin_module'
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        incremental true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation files('libs/autobanh.jar')
+
+
+    implementation files('libs/commons-io-2.4.jar')
+    implementation project(':libraries:LeonidsLib')
+
+    implementation project(':libraries:heartlayout')
+    implementation project(':libraries:imageeditlibrary')
+    implementation project(':libraries:picture_library')
+    implementation project(':libraries:datepicker')
+    implementation project(':libraries:emoji-facebook')
+    implementation project(':libraries:emoji')
+    implementation project(':libraries:paper-onboarding')
+    implementation project(':libraries:LinkReview')
+    implementation project(':libraries:AXEmojiView')
+    implementation project(':libraries:filepicker')
+    implementation project(':libraries:zxing-android-embedded')
+    implementation project(':libraries:bubbles_chat')
+    implementation project(':libraries:youtube-core')
+
+
+    implementation 'androidx.wear:wear:1.1.0'
+    compileOnly 'com.google.android.wearable:wearable:2.8.1'
+    kapt 'com.android.databinding:compiler:3.1.4'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.fragment:fragment-ktx:1.3.6'
+    def nav_version = "2.3.5"
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha02")
+
+
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.1'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.10.1'
+    implementation 'com.bluelinelabs:logansquare:1.3.7'
+    implementation 'com.github.aurae.retrofit2:converter-logansquare:1.4.1'
+    annotationProcessor 'com.bluelinelabs:logansquare-compiler:1.3.7'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    //Retrofit
+    implementation("com.squareup.okhttp3:okhttp:4.4.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.4.0")
+    // RxJava libraries
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
+
+
+//    implementation 'android.arch.work:work-runtime:1.0.1'
+
+    implementation 'com.wang.avi:library:2.1.3'
+
+    implementation 'com.github.wangjiegulu:rfab:2.0.0'
+    implementation 'com.alexbbb:uploadservice:1.6'
+    implementation 'devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4'
+
+    implementation 'com.github.smarteist:autoimageslider:1.3.9'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //noinspection GradleCompatible
+    implementation 'com.google.dagger:dagger:2.0.2'
+    implementation 'com.sbrukhanda.fragmentviewpager:fragmentviewpager:1.0.0'
+
+    implementation('io.nlopez.smartlocation:library:3.3.3') {
+        transitive = false
+    }
+
+    implementation 'me.rishabhkhanna:RecyclerviewSwipeDrag:1.3.1'
+
+    implementation 'com.webianks.library:scroll-choice:1.0.1'
+
+    implementation 'com.github.vihtarb:tooltip:0.2.0'
+    //Glide 
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.github.bumptech.glide:annotations:4.11.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.11.0"
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+//
+
+    implementation 'at.blogc:expandabletextview:1.0.5'
+
+    implementation 'com.github.angads25:toggle:1.1.0'
+    implementation 'com.pkmmte.view:circularimageview:1.1'
+//    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.github.chrisbanes.photoview:library:1.2.3'
+    implementation 'com.balysv:material-ripple:1.0.2'
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    //Barcode
+    implementation "com.github.skydoves:expandablelayout:1.0.3"
+
+    // version must be the same as gradle version
+
+    implementation 'com.iarcuschin:simpleratingbar:0.1.5'
+    implementation 'io.github.ivanespitiac:imageslider:1.0.3'
+    implementation 'me.toptas.fancyshowcase:fancyshowcaseview:1.3.0'
+
+    implementation 'com.android.support:support-v4:+'
+    //noinspection GradleCompatible
+
+    // Firebase UI
+    // Firebase Authentication (Kotlin)
+    implementation 'com.google.firebase:firebase-auth-ktx:19.3.2'
+
+    // Google Sign In SDK (only required for Google Sign In)
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+
+    // Firebase UI
+    // Used in FirebaseUIActivity.
+    implementation 'com.firebaseui:firebase-ui-auth:6.3.0'
+
+    // google vision library
+    implementation 'com.google.android.gms:play-services-vision:20.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+
+    implementation 'com.google.android.gms:play-services-basement:15.0.1'
+    implementation 'com.google.android.gms:play-services-base:15.0.1'
+//    implementation 'com.google.android.gms:play-services-gcm:15.0.1'
+    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+//    implementation 'com.google.android.gms:play-services-vision:17.0.2'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+//    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.firebase:firebase-database:16.0.5'
+    // Places library
+    implementation 'com.google.android.libraries.places:places:2.5.0'
+
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.2.0'
+    // for experimental rx picker
+    // If you have a problem with Glide, please use the same Glide version or simply open an issue
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.piruin:quickaction:2.4.3'
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+    implementation 'com.aldoapps:autoformatedittext:0.9.3'
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+    implementation 'com.github.Cutta:TagView:1.3'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+    implementation 'com.airbnb.android:lottie:3.4.0'
+
+
+    //noinspection GradleCompatible
+    implementation "com.android.support:design:24.2.0"
+
+
+    // Places library
+//    // PING Place Picker
+    implementation 'com.github.rtchagas:pingplacepicker:2.1.1'
+
+    implementation 'com.facebook.android:facebook-android-sdk:4.17.0'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation 'jp.wasabeef:recyclerview-animators:3.0.0'
+    implementation 'com.isseiaoki:simplecropview:1.1.8'
+    //noinspection GradleCompatible
+    implementation 'com.zoonref:simple-view-behavior:1.0'
+    //implementation 'com.vanniktech:emoji-ios:0.6.0'
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'com.devlomi.record-view:record-view:2.0.1'
+    implementation 'fm.jiecao:jiecaovideoplayer:5.7'
+    implementation 'com.github.whalemare:sheetmenu:1.3.3'
+    implementation 'com.github.roiacult:BackdropLayout:v2.2'
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+    implementation 'me.itangqi.waveloadingview:library:0.3.5'
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    implementation 'nl.dionsegijn:konfetti:1.2.2'
+    implementation 'nl.dionsegijn:konfetti-xml:2.0.2'
+
+    implementation 'com.github.IamStY:SnowFalling:v1.4'
+    implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.6'
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "com.github.nisrulz:lantern:2.0.0"
+    implementation 'com.github.hkk595:Resizer:v1.5'
+    implementation 'com.borjabravo:readmoretextview:2.1.0'
+    implementation 'com.tomer:fadingtextview:2.5'
+    implementation 'com.github.iwgang:countdownview:2.1.6'
+    implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+    implementation 'com.facebook.android:facebook-login:5.15.3'
+    implementation 'com.snatik:storage:2.1.0'
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+
+    /*Firebase*/
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+
+    /*fb ad*/
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.0.0'
+    implementation 'com.tonicartos:superslim:0.4.13'
+
+//    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.recyclerview:recyclerview:1.2.0-alpha02"
+
+    implementation 'net.gotev:uploadservice:4.4.0'
+    implementation 'net.gotev:recycleradapter:2.8.1'
+    implementation 'com.karumi:dexter:6.2.1'
+    implementation 'com.github.kenglxn.QRGen:android:2.6.0'
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2-ktx'
+
+
+    implementation "com.github.pgreze:android-reactions:1.2.2"
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.5.0'
+    //noinspection GradleDependency
+//    implementation 'com.etebarian:meow-bottom-navigation:1.0.4'
+
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+    implementation 'com.danikula:videocache:2.7.0'
+    //implementation 'com.google.android.exoplayer:exoplayer:2.9.1'
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.10'
+    implementation 'com.androidadvance:topsnackbar:1.1.1'
+    implementation 'com.github.devendroid:ReadMoreOption:1.0.2'
+    implementation 'com.github.ivorcho:SnowfallView:1.0'
+    //load image
+    implementation("io.coil-kt:coil:1.2.1")
+    implementation("io.coil-kt:coil-gif:1.1.1")
+    //socket
+    implementation 'io.socket:socket.io-client:2.0.1'
+    //update to sever
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+    //bubble navigation
+    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+    //audio
+    implementation 'com.github.Armen101:AudioRecordView:1.0.5'
+    //button success
+    implementation 'com.github.razir.progressbutton:progressbutton:2.1.0'
+    //Balloon
+    implementation "com.github.skydoves:balloon:1.3.1"
+    implementation 'com.squareup:seismic:1.0.2'
+    implementation 'org.imaginativeworld.oopsnointernet:oopsnointernet:2.0.0'
+    //webRtc
+    //noinspection GradleDynamicVersion
+    implementation 'org.webrtc:google-webrtc:1.0.+'
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    def kohiiVersion = '1.1.0.2011003'
+    def exoPlayer_version = '2.10.4'
+    //noinspection GradleDependency
+    implementation "im.ene.kohii:kohii-core:${kohiiVersion}"
+    //noinspection GradleDependency
+    implementation "im.ene.kohii:kohii-exoplayer:${kohiiVersion}"
+    //noinspection GradleDependency
+    implementation "com.google.android.exoplayer:exoplayer:${exoPlayer_version}"
+    // ExoPlayer
+//    implementation "com.google.android.exoplayer:exoplayer-ui:${rootProject.ext.exoPlayerVersion}" // Subtitles
+//    implementation "com.google.android.exoplayer:extension-okhttp:${rootProject.ext.exoPlayerVersion}"
+    // Custom HTTP
+
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    // If you want to use the GPU Filters
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
+    implementation 'me.relex:photodraweeview:2.0.0'
+    implementation 'com.roughike:bottom-bar:2.3.1'
+
+//    implementation 'com.github.the-super-toys.glimpse-android:glimpse-core:0.0.5'
+//
+//    //only required for glide extensions
+//    implementation 'com.github.the-super-toys.glimpse-android:glimpse-glide:0.0.5'
+//
+//    //only required for coil extensions
+//    implementation 'com.github.the-super-toys.glimpse-android:glimpse-coil:0.0.5'
+
+    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
+
+    implementation 'com.giphy.sdk:ui:2.1.0'
+
+    //link
+    implementation 'com.github.omegaes:Android-Link-Preview:1.0.2'
+    implementation 'io.github.ponnamkarthik:richlinkpreview:1.0.9'
+
+    //Play video youtube
+//    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+//    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.23'
+
+//    implementation 'com.github.shikleev:fragula:1.0.8'
+
+//    implementation 'me.yokeyword:swipebackfragment:0.4.0'
+
+    def lifecycle_version = "2.3.1"
+    def arch_version = "2.1.0"
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
+
+    // Saved state module for ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
+
+    // Annotation processor
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    kapt("androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycle_version")
+
+    // optional - helpers for implementing LifecycleOwner in a Service
+    implementation("androidx.lifecycle:lifecycle-service:$lifecycle_version")
+
+    // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
+    implementation("androidx.lifecycle:lifecycle-process:$lifecycle_version")
+    // optional - ReactiveStreams support for LiveData
+    implementation("androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycle_version")
+
+    // optional - Test helpers for LiveData
+    testImplementation("androidx.arch.core:core-testing:$arch_version")
+
+    implementation 'com.r0adkll:slidableactivity:2.1.0'
+    implementation("androidx.percentlayout:percentlayout:1.0.0")
+    //Bubbles message
+    implementation 'com.txusballesteros:bubbles:1.2.1'
+    implementation 'org.firezenk:audiowaves:1.1@aar'
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:2.35"
+    kapt "com.google.dagger:hilt-android-compiler:2.28.1-alpha"
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+
+    def paging_version = "3.0.0"
+
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+
+    // alternatively - without Android dependencies for tests
+    testImplementation "androidx.paging:paging-common-ktx:$paging_version"
+
+    // optional - RxJava2 support
+    implementation "androidx.paging:paging-rxjava2-ktx:$paging_version"
+
+    // optional - RxJava3 support
+    implementation "androidx.paging:paging-rxjava3:$paging_version"
+
+    // optional - Guava ListenableFuture support
+    implementation "androidx.paging:paging-guava:$paging_version"
+
+    // optional - Jetpack Compose integration
+    implementation "androidx.paging:paging-compose:1.0.0-alpha10"
+
+    implementation 'me.yokeyword:swipebackfragment:0.4.0'
+
+    implementation 'com.github.luizgrp:SectionedRecyclerViewAdapter:v3.2.0'
+    //video call
+    implementation "com.skyfishjy.ripplebackground:library:1.0.1"
+    implementation "de.hdodenhof:circleimageview:3.1.0"
+
+    implementation 'com.facebook.rebound:rebound:0.3.8'
+
+    //intro
+    implementation 'com.github.AppIntro:AppIntro:6.1.0'
+
+    implementation 'com.blankj:utilcodex:1.30.5'
+    implementation 'com.zhihu.android:matisse:0.5.3-beta3'
+
+    // Playlist support
+    implementation 'com.devbrackets.android:playlistcore:2.0.1'
+    //Download File
+    implementation 'com.liulishuo.filedownloader:library:1.7.7'
+    implementation 'com.gauravk.audiovisualizer:audiovisualizer:0.9.2'
+
+    //Room Database Library
+    implementation "androidx.room:room-runtime:2.2.4"
+    kapt "androidx.room:room-compiler:2.2.4"
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+
+    // Kotlin + coroutines
+    implementation("androidx.work:work-runtime-ktx:$work_version")
+
+    implementation "im.ene.toro3:toro:${toro_version}"
+    implementation "im.ene.toro3:toro-ext-exoplayer:${toro_version}"
+
+    implementation "com.github.flipkart-incubator:circular-image:${circular_version}"
+
+    implementation 'com.github.wangfeng19930909:DragFloatingActionButton:1.0.1'
+    implementation 'com.github.bingoogolapple.BGAQRCode-Android:zbar:1.3.8'
+    implementation 'com.github.markomilos:paginate:1.0.0'
+
+    implementation 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
+
+
+    // Declare the dependencies for any other desired Firebase products
+    // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.0.0')
+
+    // Declare the dependency for the Performance Monitoring library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-perf-ktx'
+
+    // Declare the dependency for the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+//
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.10'
+
+    //Show a biometric authentication dialog
+    implementation("androidx.biometric:biometric:1.2.0-alpha04")
+}

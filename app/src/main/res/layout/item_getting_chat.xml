@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16dp"
+        android:background="@drawable/corners_white_8dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/banner_123zo" />
+
+        <vn.techres.line.widget.TechResTextView
+            android:id="@+id/txtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_8dp"
+            android:lineSpacingExtra="@dimen/padding_4dp"
+            android:text="Tập thể 123-zo xin cám ơn anh Phạm Văn Nhân đã ủng hộ quán trong thời gian qua, cũng như thời gian sắp tới. 123-zo rất hy vọng nhận những lời góp ý chân thành từ quý khách để quán luôn nâng cấp sản phẩm và dịch vụ 1 cách tốt nhất, Chúc anh Phạm Văn Nhân có một sức khoẻ tốt, 1 gia đình hạnh phúc và 1 sự nghiệp thành công..." />
+    </LinearLayout>
+</layout>

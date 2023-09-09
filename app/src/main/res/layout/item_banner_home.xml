@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <merge>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:id="@+id/lnBannerHome">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/sliderHome"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                app:sliderAnimationDuration="1000"
+                app:sliderAutoCycleDirection="right"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="1.5dp"
+                app:sliderIndicatorSelectedColor="@color/main_bg"
+                app:sliderIndicatorUnselectedColor="@color/white"
+                app:sliderScrollTimeInSec="10"
+                app:sliderStartAutoCycle="true"
+                android:visibility="gone" />
+
+            <com.custom.sliderimage.logic.SliderImage
+                android:id="@+id/sliderImage"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vpBannerADS"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_200"
+                android:paddingStart="@dimen/size_40"
+                android:paddingEnd="@dimen/size_40" />
+        </LinearLayout>
+    </merge>
+
+</layout>

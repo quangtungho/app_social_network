@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <vn.techres.line.widget.TechResTextViewBold
+                android:id="@+id/tvTimeHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/time_text_bg"
+                android:paddingLeft="@dimen/padding_7dp"
+                android:paddingTop="@dimen/padding_1dp"
+                android:paddingRight="@dimen/padding_7dp"
+                android:paddingBottom="@dimen/padding_1dp"
+                android:layout_margin="@dimen/margin_10dp"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny" />
+
+            <RelativeLayout
+                android:id="@+id/rlSticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:visibility="visible"
+                tools:ignore="RtlSymmetry">
+
+                <ImageView
+                    android:id="@+id/imgSticker"
+                    android:layout_width="@dimen/size_120"
+                    android:layout_height="@dimen/size_120"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/default_image"
+                    tools:ignore="RtlHardcoded" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvTimeSticker"
+                    style="@style/chat_time_style"
+                    android:layout_below="@+id/imgSticker"
+                    android:layout_alignStart="@+id/imgSticker"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:background="@drawable/time_text_bg"
+                    android:paddingLeft="@dimen/padding_5dp"
+                    android:paddingRight="@dimen/padding_5dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_small"
+                    tools:ignore="RtlHardcoded" />
+
+                <LinearLayout
+                    android:id="@+id/lnReactionContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgSticker"
+                    android:layout_alignEnd="@+id/imgSticker"
+                    android:layout_marginTop="-5dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/margin_5dp">
+
+                    <include android:id="@+id/reaction" layout="@layout/item_reaction_message" />
+
+                </LinearLayout>
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvStatusView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTimeSticker"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/time_text_bg"
+                    android:textSize="@dimen/font_very_tiny"
+                    android:textColor="@color/white"
+                    android:paddingLeft="@dimen/padding_7dp"
+                    android:paddingTop="@dimen/padding_1dp"
+                    android:paddingRight="@dimen/padding_7dp"
+                    android:paddingBottom="@dimen/padding_1dp"
+                    android:layout_marginTop="@dimen/margin_4dp"
+                    android:drawableStart="@drawable/icn_bubble_chat_received"
+                    android:drawablePadding="@dimen/padding_2dp"
+                    android:visibility="gone"
+
+                    />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvSeen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seen"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_big"
+                    android:layout_below="@+id/tvStatusView"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcViewerSeen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_4dp"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_below="@+id/tvSeen"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical" />
+
+                <vn.techres.line.widget.TechResTextView
+                    android:id="@+id/tvReceived"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/received"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_big"
+                    android:layout_below="@+id/rcViewerSeen"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcViewerReceived"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_4dp"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_below="@+id/tvReceived"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>
